@@ -14,7 +14,7 @@ package com.atguigu.day1;
  * float:
  * double:
  * 3)字符型
- * char
+ * char：
  * 4）布尔型
  * boolean
  * 2、引用数据类型：类、接口、数组、枚举........
@@ -27,11 +27,16 @@ package com.atguigu.day1;
  * 1gb : 1024mb
  * 1tb : 1024gb
  */
-public class Test11 {
+public class TestType {
 
     public static void main(String[] args) {
 
-        System.out.println();
+        short c = 1;
+        System.out.println(c);
+        float a = 1.2F;
+        System.out.println(a);
+
     }
+
 
 }
