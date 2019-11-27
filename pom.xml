@@ -11,6 +11,36 @@
     <modules>
         <module>base</module>
     </modules>
+    <build>
+        <resources>
+            <resource>
+                <directory>${basedir}/src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>application-${activatedProfile}.yml</include>
+                    <include>application-${activatedProfile}.yaml</include>
+                    <include>application-${activatedProfile}.properties</include>
+                    <include>application.properties</include>
+                    <include>application.yaml</include>
+                    <include>bootstrap.properties</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>${basedir}/src/main/profiles/${activatedProfile}</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+    </build>
 
 
 </project>
