@@ -1,4 +1,23 @@
 # Created by .ignore support plugin (hsz.mobi)
 .gitignore
-target/
-.idea/
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+
+
+
+
+
+
