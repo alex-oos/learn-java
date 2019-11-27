@@ -8,7 +8,7 @@ package com.atguigu.day1;
  * 2）数据类型：决定大小，存储的类型
  * 3）变量值
  */
-public class BianLiang<psvf> {
+public class BianLiang {
 
     public static void main(String[] args) {
         int age;

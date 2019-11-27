@@ -45,13 +45,13 @@ public class TestType {
     public static void main(String[] args) {
 
         short a = 1;
-        System.out.println(c);
+        System.out.println(a);
 
         int  b = 2;
         System.out.println(b);
 
-        long c = 1234567890.123245466;
-        System.out.println(d);
+        long c = (long) 1234567890.123245466;
+        System.out.println(c);
 
         float d = 1.2F;
         System.out.println(d);
