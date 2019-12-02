@@ -1,4 +1,6 @@
 # markdown 学习使用教程
+
+
 # 一级标题
 ## 二级标题
 ### 三级标题
@@ -38,6 +40,14 @@
 ### 斜体
 *这里是斜体*
 
+*斜体* 1. _斜体_
+- **粗体**
+- ***加粗斜体***
+- ~~删除线~~
+
+### <> 自动变为链接格式
+<http:///www.baidu.com>
+
 ### 表格
 | Tables        | Are           | Cool  |
 | ------------- |:-------------:| -----:|
@@ -55,3 +65,17 @@
 
 ### 分割线
 ***
+
+#### TODO 列表
+- [ ] day1 学习
+- [x] day2 学习   
+
+### 高亮代码
+```java
+    class  Testjava{
+        public static void main(String[] args){
+            System.out.println("hello ,world!");
+        }
+    }
+  
+```
