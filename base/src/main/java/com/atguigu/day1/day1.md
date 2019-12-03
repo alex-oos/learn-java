@@ -1,12 +1,3 @@
-# JAVA从基础到大师
-***
-### base 目录里面的所有的文件都是基础
-***
-### 学习之路
-***
-#### day1  
-#### **java基础知识** 
-
 ##### java入门知识：
 #### 一、开发环境
 1. **jdk**  java开发工具包，全称为 java develpment kit
@@ -16,20 +7,4 @@
 #### 二、关系
 > - JDK = JRE + 开发工具（javac.exe，java.exe，javadoc.exe..）
 > - JRE = JVM + 标准的核心的类库
-
-***
-
-### TODO列表
-- [X] day1 java基础介绍 
-- [ ] day2 java基础类型
-- [ ] day3 任务 
-- [ ] day4 任务
-- [ ] day5 任务
-
-
- 
-
-
-    
- 
-
+>
