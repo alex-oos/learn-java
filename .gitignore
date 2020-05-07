@@ -10,10 +10,21 @@
 .settings
 
 ### IntelliJ IDEA ###
-.idea/*
+.idea/
 *.iws
 *.iml
 *.ipr
+
+##----------Other----------
+# osx
+*~
+.DS_Store
+gradle.properties
+
+.vscode
+
+*.log
+
 
 
 

@@ -59,7 +59,7 @@ public class TestType {
         double e = 10.12;
         System.out.println(e);
 
-        char f = '尚';
+//        char f = '尚';
 
         System.out.println("char f 的变量是" + c);
 
