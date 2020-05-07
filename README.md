@@ -21,10 +21,18 @@
 
 ### TODO列表
 - [X] day1 java基础介绍 
-- [ ] day2 java基础类型
-- [ ] day3 任务 
-- [ ] day4 任务
+- [X] day2 java基础类型，类型转换
+- [X] day3 java语句
+- [X] day4 
 - [ ] day5 任务
+- [ ] day6
+- [ ] day7
+- [ ] day8
+- [ ] day9
+- [ ] day10
+- [ ] day11
+- [ ] day12
+ 
 
 
  
