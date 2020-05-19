@@ -1,12 +1,5 @@
-package com.atguigu.day4;/*
+package com.atguigu.day4;
 
-break�������ڽ�����ǰѭ��
-
-break���÷���
-��1����switch�б�ʾ����switch
-��2��break��ѭ���У���ʾ������ǰѭ��
-*/
-import java.util.Scanner;
 
 /*
 
@@ -16,6 +9,8 @@ break的用法：
 （1）在switch中表示结束switch
 （2）break在循环中，表示结束当前循环
 */
+
+import java.util.Scanner;
 
 class TestBreak{
 	public static void main(String[] args){
