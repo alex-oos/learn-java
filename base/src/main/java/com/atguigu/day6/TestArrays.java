@@ -40,19 +40,37 @@ class TestArrays {
         //看结果
         System.out.println(Arrays.toString(arr));
 
-        //填充
-        //Arrays.fill(arr, 5);//填充所有元素为5
-        //Arrays.fill(arr, 0, 2,5);//填充[0,2)的元素为5
-        //看结果
-        //System.out.println(Arrays.toString(arr));
-
-        //int[] newArray = Arrays.copyOf(arr, 10);
-        //int[] newArray = Arrays.copyOfRange(arr, 2,10);
-
-        //看结果
-        //System.out.println(Arrays.toString(newArray));
-
         int index = Arrays.binarySearch(arr, 6);
+
         System.out.println("6在arr数组中的位置是：" + index);
+
+        //填充
+        Arrays.fill(arr, 5);//填充所有元素为5
+
+        //看结果
+        System.out.println(Arrays.toString(arr));
+
+        //填充[0,2)的元素为5
+        Arrays.fill(arr, 0, 2, 5);
+
+        //看结果
+        System.out.println(Arrays.toString(arr));
+
+        int[] newArray = Arrays.copyOf(arr, 10);
+
+        //看结果
+        System.out.println(Arrays.toString(newArray));
+
+        int[] newArray1 = Arrays.copyOfRange(arr, 2, 10);
+
+        //看结果
+        System.out.println(Arrays.toString(newArray1));
+
+
+        // for each 遍历打印数组中的元素
+        for (int n : arr) {
+            System.out.println("n = " + n);
+
+        }
     }
 }
