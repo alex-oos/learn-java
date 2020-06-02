@@ -31,21 +31,24 @@
     > 抽象类练习题
 - [X] day5 接口类
     > 接口类
-- [ ] day6  java核心类
-       1.字符串和编码
-       2. StringBuilder
-       3. StringJoiner
-       4. 
-
-     
-       
-    
-- [ ] day7
-- [ ] day8
-- [ ] day9
-- [ ] day10
+- [X] day6-day10  java核心类
+    1.字符串和编码
+    > String 的用法
+    2. StringBuilder
+    > StringBuilder 用法
+    3. StringJoiner
+    > StringJoiner 用法
+    4. 包装类型
+    > Boolean、Byte、Short、Integer、Long、Float、Double、Character
+    5. JAVABean
+    > JAVABean 符合命名规范的class ，通过getter 和setteer 定义属性，使用Introspector.getBeanInfo()可以获取属性列表。    
+    6. 枚举类
+    > enum用法
+    7. BigInteger
+    8. BigDecimal
+    9. 常用工具类
+    > Math、Random、SecureRandom
 - [ ] day11
-- [ ] day12
  
 
 
