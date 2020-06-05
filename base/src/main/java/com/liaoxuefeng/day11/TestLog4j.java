@@ -24,3 +24,4 @@ public class TestLog4j {
         log.info("Process end.");
     }
 }
+
