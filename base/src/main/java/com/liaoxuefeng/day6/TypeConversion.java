@@ -28,6 +28,12 @@ public class TypeConversion {
         //Integer有个getInteger(String)方法，它不是将字符串转换为int，而是把该字符串对应的系统变量转换为Integer：
 
         Integer.getInteger("java.version");
+        System.out.println(Integer.getInteger("java.version"));
+
+        //字符串转化为int型
+        String a = "122345";
+        System.out.println(Integer.parseInt(a));
+
 
         //String和char[]类型可以互相转换，方法是：
         char[] cs = "hello".toCharArray();

@@ -20,6 +20,7 @@ public class TestLog4j {
             "".getBytes("invalidCharsetName");
         } catch (UnsupportedEncodingException e) {
             // TODO: 使用log.error(String, Throwable)打印异常
+            log.error(e);
         }
         log.info("Process end.");
     }
