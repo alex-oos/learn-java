@@ -19,17 +19,18 @@ package com.liaoxuefeng.day13;
  * 此外，大部分注解会有一个名为value的配置参数，对此参数赋值，可以只写常量，相当于省略了value参数。
  */
 public class TestAnnotation {
-
+/*
     @Check(min = 0, max = 100, value = 55)
     public int n;
 
-    @Check(value = 99)
+    @Check(value = 99)*/
     public int p;
 
-    @Check(99) // @Check(value=99)
+    //    @Check(99) // @Check(value=99)
     public int x;
 
     @Check
     public int y;
+
 
 }
