@@ -3,9 +3,9 @@ package com.liaoxuefeng.day14;
 /**
  * @Auther: 李将
  * @Date: 2020/6/8 18:32
- * @Descprition:
+ * @Descprition: ，泛型类型<T>不能用于静态方法
  */
-public class Pair<T> {
+class Pair<T> {
     private T first;
     private T last;
 
@@ -14,7 +14,7 @@ public class Pair<T> {
         this.last = last;
     }
 
-    public static Pair<T> create(T first, T last) {
+    public Pair<T> create(T first, T last) {
         return new Pair<T>(first, last);
     }
 
@@ -33,4 +33,6 @@ public class Pair<T> {
     public void setLast(T last) {
         this.last = last;
     }
+
+
 }
