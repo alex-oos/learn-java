@@ -380,7 +380,7 @@ class User {
 
 ```
 
-2.Deque
+##### 2.Deque
 
 > 允许两头都进，两头都出，这种队列叫双端队列（Double Ended Queue），学名`Deque`
 
@@ -397,6 +397,175 @@ class User {
 > 总是调用xxxFirst()/xxxLast()以便与Queue的方法区分开；
 > 避免把null添加到队列。
 
+```java
+    Deque<String> deque = new LinkedList<>();
+        deque.offerLast("A");
+        deque.offerLast("B");
+        deque.offerFirst("C");
+
+        System.out.println(deque.pollFirst());
+        System.out.println(deque.pollLast());
+        System.out.println(deque.pollFirst());
+        System.out.println(deque.pollFirst());
+```
+
+**我们发现`LinkedList`真是一个全能选手，它即是`List`，又是`Queue`，还是`Deque`。但是我们在使用的时候，总是用特定的接口来引用它，这是因为持有接口说明代码的抽象层次更高，而且接口本身定义的方法代表了特定的用途。**
+
+
+
 #### 八、Stack
 
+> 栈（Stack）是一种先进后出的数据结构
+
+##### 1.Stack只有入栈和出栈的操作：
+
+- 把元素压栈：push（E）
+- 取栈顶的元素"弹出"：pop（E）
+- 取栈顶的元素但是不弹出：peek（E）
+
+##### 2.Deque实现Stack的功能：
+
+- 把元素压栈：push（E）/addFirst(E)
+- 把栈顶元素弹出：pop(E)/removeFirst()
+- 取栈顶元素但不弹出：pop(E)/peekFirst()
+
+##### 3.Stack的用途：
+
+整数进行进制的转换就可以利用栈。
+
+```java
+public class Main {
+
+    /*
+     * 栈（Stack） 是一种现后进后出的数组结构
+     * */
+    public static void function() {
+        String hex = toHex(12500);
+        if (hex.equalsIgnoreCase("30D4")) {
+            System.out.println("测试通过");
+        } else {
+            System.out.println("测试失败");
+        }
+
+    }
+
+    static String toHex(int n) {
+        Deque<String> deque = new LinkedList<>();
+        String result = "";
+        int remain = n;
+        while (n < 16) {
+            remain = n % 16;
+            deque.push(Integer.toHexString(remain));
+            n = n / 16;
+        }
+        deque.push(Integer.toHexString(n));
+        while (!deque.isEmpty()) {
+            result += deque.pop();
+        }
+        return result;
+
+    }
+
+    public static void main(String[] args) {
+        function();
+    }
+
+```
+
+
+
 #### 九、Collections
+
+> `ollections`是JDK提供的工具类，同样位于`java.util`包中。它提供了一系列静态方法，能更方便地操作各种集合
+
+#####  Collections 的用法：
+
+1. 创建空集合
+
+   1. 创建空List：`List<T> emptyList()`
+   2. 创建空Map：`Map<K, V> emptyMap()`
+   3. 创建空Set：`Set<T> emptySet()`
+
+   ```java
+   List<String> list1 = List.of();
+   List<String> list2 = Collections.emptyList();
+   ```
+
+   
+
+2. 创建单元素集合
+
+   1. 创建一个元素的List：`List<T> singletonList(T o)`
+   2. 创建一个元素的Map：`Map<K, V> singletonMap(K key, V value)`
+   3. 创建一个元素的Set：`Set<T> singleton(T o)`
+
+   ```java
+   List<String> list1 = List.of("apple");
+   List<String> list2 = Collections.singletonList("apple");
+   ```
+
+   
+
+3. 不可变集合
+
+   1. 封装成不可变List：`List<T> unmodifiableList(List<? extends T> list)`
+   2. 封装成不可变Set：`Set<T> unmodifiableSet(Set<? extends T> set)`
+   3. 封装成不可变Map：`Map<K, V> unmodifiableMap(Map<? extends K, ? extends V> m)`
+
+   ```java
+    List<String> mutable = new ArrayList<>();
+           mutable.add("apple");
+           mutable.add("pear");
+           // 变为不可变集合
+           List<String> immutale = Collections.unmodifiableList(mutable);
+           immutale.add("orange");
+   ```
+
+   **变为不可以变集合就不能添加元素了，所以以上代码会报错**
+
+4. 线程安全集合
+
+   1. 线程安全的List：`List<T> synchronizedList(List<T> list)`
+   2. 线程安全的Set：`Set<T> synchronizedSet(Set<T> s)`
+   3. 线程安全的Map：`Map<K,V> synchronizedMap(Map<K,V> m)`
+
+5. 排序：Collections`可以对`List`进行排序。因为排序会直接修改`List`元素的位置，因此必须传入可变`List
+
+   ```java
+   Collections.sort(list);
+   ```
+
+   ```java
+   List<String> list = new ArrayList<>();
+           list.add("apple");
+           list.add("pear");
+           list.add("orange");
+   //        排序前
+           System.out.println(list);
+           //排序
+           Collections.sort(list);
+           // 排序后
+           System.out.println(list);
+   ```
+
+6. 洗牌
+
+   ```java
+    List<Integer> list = new ArrayList<>();
+           for (int i = 0; i < 10; i++) {
+               list.add(i);
+           }
+   
+           // 洗牌前：
+           System.out.println(list);
+           Collections.shuffle(list);
+   
+           //洗牌后
+           System.out.println(list);
+   ```
+
+   
+
+   
+
+   ​	
