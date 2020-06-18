@@ -140,7 +140,7 @@ public static void main(String[] args){
         }
 ```
 
-
+​       
 
 ##### 1.HashMAp 的使用：
 
@@ -189,7 +189,7 @@ public static void main(String[] args){
 
 ##### 3. SortedMap()的使用：
 
-> SortedMap保证遍历时以key的顺序来进行排序，例如放入的key是"apple"、”pear“."orange"，遍历的顺序一定是"apple"、”orange“、”pear“，因为String 默认按照字母进行排序
+> SortedMap保证遍历时以key的顺序来进行排序，例如放入的key是"apple"、”pear“."orange"，遍历的顺序一定是"apple"、”orange“、”pear“，因为String 默认按照字母进行排序，它的实现类是：TreeMap
 
 ```java
  Map<String, Integer> map = new TreeMap<>();
@@ -201,3 +201,202 @@ public static void main(String[] args){
         }
 ```
 
+**注意：使用TreeMap，放入的Key必须实现Comparable接口，String、Integer 这些类都已经实现Comparable 接口。因此可以直接作为Key使用。作为Value的对象则没有任何要求。如果作为Key的class没有实现`Comparable`接口，那么，必须在创建`TreeMap`时同时指定一个自定义排序算法：**
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Map<Person, Integer> map = new TreeMap<>(new Comparator<Person>() {
+            @Override
+            public int compare(Person p1, Person p2) {
+                return p1.name.compareTo(p2.name);
+            }
+        });
+        map.put(new Person("Tom"), 1);
+        map.put(new Person("Bob"), 2);
+        map.put(new Person("Lily"), 3);
+        for (Person key : map.keySet()) {
+            System.out.println(key);
+        }
+        // {Person: Bob}, {Person: Lily}, {Person: Tom}
+        System.out.println(map.get(new Person("Bob"))); // 2
+    }
+}
+
+class Person {
+    public String name;
+    Person(String name) {
+        this.name = name;
+    }
+    public String toString() {
+        return "{Person: " + name + "}";
+    }
+}
+
+```
+
+> 注意到`Comparator`接口要求实现一个比较方法，它负责比较传入的两个元素`a`和`b`，如果`a<b`，则返回负数，通常是`-1`，如果`a==b`，则返回`0`，如果`a>b`，则返回正数，通常是`1`。`TreeMap`内部根据比较结果对Key进行排序。
+>
+> 从上述代码执行结果可知，打印的Key确实是按照`Comparator`定义的顺序排序的。如果要根据Key查找Value，我们可以传入一个`new Person("Bob")`作为Key，它会返回对应的`Integer`值`2`。
+>
+> 另外，注意到`Person`类并未覆写`equals()`和`hashCode()`，因为`TreeMap`不使用`equals()`和`hashCode()`。
+
+#### 六、Set
+
+> Set用于存储不重复的元素集合
+
+set 有以下几种方法：
+
+1. boolean add(E,e):将元素添加到Set中
+2. boolean remove（Object e） 删除
+3. boolean contains（Object e）判断是否包含元素
+
+```java
+ 		Set<String> set = new HashSet<>();
+        System.out.println(set.add("abc")); // true
+        System.out.println(set.add("xyz")); // true
+        System.out.println(set.add("xyz")); // false，添加失败，因为元素已存在
+        System.out.println(set.contains("xyz")); // true，元素存在
+        System.out.println(set.contains("XYZ")); // false，元素不存在
+        System.out.println(set.remove("hello")); // false，删除失败，因为元素不存在
+        System.out.println(set.size()); // 2，一共两个元素
+```
+
+`**Set`的元素和`Map`的key类似正确实现`equals()`和`hashCode()`方法，否则该元素无法正确地放入`Set`**
+
+##### 1.HashSet
+
+> HashSet 是无序的，实现了Set接口，但是没有实现SortedSet接口
+
+##### 2. TreeSet
+
+> TreeSet是有序的，实现了SortedSet接口,添加的元素必须正确实现`Comparable`接口，如果没有实现`Comparable`接口，那么创建`TreeSet`时必须传入一个`Comparator`对象。
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Set<String> set = new TreeSet<>();
+        set.add("apple");
+        set.add("banana");
+        set.add("pear");
+        set.add("orange");
+        for (String s : set) {
+            System.out.println(s);
+        }
+    }
+}
+
+```
+
+#### 七、Queue
+
+> Queue(队列)，实现了先进先出的有序表，
+
+Queue与List的区别：
+
+1. List可以在任意位置添加元素
+2. Queue只能将元素添加到队列末尾，从队列头部取出元素
+
+Queues方法：
+
+1. int size():获取队列长度
+
+2. boolean add(E)/boolean offer(E)：添加元素，调用`add()`方法，当添加失败时（可能超过了队列的容量），它会抛出异常，调用`offer()`方法来添加元素，当添加失败时，它不会抛异常，而是返回`false`
+
+3. E remove()/E poll()： 获取队首元素并从队列中删除，`Queue`是一个空队列，调用`remove()`方法，它会抛出异常，`poll()`方法来取出队首元素，当获取失败时，它不会抛异常，而是返回`null`：
+
+4. E element()/E peek()：获取队首元素但并不从队列中删除。
+
+   ```
+   public class Main {
+       public static void main(String[] args) {
+           Queue<String> q = new LinkedList<>();
+           // 添加3个元素到队列:
+           q.offer("apple");
+           q.offer("pear");
+           q.offer("banana");
+           // 队首永远都是apple，因为peek()不会删除它:
+           System.out.println(q.peek()); // apple
+           System.out.println(q.peek()); // apple
+           System.out.println(q.peek()); // apple
+       }
+   }
+   
+   ```
+
+##### 1. PriorityQueue:
+
+> `PriorityQueue`实现了一个优先队列：从队首获取元素时，总是获取优先级最高的元素
+
+区别：
+
+`PriorityQueue`实现了一个优先队列：从队首获取元素时，总是获取优先级最高的元素
+
+**注意：`PriorityQueue`默认按元素比较的顺序排序（必须实现`Comparable`接口），也可以通过`Comparator`自定义排序算法（元素就不必实现`Comparable`接口）。**
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        Queue<User> q = new PriorityQueue<>(new UserComparator());
+        // 添加3个元素到队列:
+        q.offer(new User("Bob", "A1"));
+        q.offer(new User("Alice", "A2"));
+        q.offer(new User("Boss", "V1"));
+        System.out.println(q.poll()); // Boss/V1
+        System.out.println(q.poll()); // Bob/A1
+        System.out.println(q.poll()); // Alice/A2
+        System.out.println(q.poll()); // null,因为队列为空
+    }
+}
+
+class UserComparator implements Comparator<User> {
+    public int compare(User u1, User u2) {
+        if (u1.number.charAt(0) == u2.number.charAt(0)) {
+            // 如果两人的号都是A开头或者都是V开头,比较号的大小:
+            return u1.number.compareTo(u2.number);
+        }
+        if (u1.number.charAt(0) == 'V') {
+            // u1的号码是V开头,优先级高:
+            return -1;
+        } else {
+            return 1;
+        }
+    }
+}
+
+class User {
+    public final String name;
+    public final String number;
+
+    public User(String name, String number) {
+        this.name = name;
+        this.number = number;
+    }
+
+    public String toString() {
+        return name + "/" + number;
+    }
+}
+
+```
+
+2.Deque
+
+> 允许两头都进，两头都出，这种队列叫双端队列（Double Ended Queue），学名`Deque`
+
+特点：
+
+- 既可以添加到队尾，也可以添加到队首；
+- 既可以从队首获取，又可以从队尾获取。
+
+`Deque`实现了一个双端队列（Double Ended Queue），它可以：
+
+>  将元素添加到队尾或队首：addLast()/offerLast()/addFirst()/offerFirst()；
+> 从队首／队尾获取元素并删除：removeFirst()/pollFirst()/removeLast()/pollLast()；
+> 从队首／队尾获取元素但不删除：getFirst()/peekFirst()/getLast()/peekLast()；
+> 总是调用xxxFirst()/xxxLast()以便与Queue的方法区分开；
+> 避免把null添加到队列。
+
+#### 八、Stack
+
+#### 九、Collections

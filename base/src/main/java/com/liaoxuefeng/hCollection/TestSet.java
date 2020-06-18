@@ -1,5 +1,9 @@
 package com.liaoxuefeng.hCollection;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -9,7 +13,7 @@ import java.util.TreeSet;
  * @Descprition:
  */
 public class TestSet {
-    public static void main(String[] args) {
+    public static void function() {
         String[] oldarry = {"a", "b", "c", "d", "d"};
 
         Set<String> set = new TreeSet<>();
@@ -18,6 +22,22 @@ public class TestSet {
         }
         System.out.println("set.size() = " + set.size());
         System.out.println("set.toString() = " + set.toString());
+    }
+
+    public static void function1() {
+        String[] oldarry = {"a", "b", "c", "d", "d"};
+        List<String> list = new ArrayList<>();
+        for (String s : oldarry) {
+            list.add(s);
+
+        }
+        Map<String, Integer> map = new HashMap<>();
+
+
+    }
+
+    public static void main(String[] args) {
+
 
     }
 }
