@@ -8,6 +8,7 @@ import java.time.LocalTime;
  * @Auther: 李将
  * @Date: 2020/6/24 17:39
  * @Descprition:
+ * 日期新的API：
  */
 public class TestLocal {
     public static void function() {
@@ -20,9 +21,6 @@ public class TestLocal {
 
     }
 
-    public static void function1() {
-
-    }
 
     public static void main(String[] args) {
         function();

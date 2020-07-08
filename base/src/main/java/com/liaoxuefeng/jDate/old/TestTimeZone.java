@@ -1,4 +1,4 @@
-package com.liaoxuefeng.jDate;
+package com.liaoxuefeng.jDate.old;
 
 import java.util.TimeZone;
 
@@ -7,6 +7,7 @@ import java.util.TimeZone;
  * @Date: 2020/6/24 16:32
  * @Descprition:
  */
+//jdk1.8 之前设置时区
 public class TestTimeZone {
     public static void function() {
         TimeZone tzDefault = TimeZone.getDefault();
