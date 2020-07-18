@@ -1,4 +1,4 @@
-package com.liaoxuefeng.qThread;
+package com.liaoxuefeng.qThread.aThread;
 
 /**
  * @Auther: 李将
