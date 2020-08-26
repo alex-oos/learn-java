@@ -3,8 +3,8 @@ package com.liaoxuefeng.hCollection.cMap;
 import java.util.Objects;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/11 14:10
+ * @author: 李将
+ * @since: 2020/6/11 14:10
  * @Descprition:
  */
 public class Person {

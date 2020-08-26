@@ -4,7 +4,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
 /**
- * @Auther: 李将
+ * @author: 李将
  * @Date: 2020/6/29 17:46
  * @Descprition:
  */

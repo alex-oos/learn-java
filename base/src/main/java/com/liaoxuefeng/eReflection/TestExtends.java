@@ -1,8 +1,8 @@
 package com.liaoxuefeng.eReflection;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/7 下午 6:05
+ * @author: 李将
+ * @since: 2020/6/7 下午 6:05
  * @Descprition: 反射获取继承关系
  * 1、使用getSuperclass()方法
  * 2、getInterfaces()只返回当前类直接实现的接口类型，并不包括其父类实现的接口类型

@@ -3,8 +3,8 @@ package com.liaoxuefeng.eReflection;
 import java.lang.reflect.Field;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/5 16:28
+ * @author: 李将
+ * @since: 2020/6/5 16:28
  * @Descprition:
  */
 public class TestField2 {
@@ -26,7 +26,7 @@ public class TestField2 {
 
 class Person1 {
 
-    private String name;
+    private final String name;
 
     public Person1(String name) {
         this.name = name;

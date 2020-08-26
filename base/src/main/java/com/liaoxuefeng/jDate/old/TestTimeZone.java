@@ -1,10 +1,10 @@
-package com.liaoxuefeng.jDate.old;
+package com.liaoxuefeng.jsince.old;
 
 import java.util.TimeZone;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/24 16:32
+ * @author: 李将
+ * @since: 2020/6/24 16:32
  * @Descprition:
  */
 //jdk1.8 之前设置时区

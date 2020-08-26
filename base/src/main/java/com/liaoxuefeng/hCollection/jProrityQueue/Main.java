@@ -4,8 +4,8 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/18 11:24
+ * @author: 李将
+ * @since: 2020/6/18 11:24
  * @Descprition:
  */
 public class Main {

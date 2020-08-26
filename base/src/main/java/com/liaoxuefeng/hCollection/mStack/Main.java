@@ -4,8 +4,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/18 12:08
+ * @author: 李将
+ * @since: 2020/6/18 12:08
  * @Descprition:
  */
 public class Main {

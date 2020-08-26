@@ -3,8 +3,8 @@ package com.atguigu.day6;
 import java.util.Arrays;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/26 18:40
+ * @author: 李将
+ * @since: 2020/5/26 18:40
  * @Descprition:
  */
 public class TestTwoArrays {

@@ -2,8 +2,8 @@ package com.liaoxuefeng.aQuickStart.hInterface;
 
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/28 16:10
+ * @author: 李将
+ * @since: 2020/5/28 16:10
  * @Descprition:
  */
 public interface Income {

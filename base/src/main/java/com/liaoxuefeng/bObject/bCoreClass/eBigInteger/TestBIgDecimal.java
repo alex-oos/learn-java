@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/2 15:38
+ * @author: 李将
+ * @since: 2020/6/2 15:38
  * @Descprition:
  */
 public class TestBIgDecimal {

@@ -1,8 +1,8 @@
 package com.liaoxuefeng.mRegular.aregex;
 
 /**
- * @Auther: 李将
- * @Date: 2020/7/13 11:43
+ * @author: 李将
+ * @since: 2020/7/13 11:43
  * @Descprition:
  */
 public class Main {

@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/27 18:00
+ * @author: 李将
+ * @since: 2020/6/27 18:00
  * @Descprition:
  */
 public class Main {

@@ -1,8 +1,8 @@
 package com.atguigu.day3;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/8 上午 12:03
+ * @author: 李将
+ * @since: 2020/5/8 上午 12:03
  * @Descprition:
  */
 class TestMath{

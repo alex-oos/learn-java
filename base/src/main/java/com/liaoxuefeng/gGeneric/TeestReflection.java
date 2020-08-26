@@ -3,8 +3,8 @@ package com.liaoxuefeng.gGeneric;
 import java.util.Arrays;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/9 21:01
+ * @author: 李将
+ * @since: 2020/6/9 21:01
  * @Descprition:
  */
 public class TeestReflection {

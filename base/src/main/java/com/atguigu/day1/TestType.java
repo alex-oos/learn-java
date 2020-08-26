@@ -1,8 +1,8 @@
 package com.atguigu.day1;
 
 /**
- * @Auther: 唐凯泽
- * @Date: 2019/11/24
+ * @author: 唐凯泽
+ * @since: 2019/11/24
  * @Descprition:
  * 1、基本数据类型 8种
  * 1）整型：
@@ -31,7 +31,7 @@ package com.atguigu.day1;
  * 4）布尔型
  * boolean    true  false
  * 2、引用数据类型：类、接口、数组、枚举........
- * 例如： String、System、Math、Date这些都是类
+ * 例如： String、System、Math、since这些都是类
  *
  * 计算机最小的存储单位是bit，比特，位
  * 计算机最基本的存储单位是byte，字节。 1个字节 = 8位

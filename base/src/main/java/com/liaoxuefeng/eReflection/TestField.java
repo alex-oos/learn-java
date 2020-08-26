@@ -6,8 +6,8 @@ import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/5 15:33
+ * @author: 李将
+ * @since: 2020/6/5 15:33
  * @Descprition: CLass 类提供了以下几种方法来获取字段：
  * 1、Field getField(name)：根据字段名获取某个public的field(包括父类)
  * 2、Field getDeclaredField(name)：根据字段名获取当前类的某个field（不包括父类）
@@ -36,13 +36,16 @@ public class TestField {
         System.out.println("stdClass.getDeclaredFields() = " + Arrays.toString(stdClass.getDeclaredFields()));
     }
 
-    /*
-        一个Field对象包含一个字段的所有信息：
-        1、getName（）：返回字段名称，例如，"name"
-        2、getType():返回字段类型，也是一个Class实例，例如：String.class;
-        3、getModifiers()：返回字段的修饰符，它是一个int，不同的bit表示不同的含义
-    *
-    * */
+    /**
+     * <p>
+     * 一个Field对象包含一个字段的所有信息：
+     * 1、getName（）：返回字段名称，例如，"name"
+     * 2、getType():返回字段类型，也是一个Class实例，例如：String.class;
+     * 3、getModifiers()：返回字段的修饰符，它是一个int，不同的bit表示不同的含义
+     * </p>
+     *
+     * @throws NoSuchFieldException
+     */
     public static void f1() throws NoSuchFieldException {
 
         Field field = String.class.getDeclaredField("value");

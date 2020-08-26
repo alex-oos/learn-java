@@ -1,8 +1,8 @@
 package com.liaoxuefeng.eReflection;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/5 11:40
+ * @author: 李将
+ * @since: 2020/6/5 11:40
  * @Descprition:
  */
 public class Main {

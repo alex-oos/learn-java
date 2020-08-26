@@ -1,8 +1,8 @@
 package com.atguigu.day6;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/26 19:02
+ * @author: 李将
+ * @since: 2020/5/26 19:02
  * @Descprition:
  */
 public class TestCommand {

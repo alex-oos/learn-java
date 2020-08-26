@@ -5,8 +5,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/14 下午 10:08
+ * @author: 李将
+ * @since: 2020/6/14 下午 10:08
  * @Descprition:
  */
 public class Main {
@@ -36,13 +36,13 @@ public class Main {
     /*从内存读取一个字节流
      * */
     public static void function3() throws IOException {
-        String settings = "# test" + "\n" + "course=Java" + "\n" + "last_open_date=2019-08-07T12:35:01";
-        ByteArrayInputStream input = new ByteArrayInputStream(settings.getBytes("UTF-8"));
+        String settings = "# test" + "\n" + "course=Java" + "\n" + "last_open_since=2019-08-07T12:35:01";
+        ByteArrayInputStream input = new ByteArrayInputStream(settings.getBytes(StandardCharsets.UTF_8));
         Properties props = new Properties();
         props.load(input);
 
         System.out.println("course: " + props.getProperty("course"));
-        System.out.println("last_open_date: " + props.getProperty("last_open_date"));
+        System.out.println("last_open_since: " + props.getProperty("last_open_since"));
         System.out.println("last_open_file: " + props.getProperty("last_open_file"));
         System.out.println("auto_save: " + props.getProperty("auto_save", "60"));
 

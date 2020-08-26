@@ -1,8 +1,8 @@
 package com.liaoxuefeng.aQuickStart.gAbstract;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/28 12:24
+ * @author: 李将
+ * @since: 2020/5/28 12:24
  * @Descprition:
  */
 

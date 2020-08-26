@@ -1,8 +1,8 @@
 package com.liaoxuefeng.aQuickStart.aMethod;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/17 15:19
+ * @author: 李将
+ * @since: 2020/6/17 15:19
  * @Descprition:
  */
 public class TestMethod {

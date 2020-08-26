@@ -1,8 +1,8 @@
 package com.atguigu.day1;
 
 /**
- * @Auther: 唐凯泽
- * @Date: 2019/11/24
+ * @author: 唐凯泽
+ * @since: 2019/11/24
  * @Descprition JAVA学习的第一天
  */
 public class HelloWorld {

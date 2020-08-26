@@ -11,27 +11,21 @@
     <modules>
         <module>base</module>
     </modules>
+
+    <dependencies>
+        <!-- lombok 快速进行开发       -->
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
     <build>
         <resources>
-            <resource>
-                <directory>${basedir}/src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>application-${activatedProfile}.yml</include>
-                    <include>application-${activatedProfile}.yaml</include>
-                    <include>application-${activatedProfile}.properties</include>
-                    <include>application.properties</include>
-                    <include>application.yaml</include>
-                    <include>bootstrap.properties</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>${basedir}/src/main/profiles/${activatedProfile}</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.*</include>
-                </includes>
-            </resource>
+            <!-- 打包的xml格式  -->
             <resource>
                 <directory>src/main/resources</directory>
                 <includes>

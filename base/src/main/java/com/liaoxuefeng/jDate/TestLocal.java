@@ -2,13 +2,13 @@ package com.liaoxuefeng.jDate;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+
 import java.time.LocalTime;
 
 /**
- * @Auther: 李将
+ * @author: 李将
  * @Date: 2020/6/24 17:39
- * @Descprition:
- * 日期新的API：
+ * @Descprition: 日期新的API：
  */
 public class TestLocal {
     public static void function() {

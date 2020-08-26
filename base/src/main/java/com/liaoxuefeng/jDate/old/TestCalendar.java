@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/24 15:59
+ * @author: 李将
+ * @since: 2020/6/24 15:59
  * @Descprition:
  */
 public class TestCalendar {
@@ -22,7 +22,7 @@ public class TestCalendar {
         int mm = c.get(Calendar.MINUTE);
         int ss = c.get(Calendar.SECOND);
         int ms = c.get(Calendar.MILLISECOND);
-        System.out.println(y + "-" + m + "-" + d + " " + w + " " + hh + ":" + mm + ":" + ss + "." + ms+"ms");
+        System.out.println(y + "-" + m + "-" + d + " " + w + " " + hh + ":" + mm + ":" + ss + "." + ms + "ms");
 
     }
 
@@ -39,6 +39,7 @@ public class TestCalendar {
         System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(c.getTime()));
 
     }
+
     public static void main(String[] args) {
         function();
         function1();

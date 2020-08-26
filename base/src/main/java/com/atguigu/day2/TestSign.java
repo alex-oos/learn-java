@@ -1,8 +1,8 @@
 package com.atguigu.day2;
 
 /**
- * @Auther: 唐凯泽
- * @Date: 2020/5/5 14:54
+ * @author: 唐凯泽
+ * @since: 2020/5/5 14:54
  * @Descprition:
  */
 public class TestSign {

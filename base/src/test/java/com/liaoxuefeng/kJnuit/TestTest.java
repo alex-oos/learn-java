@@ -7,8 +7,8 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * @Auther: 李将
- * @Date: 2020/7/10 18:47
+ * @author: 李将
+ * @since: 2020/7/10 18:47
  * @Descprition:
  */
 class TestTest {

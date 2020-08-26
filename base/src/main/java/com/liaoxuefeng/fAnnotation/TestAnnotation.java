@@ -1,8 +1,8 @@
 package com.liaoxuefeng.fAnnotation;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/8 上午 7:21
+ * @author: 李将
+ * @since: 2020/6/8 上午 7:21
  * @Descprition: 注解：（Annotation）
  * 注解分为三类：
  * 1、编译器使用的注解

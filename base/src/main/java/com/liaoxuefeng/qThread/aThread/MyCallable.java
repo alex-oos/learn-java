@@ -4,8 +4,8 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 /**
- * @Auther: 李将
- * @Date: 2020/7/13 16:32
+ * @author: 李将
+ * @since: 2020/7/13 16:32
  * @Descprition:
  */
 public class MyCallable implements Callable<Integer> {

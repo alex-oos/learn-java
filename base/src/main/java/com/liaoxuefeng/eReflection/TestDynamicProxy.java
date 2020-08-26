@@ -9,8 +9,8 @@ interface Hello {
 }
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/7 下午 6:47
+ * @author: 李将
+ * @since: 2020/6/7 下午 6:47
  * @Descprition: 动态代理（Dynamic Proxy）:
  * 1、
  * 2、

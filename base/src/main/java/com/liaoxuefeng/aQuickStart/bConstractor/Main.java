@@ -1,8 +1,8 @@
 package com.liaoxuefeng.aQuickStart.bConstractor;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/28 11:59
+ * @author: 李将
+ * @since: 2020/5/28 11:59
  * @Descprition:
  */
 public class Main {
@@ -10,7 +10,7 @@ public class Main {
         //多态
         Student student = new Student("刘言", 18, 80);
         // TODO(不懂)
-        System.out.println(student.toString());
+        System.out.println(student);
 
         //多态
         Person ss = new Student();

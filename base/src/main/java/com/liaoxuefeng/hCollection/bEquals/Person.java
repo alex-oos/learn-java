@@ -3,14 +3,14 @@ package com.liaoxuefeng.hCollection.bEquals;
 import java.util.Objects;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/10 21:04
+ * @author: 李将
+ * @since: 2020/6/10 21:04
  * @Descprition:
  */
 public class Person {
 
-    private String name;
-    private Integer age;
+    private final String name;
+    private final Integer age;
 
     public Person(String name, Integer age) {
         this.name = name;

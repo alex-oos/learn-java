@@ -1,8 +1,8 @@
 package com.liaoxuefeng.cExcethion;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/2 19:45
+ * @author: 李将
+ * @since: 2020/6/2 19:45
  * @Descprition: NullPointerException异常，因为city为空，所以报错
  */
 public class TestNullPointerException {

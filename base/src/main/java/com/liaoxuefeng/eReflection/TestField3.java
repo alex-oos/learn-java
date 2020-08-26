@@ -3,8 +3,8 @@ package com.liaoxuefeng.eReflection;
 import java.lang.reflect.Field;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/5 17:03
+ * @author: 李将
+ * @since: 2020/6/5 17:03
  * @Descprition: 设置字段值
  * 通过Field实例既然可以获取到指定实例的字段值，自然也可以设置字段的值。
  * <p>

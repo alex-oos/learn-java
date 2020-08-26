@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/8 17:26
+ * @author: 李将
+ * @since: 2020/6/8 17:26
  * @Descprition:
  */
 public class TestList {

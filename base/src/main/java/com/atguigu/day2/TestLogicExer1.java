@@ -1,8 +1,8 @@
 package com.atguigu.day2;
 
 /**
- * @Auther: 唐凯泽
- * @Date: 2020/5/6 21:04
+ * @author: 唐凯泽
+ * @since: 2020/5/6 21:04
  * @Descprition:
  */
 public class TestLogicExer1 {

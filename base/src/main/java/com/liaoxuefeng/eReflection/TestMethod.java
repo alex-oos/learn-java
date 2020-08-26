@@ -1,8 +1,8 @@
 package com.liaoxuefeng.eReflection;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/5 18:11
+ * @author: 李将
+ * @since: 2020/6/5 18:11
  * @Descprition: Class类提供以下几种方法获取Method:
  * 1、Menthod  getMenthod(name,Class ，，，)： 获取某个public的metho（包括父类）
  * 2、Menthod getDeclaredMethod(name.Class ...):获取当前类的某个method（不包括父类）

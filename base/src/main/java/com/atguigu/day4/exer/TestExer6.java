@@ -1,8 +1,8 @@
 package com.atguigu.day4.exer;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/16 下午 11:46
+ * @author: 李将
+ * @since: 2020/5/16 下午 11:46
  * @Descprition:
  */
 /*

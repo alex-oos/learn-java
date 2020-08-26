@@ -1,14 +1,10 @@
 package com.liaoxuefeng.iIo.bInputStream;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/27 16:51
+ * @author: 李将
+ * @since: 2020/6/27 16:51
  * @Descprition:
  */
 public class TestFileInputStream {
@@ -25,7 +21,6 @@ public class TestFileInputStream {
                 System.out.print((char) byteData);
             }
         } catch (FileNotFoundException e) {
-            ;
         } catch (IOException e) {
             e.printStackTrace();
         }

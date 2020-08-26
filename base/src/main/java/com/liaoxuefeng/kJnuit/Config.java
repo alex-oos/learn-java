@@ -1,8 +1,8 @@
 package com.liaoxuefeng.kJnuit;
 
 /**
- * @Auther: 李将
- * @Date: 2020/7/10 18:35
+ * @author: 李将
+ * @since: 2020/7/10 18:35
  * @Descprition:
  */
 public class Config {

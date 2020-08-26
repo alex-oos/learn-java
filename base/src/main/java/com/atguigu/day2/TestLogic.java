@@ -2,8 +2,8 @@ package com.atguigu.day2;
 
 
 /**
- * @Auther: 唐凯泽
- * @Date: 2020/5/6 20:49
+ * @author: 唐凯泽
+ * @since: 2020/5/6 20:49
  * @Descprition:
  */
 /*

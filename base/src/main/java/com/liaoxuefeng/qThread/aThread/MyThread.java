@@ -1,8 +1,8 @@
 package com.liaoxuefeng.qThread.aThread;
 
 /**
- * @Auther: 李将
- * @Date: 2020/7/13 14:47
+ * @author: 李将
+ * @since: 2020/7/13 14:47
  * @Descprition:
  */
 

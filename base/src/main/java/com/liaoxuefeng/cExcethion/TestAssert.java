@@ -1,8 +1,8 @@
 package com.liaoxuefeng.cExcethion;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/2 19:51
+ * @author: 李将
+ * @since: 2020/6/2 19:51
  * @Descprition:
  */
 

@@ -3,8 +3,8 @@ package com.liaoxuefeng.hCollection.gSet;
 import java.util.*;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/15 下午 11:35
+ * @author: 李将
+ * @since: 2020/6/15 下午 11:35
  * @Descprition: 在聊天软件中，发送方发送消息时，遇到网络超时后就会自动重发，因此，接收方可能会收到重复的消息，在显示给用户看的时候，需要首先去重。请练习使用Set去除重复的消息：
  */
 public class SetExam {
@@ -27,7 +27,7 @@ public class SetExam {
 
     public static List<Message> process(List<Message> received) {
 
-        // TODO: 按sequence去除重复消息
+        // 按sequence去除重复消息
 
         List<Message> list = new ArrayList<>(received.size());
 

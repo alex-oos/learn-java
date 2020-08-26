@@ -3,8 +3,8 @@ package com.liaoxuefeng.hCollection.bEquals;
 import java.util.List;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/10 21:04
+ * @author: 李将
+ * @since: 2020/6/10 21:04
  * @Descprition:
  */
 public class TestEquals {

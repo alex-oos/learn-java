@@ -6,8 +6,8 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/29 17:01
+ * @author: 李将
+ * @since: 2020/6/29 17:01
  * @Descprition:
  */
 public class Main {

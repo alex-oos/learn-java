@@ -1,8 +1,8 @@
 package com.atguigu.day5;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/19 下午 11:04
+ * @author: 李将
+ * @since: 2020/5/19 下午 11:04
  * @Descprition:
  */
 /*

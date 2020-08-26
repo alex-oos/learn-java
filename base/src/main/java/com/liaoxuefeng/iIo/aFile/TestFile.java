@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.Random;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/20 17:17
+ * @author: 李将
+ * @since: 2020/6/20 17:17
  * @Descprition:
  */
 public class TestFile {
@@ -60,8 +60,8 @@ public class TestFile {
     }
 
     /**
-     * @Auther: 李将
-     * @Date: 2020/6/18 20:34
+     * @author: 李将
+     * @since: 2020/6/18 20:34
      * @Descprition:
      */
     public static class Main {

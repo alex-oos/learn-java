@@ -6,8 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/8 16:51
+ * @author: 李将
+ * @since: 2020/6/8 16:51
  * @Descprition:
  */
 

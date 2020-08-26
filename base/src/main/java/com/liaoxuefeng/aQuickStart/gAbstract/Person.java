@@ -3,8 +3,8 @@ package com.liaoxuefeng.aQuickStart.gAbstract;
 import com.liaoxuefeng.aQuickStart.dOverload.Hello;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/28 15:30
+ * @author: 李将
+ * @since: 2020/5/28 15:30
  * @Descprition:
  */
 /*

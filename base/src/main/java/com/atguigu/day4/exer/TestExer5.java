@@ -1,8 +1,8 @@
 package com.atguigu.day4.exer;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/16 下午 7:54
+ * @author: 李将
+ * @since: 2020/5/16 下午 7:54
  * @Descprition:
  */
 /*5、输出所有的水仙花数，所谓水仙花数是指一个3位数，其各个位上数字立方和等于其本身。

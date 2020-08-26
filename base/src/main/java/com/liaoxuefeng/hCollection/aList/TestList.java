@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/10 19:41
+ * @author: 李将
+ * @since: 2020/6/10 19:41
  * @Descprition:
  */
 public class TestList {

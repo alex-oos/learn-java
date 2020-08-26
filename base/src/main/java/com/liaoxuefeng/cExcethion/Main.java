@@ -4,8 +4,8 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/2 16:19
+ * @author: 李将
+ * @since: 2020/6/2 16:19
  * @Descprition: java使用异常来表示错误，并通过try ... catch捕获异常；
  * <p>
  * Java的异常是class，并且从Throwable继承；

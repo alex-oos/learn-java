@@ -1,8 +1,8 @@
 package com.liaoxuefeng.aQuickStart.bConstractor;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/27 17:34
+ * @author: 李将
+ * @since: 2020/5/27 17:34
  * @Descprition:
  */
 public class Student extends Person {

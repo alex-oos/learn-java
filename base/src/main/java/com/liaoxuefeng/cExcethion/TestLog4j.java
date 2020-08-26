@@ -7,8 +7,8 @@ import org.apache.commons.logging.LogFactory;
 import java.io.UnsupportedEncodingException;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/2 20:22
+ * @author: 李将
+ * @since: 2020/6/2 20:22
  * @Descprition:
  */
 public class TestLog4j {

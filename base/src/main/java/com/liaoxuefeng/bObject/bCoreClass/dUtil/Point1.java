@@ -1,8 +1,8 @@
 package com.liaoxuefeng.bObject.bCoreClass.dUtil;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/2 15:28
+ * @author: 李将
+ * @since: 2020/6/2 15:28
  * @Descprition:
  */
 public final class Point1 {

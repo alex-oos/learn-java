@@ -3,8 +3,8 @@ package com.atguigu.day1;
 import static java.lang.Math.PI;
 
 /**
- * @Auther: 唐凯泽
- * @Date: 2019/11/24
+ * @author: 唐凯泽
+ * @since: 2019/11/24
  * @Descprition: 标识符：
  * java 对各种变量、方法和类等要素命名的时候使用的字符串叫做标识符
  * 比如：类名、变量名、包、常量名.....

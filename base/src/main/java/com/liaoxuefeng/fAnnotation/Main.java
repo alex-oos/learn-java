@@ -3,8 +3,8 @@ package com.liaoxuefeng.fAnnotation;
 import java.lang.reflect.Field;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/8 16:53
+ * @author: 李将
+ * @since: 2020/6/8 16:53
  * @Descprition:
  */
 public class Main {

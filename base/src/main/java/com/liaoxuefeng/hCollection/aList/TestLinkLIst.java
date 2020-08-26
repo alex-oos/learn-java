@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/11 16:37
+ * @author: 李将
+ * @since: 2020/6/11 16:37
  * @Descprition:
  */
 public class TestLinkLIst {

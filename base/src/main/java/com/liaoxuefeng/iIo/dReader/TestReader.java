@@ -6,8 +6,8 @@ import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @Auther: 李将
- * @Date: 2020/6/29 16:51
+ * @author: 李将
+ * @since: 2020/6/29 16:51
  * @Descprition:
  */
 public class TestReader {

@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 /**
- * @Auther: 李将
+ * @author: 李将
  * @Date: 2020/7/8 15:06
  * @Descprition: 用旧的Date对象时，我们用SimpleDateFormat进行格式化显示。使用新的LocalDateTime或ZonedLocalDateTime时，我们要进行格式化显示，就要使用DateTimeFormatter。
  * 使用的时候，只能在方法内部创建新的局部变量。而DateTimeFormatter可以只创建一个实例，到处引用
@@ -15,9 +15,9 @@ public class TestDateTimeFormatter {
     //     DateTimeFormatters实例化的两种方法
     public static void function() {
 //    方法一：创建DateTimeFormatter时，我们仍然通过传入格式化字符串实现：
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter DateTimeFormatter = java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 //     方法二：另一种创建DateTimeFormatter的方法是，传入格式化字符串时，同时指定Locale：
-        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("E,yyyy-MM-dd HH:mm", Locale.CHINA);
+        DateTimeFormatter DateTimeFormatter1 = java.time.format.DateTimeFormatter.ofPattern("E,yyyy-MM-dd HH:mm", Locale.CHINA);
 
     }
 

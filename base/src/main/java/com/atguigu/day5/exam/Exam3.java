@@ -3,8 +3,8 @@ package com.atguigu.day5.exam;
 import java.util.Scanner;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/19 下午 8:46
+ * @author: 李将
+ * @since: 2020/5/19 下午 8:46
  * @Descprition:
  */
 /*3、使用循环实现如下功能

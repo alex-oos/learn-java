@@ -3,8 +3,8 @@ package com.liaoxuefeng.bObject.bCoreClass.aString;
 import java.util.StringJoiner;
 
 /**
- * @Auther: 李将
- * @Date: 2020/5/29 11:39
+ * @author: 李将
+ * @since: 2020/5/29 11:39
  * @Descprition:
  */
 public class TestSringJoiner {
@@ -31,7 +31,7 @@ public class TestSringJoiner {
         for (String name : names) {
             sj.add(name);
         }
-        System.out.println("sj = " + sj.toString());
+        System.out.println("sj = " + sj);
     }
 
 
