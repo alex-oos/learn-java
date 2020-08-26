@@ -1,10 +1,6 @@
 package com.liaoxuefeng.iIo.bInputStream;
 
-import java.io.BufferedInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 /**
  * @Auther: 李将

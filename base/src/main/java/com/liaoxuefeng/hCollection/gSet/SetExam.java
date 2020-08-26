@@ -27,7 +27,7 @@ public class SetExam {
 
     public static List<Message> process(List<Message> received) {
 
-        // TODO: 按sequence去除重复消息
+        // 按sequence去除重复消息
 
         List<Message> list = new ArrayList<>(received.size());
 
