@@ -1,7 +1,7 @@
 package com.liaoxuefeng.iIo.fSerializable;
 
-import java.io.*;
 
+import java.io.*;
 
 /**
  * <p>
@@ -23,7 +23,7 @@ public class SerializableLearn {
         oos.writeObject(user);
         oos.close();
         //反序列化
-        java.io.File file = new File("template");
+        File file = new File("template");
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
         User newUser = (User) ois.readObject();
         System.out.println(newUser.toString());
