@@ -1,21 +1,5 @@
 package com.liaoxuefeng.bObject.bCoreClass.cEnum;
 
-enum Weekey {
-    MON(1, "星期一"), TUE(2, "星期二"), WED(3, "星期三"), THU(4, "星期四"), FRI(5, "星期五"), SAT(6, "星期六"), SUN(0, "星期日");
-    public final int dayVaule;
-
-    private final String chinese;
-
-    Weekey(int dayVaule, String chinese) {
-        this.dayVaule = dayVaule;
-        this.chinese = chinese;
-    }
-
-    @Override
-    public String toString() {
-        return this.chinese;
-    }
-}
 
 /**
  * @author: 李将
@@ -42,7 +26,8 @@ enum Weekey {
  * <p>
  * enum适合用在switch语句中。
  */
-public class Main {
+public class TestEnum {
+
     public static void main(String[] args) {
         Weekey day = Weekey.SUN;
         if (day.dayVaule == 6 || day.dayVaule == 0) {

@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         //多态
         Student student = new Student("刘言", 18, 80);
-        // TODO(不懂)
+        //
         System.out.println(student);
 
         //多态

@@ -9,5 +9,4 @@ package com.liaoxuefeng.aQuickStart.dOverload;
 
 public interface Hello {
 
-
 }

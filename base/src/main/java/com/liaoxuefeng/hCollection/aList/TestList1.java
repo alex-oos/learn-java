@@ -4,12 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * <p>
+ * 随机删除一个数，随机找到这个数
+ * </p>
+ *
  * @author: 李将
  * @since: 2020/6/10 20:25
  * @Descprition:
  */
 public class TestList1 {
-
+    /**
+     * 随机删除的一个数
+     *
+     * @param start
+     * @param end
+     * @param list
+     * @return
+     */
     static int findMissingNumber(int start, int end, List<Integer> list) {
         int sum = 0;
         for (Integer integer : list) {
