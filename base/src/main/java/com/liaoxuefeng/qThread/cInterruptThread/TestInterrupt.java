@@ -8,6 +8,7 @@ package com.liaoxuefeng.qThread.cInterruptThread;
  * </p>
  */
 public class TestInterrupt {
+
     public static void main(String[] args) throws InterruptedException {
         Thread t = new Mythread();
         t.start();
@@ -27,7 +28,7 @@ class Mythread extends Thread {
         try {
             hello.join();
         } catch (InterruptedException e) {
-//            e.printStackTrace();
+            //e.printStackTrace();
             System.out.println("InterruptedException!");
         }
         hello.interrupt();

@@ -10,6 +10,7 @@ import com.atguigu.day1.HelloWorld;
  * 线程间共享变量需要使用volatile关键字标记，确保每个线程都能读取到更新后的变量值
  */
 public class Main {
+
     public static void main(String[] args) throws InterruptedException {
 
         HelloThead t = new HelloThead();
