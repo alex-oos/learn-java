@@ -16,20 +16,8 @@ package com.liaoxuefeng.qThread.aThread;
 *
 * */
 public class MyThread extends Thread {
+
     private int x = 0;
-
-    public static void main(String[] args) {
-        MyThread t1 = new MyThread();
-//        线程名字可以通过 t.setName() 来设置
-
-        MyThread t2 = new MyThread();
-        t1.setName("线程一");
-        t2.setName("线程二");
-
-        t1.start();
-        t2.start();
-        System.out.println("main方法执行结束");
-    }
 
     @Override
     public void run() {
@@ -37,5 +25,16 @@ public class MyThread extends Thread {
             System.out.println(this.getName() + " x : " + (this.x++));
         }
 
+    }
+
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+//        线程名字可以通过 t.setName() 来设置
+        MyThread t2 = new MyThread();
+        t1.setName("线程一");
+        t2.setName("线程二");
+        t1.start();
+        t2.start();
+        System.out.println("main方法执行结束");
     }
 }
