@@ -18,6 +18,7 @@ import java.util.List;
 public class Code3 {
 
     public static void main(String[] args) {
+
         Code3 code3 = new Code3();
         int a = code3.lengthOfLongestSubstring("aaaaabb");
         System.out.println("a = " + a);
@@ -31,6 +32,7 @@ public class Code3 {
                 if (characters.contains(s.charAt(j))) {
                     break;
                 }
+
                 characters.add(s.charAt(j));
                 maxLength = Math.max(characters.size(), maxLength);
             }
