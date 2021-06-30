@@ -28,8 +28,8 @@ public class MyRunnable implements Runnable {
         t1.setName("t1");
         Thread t2 = new Thread(new MyRunnable());
         t2.setName("t2");
-        t1.setPriority(8);
-        t2.setPriority(6);
+        t1.setPriority(Thread.MAX_PRIORITY);
+        t2.setPriority(Thread.MIN_PRIORITY);
 
         System.out.println("t1优先级:" + t1.getPriority());
         System.out.println("t2优先级:" + t2.getPriority());
