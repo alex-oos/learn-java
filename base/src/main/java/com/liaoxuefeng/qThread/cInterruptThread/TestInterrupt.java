@@ -3,7 +3,9 @@ package com.liaoxuefeng.qThread.cInterruptThread;
 /**
  * @author: 李将
  * @since: 2020/7/18 15:45
- * @Descprition: interrupt()  中断线程  目标线程需要反复检测自身状态是否是interrupted状态，如果是，就立刻结束运行。
+ * <p>
+ * interrupt()  中断线程  目标线程需要反复检测自身状态是否是interrupted状态，如果是，就立刻结束运行。
+ * </p>
  */
 public class TestInterrupt {
     public static void main(String[] args) throws InterruptedException {

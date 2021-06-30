@@ -9,6 +9,7 @@ import java.util.concurrent.FutureTask;
  * @Descprition:
  */
 public class MyCallable implements Callable<Integer> {
+
     public static void main(String[] args) {
         MyCallable callable = new MyCallable();
         FutureTask<Integer> f1 = new FutureTask<>(callable);
