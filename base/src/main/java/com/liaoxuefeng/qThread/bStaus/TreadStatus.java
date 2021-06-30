@@ -35,6 +35,8 @@ public class TreadStatus {
     }
 
     public static void main(String[] args) throws InterruptedException {
+
+
         function();
     }
 
