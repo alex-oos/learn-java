@@ -1,7 +1,5 @@
 package com.liaoxuefeng.qThread.cInterruptThread;
 
-import com.atguigu.day1.HelloWorld;
-
 /**
  * @author: 李将
  * @since: 2020/8/27 上午 7:21
@@ -12,16 +10,18 @@ import com.atguigu.day1.HelloWorld;
 public class Main {
     public static void main(String[] args) throws InterruptedException {
 
-        HelloThead t = new HelloThead();
+        HelloThread t = new HelloThread();
         t.start();
         Thread.sleep(1);
         t.running = false;
+
     }
 }
 
-class HelloThead extends Thread {
+class HelloThread extends Thread {
 
     public volatile boolean running = true;
+
 
     @Override
     public void run() {
