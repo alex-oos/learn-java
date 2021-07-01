@@ -1,4 +1,4 @@
-package com.liaoxuefeng.qThread.aThread;
+package com.liaoxuefeng.qThread.eThreadPool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
