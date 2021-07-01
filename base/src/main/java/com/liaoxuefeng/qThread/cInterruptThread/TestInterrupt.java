@@ -1,5 +1,6 @@
 package com.liaoxuefeng.qThread.cInterruptThread;
 
+
 /**
  * @author: 李将
  * @since: 2020/7/18 15:45
@@ -12,7 +13,9 @@ package com.liaoxuefeng.qThread.cInterruptThread;
  * </p>
  */
 public class TestInterrupt {
+
     public static void main(String[] args) throws InterruptedException {
+
         Thread t = new Mythread();
         t.start();
         Thread.sleep(1000); //暂停1豪秒
@@ -20,12 +23,14 @@ public class TestInterrupt {
         t.join(); // 等待t线程结束
         System.out.println("end");
     }
+
 }
 
 class Mythread extends Thread {
 
     @Override
     public void run() {
+
         Thread hello = new HelloThreadA();
         hello.start();
         try {
@@ -36,6 +41,7 @@ class Mythread extends Thread {
         }
         hello.interrupt();
     }
+
 }
 
 /**
