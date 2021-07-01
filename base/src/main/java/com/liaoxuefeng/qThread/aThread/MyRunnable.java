@@ -1,5 +1,6 @@
 package com.liaoxuefeng.qThread.aThread;
 
+
 /**
  * @author: 李将
  * @since: 2020/7/13 16:14
@@ -12,18 +13,18 @@ package com.liaoxuefeng.qThread.aThread;
  */
 public class MyRunnable implements Runnable {
 
-    @Override
-    public void run() {
-        //获取线程的名称
-        String strName = Thread.currentThread().getName();
-        int n = 11;
-        for (int i = 0; i < n; i++) {
-            System.out.println("当前线程的名字是：" + strName + " " + i);
-        }
+    private String threadName;
+
+    public MyRunnable() {
+
+    }
+
+    public MyRunnable(String threadName) {
 
     }
 
     public static void function() {
+
         Thread t1 = new Thread(new MyRunnable());
         t1.setName("t1");
         Thread t2 = new Thread(new MyRunnable());
@@ -38,6 +39,29 @@ public class MyRunnable implements Runnable {
     }
 
     public static void main(String[] args) {
+
         function();
     }
+
+    @Override
+    public void run() {
+        //获取线程的名称
+        String strName = Thread.currentThread().getName();
+        int n = 11;
+        for (int i = 0; i < n; i++) {
+            System.out.println("当前线程的名字是：" + strName + " " + i);
+        }
+
+    }
+
+    public String getThreadName() {
+
+        return threadName;
+    }
+
+    public void setThreadName(String threadName) {
+
+        this.threadName = threadName;
+    }
+
 }
