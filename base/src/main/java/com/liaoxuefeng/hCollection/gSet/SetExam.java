@@ -1,5 +1,6 @@
 package com.liaoxuefeng.hCollection.gSet;
 
+
 import java.util.*;
 
 /**
@@ -10,6 +11,7 @@ import java.util.*;
 public class SetExam {
 
     public static void function() {
+
         List<Message> received = List.of(
                 new Message(1, "hello"),
                 new Message(2, "world"),
@@ -45,7 +47,6 @@ public class SetExam {
                 return m1.sequence < m2.sequence ?  -1 : 1;}*/
 
                 //第二种方法
-
                 return Integer.compare(m1.sequence, m2.sequence);
             }
 
@@ -61,8 +62,10 @@ public class SetExam {
 
 
     public static void main(String[] args) {
+
         function();
     }
+
 }
 
 class Message {
@@ -71,7 +74,9 @@ class Message {
     public final String text;
 
     public Message(int sequence, String text) {
+
         this.sequence = sequence;
         this.text = text;
     }
+
 }
