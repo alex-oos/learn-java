@@ -1,5 +1,6 @@
 package cn.leetcode;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,6 +26,7 @@ public class Code3 {
     }
 
     public int lengthOfLongestSubstring(String s) {
+
         int maxLength = 0;
         for (int i = 0; i < s.length(); i++) {
             List<Character> characters = new ArrayList<>();
