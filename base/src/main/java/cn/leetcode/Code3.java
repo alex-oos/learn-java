@@ -18,6 +18,7 @@ public class Code3 {
 
     public static void main(String[] args) {
 
+
         Code3 code3 = new Code3();
         int a = code3.lengthOfLongestSubstring("aaaaabb");
         System.out.println("a = " + a);
