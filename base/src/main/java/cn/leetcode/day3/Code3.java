@@ -1,4 +1,4 @@
-package cn.leetcode;
+package cn.leetcode.day3;
 
 
 import java.util.ArrayList;
