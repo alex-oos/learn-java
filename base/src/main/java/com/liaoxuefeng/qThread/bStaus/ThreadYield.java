@@ -15,7 +15,7 @@ public class ThreadYield extends Thread {
         for (int i = 0; i < 10; i++) {
             System.out.println(" " + this.getName() + " i: " + i);
             if (i == 5) {
-                yield();
+                this.yield();
             }
         }
     }
