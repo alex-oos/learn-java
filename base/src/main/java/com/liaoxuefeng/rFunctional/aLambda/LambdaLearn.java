@@ -13,6 +13,7 @@ import java.util.function.Function;
 public class LambdaLearn {
 
     public static void main(String[] args) {
+        
         LambdaLearn lambdaLearn = new LambdaLearn();
         /*类型声明*/
         MathOperation addition = (int a,int b) -> a + b;
