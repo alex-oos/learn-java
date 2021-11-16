@@ -22,7 +22,7 @@ public class TestLoopNestExer {
 			当i=6  i<=5不成立结束外循环
 			*/
             for( j=1; j<=i; j++){
-                System.out.print("*");
+                System.out.print("* ");
             }
 
             //(2)换行
