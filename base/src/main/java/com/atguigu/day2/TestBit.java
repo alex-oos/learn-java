@@ -39,7 +39,6 @@ package com.atguigu.day2;
 开发很少用，但是源代码中有
 
 */
-//TODO(位移不懂)
 public class TestBit {
     public static void main(String[] args) {
         byte b = 8;
