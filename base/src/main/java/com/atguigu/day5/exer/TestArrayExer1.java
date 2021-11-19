@@ -1,5 +1,6 @@
 package com.atguigu.day5.exer;
 
+
 import java.util.Scanner;
 
 /**
@@ -12,6 +13,7 @@ import java.util.Scanner;
 用数组
  */
 public class TestArrayExer1 {
+
     public static void main(String[] args) {
         //从键盘输入本组学员的人数
         Scanner input = new Scanner(System.in);
@@ -45,4 +47,5 @@ public class TestArrayExer1 {
         System.out.println("最低分：" + min);
         System.out.println("平均值是：" + sum / array.length);
     }
+
 }
