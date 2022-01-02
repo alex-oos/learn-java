@@ -1,12 +1,9 @@
 package com.atguigu.day8.exer;
 
 
-import java.util.Arrays;
-import java.util.Random;
-
 /**
  * @author Alex
- * @date 2021/12/8 3:35 下午
+ * @since 2021/12/8 3:35 下午
  * 4. 对象数组题目：
  * 定义类Student，包含三个属性：学号number(int)，年级state(int)，成绩score(int)。
  * 创建20个学生对象，学号为1到20，年级和成绩都由随机数确定。
@@ -19,12 +16,11 @@ import java.util.Random;
  */
 public class Student {
 
-    int number;
+    private int number;
 
-    int state;
+    private int state;
 
-    int score;
-
+    private int score;
 
     @Override
     public String toString() {
@@ -32,8 +28,7 @@ public class Student {
     }
 
 
-    public static void main(String[] args) {
-        Student[] stus = new Student[20];
+    public void create(Student[] stus) {
         for (int i = 0; i < stus.length; i++) {
             stus[i] = new Student();
             stus[i].number = (i + 1);
@@ -42,33 +37,62 @@ public class Student {
             //成绩：[0,100]
             stus[i].score = Math.round(100);
         }
-        //遍历每个数组的信息
-        // System.out.println(Arrays.toString(stus));
-      /*  for (Student student : stus) {
-            System.out.println(student.toString());
-        }*/
-        //问题一：打印出3年级(state值为3）的学生信息。
-        for (int i = 0; i < stus.length; i++) {
-            if (stus[i].state == 3) {
-                System.out.println(stus[i].toString());
+    }
+
+    /**
+     * @param studentsArray student数组
+     * @param state         年级
+     *                      <p>
+     *                      查找年级为3的学生
+     *                      </p>
+     */
+    public void searchState(Student[] studentsArray, int state) {
+        for (int i = 0; i < studentsArray.length; i++) {
+            if (studentsArray[i].state == state) {
+                System.out.println(studentsArray[i].toString());
             }
         }
-        //问题二：使用冒泡排序按学生成绩排序，并遍历所有学生信息
+    }
+
+    /**
+     * 使用冒泡排序按学生成绩排序，并遍历所有学生信息
+     *
+     * @param stus
+     */
+    public void sort(Student[] stus) {
         for (int i = 0; i < stus.length; i++) {
             for (int j = 0; j < stus.length - 1 - i; j++) {
                 if (stus[j].score > stus[j + 1].score) {
                     //如果需要换序，交换的是数组的元素：Student对象！！！
-
-                    Student tmp = stus[j];
+                    final Student tmp = stus[j];
                     stus[j] = stus[j + 1];
                     stus[j + 1] = tmp;
                 }
-
             }
         }
-
-        System.out.println(Arrays.toString(stus));
-        
     }
+
+    /**
+     * 遍历输出
+     *
+     * @param students
+     */
+    public void print(Student[] students) {
+        for (int i = 0; i < students.length; i++) {
+            students[i].toString();
+        }
+    }
+
+    public static void main(final String[] args) {
+        Student[] stus = new Student[20];
+        Student student = new Student();
+        student.create(stus);
+        student.searchState(stus, 3);
+        student.sort(stus);
+        student.print(stus);
+
+
+    }
+
 
 }
