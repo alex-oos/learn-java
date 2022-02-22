@@ -1,12 +1,7 @@
 package com.atguigu.day9.util;
 
 
-import cn.hutool.Hutool;
 import cn.hutool.core.util.RandomUtil;
-import cn.hutool.extra.pinyin.engine.houbbpinyin.HoubbPinyinEngine;
-
-import javax.lang.model.type.IntersectionType;
-import java.util.Random;
 
 /**
  * @author Alex
@@ -37,6 +32,10 @@ public class ArrayUtil {
         }
         return minValue;
     }
+    // 求数组的平均值
+    public double getAvgValue(int[] arr) {
+        return getSum(arr) / arr.length;
+    }
     // 求数组的总和
     public int getSum(int[] arr) {
         int sumValue = 0;
@@ -44,10 +43,6 @@ public class ArrayUtil {
             sumValue += arr[i];
         }
         return sumValue;
-    }
-    // 求数组的平均值
-    public double getAvgValue(int[] arr) {
-        return getSum(arr) / arr.length;
     }
     // 反转数组
     public int[] reverse(int[] arr) {
@@ -79,9 +74,10 @@ public class ArrayUtil {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    int tmp = arr[j];
+                  /*  int tmp = arr[j];
                     arr[j] = arr[j + 1];
-                    arr[j + 1] = tmp;
+                    arr[j + 1] = tmp;*/
+                    swap(arr, j, j + 1);
                 }
             }
         }

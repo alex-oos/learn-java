@@ -1,8 +1,6 @@
 package com.atguigu.day9.exer;
 
 
-import cn.hutool.captcha.CircleCaptcha;
-
 /**
  * @author Alex
  * @date 2021/12/8 6:27 下午
@@ -17,17 +15,17 @@ import cn.hutool.captcha.CircleCaptcha;
  */
 public class PassObject {
 
-    public static void printAreas(Circle c, int time) {
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        printAreas(c, 10);
+    }
+    private static void printAreas(Circle c, int time) {
 
         for (int i = 1; i <= time; i++) {
             c.radius = i;
             System.out.println("半径是：" + c.radius);
             System.out.println("面积是：" + c.aras());
         }
-    }
-    public static void main(String[] args) {
-        Circle c = new Circle();
-        printAreas(c, 10);
     }
 
 
@@ -36,7 +34,7 @@ public class PassObject {
 class Circle {
 
     double radius;
-    public double aras() {
+    double aras() {
         return Math.PI * radius * radius;
     }
 

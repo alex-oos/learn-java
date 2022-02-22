@@ -1,8 +1,7 @@
 package com.atguigu.day9;
 
 
-import java.util.ArrayList;
-import java.util.Arrays;
+
 
 /**
  * @author Alex
@@ -37,7 +36,7 @@ public class OverLoadTest {
 
     }
 
-
+    /*如果sum(int i, int j) 这个不存在，直接调用 o.sum(1, 2），会被调用 sum(double i, double j)，自动类型提升*/
     public void sum(int i, int j) {
         System.out.println(1);
     }
