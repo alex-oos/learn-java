@@ -15,8 +15,7 @@ package com.atguigu.day10;
  * 的使用"this.变量"的方式，表明此变量是属性，而非形参。
  * <p>
  * 2.2 在类的构造器中，我们可以使用"this.属性"或"this.方法"的方式，调用当前正在创建的对象属性或方法。
- * 但是，通常情况下，我们都选择省略"this."。特殊情况下，如果构造器的形参和类的属性同名时，我们必须显式
- * 的使用"this.变量"的方式，表明此变量是属性，而非形参。
+ * 但是，通常情况下，我们都选择省略"this."。特殊情况下，如果构造器的形参和类的属性同名时，我们必须显式的使用"this.变量"的方式，表明此变量是属性，而非形参。
  * <p>
  * 3. this调用构造器
  * ① 我们在类的构造器中，可以显式的使用"this(形参列表)"方式，调用本类中指定的其他构造器
@@ -30,16 +29,12 @@ public class PersonTest {
     public static void main(String[] args) {
         Person p1 = new Person();
         p1.setAge(1);
-        System.out.println(p1.getAge());
-
+        System.out.println("age is " + p1.getAge());
         p1.eat();
 
-
         Person p2 = new Person("jerry", 20);
-        System.out.println(p2.getAge());
+        System.out.println("age is " + p2.getAge());
 
-        System.out.println("p1==p2 " + (p1 == p2));
-        System.out.println("p1.equals(p2) " + (p1.equals(p2)));
 
     }
 
@@ -61,6 +56,7 @@ class Person {
     }
 
     public Person(String name, int age) {
+        // 调用构造函数
         this(age);
         this.name = name;
     }
@@ -83,12 +79,12 @@ class Person {
     }
 
     public void eat() {
-        System.out.println("人吃饭");
+        System.out.println("人：吃饭");
         this.study();
     }
 
     public void study() {
-        System.out.println("人学习");
+        System.out.println("人:学习");
     }
 
 
