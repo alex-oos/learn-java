@@ -22,6 +22,7 @@ public class MethodArgsTest {
         m.show(1);
         m.show("AA");
         m.show("A", "B", "C");
+
     }
 
     public void show(int i) {

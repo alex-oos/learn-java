@@ -1,8 +1,6 @@
 package com.atguigu.day10;
 
 
-import jdk.swing.interop.SwingInterOpUtils;
-
 /**
  * @author Alex
  * @date 2021/12/13 2:10 下午
@@ -40,6 +38,9 @@ public class PersonTest {
         Person p2 = new Person("jerry", 20);
         System.out.println(p2.getAge());
 
+        System.out.println("p1==p2 " + (p1 == p2));
+        System.out.println("p1.equals(p2) " + (p1.equals(p2)));
+
     }
 
 }
@@ -50,18 +51,13 @@ class Person {
 
     private int age;
 
-    public Person() {
-        String info = "Person初始化时，需要考虑如下的1,2,3,4...(共40行代码)";
-        System.out.println(info);
-    }
     public Person(String name) {
         this();
         this.name = name;
     }
-
-    public Person(int age) {
-        this();
-        this.age = age;
+    public Person() {
+        String info = "Person初始化时，需要考虑如下的1,2,3,4...(共40行代码)";
+        System.out.println(info);
     }
 
     public Person(String name, int age) {
@@ -69,6 +65,10 @@ class Person {
         this.name = name;
     }
 
+    public Person(int age) {
+        this();
+        this.age = age;
+    }
     public String getName() {
         return name;
     }
