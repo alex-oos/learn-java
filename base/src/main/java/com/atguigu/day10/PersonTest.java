@@ -55,6 +55,7 @@ class Person {
         System.out.println(info);
     }
 
+
     public Person(String name, int age) {
         // 调用构造函数
         this(age);
