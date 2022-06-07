@@ -1,11 +1,13 @@
-package com.liaoxuefeng.aQuickStart.gAbstract;
+package com.liaoxuefeng.aQuickStart.hInterface;
+
 
 /**
  * @author: 李将
  * @since: 2020/5/28 16:16
  * @Descprition:
  */
-/*public class RoyaltyIncome implements Income {
+public class RoyaltyIncome implements Income {
+
     double income = 0;
 
     public RoyaltyIncome(double income) {
@@ -20,4 +22,4 @@ package com.liaoxuefeng.aQuickStart.gAbstract;
             return (income - 5000) * 0.2;
     }
 
-}*/
+}

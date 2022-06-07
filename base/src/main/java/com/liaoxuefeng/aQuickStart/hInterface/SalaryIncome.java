@@ -1,11 +1,11 @@
-package com.liaoxuefeng.aQuickStart.gAbstract;
+package com.liaoxuefeng.aQuickStart.hInterface;
 
 /**
  * @author: 李将
  * @since: 2020/5/28 16:11
  * @Descprition:
  */
-/*
+
 public class SalaryIncome implements Income {
     double income;
 
@@ -21,4 +21,4 @@ public class SalaryIncome implements Income {
             return (income - 5000) * 0.2;
     }
 }
-*/
+
