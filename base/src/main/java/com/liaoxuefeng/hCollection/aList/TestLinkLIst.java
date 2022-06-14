@@ -17,7 +17,7 @@ public class TestLinkLIst {
 
         List<String> link = new LinkedList<>();
         link.add("apple");
-        link.add("bannaner");
+        link.add("banner");
         link.add("origin");
         link.add(0, "Wiki");
         System.out.println("link = " + link);
@@ -30,4 +30,5 @@ public class TestLinkLIst {
         function();
 
     }
+
 }

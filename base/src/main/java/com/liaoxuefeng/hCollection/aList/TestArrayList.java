@@ -46,30 +46,7 @@ public class TestArrayList {
         });
     }
 
-    public static void b() {
-
-        List<Integer> stringList = new ArrayList<>();
-        stringList.add(3);
-        stringList.add(1);
-        System.out.println("stringList.size() = " + stringList.size());
-        Integer s = stringList.get(0);
-        // list 中的排序，使用compareTo方法
-        stringList.sort(new Comparator<Integer>() {
-            @Override
-            public int compare(Integer o1, Integer o2) {
-
-                return o1.compareTo(o2);
-            }
-        });
-        // 使用forEach 内置函数
-        stringList.forEach(System.out :: println);
-
-        System.out.println("s = " + s);
-        stringList.clear();
-        stringList.forEach(System.out :: println);
-    }
-
-    public static void functionA() {
+    public static void allMethod() {
 
         List<String> list = new ArrayList<>();
         list.add("apple");
@@ -108,6 +85,13 @@ public class TestArrayList {
         integerList.forEach(System.out :: println);
 
     }
+    public static void main(String[] args) {
+
+        function();
+        b();
+
+
+    }
 
     /**
      * <p>
@@ -132,11 +116,28 @@ public class TestArrayList {
         stringList.forEach(System.out :: println);
 
     }
+    public static void b() {
 
-    public static void main(String[] args) {
+        List<Integer> integerList = new ArrayList<>();
+        integerList.add(3);
+        integerList.add(1);
+        System.out.println("integerList.size() = " + integerList.size());
+        Integer number = integerList.get(0);
+        System.out.println("number = " + number);
 
-        function();
-        b();
+        // list 中的排序，使用compareTo方法
+        integerList.sort(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer o1, Integer o2) {
+
+                return o1.compareTo(o2);
+            }
+        });
+        // 使用forEach 内置函数
+        integerList.forEach(System.out :: println);
+
+        integerList.clear();
+        integerList.forEach(System.out :: println);
     }
 
 }
