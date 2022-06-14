@@ -1,46 +1,40 @@
 package com.liaoxuefeng.hCollection.mStack;
 
-import java.util.Deque;
-import java.util.LinkedList;
+
+import java.util.Stack;
 
 /**
- * @author: 李将
- * @since: 2020/6/18 12:08
- * @Descprition:
+ * @ClassName Main
+ * @Description 栈是Vector的一个子类，它实现了一个标准的后进先出的栈
+ * @Author Alex
+ * @Date 2022/6/14 23:26
+ * @Version 1.0
  */
 public class Main {
 
-    /*
-     * 栈（Stack） 是一种现后进后出的数组结构
-     * */
-    public static void function() {
-        String hex = toHex(12500);
-        if (hex.equalsIgnoreCase("30D4")) {
-            System.out.println("测试通过");
-        } else {
-            System.out.println("测试失败");
-        }
-
-    }
-
-    static String toHex(int n) {
-        Deque<String> deque = new LinkedList<>();
-        String result = "";
-        int remain = n;
-        while (n < 16) {
-            remain = n % 16;
-            deque.push(Integer.toHexString(remain));
-            n = n / 16;
-        }
-        deque.push(Integer.toHexString(n));
-        while (!deque.isEmpty()) {
-            result += deque.pop();
-        }
-        return result;
-
-    }
-
     public static void main(String[] args) {
-        function();
+
+        Stack<String> stack = new Stack<>();
+        // 把项压入堆栈顶部。
+        stack.push("A");
+        stack.push("A");
+        stack.push("B");
+
+        System.out.println("stack = " + stack);
+        // 移除堆栈顶部的对象，并作为此函数的值返回该对象。
+        stack.pop();
+        System.out.println("stack = " + stack);
+        // 查看堆栈顶部的对象，但不从堆栈中移除它。
+        String peek = stack.peek();
+        System.out.println("peek = " + peek);
+        // 返回对象在堆栈中的位置，以 1 为基数。
+        int a = stack.search("A");
+        System.out.println("a = " + a);
+
+        boolean empty = stack.isEmpty();
+        System.out.println("empty = " + empty);
+
+
     }
+
 }
