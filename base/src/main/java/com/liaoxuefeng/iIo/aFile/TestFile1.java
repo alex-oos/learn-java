@@ -2,6 +2,7 @@ package com.liaoxuefeng.iIo.aFile;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.util.Arrays;
 
 /**
  * @author: 李将
@@ -14,18 +15,20 @@ public class TestFile1 {
         System.out.println("=======");
         if (files != null) {
             for (File file : files) {
-                System.out.println(file);
+                System.out.println("里面的文件包含 " + file);
             }
-            System.out.println(files.toString() + "=========");
+            System.out.println("所有的文件为:" + Arrays.toString(files));
+            System.out.println("=========");
         }
     }
+
     public static void function() {
         String pathname = "base/src/main/resources/data";
         File file = new File(pathname);
         File[] fsl = file.listFiles(); // 列出所有文件和子目录
         printFiles(fsl);
         // 添加过滤器，仅仅显示，exe文件
-        File[] fs2 = file.listFiles(new FilenameFilter(){
+        File[] fs2 = file.listFiles(new FilenameFilter() {
 
             @Override
             public boolean accept(File dir, String name) {

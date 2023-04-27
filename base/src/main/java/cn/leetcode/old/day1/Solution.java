@@ -1,4 +1,4 @@
-package cn.leetcode.day1;
+package cn.leetcode.old.day1;
 
 
 /**

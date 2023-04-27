@@ -1,4 +1,4 @@
-package cn.leetcode.sort;
+package cn.leetcode.old.sort;
 
 
 import java.util.Arrays;

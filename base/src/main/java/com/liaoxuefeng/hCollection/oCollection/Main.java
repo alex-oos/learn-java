@@ -110,6 +110,7 @@ void rotate(List list, int distance)//旋转。当distance为正数时，将list
         Collections.rotate(list, 2);
         System.out.println("list = " + list);
     }
+
     public static void function4(List<String> list, String element) {
         System.out.println("list = " + list);
 

@@ -7,7 +7,7 @@ import java.io.InputStream;
 /**
  * @author: 李将
  * @since: 2020/6/27 18:00
- * @Descprition:
+ * @Descprition: inputStream 文件流读写操作
  */
 public class Main {
     public static final String pathName = "base/src/main/resources/data/";
