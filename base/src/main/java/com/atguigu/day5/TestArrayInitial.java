@@ -50,15 +50,3 @@ class TestArrayInitial{
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

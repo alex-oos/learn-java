@@ -8,7 +8,7 @@ package cn.javaguide.base;
  * @Version 1.0
  */
 
-//TODO(晚点写到语雀上)
+
 public class Demo extends DemoAbstract implements DemoInterface {
     public Demo() {
     }
