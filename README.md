@@ -1,43 +1,10 @@
 # JAVA从基础到大师
-***
-### base 目录里面的所有的文件都是基础
-***
-### 学习之路
-***
-#### day1  
-#### **java基础知识** 
+# 整体学习路线
+- 尚硅谷：学习路线：https://www.bilibili.com/read/cv5216534?from=search&spm_id_from=333.337.0.0
+- 黑马程序员：https://www.bilibili.com/read/cv9965357?spm_id_from=333.999.list.card_opus.click
 
-##### java入门知识：
-#### 一、开发环境
-1. **jdk**  java开发工具包，全称为 java develpment kit
-2. **jre**  java 运行环境，(java runtime Environment)
-3. **jvm**  java 虚拟机，(java Virtual Machine)
-
-#### 二、关系
-> - JDK = JRE + 开发工具（javac.exe，java.exe，javadoc.exe..）
-> - JRE = JVM + 标准的核心的类库
-
-***
-
-### TODO列表
-- [X] day1 java基础介绍 
-- [X] day2 java基础类型，类型转换
-- [X] day3 java语句
-- [X] day4 
-- [ ] day5 任务
-- [ ] day6
-- [ ] day7
-- [ ] day8
-- [ ] day9
-- [ ] day10
-- [ ] day11
-- [ ] day12
- 
-
-
- 
-
-
-    
- 
-
+## 一、Java基础
+- 学习视频：https://www.bilibili.com/video/BV1Kb411W75N/?spm_id_from=333.999.0.0&vd_source=e33a356475cf6a18a9f6345f4e44a209
+- 学习地址：
+- 学习时间：
+- [ ] 是否完成
