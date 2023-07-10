@@ -14,8 +14,6 @@ public class BianLiang {
         int age;
         age = 18;
         System.out.println("我今年的年龄是：" + age);
-
-
     }
 
 

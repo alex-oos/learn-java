@@ -1,17 +1,17 @@
 package com.atguigu.day1;
 
 /**
- * @author: 唐凯泽
+ * @author: Alex
  * @since: 2019/11/24
  * @Descprition: 打印个人信息：包括，姓名，年龄，手机号码，性别。要求一样一行
  */
 public class Myinfo {
 
     public static void main(String[] args) {
-        String name = "唐凯泽";
+        String name = "婷婷";
         int age = 18;
-        String phone = "15701208997";
-        char gender = '男';
+        String phone = "18801021955";
+        char gender = '女';
 
         System.out.println("name is " + name);
         System.out.println("age is " + age);
