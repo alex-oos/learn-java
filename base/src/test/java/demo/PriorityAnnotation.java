@@ -1,7 +1,9 @@
+package demo;
+
 import java.lang.annotation.*;
 
 /**
- * @ClassName PriorityAnnotation
+ * @ClassName demo.PriorityAnnotation
  * @Description
  * @Author Alex
  * @Date 2022/8/1 12:34

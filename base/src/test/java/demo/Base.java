@@ -1,5 +1,7 @@
+package demo;
+
 /**
- * @ClassName Base
+ * @ClassName demo.Base
  * @Description
  * @Author Alex
  * @Date 2022/8/1 15:11
