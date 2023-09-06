@@ -34,24 +34,13 @@ public class MyRunnable implements Runnable {
 
         System.out.println("t1优先级:" + t1.getPriority());
         System.out.println("t2优先级:" + t2.getPriority());
-        t1.start();//开始线程
+        t1.start();// 开始线程
         t2.start();
     }
 
     public static void main(String[] args) {
 
         function();
-    }
-
-    @Override
-    public void run() {
-        //获取线程的名称
-        String strName = Thread.currentThread().getName();
-        int n = 11;
-        for (int i = 0; i < n; i++) {
-            System.out.println("当前线程的名字是：" + strName + " " + i);
-        }
-
     }
 
     public String getThreadName() {
@@ -64,4 +53,14 @@ public class MyRunnable implements Runnable {
         this.threadName = threadName;
     }
 
+    @Override
+    public void run() {
+        // 获取线程的名称
+        String strName = Thread.currentThread().getName();
+        int n = 11;
+        for (int i = 0; i < n; i++) {
+            System.out.println("当前线程的名字是：" + strName + " " + i);
+        }
+
+    }
 }

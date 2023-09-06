@@ -17,14 +17,15 @@ package com.liaoxuefeng.qThread.aThread;
  * */
 public class Main {
 
-    public static void main(String[] args) {
-        System.out.println("main start ...");
-
+    public static void f1() {
+        System.out.println("f1 start ...");
         Thread thread = new Thread() {
 
             @Override
             public void run() {
                 System.out.println("thread run ....");
+                String[] args = {};
+                main(args);
 
                 try {
                     Thread.sleep(10);
@@ -41,6 +42,12 @@ public class Main {
             e.printStackTrace();
             System.out.println("mian end ..");
         }
+
+    }
+
+    public static void main(String[] args) {
+        System.out.println("main start ...");
+        f1();
 
     }
 }

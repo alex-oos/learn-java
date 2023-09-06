@@ -7,6 +7,13 @@ package com.liaoxuefeng.qThread.aThread;
  */
 public class MyThread1 extends Thread {
 
+    @Override
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            System.out.println(Thread.currentThread().getName());
+        }
+    }
+
     public static void main(String[] args) {
         MyThread1 thread1 = new MyThread1();
         thread1.setName("制作包子");
@@ -24,13 +31,6 @@ public class MyThread1 extends Thread {
         thread3.start();
 
 
-    }
-
-    @Override
-    public void run() {
-        for (int i = 0; i < 10; i++) {
-            System.out.println(Thread.currentThread().getName());
-        }
     }
 
 
