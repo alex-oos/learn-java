@@ -1,4 +1,4 @@
-package day6reflection;
+package com.interview.base.day6reflection;
 
 
 /**
@@ -10,7 +10,7 @@ package day6reflection;
  */
 public class TargetObject {
 
-    private String value;
+    private final String value;
 
 
     public TargetObject() {
