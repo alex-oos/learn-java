@@ -1,7 +1,9 @@
 package com.liaoxuefeng.eReflection;
 
+import java.util.Arrays;
+
 /**
- * @author: 李将
+ * @author: Alex
  * @since: 2020/6/5 18:11
  * @Descprition: Class类提供以下几种方法获取Method:
  * 1、Menthod  getMenthod(name,Class ，，，)： 获取某个public的metho（包括父类）
@@ -12,16 +14,18 @@ package com.liaoxuefeng.eReflection;
 public class TestMethod {
 
     public static void main(String[] args) throws NoSuchMethodException {
+
         Class stdClass = Student4.class;
-        // 获取public方法getScore，参数为String
-        System.out.println("stdClass.getMethod(\"getScore\", String.class) = " + stdClass.getMethod("getName"));
-        //获取继承的public方法
-
+        // 获取private方法getScore，参数为String
+        System.out.println("stdClass.getMethod(\"getScore\", String.class) = " + stdClass.getMethod("getScore", String.class));
+        // 获取继承的public getName 方法，无参数
+        System.out.println("stdClass.getMethod(\"getName\") = " + stdClass.getMethod("getName"));
+        // 获取private方法getGrade，参数为int:
         System.out.println("stdClass.getDeclaredMethod(\"getGrade\", int.class) = " + stdClass.getDeclaredMethod("getGrade", int.class));
-
-        System.out.println("stdClass = " + stdClass.getMethods());
-
-        System.out.println("stdClass.getDeclaredMethods() = " + stdClass.getDeclaredMethods());
+        // 获取所有public 的Menthod（包括父类）
+        System.out.println("stdClass = " + Arrays.toString(stdClass.getMethods()));
+        // 获取当前类中所有方法，包括private方法
+        System.out.println("stdClass.getDeclaredMethods() = " + Arrays.toString(stdClass.getDeclaredMethods()));
     }
 
 }
