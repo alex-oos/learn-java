@@ -45,13 +45,19 @@ public class TestMethod3 {
         String r = s.substring(6); // "world"
         System.out.println("r = " + r);
 
-        // 使用反射实现逻辑
+        // 使用反射实现逻辑 
+        //  方法一：反射传一个参数
         Method m = String.class.getMethod("substring", int.class);
         // 在s对象上调用该方法并获取结果:
         // invoke 需要传入一个实例对象
         // 对Method实例调用invoke就相当于调用该方法，invoke的第一个参数是对象实例，即在哪个实例上调用该方法，后面的可变参数要与方法参数一致，否则将报错。
         String r1 = (String) m.invoke(s, 6);
-        System.out.println("r1 = " + r1);
+        System.out.println("反射调用一个参数：" + r1);
+
+        // 方法二：反射传多个参数
+        // 获取String substring(int,int)方法，参数为int,int:
+        Object o1 = String.class.getMethod("substring", int.class, int.class).invoke(s, 0, 6);
+        System.out.println("反射调用多个参数：" + o1);
 
         // 调用public方法
         // 如果获取的方法是静态方法，则invoke方法传入的第一个参数是null，后面的可变参数要与方法参数一致
