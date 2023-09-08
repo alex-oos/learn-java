@@ -1,12 +1,6 @@
 package com.liaoxuefeng.qThread.aThread;
 
 
-import com.alibaba.fastjson.JSON;
-
-import java.util.Map;
-
-import static java.lang.Thread.sleep;
-
 /**
  * @author LiJiang
  * @since 2021/6/29 18:13
@@ -28,7 +22,7 @@ public class Test1 extends Thread {
 
 
     public static void main(String[] args) throws InterruptedException {
- /*       Test1 thread = new Test1();
+ /*       RegexGroup thread = new RegexGroup();
         thread.setName("线程一");
         thread.start();
         Thread.sleep(1000);
