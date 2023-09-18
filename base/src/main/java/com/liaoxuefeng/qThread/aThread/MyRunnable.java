@@ -19,9 +19,6 @@ public class MyRunnable implements Runnable {
 
     }
 
-    public MyRunnable(String threadName) {
-
-    }
 
     public static void function() {
 
@@ -57,10 +54,12 @@ public class MyRunnable implements Runnable {
     public void run() {
         // 获取线程的名称
         String strName = Thread.currentThread().getName();
+        // n值代表循环多少次
         int n = 11;
         for (int i = 0; i < n; i++) {
-            System.out.println("当前线程的名字是：" + strName + " " + i);
+            System.out.println("当前线程的名字是：" + strName + "，第" + i + "次执行！");
         }
 
     }
+
 }
