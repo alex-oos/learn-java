@@ -23,10 +23,11 @@ public class MyThreadPool {
      * 创建固定大小的线程池
      */
     public static void fixThreadPool() {
-
-
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
-        for (int i = 0; i < 5; i++) {
+        int numberOfThreads = 10; // 指定线程池中的线程数量
+        // 创建一个固定大小的线程池
+        ExecutorService executorService = Executors.newFixedThreadPool(numberOfThreads);
+        // 提交任务给线程池
+        for (int i = 0; i < numberOfThreads; i++) {
             // 提交任务
             executorService.submit(new Runnable() {
                 @Override
