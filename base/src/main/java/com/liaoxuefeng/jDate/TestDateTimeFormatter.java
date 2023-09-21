@@ -12,30 +12,33 @@ import java.util.Locale;
  */
 public class TestDateTimeFormatter {
 
-    //     DateTimeFormatters实例化的两种方法
+    // DateTimeFormatters实例化的两种方法
     public static void function() {
-//    方法一：创建DateTimeFormatter时，我们仍然通过传入格式化字符串实现：
-        DateTimeFormatter DateTimeFormatter = java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-//     方法二：另一种创建DateTimeFormatter的方法是，传入格式化字符串时，同时指定Locale：
-        DateTimeFormatter DateTimeFormatter1 = java.time.format.DateTimeFormatter.ofPattern("E,yyyy-MM-dd HH:mm", Locale.CHINA);
+
+        // 方法一：创建DateTimeFormatter时，我们仍然通过传入格式化字符串实现：
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        // 方法二：另一种创建DateTimeFormatter的方法是，传入格式化字符串时，同时指定Locale：
+        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("E,yyyy-MM-dd HH:mm", Locale.CHINA);
 
     }
 
     //    练习
     public static void function1() {
+
         ZonedDateTime zonedDateTime = ZonedDateTime.now();
-        var formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'T' HH:mm ZZZZ");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'T' HH:mm ZZZZ");
         System.out.println(formatter.format(zonedDateTime));
 
-        var formatter1 = DateTimeFormatter.ofPattern("yyyy MM dd EE  HH:mm ", Locale.CHINA);
+        DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy MM dd EE  HH:mm ", Locale.CHINA);
         System.out.println(formatter1.format(zonedDateTime));
 
-        var formater2 = DateTimeFormatter.ofPattern("E, MMMM/dd/yyyy HH:mm", Locale.US);
+        DateTimeFormatter formater2 = DateTimeFormatter.ofPattern("E, MMMM/dd/yyyy HH:mm", Locale.US);
         System.out.println(formater2.format(zonedDateTime));
 
     }
 
     public static void main(String[] args) {
+
         function1();
     }
 
