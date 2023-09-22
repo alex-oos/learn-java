@@ -1,7 +1,7 @@
 package cn.javaguide.base;
 
 /**
- * @ClassName Demo
+ * @ClassName ReflectionDemo
  * @Description
  * @Author Alex
  * @Date 2023/4/28 10:07
