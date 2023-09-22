@@ -11,8 +11,11 @@ import java.time.format.DateTimeFormatter;
  * @Descprition: Java提供的System.currentTimeMillis()返回的就是以毫秒表示的当前时间戳
  * 这个当前时间戳在java.time中以Instant类型表示，我们用Instant.now()获取当前时间戳，效果和System.currentTimeMillis()类似
  */
-public class TestInstant {
+public class InstantDemo {
 
+    /**
+     * 时间戳类 Instant 的基本应用
+     */
     public static void function() {
 
         Instant instant = Instant.now();
@@ -23,23 +26,34 @@ public class TestInstant {
 
     }
 
-    // 将时间秒级别的时间戳转化为时间
-    public static void function1() {
+    /**
+     * 将时间秒级别的时间戳转化为时间
+     * 使用方法： Instant.ofEpochSecond()
+     * 将时间毫秒级别的时间戳转化为时间，使用 Instant.ofEpochMilli()
+     * 转化思路：
+     * 1. 先转化为 Instant 类
+     * 2. instant 设置时区，转化为 ZonedDateTime
+     * 3. 格式化输出 DateTimeFormatter
+     *
+     * @param time 传入时间戳，秒级别
+     */
+    public static void function1(long time) {
 
-        Instant instant = Instant.ofEpochSecond(1594193546);
+        Instant instant = Instant.ofEpochSecond(time);
+        // Instant instant1 = Instant.ofEpochMilli(System.currentTimeMillis());
         ZonedDateTime zonedDateTime = instant.atZone(ZoneId.systemDefault());
-        System.out.println(zonedDateTime);
-
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String format = dateTimeFormatter.format(zonedDateTime);
-        System.out.println("format = " + format);
+        System.out.println("当前时间为： " + format);
 
     }
 
     public static void main(String[] args) {
 
         function();
-        function1();
+        //  获取到当前时间戳，毫秒级别，然后除以1000 转化为秒级别
+        long time = System.currentTimeMillis() / 1000;
+        function1(time);
     }
 
 }

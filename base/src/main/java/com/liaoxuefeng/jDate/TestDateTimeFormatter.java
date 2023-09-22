@@ -16,13 +16,13 @@ public class TestDateTimeFormatter {
     public static void function() {
 
         // 方法一：创建DateTimeFormatter时，我们仍然通过传入格式化字符串实现：
-        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         // 方法二：另一种创建DateTimeFormatter的方法是，传入格式化字符串时，同时指定Locale：
-        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("E,yyyy-MM-dd HH:mm", Locale.CHINA);
+        DateTimeFormatter dateTimeFormatter1 = DateTimeFormatter.ofPattern("E,yyyy-MM-dd HH:mm:ss", Locale.CHINA);
 
     }
 
-    //    练习
+    //
     public static void function1() {
 
         ZonedDateTime zonedDateTime = ZonedDateTime.now();
