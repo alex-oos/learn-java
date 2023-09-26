@@ -25,16 +25,38 @@ public class LambdaFunctionDemo {
 
     }
 
-    public static void main(String[] args) {
+    /**
+     * Predicate<Integer> predicate = n -> true
+     * n 是一个参数传递到 Predicate 接口的 test 方法
+     * n 如果存在则 test 方法返回 true
+     *
+     * @param list
+     * @param predicate
+     */
 
-        function();
+    public static void eval(List<Integer> list, Predicate<Integer> predicate) {
+
+        for (Integer n : list) {
+            if (predicate.test(n)) {
+                System.out.print(n + " ");
+            }
+        }
+        System.out.println();
+    }
+
+    /**
+     * 函数式接口的实例：
+     * Predicate<T> 接口是一个函数式接口，它接受一个输入参数 T，返回一个布尔值结果。
+     * 该接口包含多种默认方法来将Predicate组合成其他复杂的逻辑（比如：与，或，非）。
+     * 该接口用于测试对象是 true 或 false。
+     */
+    public static void function1() {
 
         List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7);
 
         // Predicate<Integer> predicate = n -> true
         // n 是一个参数传递到 Predicate 接口的 test 方法
         // n 如果存在则 test 方法返回 true
-
         System.out.println("输出所有数据:");
 
         // 传递参数 n
@@ -53,17 +75,15 @@ public class LambdaFunctionDemo {
 
         System.out.println("输出大于 3 的所有数字:");
         eval(list, n -> n > 3);
+
     }
 
+    public static void main(String[] args) {
 
-    public static void eval(List<Integer> list, Predicate<Integer> predicate) {
+        function();
+        function1();
 
-        for (Integer n : list) {
-            if (predicate.test(n)) {
-                System.out.print(n + " ");
-            }
-        }
-        System.out.println();
     }
+
 
 }

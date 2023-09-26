@@ -7,10 +7,11 @@ import java.util.Arrays;
  * @since: 2020/6/9 21:01
  * @Descprition:
  */
-public class TeestReflection {
+public class TestReflection {
 
     public static <K> K[] pickTwo(K k1, K k2, K k3) {
-        return asArray(k1, k2);
+
+        return asArray(k1, k2, k3);
 
     }
 
