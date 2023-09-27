@@ -1,5 +1,7 @@
-package com.liaoxuefeng.rFunctional.aLambda;
+package com.liaoxuefeng.rFunctional;
 
+
+import com.liaoxuefeng.rFunctional.aLambda.Car;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +14,7 @@ import java.util.List;
  * @Descprition: java 8 特性，方法引用.方法引用可以使语言的构造更紧凑简洁，减少冗余代码。
  * 方法引用使用一对冒号 :: 。
  */
-public class FunctionDemo {
+public class MethodReferences {
 
     /**
      *
@@ -33,6 +35,7 @@ public class FunctionDemo {
         // 4. 特定对象的引用：语法格式是:instance::method 实例如下：
         final Car police = Car.create(Car::new);
         cars.forEach(police::follow);
+
 
     }
 

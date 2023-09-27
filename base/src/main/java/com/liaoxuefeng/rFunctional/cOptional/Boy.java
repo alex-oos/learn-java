@@ -1,21 +1,23 @@
-package com.liaoxuefeng.rFunctional.stream;
+package com.liaoxuefeng.rFunctional.cOptional;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author: Alex
- * @date: 2023/9/26 下午6:11
+ * @author: lijiang
+ * @date: 2023/9/27 上午11:10
  * @Descprition:
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Student {
+
+public class Boy {
 
     private String name;
 
-    private Integer grades;
+    private Girl girlFriend;
+
 
 }

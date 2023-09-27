@@ -1,4 +1,4 @@
-package com.liaoxuefeng.rFunctional.stream;
+package com.liaoxuefeng.rFunctional.bStream;
 
 
 import java.util.Arrays;
@@ -14,20 +14,21 @@ import java.util.stream.Collectors;
 public class Exer {
 
     public static void main(String[] args) {
+
         List<String> strings = Arrays.asList("abc", "", "bc", "efg", "abcd", "", "jkl");
         System.out.println("列表是" + strings);
-        long count = strings.stream().filter(string->string.isEmpty()).count();
+        long count = strings.stream().filter(string -> string.isEmpty()).count();
         System.out.println("空字符串数量为：" + count);
 
-        List<String> collect = strings.stream().filter(string->!string.isEmpty()).collect(Collectors.toList());
+        List<String> collect = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.toList());
         System.out.println("筛选后的列表是 " + collect);
 
-        String collect1 = strings.stream().filter(string->!string.isEmpty()).collect(Collectors.joining(","));
+        String collect1 = strings.stream().filter(string -> !string.isEmpty()).collect(Collectors.joining(","));
         System.out.println("合并字符串" + collect1);
 
 
         List<Integer> numbers = Arrays.asList(3, 2, 2, 3, 7, 3, 5);
-        List<Integer> collect2 = numbers.stream().map(i->i * i).distinct().collect(Collectors.toList());
+        List<Integer> collect2 = numbers.stream().map(i -> i * i).distinct().collect(Collectors.toList());
         System.out.println("结果是" + collect2);
 
 

@@ -1,7 +1,6 @@
-package com.liaoxuefeng.rFunctional.stream.other;
+package com.liaoxuefeng.rFunctional.bStream.other;
 
 import java.util.OptionalDouble;
-import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
 
 /**

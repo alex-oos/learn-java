@@ -1,4 +1,4 @@
-package com.liaoxuefeng.rFunctional.stream.other;
+package com.liaoxuefeng.rFunctional.bStream.other;
 
 
 import java.util.stream.IntStream;

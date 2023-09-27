@@ -1,4 +1,4 @@
-package com.liaoxuefeng.rFunctional.stream;
+package com.liaoxuefeng.rFunctional.bStream;
 
 import java.util.*;
 import java.util.stream.Collectors;

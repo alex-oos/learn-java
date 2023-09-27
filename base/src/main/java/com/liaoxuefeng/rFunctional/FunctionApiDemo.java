@@ -1,4 +1,4 @@
-package com.liaoxuefeng.rFunctional.aLambda;
+package com.liaoxuefeng.rFunctional;
 
 
 import java.util.Arrays;
@@ -9,8 +9,9 @@ import java.util.function.Predicate;
  * @author Alex
  * @date 2021/8/16 7:15 下午
  * 函数式编程: 是把函数作为基本运算单位，函数可以作为变量，可以接收函数，还可以返回函数，一般支持 函数式编程的编码风格叫做Lambda表达式
+ * 函数式接口： 只包含一个抽象方法的接口，称为函数式接口。可以使用@FunctionalInterface注解修饰，可以检查是否是函数式接口
  */
-public class LambdaFunctionDemo {
+public class FunctionApiDemo {
 
     /**
      * 对比 Lambda 表达式与原来的区别
@@ -78,10 +79,23 @@ public class LambdaFunctionDemo {
 
     }
 
+    /**
+     * 常见的函数式接口有哪些：四大核心接口
+     * Consumer<T> 消费型接口： 对类型为T的对象应用操作，包含方法：void accept(T t)
+     * Supplier<T> 供给型接口： 返回类型为T的对象，包含方法：T get()
+     * Function<T,R> 函数型接口： 对类型为T的对象应用操作，并返回结果，结果是R类型的对象，包含方法：R apply(T t)
+     * Predicate<T> 断言型接口： 确定类型为T的对象是否满足某约束，并返回boolean值，包含方法：boolean test(T t)
+     */
+    public static void function2() {
+
+
+    }
+
     public static void main(String[] args) {
 
         function();
         function1();
+        function2();
 
     }
 

@@ -1,4 +1,4 @@
-package com.liaoxuefeng.rFunctional.stream;
+package com.liaoxuefeng.rFunctional.bStream;
 
 
 import java.util.Arrays;
@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 public class CreateStream {
 
     /**
-     * 方式一：通过使用Stream.of
+     * 方式一：通过使用Stream.of,通过显示值创建一个流。它可以接收任意数量的参数
      */
     public static void createStreamOne() {
 

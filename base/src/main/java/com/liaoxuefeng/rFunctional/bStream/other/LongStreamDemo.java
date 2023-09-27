@@ -1,7 +1,5 @@
-package com.liaoxuefeng.rFunctional.stream.other;
+package com.liaoxuefeng.rFunctional.bStream.other;
 
-import java.io.StringBufferInputStream;
-import java.util.stream.DoubleStream;
 import java.util.stream.LongStream;
 
 /**
