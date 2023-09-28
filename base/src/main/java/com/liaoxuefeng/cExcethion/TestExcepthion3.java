@@ -10,15 +10,17 @@ public class TestExcepthion3 {
     public static void main(String[] args) {
 
         try {
-            Integer.parseInt("sss");
+            int i = Integer.parseInt("sss");
+            System.out.println(i);
         } catch (NumberFormatException e) {
 //            throw new RuntimeException(e);
             throw new RuntimeException(e);
         } finally {
             System.out.println("finally");
-            throw new IllegalArgumentException();
+            // throw new IllegalArgumentException();
         }
 
 
     }
+
 }

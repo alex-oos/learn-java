@@ -6,7 +6,9 @@ package com.liaoxuefeng.cExcethion;
  * @Descprition:
  */
 public class TestExcepthion4 {
+
     public static void main(String[] args) throws Exception {
+
         Exception origin = null;
         try {
             System.out.println(Integer.parseInt("abc"));
@@ -22,4 +24,5 @@ public class TestExcepthion4 {
         }
 
     }
+
 }
