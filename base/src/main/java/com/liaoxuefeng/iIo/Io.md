@@ -1,22 +1,22 @@
 [TOC]
 
-## Java输入/输出（I/O）；
+## Java输入/输出（I/O）
 
 ### 一、java流：
 
 1. 概念
 
-> java 程序通过流来完成输入/输出，所有的输入/输出以流的形式处理，要了解I/O系统，
+> java 程序通过流来完成输入/输出，所有的输入/输出以流的形式处理，要了解I/O系统
 >
 > 输入就是将数据从各种输入设备（包括文件、键盘等）中读取到内存中，输出则正好相反，是将数据写入到各种输出设备（比如文件、显示器、磁盘等）。例如键盘就是一个标准的输入设备，而显示器就是一个标准的输出设备，但是文件既可以作为输入设备，又可以作为输出设备。
 
   2. 数据流是 Java 进行 I/O 操作的对象，它按照不同的标准可以分为不同的类别。
 
-       		1. 按照流的方向分为输入流和输出流
-       		2. 数据流按照数据方位的不同分为字节流和字符流
-       		3. 按照功能可以划分为节点流和处理流
+      * 按照流的方向分为输入流和输出流
 
-     
+      - 数据流按照数据方位的不同分为字节流和字符流
+
+      - 按照功能可以划分为节点流和处理流
 
 二、Java系统流
 
@@ -30,7 +30,7 @@
 
 ### 二、File对象
 
-> FIle对象是用于读取文件
+> FIle对象是用于读取文件的实体类
 
 ##### 1.File对象的用法：
 
@@ -39,10 +39,10 @@
 3. getCanoniacalPath：返回规范路径（与绝对路径类似）
 
 ```java
- File file = new File("base/src/main/resources/data/file.txt");
-        // 返回构造方法传入的路径
+        File file=new File("base/src/main/resources/data/file.txt");
+        //返回构造方法传入的路径
         System.out.println(file.getPath());
-//        返回绝对路径
+        //返回绝对路径
         System.out.println(file.getAbsolutePath());
         // 返回规范
         System.out.println(file.getCanonicalPath());
@@ -54,10 +54,10 @@
 1. isFile():判断FIle对象是否是一个已经存在的文件，
 2. isDirectory()：判断File对象是否是一个已经存在的目录
 3. exists():判断文件是否存在
-4. File.separator，分隔符
+4. File.separator，分隔符 ，因为widows 上用的反斜杠，linux上是斜杠，两者并不一致，而系统多在linux上执行，所以很多时候都用这个
 
 ```java
- File f1 = new File("base/src/main/resources/");
+        File f1=new File("base/src/main/resources/");
         File f2 = new File("base/src/main/resources/data/");
         File f3 = new File("base/src/main/resources/data/file.txt");
 
@@ -108,7 +108,7 @@
 2. list()或listFiles()方法列出目录中的所有文件和目录
 
 ```java
- File[] fsl = file.listFiles(); // 列出所有文件和子目录
+        File[]fsl=file.listFiles(); // 列出所有文件和子目录
         printFiles(fsl);
         // 添加过滤器，仅仅显示，exe文件
         File[] fs2 = file.listFiles(new FilenameFilter(){
@@ -121,7 +121,7 @@
         });
 ```
 
-二、输入流：InputStream
+### 二、输入流：InputStream
 
 > InputStream是输入流，主要有以下三种实现方式：FileInputStream，ByteArrayInputStream和PipedInputStream，FilterInputStream
 
@@ -145,7 +145,7 @@
 
 4.数据输入流:DataInputStream
 
-三、输出流：OutputStream
+### 三、输出流：OutputStream
 
 1.文件输出流
 
@@ -156,6 +156,3 @@
 4.管道
 
 5.对象序列化
-
-
-

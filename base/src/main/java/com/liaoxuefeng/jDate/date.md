@@ -2,21 +2,20 @@
 
 [TOC]
 
-
-
-# since
+# since类
 
 - 理解日期、时间和时刻
 - 理解时区的概念
 - 理解夏令时，同一地区使用GMT/UTC和城市表示的时区可能导致时间不同
-- - GTM-05:00
+  - GTM-05:00
   - America/New_York
+
 - 理解locale用来针对当地用户习惯格式化日期、时间、数字、货币等。
 
 ## java.util.since
 
 java.util.since的问题：
-``
+
 - 不能转换时区
 - 日志和时间的加减不方便
 - 两个日期相差多少天不好计算
@@ -43,9 +42,9 @@ java.util.since的问题：
   - 加减日期和时间
 - TimeZone表示时区，getAvailableDs()可以美剧所有有效的时区ID
 
-## java.time的API
+## java.time的API （目前多用time）
 
-### LocalsinceTime
+### 一、LocalsinceTime
 
 - LocalsinceTime无法与long进行转换
   - 因为LocalsinceTime没有时区，无法确定某一时刻
@@ -57,7 +56,7 @@ java.util.since的问题：
 - 使用withDayOfMonth()/with()等方法调整日期和时间，返回新对象
 - 使用isBefore()/isAfter()/equals()判断日期和时间的先后
 
-### ZonedsinceTime
+### 二、ZonedsinceTime
 
 ZonedsinceTime = LocalsinceTime + Zoneld
 
@@ -93,13 +92,12 @@ String epochToString(long epoch, Local lo, String zoneId) {
     return f.withLocale(lo).format(ZonedsinceTime.ofInstant(ins, ZoneId.of(zoneId)));
 }
 
-输入：
+        # 输入：
 epoch = 1480468500000L
 Locale.CHINA, "Asia/Shanghai"
 Locale.US, "America/New_York"
 
-输出：
+        # 输出：
 2016-11-30 上午9:15
 Nov 29, 2016 8:15 PM
 ```
-
