@@ -1,6 +1,8 @@
 package com.atguigu.day7;
 
 
+import java.util.Arrays;
+
 /**
  * @author Alex
  * @date 2021/12/1 4:37 下午
@@ -47,10 +49,9 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] data = {9, -16, 30, 23, -30, -49, 25, 21, 30};
-        System.out.println("排序之前：\n" + java.util.Arrays.toString(data));
+        System.out.println("排序之前：\n" + Arrays.toString(data));
         quickSort(data);
-        System.out.println("排序之后：\n" + java.util.Arrays.toString(data));
+        System.out.println("排序之后：\n" + Arrays.toString(data));
     }
 
 }
-
