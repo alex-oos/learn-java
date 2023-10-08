@@ -23,8 +23,9 @@ package com.atguigu.day9;
 public class InstanceTest {
 
     public static void main(String[] args) {
+
         Phone p = new Phone();
-//		p = null;
+        // p = null;
         System.out.println(p); // 打印的是地址值
 
         /* 对象数组中，数组存的是变量名，即是地址值，所以不经过实例化直接调用其属性会报空指针异常*/
@@ -33,25 +34,25 @@ public class InstanceTest {
         System.out.println("phoneArray[1] = " + phoneArray[0]); // 打印出地址值
         System.out.println("phoneArray[0].price = " + phoneArray[0].price); // 打印出price 的值
 
-        System.out.println("phoneArray[1] = " + phoneArray[1]);//对象数组默认的值是null
+        System.out.println("phoneArray[1] = " + phoneArray[1]);// 对象数组默认的值是null
         // System.out.println("phoneArray[1].price = " + phoneArray[1].price);// 报空针织异常，因为未实力化对象，根本找不见其属性
 
         p.sendEmail();
         p.playGame();
 
 
-        //匿名对象
+        // 匿名对象
 //		new Phone().sendEmail();
 //		new Phone().playGame();
 
-        //每一个匿名对象都是独立的，相互之间不会任何影响
+        // 每一个匿名对象都是独立的，相互之间不会任何影响
         new Phone().price = 1999;
-        new Phone().showPrice();//0.0
+        new Phone().showPrice();// 0.0
 
         //**********************************
         PhoneMall mall = new PhoneMall();
-        //mall.show(p);
-        //匿名对象的使用
+        // mall.show(p);
+        // 匿名对象的使用
         mall.show(new Phone());
 
     }
@@ -62,6 +63,7 @@ class PhoneMall {
 
 
     public void show(Phone phone) {
+
         phone.sendEmail();
         phone.playGame();
     }
@@ -71,19 +73,21 @@ class PhoneMall {
 
 class Phone {
 
-    double price;//价格
+    double price;// 价格
 
     public void sendEmail() {
+
         System.out.println("发送邮件");
     }
 
     public void playGame() {
+
         System.out.println("玩游戏");
     }
 
     public void showPrice() {
+
         System.out.println("手机价格为：" + price);
     }
 
 }
-

@@ -10,13 +10,16 @@ import java.util.Arrays;
  */
 public class Test {
 
-    public void function(String... arr) {
-        System.out.println(arr.length);
-        System.out.println(Arrays.toString(arr));
+    public static void main(String[] args) {
+
+        new Test().function("A", "B", "C");
     }
 
-    public static void main(String[] args) {
-        new Test().function("A", "B", "C");
+    // 参数传递，可以传多个参数，不限制长度，其实核心就是传了一个数组而已
+    public void function(String... arr) {
+
+        System.out.println(arr.length);
+        System.out.println(Arrays.toString(arr));
     }
 
 

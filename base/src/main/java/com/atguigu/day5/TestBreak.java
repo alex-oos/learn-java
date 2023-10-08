@@ -8,6 +8,8 @@ import java.util.Scanner;
  * @Descprition: break的作用
  */
 public class TestBreak {
+
+    // break的用法
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         boolean flag = true;
