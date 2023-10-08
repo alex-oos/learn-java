@@ -1,4 +1,4 @@
-package com.atguigu.day2;
+package com.atguigu.day2.typechange;
 
 class TestTypeChangeExer2 {
     public static void main(String[] args) {

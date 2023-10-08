@@ -10,7 +10,7 @@ package com.atguigu.day2;
 /*
  * 计算机底层是二进制
  * 数字也是二进制
- *
+ * 二进制的最高位是符号位，0表示正数，1表示负数
  * */
 public class TestSave {
     public static void main(String[] args) {

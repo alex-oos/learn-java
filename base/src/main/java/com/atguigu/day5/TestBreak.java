@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author: 李将
  * @since: 2020/5/19 下午 10:28
- * @Descprition:
+ * @Descprition: break的作用
  */
 public class TestBreak {
     public static void main(String[] args){

@@ -18,12 +18,12 @@ import java.util.Scanner;
  * 导致程序终止。
  * </p>
  */
-//1、导包：import java.util.Scanner
+// 1、导包：import java.util.Scanner
 public class TestScanner {
 
     public static void main(String[] args) {
-        // 2、scanner 实力化
 
+        // 2、scanner 的实例化
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("请输入你的姓名：");

@@ -1,4 +1,4 @@
-package com.atguigu.day2;
+package com.atguigu.day2.logic.exer;
 
 /**
  * @author: 唐凯泽

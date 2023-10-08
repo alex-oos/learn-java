@@ -1,4 +1,4 @@
-package com.atguigu.day2;
+package com.atguigu.day2.logic.exer;
 
 class TestLogicExer6 {
     public static void main(String[] args) {

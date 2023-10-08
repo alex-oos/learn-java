@@ -7,6 +7,8 @@ package com.atguigu.day5;
  */
 //请打印1-10之间不是3或5的倍数的数字
 public class TestContinue {
+
+    // continue的用法
     public static void main(String[] args) {
         for (int i = 1; i <= 10; i++) {
             if (i % 3 == 0 || i % 5 == 0) {

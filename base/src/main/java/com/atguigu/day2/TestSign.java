@@ -6,6 +6,10 @@ package com.atguigu.day2;
  * @Descprition:
  */
 public class TestSign {
+
+    /**
+     * ++ --  自增自减运算符
+     */
     public static void main(String[] args) {
         int i1 = 10;
         int i2 = 20;

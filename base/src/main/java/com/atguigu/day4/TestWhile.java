@@ -1,25 +1,5 @@
-package com.atguigu.day4;/*
-whileѭ��
-�﷨�ṹ��
-while(ѭ������){	
-	ѭ���壺��Ҫ�ظ�ִ�е�����
-}
+package com.atguigu.day4;
 
-ִ�й��̣�
-��1�����������ж�ѭ������
-��2�����������������ִ��ѭ����
-��3���ص���1��
-��4��ֱ��ѭ����������������
-
-ѭ�����ĸ�Ҫ�أ�
-��1��ѭ�������ĳ�ʼ��
-��2��ѭ������
-��3��ѭ����
-��4���������ʽ�������޸�ѭ��������ֵ
-
-forѭ���Ƚ������ڣ������յ�Ƚ����ԣ�����1-100��������ٴΣ�3000�׵�5��
-whileѭ���������ڣ�ѭ���������ԣ�������ȷ�����̶�
-*/
 import java.util.Scanner;
 
 /*
@@ -45,29 +25,31 @@ for循环比较适用于：起点和终点比较明显，例如1-100，具体多
 while循环，适用于，循环条件明显，次数不确定不固定
 */
 
-class TestWhile{
-	public static void main(String[] args){
-		//从键盘不断输入整数，统计正数、负数的个数，输入0结束
-		Scanner input = new Scanner(System.in);
+class TestWhile {
 
-		System.out.println("请输入一个整数：");
-		int num = input.nextInt();
+    public static void main(String[] args) {
+        // 从键盘不断输入整数，统计正数、负数的个数，输入0结束
+        Scanner input = new Scanner(System.in);
 
-		int zheng = 0;
-		int fu = 0;
+        System.out.println("请输入一个整数：");
+        int num = input.nextInt();
 
-		while(num!=0){
-			if(num>0){
-				zheng++;
-			}else if(num<0){
-				fu++;
-			}
+        int zheng = 0;
+        int fu = 0;
 
-			System.out.println("请输入一个整数：");
-			num = input.nextInt();
-		}
+        while (num != 0) {
+            if (num > 0) {
+                zheng++;
+            } else if (num < 0) {
+                fu++;
+            }
 
-		System.out.println("正数的个数：" + zheng);
-		System.out.println("负数的个数：" + fu);
-	}
+            System.out.println("请输入一个整数：");
+            num = input.nextInt();
+        }
+
+        System.out.println("正数的个数：" + zheng);
+        System.out.println("负数的个数：" + fu);
+    }
+
 }

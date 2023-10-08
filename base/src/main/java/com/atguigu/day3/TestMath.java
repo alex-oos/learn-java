@@ -3,7 +3,7 @@ package com.atguigu.day3;
 /**
  * @author: 李将
  * @since: 2020/5/8 上午 12:03
- * @Descprition:
+ * @Descprition: 常见的数学运算
  */
 class TestMath{
     public static void main(String[] args){

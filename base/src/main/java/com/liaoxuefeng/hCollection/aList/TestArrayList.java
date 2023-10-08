@@ -25,13 +25,13 @@ public class TestArrayList {
         List<String> list = Arrays.asList("Banana", "Apple", "Orange");
         Collections.sort(list);
         // list.clear();
-        list.forEach(System.out :: println);
-        //方式二：
+        list.forEach(System.out::println);
+        // 方式二：
         List<String> array = new ArrayList<>();
 
         array.add("c");
         array.add("b");
-        //排序
+        // 排序
         Collections.sort(array);
         for (String s : array) {
             System.out.println("s = " + s);
@@ -41,7 +41,7 @@ public class TestArrayList {
         System.out.println("是否为空：" + empty);
 
         // 将 lambda 表达式传递给 forEach
-        array.forEach((e)->{
+        array.forEach((e) -> {
             System.out.println("e = " + e);
         });
     }
@@ -59,12 +59,12 @@ public class TestArrayList {
         System.out.println("list = " + list);
         System.out.println("list.size() = " + list.size());
 
-        //遍历输出
-        list.forEach(System.out :: println);
+        // 遍历输出
+        list.forEach(System.out::println);
         // List接口提供的of()方法，根据给定元素快速创建List：
         List<Integer> integerList = new ArrayList<>(List.of(9, 5, 109, 2));
 
-        //排序
+        // 排序
         integerList.sort(new Comparator<Integer>() {
             @Override
             public int compare(Integer o1, Integer o2) {
@@ -73,7 +73,7 @@ public class TestArrayList {
             }
         });
 
-        integerList.forEach(System.out :: println);
+        integerList.forEach(System.out::println);
         // 使用Iterator 遍历list
         for (Iterator<Integer> integerIterator = integerList.iterator(); integerIterator.hasNext(); ) {
             Integer next = integerIterator.next();
@@ -81,17 +81,11 @@ public class TestArrayList {
         }
 
         /* 删除list中的所有偶数 */
-        integerList.removeIf(filter->filter % 2 == 0);
-        integerList.forEach(System.out :: println);
+        integerList.removeIf(filter -> filter % 2 == 0);
+        integerList.forEach(System.out::println);
 
     }
-    public static void main(String[] args) {
 
-        function();
-        b();
-
-
-    }
 
     /**
      * <p>
@@ -113,9 +107,10 @@ public class TestArrayList {
             }
         }
 
-        stringList.forEach(System.out :: println);
+        stringList.forEach(System.out::println);
 
     }
+
     public static void b() {
 
         List<Integer> integerList = new ArrayList<>();
@@ -134,10 +129,19 @@ public class TestArrayList {
             }
         });
         // 使用forEach 内置函数
-        integerList.forEach(System.out :: println);
+        integerList.forEach(System.out::println);
 
         integerList.clear();
-        integerList.forEach(System.out :: println);
+        integerList.forEach(System.out::println);
+
+    }
+
+    public static void main(String[] args) {
+
+        function();
+        b();
+
+
     }
 
 }

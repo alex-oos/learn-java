@@ -1,4 +1,4 @@
-package com.atguigu.day2;
+package com.atguigu.day2.typechange;
 
 /*
 基本数据类型：

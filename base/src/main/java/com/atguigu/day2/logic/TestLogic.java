@@ -1,4 +1,4 @@
-package com.atguigu.day2;
+package com.atguigu.day2.logic;
 
 
 /**
@@ -55,33 +55,33 @@ public class TestLogic {
             System.out.println("欢迎来尚硅谷学习");
         }
 
-        System.out.println(true & true);
+        System.out.println(true);
 
-        System.out.println(true & false);
-        System.out.println(false & false);
-        System.out.println(false & false);
+        System.out.println(false);
+        System.out.println(false);
+        System.out.println(false);
 
 
         if (age < 18 | age > 35) {
             System.out.println("年龄过大或过小");
         }
-        System.out.println(true | true);
-        System.out.println(true | false);
-        System.out.println(false | false);
-        System.out.println(false | false);
+        System.out.println(true);
+        System.out.println(true);
+        System.out.println(false);
+        System.out.println(false);
 
-        System.out.println(!true);
-        System.out.println(!false);
-        System.out.println(true ^ true);//false
-        System.out.println(true ^ false);//true
-        System.out.println(false ^ true);//true
-        System.out.println(false ^ false);//false
+        System.out.println(false);
+        System.out.println(true);
+        System.out.println(false);//false
+        System.out.println(true);//true
+        System.out.println(true);//true
+        System.out.println(false);//false
 
 
-        System.out.println(true && true);//true
-        System.out.println(true && false);//false
-        System.out.println(false && true);//false
-        System.out.println(false && false);//false
+        System.out.println(true);//true
+        System.out.println(false);//false
+        System.out.println(false);//false
+        System.out.println(false);//false
 
         	/*
 		int i = 1;

@@ -11,11 +11,14 @@ package com.atguigu.day5;
 2、找出最大值、最小值及其下标
 3、求元素的总和和平均值
 */
+
 import java.util.Scanner;
-class TestSumAvg{
-    public static void main(String[] args){
-        //从键盘输入元素的值
-        //n个整数
+
+class TestSumAvg {
+
+    public static void main(String[] args) {
+        // 从键盘输入元素的值
+        // n个整数
         //(1)声明一个数组
         int[] array;
 
@@ -28,16 +31,16 @@ class TestSumAvg{
         array = new int[length];
 
         //(4)为元素赋值，从键盘输入
-        for(int i=0; i<array.length; i++){
-            System.out.print("请输入第" + (i+1) + "个元素的值：");
-            //为元素赋值的格式：
-            //数组名[下标] = 值;
+        for (int i = 0; i < array.length; i++) {
+            System.out.print("请输入第" + (i + 1) + "个元素的值：");
+            // 为元素赋值的格式：
+            // 数组名[下标] = 值;
             array[i] = input.nextInt();
         }
 
         System.out.println("数组的元素有：");
         //(5)遍历数组
-        for(int i=0; i<array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
         System.out.println();
@@ -51,9 +54,10 @@ class TestSumAvg{
 		System.out.println("总和是：" + sum + "，平均值是：" + (double)sum/array.length);
 		*/
         double sum = 0;
-        for(int i=0; i<array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             sum += array[i];
         }
-        System.out.println("总和是：" + sum + "，平均值是：" + sum/array.length);
+        System.out.println("总和是：" + sum + "，平均值是：" + sum / array.length);
     }
+
 }
