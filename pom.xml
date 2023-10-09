@@ -13,6 +13,7 @@
     <modules>
         <module>base</module>
         <module>springboot-demo</module>
+        <module>springboot-mybatisPlus</module>
     </modules>
     <!--指定一些版本之类的-->
     <properties>

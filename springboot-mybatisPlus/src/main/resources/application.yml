@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+#数据库 配置
+spring:
+  datasource:
+    name: test
+    url: jdbc:mysql://rm-2zeyoxjy4n606sm1l4o.mysql.rds.aliyuncs.com:3306/test
+    username: test
+    password: test123
+    # 数据库引擎，最新的数据库都需要加入cj
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+  type-aliases-package: com.springboot.demo.endity
+
+#mybatis -plus的配置，可以将日志输出
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    global-config:
+#      db-config:
+#        id-type: auto
+
+#      map-underscore-to-camel-case: true
