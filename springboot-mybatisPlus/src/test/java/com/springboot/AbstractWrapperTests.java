@@ -79,7 +79,7 @@ public class AbstractWrapperTests {
 
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.between("age", 10, 30);
-        Integer count = userMapper.selectCount(queryWrapper);
+        Integer count = Math.toIntExact(userMapper.selectCount(queryWrapper));
         System.out.println(count);
     }
 
