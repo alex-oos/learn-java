@@ -1,3 +1,7 @@
+create
+database  if not exists  demodb;
+use
+demodb;
 DROP TABLE IF EXISTS user;
 CREATE TABLE user
 (

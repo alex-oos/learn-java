@@ -13,7 +13,12 @@
 
  Date: 17/04/2021 11:57:28
 */
-
+-- 创建数据库
+create
+database  if not exists  mybatisplusdb;
+-- 使用数据库
+use
+mybatisplusdb;
 SET NAMES utf8mb4;
 SET
 FOREIGN_KEY_CHECKS = 0;

@@ -4,22 +4,22 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://39.96.49.72:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://localhost:3306/demodb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: Test@123456
+    password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
 
-  redis:
-    database: 0
-    host: 39.96.49.72
-    lettuce:
-      pool:
-        max-active: 20
-        max-idle: 5
-        max-wait: -1
-        min-idle: 0
-    port: 6379
-    timeout: 1800000
+#  redis:
+#    database: 0
+#    host: 39.96.49.72
+#    lettuce:
+#      pool:
+#        max-active: 20
+#        max-idle: 5
+#        max-wait: -1
+#        min-idle: 0
+#    port: 6379
+#    timeout: 1800000
 
 #mybatis -plus的配置，可以将日志输出
 mybatis-plus:
@@ -58,4 +58,3 @@ xxl:
       port: 9999
       logpath: root/logs/xxl-job/jobhandler
       logretentiondays: 30
-

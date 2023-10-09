@@ -5,9 +5,9 @@ server:
 spring:
   datasource:
     name: test
-    url: jdbc:mysql://rm-2zeyoxjy4n606sm1l4o.mysql.rds.aliyuncs.com:3306/test
-    username: test
-    password: test123
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
     # 数据库引擎，最新的数据库都需要加入cj
     driver-class-name: com.mysql.cj.jdbc.Driver
 
