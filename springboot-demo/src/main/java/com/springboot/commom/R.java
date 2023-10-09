@@ -1,8 +1,6 @@
 package com.springboot.commom;
 
 
-import lombok.Data;
-
 import java.io.Serializable;
 import java.util.Optional;
 
@@ -14,7 +12,7 @@ import java.util.Optional;
  * <P></p>
  */
 
-@Data
+
 public class R<T> implements Serializable {
 
     /**
@@ -96,5 +94,94 @@ public class R<T> implements Serializable {
         }
         return data;
     }
+
+    public long getCode() {
+
+        return this.code;
+    }
+
+    public R<T> setCode(final long code) {
+
+        this.code = code;
+        return this;
+    }
+
+    public T getData() {
+
+        return this.data;
+    }
+
+    public R<T> setData(final T data) {
+
+        this.data = data;
+        return this;
+    }
+
+    public String getMsg() {
+
+        return this.msg;
+    }
+
+    public R<T> setMsg(final String msg) {
+
+        this.msg = msg;
+        return this;
+    }
+
+    public boolean equals(final Object o) {
+
+        if (o == this) {
+            return true;
+        } else if (!(o instanceof R)) {
+            return false;
+        } else {
+            R<?> other = (R) o;
+            if (!other.canEqual(this)) {
+                return false;
+            } else if (this.getCode() != other.getCode()) {
+                return false;
+            } else {
+                Object this$data = this.getData();
+                Object other$data = other.getData();
+                if (this$data == null) {
+                    if (other$data != null) {
+                        return false;
+                    }
+                } else if (!this$data.equals(other$data)) {
+                    return false;
+                }
+
+                Object this$msg = this.getMsg();
+                Object other$msg = other.getMsg();
+                if (this$msg == null) {
+                    return other$msg == null;
+                } else return this$msg.equals(other$msg);
+            }
+        }
+    }
+
+    protected boolean canEqual(final Object other) {
+
+        return other instanceof R;
+    }
+
+    public int hashCode() {
+        // int PRIME = true;
+        int result = 1;
+        long $code = this.getCode();
+        result = result * 59 + (int) ($code >>> 32 ^ $code);
+        Object $data = this.getData();
+        result = result * 59 + ($data == null ? 43 : $data.hashCode());
+        Object $msg = this.getMsg();
+        result = result * 59 + ($msg == null ? 43 : $msg.hashCode());
+        return result;
+    }
+
+    public String toString() {
+
+        return "R(code=" + this.getCode() + ", data=" + this.getData() + ", msg=" + this.getMsg() + ")";
+    }
+
+
 
 }

@@ -34,7 +34,7 @@
             <artifactId>spring-boot-configuration-processor</artifactId>
             <optional>true</optional>
         </dependency>
-
+        <!--一般增加该依赖即可-->
         <!--mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>

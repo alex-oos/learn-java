@@ -1,7 +1,7 @@
 package com.springboot.controller;
 
 
-import com.baomidou.mybatisplus.extension.api.R;
+import com.springboot.commom.R;
 import com.springboot.entity.vo.LoginVo;
 import com.springboot.service.UserService;
 import com.springboot.utils.HuJwtUtils;
