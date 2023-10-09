@@ -1,0 +1,6 @@
+demo:
+  id: 1
+user:
+  id: 1
+  name: Alex
+  password: 123456
