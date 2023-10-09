@@ -1,15 +1,26 @@
 server:
-  port: 8081
+  port: 8099
 
 #数据库 配置
 spring:
+  #  mysql 数据源
+  #  datasource:
+  #    name: test
+  #    url: jdbc:mysql://localhost:3306/test
+  #    username: root
+  #    password: 123456
+  #    # 数据库引擎，最新的数据库都需要加入cj
+  #    driver-class-name: com.mysql.cj.jdbc.Driver
+  #  h2 数据库数据源
   datasource:
-    name: test
-    url: jdbc:mysql://localhost:3306/test
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
     username: root
-    password: 123456
-    # 数据库引擎，最新的数据库都需要加入cj
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: test
+  sql:
+    init:
+      schema-locations: classpath:db/schema-h2.sql
+      data-locations: classpath:db/data-h2.sql
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
