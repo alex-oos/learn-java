@@ -1,9 +1,9 @@
-package com.springboot;
+package com.mybatisplus;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.springboot.entity.User;
-import com.springboot.mapper.UserMapper;
+import com.mybatisplus.entity.User;
+import com.mybatisplus.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -109,9 +109,7 @@ public class AbstractWrapperTests {
     public void testSelectMaps() {
 
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper
-                .notLike("name", "T")
-                .like("email", "t");
+        queryWrapper.notLike("name", "T").like("email", "t");
         List<Map<String, Object>> list = userMapper.selectMaps(queryWrapper);
         list.forEach(System.out::println);
     }
@@ -149,9 +147,7 @@ public class AbstractWrapperTests {
         user.setAge(99);
         user.setName("Andy");
         UpdateWrapper<User> userUpdateWrapper = new UpdateWrapper<>();
-        userUpdateWrapper
-                .like("name", "h")
-                .or(i -> i.eq("name", "李白").ne("age", 20));
+        userUpdateWrapper.like("name", "h").or(i -> i.eq("name", "李白").ne("age", 20));
         int result = userMapper.update(user, userUpdateWrapper);
         System.out.println("result = " + result);
 
@@ -181,9 +177,7 @@ public class AbstractWrapperTests {
     public void testSelectListLast() {
 
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper
-                .orderByDesc("id")
-                .last("limit 1");
+        queryWrapper.orderByDesc("id").last("limit 1");
         List<User> users = userMapper.selectList(queryWrapper);
         users.forEach(System.out::println);
     }
@@ -215,9 +209,7 @@ public class AbstractWrapperTests {
         user.setAge(99);
         // 修改条件
         UpdateWrapper<User> userUpdateWrapper = new UpdateWrapper<>();
-        userUpdateWrapper
-                .like("name", "h")
-                .set("name", "老李头")// 除了可以查询还可以使用set设置修改的字段
+        userUpdateWrapper.like("name", "h").set("name", "老李头")// 除了可以查询还可以使用set设置修改的字段
                 .setSql(" email = '123@qq.com'");// 可以有子查询
         int result = userMapper.update(user, userUpdateWrapper);
         System.out.println("result = " + result);

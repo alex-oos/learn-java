@@ -15,10 +15,10 @@
 */
 -- 创建数据库
 create
-database  if not exists  mybatisplusdb;
+database  if not exists  mybatis_plus_db;
 -- 使用数据库
 use
-mybatisplusdb;
+mybatis_plus_db;
 SET NAMES utf8mb4;
 SET
 FOREIGN_KEY_CHECKS = 0;

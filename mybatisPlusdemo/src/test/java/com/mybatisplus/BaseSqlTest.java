@@ -1,8 +1,8 @@
-package com.springboot;
+package com.mybatisplus;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.springboot.entity.User;
-import com.springboot.mapper.UserMapper;
+import com.mybatisplus.entity.User;
+import com.mybatisplus.mapper.UserMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

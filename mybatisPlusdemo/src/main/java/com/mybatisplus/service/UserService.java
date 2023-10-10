@@ -1,7 +1,7 @@
-package com.springboot.service;
+package com.mybatisplus.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.springboot.entity.User;
+import com.mybatisplus.entity.User;
 
 /**
  * @Auther: 唐凯泽
@@ -9,5 +9,6 @@ import com.springboot.entity.User;
  * @Descprition:
  */
 public interface UserService extends IService<User> {
+
 
 }

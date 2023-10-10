@@ -1,9 +1,9 @@
-package com.springboot.mapper;
+package com.mybatisplus.mapper;
 
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
-import com.springboot.entity.User;
+import com.mybatisplus.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -23,5 +23,18 @@ public interface UserMapper extends BaseMapper<User> {
     // SQL中不写WHERE关键字，且固定使用${ew.customSqlSegment}
     @Select("select * from user ${ew.customSqlSegment}")
     List<User> findAll(@Param(Constants.WRAPPER) Wrapper<User> wrapper);
+
+    List<User> getUserList();
+
+    // 根据id查询用户
+    User getUserById(Integer id);
+
+    // 新增用户
+    Boolean addUser(User user);
+
+    Boolean updateUser(User user);
+
+    Boolean deleteUser(Integer id);
+
 
 }

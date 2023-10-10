@@ -1,7 +1,10 @@
-package com.springboot.entity;
+package com.mybatisplus.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
@@ -10,8 +13,10 @@ import java.time.LocalDateTime;
  * @Date: 2021/1/21 13:42
  * @Descprition:
  */
-
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
+@Getter
 public class User {
 
     // 实现自增，必须数据库中设置自增
@@ -39,7 +44,7 @@ public class User {
     private LocalDateTime updateTime;
 
     @Version
-//    @TableField(fill = FieldFill.INSERT)
+    @TableField(fill = FieldFill.INSERT)
     private Integer version;
 
 

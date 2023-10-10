@@ -1,4 +1,4 @@
-package com.springboot.config;
+package com.mybatisplus.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
@@ -17,7 +17,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration // 加入到bean里面，让spring进行管理
-@MapperScan("com.springboot.mapper")
+@MapperScan("com.mybatisplus.mapper")
 public class MybatisPlusConfig {
 
     /**
