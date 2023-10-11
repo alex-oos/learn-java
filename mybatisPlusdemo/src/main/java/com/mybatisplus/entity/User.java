@@ -36,11 +36,11 @@ public class User implements Serializable {
     /**
      * 自动填充，插入的时候，自动加入时间
      */
-    @TableField(fill = FieldFill.INSERT)
+    @TableField(value = "create_time", fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 
     // 自动填充，更新的时候自动加入时间
-    @TableField(fill = FieldFill.INSERT_UPDATE)
+    @TableField(value = "update_time", fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime updateTime;
 
     @Version
