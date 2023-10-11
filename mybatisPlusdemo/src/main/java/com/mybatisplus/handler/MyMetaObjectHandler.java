@@ -25,7 +25,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
         // 插入时自动填充
         // 注意第二个参数要填写实体类中的字段名称，而不是表的列名称
         log.info("start insert fill ....");
-        strictFillStrategy(metaObject, "createTime", LocalDateTime::now);
+        this.strictInsertFill(metaObject, "createTime", LocalDateTime.class, LocalDateTime.now()); // 起始版本 3.3.0(推荐使用)
 
     }
 
@@ -34,8 +34,7 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
         log.info("start update fill ....");
         // 更新时自动填充
-        strictFillStrategy(metaObject, "updateTime", LocalDateTime::now);
-
+        this.strictUpdateFill(metaObject, "updateTime", LocalDateTime.class, LocalDateTime.now()); // 起始版本 3.3.0(推荐)
     }
 
 

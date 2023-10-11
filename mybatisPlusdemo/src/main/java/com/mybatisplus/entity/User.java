@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@TableName(value = "user")
 public class User implements Serializable {
 
     // 实现自增，必须数据库中设置自增
