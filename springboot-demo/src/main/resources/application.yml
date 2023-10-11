@@ -2,6 +2,9 @@ server:
   port: 8080
 
 spring:
+  jackson: # 返回JSON的全局时间格式
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
   datasource:
     name: test
     url: jdbc:mysql://localhost:3306/demodb?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
@@ -61,3 +64,8 @@ mybatis-plus:
 #      port: 9999
 #      logpath: root/logs/xxl-job/jobhandler
 #      logretentiondays: 30
+#日志设置
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: INfO
