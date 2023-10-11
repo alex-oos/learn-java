@@ -3,18 +3,18 @@
 <!--namespace绑定了一个对应的Dao/Mapper接口-->
 <mapper namespace="com.mybatisplus.mapper.UserMapper">
     <!--select查询 查询所哟-->
-    <select id="getUserList" resultType="com.mybatisplus.entity.User">
+    <select id="selectAllUser" resultType="com.mybatisplus.entity.User">
         select * from user;
     </select>
     <!-- select 查询-->
     <!--通过Id 指定，resultType 设置返回值的类型，parameterType 设置参数的类型-->
-    <select id="getUserById" resultType="com.mybatisplus.entity.User" parameterType="integer">
+    <select id="selectUserById" resultType="com.mybatisplus.entity.User" parameterType="integer">
         select * from user where id = #{id}
     </select>
 
     <!--   插入操作-->
     <!--  插入一条数据,插入的时候不要向数据里面set进无关的值，不然会导致报错-->
-    <insert id="addUser" parameterType="com.mybatisplus.entity.User" keyProperty="id">
+    <insert id="insertUser" parameterType="com.mybatisplus.entity.User" keyProperty="id">
         insert into user(name, age, email) values ( #{name}, #{age}, #{email})
     </insert>
 
