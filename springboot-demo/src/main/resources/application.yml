@@ -65,7 +65,7 @@ mybatis-plus:
 #      logpath: root/logs/xxl-job/jobhandler
 #      logretentiondays: 30
 #日志设置
-logging:
-  config: classpath:logback-spring.xml
-  level:
-    root: INfO
+#logging:
+#  config: classpath:logback-spring.xml
+#  level:
+#    root: INfO
