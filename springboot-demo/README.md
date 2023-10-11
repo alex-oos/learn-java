@@ -17,6 +17,6 @@ springboot+mybatis-plus+swagger+jwt
 3. yml文件读取
    1. @value和@PropertySource 进行读取
    2. @ConfigurationProperties 和 @PropertySource 进行读取
-4. swagger集成
-   > http://localhost:8080/swagger-ui/index.html
+4. 接口文档地址
+   > http://localhost:+端口号/doc.html
 5.
