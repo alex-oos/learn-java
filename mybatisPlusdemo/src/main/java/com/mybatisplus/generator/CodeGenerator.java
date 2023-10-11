@@ -19,10 +19,10 @@ import java.util.List;
 public class CodeGenerator {
 
     // 数据库连接配置 z
-    private static final String JDBC_URL = "jdbc:h2:mem:test";
+    // private static final String JDBC_URL = "jdbc:h2:mem:test";
 
     // mysql 配置
-    // private static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/hd_map_data_validator?useUnicode=true&useSSL=false&characterEncoding=utf8";
+    private static final String JDBC_URL = "jdbc:mysql://127.0.0.1:3306/hd_map_data_validator?useUnicode=true&useSSL=false&characterEncoding=utf8";
     private static final String JDBC_USER_NAME = "root";
 
     private static final String JDBC_PASSOWRD = "test";

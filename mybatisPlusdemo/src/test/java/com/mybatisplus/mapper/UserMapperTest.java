@@ -63,6 +63,14 @@ class UserMapperTest {
 
         Boolean b = userMapper.deleteUser(10);
         System.out.println("是否删除成功！" + b);
+    }
+
+
+    @Test
+    void queryALLData() {
+
+        List<User> users = userMapper.queryALLData();
+        users.forEach(System.out::println);
 
     }
 

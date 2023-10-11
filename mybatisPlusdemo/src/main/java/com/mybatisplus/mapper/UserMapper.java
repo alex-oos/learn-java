@@ -36,5 +36,9 @@ public interface UserMapper extends BaseMapper<User> {
 
     Boolean deleteUser(Integer id);
 
+    // @Result(javaType = User.class)
+    @Select("select  * from user")
+    List<User> queryALLData();
+
 
 }

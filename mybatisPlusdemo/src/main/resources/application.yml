@@ -5,12 +5,12 @@ server:
 spring:
   #  mysql 数据源
   datasource:
-    name: test
+    # 数据库引擎，最新的数据库都需要加入cj
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mybatis_plus_db
     username: root
     password: 123456
-    # 数据库引擎，最新的数据库都需要加入cj
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource  # 使用 DruidDataSource作为数据源
 #    h2 数据库数据源
 #  datasource:
 #    driver-class-name: org.h2.Driver
@@ -22,19 +22,29 @@ spring:
 #      schema-locations: classpath:db/schema-h2.sql
 #      data-locations: classpath:db/data-h2.sql
 
-mybatis:
-  mapper-locations: classpath:mapper/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
-  type-aliases-package: com.mybatisplus.entity
 
-#mybatis -plus的配置，可以将日志输出
+# MyBatis-plus配置
 mybatis-plus:
+  # xml文件位置
+  mapper-locations: classpath*:mapper/*.xml
+  # 别名类型包
+  type-aliases-package: com.xiaomi.mybatisplus.entity
+  global-config:
+    banner: false   # 是否 mybatis-plus 在控制台输出的logo
+    db-config:
+      # 全局逻辑删除的字段名
+      logic-delete-field: deleted
+      # 逻辑已删除值(默认为 1)
+      logic-delete-value: 1
+      # 逻辑未删除值(默认为 0)
+      logic-not-delete-value: 0
+      # 主键 自增
+      id-type: auto
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-#    global-config:
-#      db-config:
-#        id-type: auto
-#    map-underscore-to-camel-case: true
-
-logging:
-  level:
-    root: info
+    # 开启驼峰转换
+    map-underscore-to-camel-case: true
+    # MyBatis日志打印类
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+    # log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl   # 关闭日志
+    # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl         # 打印到控制台
+    auto-mapping-behavior: full
