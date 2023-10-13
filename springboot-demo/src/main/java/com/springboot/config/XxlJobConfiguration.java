@@ -47,7 +47,7 @@ public class XxlJobConfiguration {
         log.info(">>>>>>>>>>> xxl-job config init...");
         XxlJobSpringExecutor xxlJobSpringExecutor = new XxlJobSpringExecutor();
         xxlJobSpringExecutor.setAdminAddresses(this.addresses);
-        xxlJobSpringExecutor.setAppName(this.appName);
+        xxlJobSpringExecutor.setAppname(this.appName);
         xxlJobSpringExecutor.setIp(this.ip);
         xxlJobSpringExecutor.setPort(this.port);
         xxlJobSpringExecutor.setAccessToken(this.accessToken);
