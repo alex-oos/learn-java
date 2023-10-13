@@ -73,7 +73,7 @@ mybatis-plus:
       # 主键 自增  #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID"
       id-type: auto
   configuration:
-    # 开启驼峰转换
+    # 开启驼峰转换;
     map-underscore-to-camel-case: true
     # MyBatis日志打印类
     # log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
