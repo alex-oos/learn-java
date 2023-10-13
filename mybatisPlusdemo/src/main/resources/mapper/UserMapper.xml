@@ -3,29 +3,41 @@
 <!--namespace绑定了一个对应的Dao/Mapper接口-->
 <mapper namespace="com.mybatisplus.mapper.UserMapper">
     <!--select查询 查询所哟-->
+    <!--id 设置方法名进行绑定-->
     <select id="selectAllUser" resultType="com.mybatisplus.entity.User">
-        select * from user;
+        select *
+        from user;
     </select>
     <!-- select 查询-->
     <!--通过Id 指定，resultType 设置返回值的类型，parameterType 设置参数的类型-->
-    <select id="selectUserById" resultType="com.mybatisplus.entity.User" parameterType="integer">
-        select * from user where id = #{id}
+    <select id="selectUserById" parameterType="integer" resultType="com.mybatisplus.entity.User">
+        select *
+        from user
+        where id = #{id}
     </select>
 
     <!--   插入操作-->
     <!--  插入一条数据,插入的时候不要向数据里面set进无关的值，不然会导致报错-->
-    <insert id="insertUser" parameterType="com.mybatisplus.entity.User" keyProperty="id">
-        insert into user(name, age, email) values ( #{name}, #{age}, #{email})
+    <!--keyProperty:（仅适用于 insert 和 update）指定能够唯一识别对象的属性 -->
+    <!--    useGeneratedKeys（仅适用于 insert 和 update）这会令 MyBatis 使用 JDBC 的 getGeneratedKeys 方法来取出由数据库内部生成的主键
+-->
+    <insert id="insertUser" parameterType="com.mybatisplus.entity.User" keyProperty="id" useGeneratedKeys="true">
+        insert into user(name, age, email)
+        values (#{name}, #{age}, #{email})
     </insert>
 
     <!--    修改操作-->
-    <update id="updateUser" parameterType="com.mybatisplus.entity.User">
-        update user set name = #{name} where id =#{id}
+    <update id="updateUser" parameterType="com.mybatisplus.entity.User" keyProperty="id" useGeneratedKeys="true">
+        update user
+        set name = #{name}
+        where id = #{id}
     </update>
 
     <!--  删除操作-->
     <delete id="deleteUser" parameterType="integer">
-        delete from user where id = #{id}
+        delete
+        from user
+        where id = #{id}
     </delete>
 
 

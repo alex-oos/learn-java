@@ -60,7 +60,7 @@ mybatis-plus:
   # xml文件位置
   mapper-locations: classpath*:mapper/*.xml
   # 别名类型包
-  type-aliases-package: com.xiaomi.mybatisplus.entity
+  type-aliases-package: com.mybatisplus.entity
   global-config:
     banner: false   # 是否 mybatis-plus 在控制台输出的logo
     db-config:
