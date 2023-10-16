@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 /**
  * @author LiJiang
@@ -16,6 +17,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @ToString
 public class User implements Serializable {
+
+    private static final long serialVersionUID = UUID.randomUUID().getMostSignificantBits();
+
     private String name;
+
     private int age;
+
 }
