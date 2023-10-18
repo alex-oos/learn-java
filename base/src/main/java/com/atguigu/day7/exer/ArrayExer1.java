@@ -3,7 +3,7 @@ package com.atguigu.day7.exer;
 
 /**
  * @author Alex
- * @date 2021/11/25 4:28 下午
+ * @since 2021/11/25 4:28 下午
  * <P>
  * 二维数组的练习，求二维数组中所有元素的总和
  * </p>

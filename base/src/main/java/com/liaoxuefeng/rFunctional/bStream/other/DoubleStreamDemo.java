@@ -7,7 +7,7 @@ import java.util.stream.DoubleStream;
  * @ClassName DoubleStreamDemo
  * @Description
  * @Author Alex
- * @Date 2023/9/26 22:34
+ * @since 2023/9/26 22:34
  * @Version 1.0
  */
 public class DoubleStreamDemo {

@@ -3,7 +3,7 @@ package com.springboot.commom;
 
 /**
  * @author Alex
- * @date 2021/9/13 3:09 下午
+ * @since 2021/9/13 3:09 下午
  * <P></p>
  */
 public class ApiException extends RuntimeException {

@@ -5,7 +5,7 @@ import com.atguigu.day12.exer.Student;
 
 /**
  * @author Alex
- * @date 2021/12/13 3:57 下午
+ * @since 2021/12/13 3:57 下午
  * super关键字的使用
  * 1.super理解为：父类的
  * 2.super可以用来调用：属性、方法、构造器

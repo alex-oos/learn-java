@@ -1,13 +1,9 @@
 package com.atguigu.day7;
 
 
-import com.sun.source.doctree.SummaryTree;
-
-import java.util.IllegalFormatFlagsException;
-
 /**
  * @author Alex
- * @date 2021/11/26 3:00 下午
+ * @since 2021/11/26 3:00 下午
  * /*
  * 算法的考查：求数值型数组中元素的最大值、最小值、平均数、总和等
  * <p>

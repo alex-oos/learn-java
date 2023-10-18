@@ -3,7 +3,7 @@ package com.liaoxuefeng.eReflection;
 import java.util.Arrays;
 
 /**
- * @author: Alex
+ * @autoer Alex
  * @since: 2020/6/5 18:11
  * @Descprition: Class类提供以下几种方法获取Method:
  * 1、Menthod  getMenthod(name,Class ，，，)： 获取某个public的metho（包括父类）

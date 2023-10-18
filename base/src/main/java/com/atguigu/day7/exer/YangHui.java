@@ -3,7 +3,7 @@ package com.atguigu.day7.exer;
 
 /**
  * @author Alex
- * @date 2021/11/25 6:47 下午
+ * @since 2021/11/25 6:47 下午
  * <P>
  * 使用二维数组打印杨辉三角形
  * 【提示】

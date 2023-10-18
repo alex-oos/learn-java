@@ -2,7 +2,7 @@ package com.liaoxuefeng.bObject.bCoreClass.cEnum;
 
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 12:16
  * @Descprition: enum : 枚举类
  * 枚举类的比较，只能使用== ，不能使用equals()方法

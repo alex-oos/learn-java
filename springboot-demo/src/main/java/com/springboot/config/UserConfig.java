@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author Alex
- * @date 2021/8/28 11:51 下午
+ * @since 2021/8/28 11:51 下午
  * <P>
  * 成为一个配置类去读取yml 里面的文件
  * </p>

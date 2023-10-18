@@ -3,7 +3,7 @@ package com.atguigu.day9.util;
 
 /**
  * @author Alex
- * @date 2021/12/9 10:49 上午
+ * @since 2021/12/9 10:49 上午
  * <P></p>
  */
 public class ArrayPrintTest {

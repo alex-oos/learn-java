@@ -3,7 +3,7 @@ package com.liaoxuefeng.bObject.bCoreClass.dUtil;
 import java.util.Random;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 15:51
  * @Descprition:
  */

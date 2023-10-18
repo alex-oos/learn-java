@@ -1,7 +1,7 @@
 package com.liaoxuefeng.gGeneric;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/9 19:45
  * @Descprition: 擦拭法：决定了泛型<T>:
  * 1、不能是基本类型，例如：int；

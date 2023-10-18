@@ -1,7 +1,7 @@
 package com.atguigu.day3;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/8 上午 12:03
  * @Descprition: 常见的数学运算
  */

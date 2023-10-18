@@ -2,7 +2,7 @@ package cn.leetcode.old.day1;
 
 
 /**
- * @author: TangKaiZe
+ * @autoer Alex
  * @since: 2021/7/6 下午 2:59
  * <p>
  * 替换空格

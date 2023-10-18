@@ -7,7 +7,7 @@ import java.util.Stack;
  * @ClassName Main
  * @Description 栈是Vector的一个子类，它实现了一个标准的后进先出的栈
  * @Author Alex
- * @Date 2022/6/14 23:26
+ * @since 2022/6/14 23:26
  * @Version 1.0
  */
 public class Main {

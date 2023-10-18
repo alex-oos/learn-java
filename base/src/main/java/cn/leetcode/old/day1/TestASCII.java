@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author: TangKaiZe
+ * @autoer Alex
  * @since: 2021/7/6 下午 4:23
  * <p>
  * 统计一个字符串中的数字，字母，特殊字符，空格

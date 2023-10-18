@@ -1,7 +1,7 @@
 package com.liaoxuefeng.gGeneric;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/9 20:12
  * @Descprition: 使用类似<? extends Number>通配符作为方法参数时表示：
  * 方法内部可以调用获取Number引用的方法，例如：Number n = obj.getFirst();；

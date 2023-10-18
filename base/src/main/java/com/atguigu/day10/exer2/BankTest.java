@@ -3,7 +3,7 @@ package com.atguigu.day10.exer2;
 
 /**
  * @author Alex
- * @date 2022/4/20 10:12
+ * @since 2022/4/20 10:12
  */
 public class BankTest {
 

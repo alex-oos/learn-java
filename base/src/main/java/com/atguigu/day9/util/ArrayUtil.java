@@ -5,7 +5,7 @@ import cn.hutool.core.util.RandomUtil;
 
 /**
  * @author Alex
- * @date 2021/12/8 5:03 下午
+ * @since 2021/12/8 5:03 下午
  * <P>
  * 自定义数组的工具
  * </p>
@@ -64,9 +64,7 @@ public class ArrayUtil {
     // 复制数组
     public int[] copyArray(int[] arr) {
         int[] tmp = new int[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            tmp[i] = arr[i];
-        }
+        System.arraycopy(arr, 0, tmp, 0, arr.length);
         return tmp;
     }
     // 数组排序

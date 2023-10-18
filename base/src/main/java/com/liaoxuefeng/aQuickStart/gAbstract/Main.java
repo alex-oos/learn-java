@@ -1,7 +1,7 @@
 package com.liaoxuefeng.aQuickStart.gAbstract;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/28 12:29
  * @Descprition:
  */

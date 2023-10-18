@@ -7,7 +7,7 @@ import java.util.List;
  * equals方法，使用规则
  * </p>
  *
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/10 21:04
  * @Descprition:
  */

@@ -3,7 +3,7 @@ package com.atguigu.day9.exer;
 
 /**
  * @author Alex
- * @date 2021/12/8 6:27 下午
+ * @since 2021/12/8 6:27 下午
  * 考查参数的值传递
  * 定义一个类PassObject，在类中定义一个方法printAreas()，
  * 该方法的定义如下：public void printAreas(Circle c, int time)
@@ -40,4 +40,3 @@ class Circle {
 
 
 }
-

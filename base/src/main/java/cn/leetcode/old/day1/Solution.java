@@ -2,7 +2,7 @@ package cn.leetcode.old.day1;
 
 
 /**
- * @author TangKaiZe
+ * @author Alex
  * @since 2021/7/1 16:27
  * <p>
  * 大数相加，两个String类型的大数相加

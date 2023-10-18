@@ -2,7 +2,7 @@ package com.liaoxuefeng.qThread.cInterruptThread;
 
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/7/18 15:45
  * <p>
  * interrupt()  中断线程  目标线程需要反复检测自身状态是否是interrupted状态，如果是，就立刻结束运行。
@@ -47,7 +47,7 @@ class Mythread extends Thread {
 /**
  * 你好threada
  *
- * @author TangKaiZe
+ * @author Alex
  * @since 2021/07/01
  */
 class HelloThreadA extends Mythread {
@@ -72,4 +72,3 @@ class HelloThreadA extends Mythread {
     }
 
 }
-

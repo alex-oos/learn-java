@@ -3,7 +3,7 @@ package com.atguigu.day11;
 
 /**
  * @author Alex
- * @date 2021/12/13 3:25 下午
+ * @since 2021/12/13 3:25 下午
  * 面向对象的特征之二：继承性    why?
  * <p>
  * 一、继承性的好处：
@@ -51,7 +51,7 @@ public class ExtendsTest {
         s1.breath();
 
         Creature c1 = new Creature();
-        System.out.println(c1.toString());
+        System.out.println(c1);
     }
 
 }

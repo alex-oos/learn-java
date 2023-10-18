@@ -1,7 +1,7 @@
 package com.liaoxuefeng.bObject.bCoreClass.aString;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/29 12:14
  * @Descprition:
  *        Java核心库提供的包装类型可以把基本类型包装为class；
@@ -25,6 +25,3 @@ public class TypePackaging {
 
     }
 }
-
-
-

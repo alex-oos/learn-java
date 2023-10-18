@@ -2,7 +2,7 @@ package cn.leetcode.old.day2;
 
 
 /**
- * @author : TangKaiZe
+ * @author : Alex
  * @since: 2021/7/9 下午 4:03
  * <p>
  * </p>

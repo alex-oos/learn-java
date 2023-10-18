@@ -1,12 +1,9 @@
 package com.atguigu.day12.exer;
 
 
-import com.atguigu.day12.exer.Man;
-import com.atguigu.day12.exer.Person;
-
 /**
  * @author Alex
- * @date 2021/12/13 4:14 下午
+ * @since 2021/12/13 4:14 下午
  * 面向对象特征之三：多态性
  *
  * 1.理解多态性：可以理解为一个事物的多种形态。

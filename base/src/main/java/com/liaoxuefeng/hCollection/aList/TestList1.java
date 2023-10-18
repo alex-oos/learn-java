@@ -8,7 +8,7 @@ import java.util.List;
  * 随机删除一个数，随机找到这个数
  * </p>
  *
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/10 20:25
  * @Descprition:
  */

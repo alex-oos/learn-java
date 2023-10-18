@@ -9,7 +9,7 @@ import java.util.stream.Stream;
  * @ClassName StreamOther
  * @Description
  * @Author Alex
- * @Date 2023/9/26 21:15
+ * @since 2023/9/26 21:15
  * @Version 1.0
  */
 public class StreamOther {

@@ -1,12 +1,11 @@
 package com.atguigu.day7;
 
 
-import javax.imageio.metadata.IIOInvalidTreeException;
 import java.util.Arrays;
 
 /**
  * @author Alex
- * @date 2021/11/26 3:28 下午
+ * @since 2021/11/26 3:28 下午
  * <P>
  * 算法的考查：数组的复制、反转、查找(线性查找、二分法查找)
  * </p>
@@ -19,9 +18,7 @@ public class ArrayTest2 {
 
         //数组的复制(区别于数组变量的赋值：arr1 = arr)
         String[] arr1 = new String[arr.length];
-        for (int i = 0; i < arr.length; i++) {
-            arr1[i] = arr[i];
-        }
+        System.arraycopy(arr, 0, arr1, 0, arr.length);
         //遍历输出
         for (int i = 0; i < arr1.length; i++) {
             System.out.print(arr1[i] + "  ");

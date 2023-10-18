@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/18 20:08
  * @Descprition: Collections 工具类常用方法:
  * <p>
@@ -128,4 +128,3 @@ void rotate(List list, int distance)//旋转。当distance为正数时，将list
     }
 
 }
-

@@ -3,7 +3,7 @@ package com.atguigu.day13.exer;
 
 /**
  * @author Alex
- * @date 2021/12/17 3:22 下午
+ * @since 2021/12/17 3:22 下午
  * <P></p>
  */
 public class Customer {
@@ -40,9 +40,8 @@ public class Customer {
         Customer other = (Customer) obj;
         if (age != other.age) return false;
         if (name == null) {
-            if (other.name != null) return false;
-        } else if (!name.equals(other.name)) return false;
-        return true;
+            return other.name == null;
+        } else return name.equals(other.name);
     }
 
 
@@ -85,4 +84,3 @@ public class Customer {
     }
 
 }
-

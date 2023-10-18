@@ -2,7 +2,7 @@ package com.liaoxuefeng.qThread;
 
 
 /**
- * @author TangKaiZe
+ * @author Alex
  * @since 2021/7/1 15:08
  * <p>
  * 实现java多线程抢票

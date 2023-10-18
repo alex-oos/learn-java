@@ -7,7 +7,7 @@ import java.util.HashMap;
  * @ClassName FirstChar
  * @Description 剑指 Offer 50. 第一个只出现一次的字符  https://leetcode.cn/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/solution/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-by-3zqv5/
  * @Author Alex
- * @Date 2022/7/25 20:01
+ * @since 2022/7/25 20:01
  * @Version 1.0
  */
 public class OFFer50 {

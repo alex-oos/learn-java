@@ -1,7 +1,7 @@
 package com.liaoxuefeng.aQuickStart.aMethod;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/17 15:19
  * @Descprition:
  */

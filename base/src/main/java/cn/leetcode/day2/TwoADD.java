@@ -5,7 +5,7 @@ package cn.leetcode.day2;
  * @ClassName TwoADD
  * @Description
  * @Author Alex
- * @Date 2022/7/23 10:24
+ * @since 2022/7/23 10:24
  * @Version 1.0
  */
 public class TwoADD {
@@ -52,5 +52,3 @@ public class TwoADD {
 
 
 }
-
-

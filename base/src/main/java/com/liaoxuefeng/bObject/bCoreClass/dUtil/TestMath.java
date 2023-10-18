@@ -1,7 +1,7 @@
 package com.liaoxuefeng.bObject.bCoreClass.dUtil;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 15:39
  * @Descprition: 常用的工具类
  * Math

@@ -3,7 +3,7 @@ package com.atguigu.day12.exer2;
 
 /**
  * @author Alex
- * @date 2021/12/16 4:37 下午
+ * @since 2021/12/16 4:37 下午
  * <P></p>
  */
 public class CylinderTest extends Circle {
@@ -18,5 +18,3 @@ public class CylinderTest extends Circle {
     }
 
 }
-
-

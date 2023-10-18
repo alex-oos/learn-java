@@ -5,7 +5,7 @@ package day9thread;
  * @ClassName TestThread
  * @Description
  * @Author Alex
- * @Date 2022/6/17 15:41
+ * @since 2022/6/17 15:41
  * @Version 1.0
  */
 public class TestThread extends Thread {

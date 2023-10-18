@@ -1,10 +1,10 @@
 package demo;
 
 /**
- * @ClassName demo.Test
+ * @ClassName demo.Parameterpassing
  * @Description
  * @Author Alex
- * @Date 2022/8/1 12:37
+ * @since 2022/8/1 12:37
  * @Version 1.0
  */
 

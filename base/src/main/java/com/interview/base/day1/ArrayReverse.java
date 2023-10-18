@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
- * @author: TangKaiZe
+ * @autoer Alex
  * @since: 2021/7/7 上午 10:48
  * <p>
  * 数组反转

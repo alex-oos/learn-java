@@ -5,7 +5,7 @@ package day2;
  * @ClassName Main
  * @Description
  * @Author Alex
- * @Date 2022/6/8 7:08
+ * @since 2022/6/8 7:08
  * @Version 1.0
  */
 public class Main {

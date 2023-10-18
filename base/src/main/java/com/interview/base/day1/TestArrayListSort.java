@@ -4,7 +4,7 @@ package com.interview.base.day1;
 import java.util.Arrays;
 
 /**
- * @author: TangKaiZe
+ * @autoer Alex
  * @since: 2021/7/6 下午 9:54
  * <p>
  * 数组排序以及元素查找

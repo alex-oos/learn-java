@@ -3,7 +3,7 @@ package com.atguigu.day5.exam;
 import java.util.Scanner;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/19 下午 8:46
  * @Descprition:
  */
@@ -33,4 +33,3 @@ public class Exam3 {
 
 
 }
-

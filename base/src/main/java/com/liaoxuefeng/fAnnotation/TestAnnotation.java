@@ -1,7 +1,7 @@
 package com.liaoxuefeng.fAnnotation;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/8 上午 7:21
  * @Descprition: 注解：（Annotation）
  * 注解分为三类：

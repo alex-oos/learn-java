@@ -1,7 +1,7 @@
 package com.liaoxuefeng.gGeneric;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/9 20:25
  * @Descprition: <? super Integer>通配符表示：
  * 1、允许调用set（？ super Integer） 方法传入Integer的引用

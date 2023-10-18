@@ -3,7 +3,7 @@ package com.springboot.commom;
 
 /**
  * @author Alex
- * @date 2021/9/13 3:07 下午
+ * @since 2021/9/13 3:07 下午
  * <P></p>
  */
 
@@ -20,5 +20,3 @@ public interface IErrorCode {
     String getMsg();
 
 }
-
-

@@ -3,7 +3,7 @@ package com.liaoxuefeng.fAnnotation;
 import java.lang.reflect.Field;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/8 16:53
  * @Descprition:
  */
@@ -72,6 +72,3 @@ public class Main {
 
     }
 }
-
-
-

@@ -3,7 +3,7 @@ package com.liaoxuefeng.bObject.bCoreClass.aString;
 import java.util.Arrays;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/28 17:21
  * @Descprition: String 常用的一些方法
  */
@@ -86,6 +86,6 @@ public class TestString {
         %d：显示整数；
         %x：显示十六进制整数；
         %f：显示浮点数*/
-        System.out.println(String.format("Hi %s, your score is %.2f!", "Bob", 59.5));
+        System.out.printf("Hi %s, your score is %.2f!%n", "Bob", 59.5);
     }
 }

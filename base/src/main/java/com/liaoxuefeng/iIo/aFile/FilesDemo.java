@@ -6,8 +6,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * @author: lijiang
- * @date: 2023/10/7 下午6:48
+ * @autoer lijiang
+ * @since: 2023/10/7 下午6:48
  * @Descprition: java.nio.file.Files 用于操作文件或目录的工具类
  */
 public class FilesDemo {

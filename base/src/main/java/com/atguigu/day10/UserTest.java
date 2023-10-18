@@ -3,7 +3,7 @@ package com.atguigu.day10;
 
 /**
  * @author Alex
- * @date 2021/12/13 2:00 下午
+ * @since 2021/12/13 2:00 下午
  * 总结：属性赋值的先后顺序
  *
  *

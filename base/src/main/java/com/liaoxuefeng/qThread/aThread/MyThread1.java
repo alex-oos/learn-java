@@ -1,7 +1,7 @@
 package com.liaoxuefeng.qThread.aThread;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/7/13 17:15
  * @Descprition:
  */

@@ -1,10 +1,8 @@
 package com.atguigu.day6;
 
 
-import java.util.Arrays;
-
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/26 18:40
  * @Descprition: <p>
  * * 二维数组的使用

@@ -3,7 +3,7 @@ package com.atguigu.day13.wrapper;
 
 /**
  * @author Alex
- * @date 2021/12/17 3:41 下午
+ * @since 2021/12/17 3:41 下午
  * 包装类的使用:
  * 1.java提供了8种基本数据类型对应的包装类，使得基本数据类型的变量具有类的特征
  * 2.掌握的：基本数据类型、包装类、String三者之间的相互转换
@@ -31,7 +31,7 @@ public class WrapperTest {
     }
     //包装类--->基本数据类型:调用包装类Xxx的xxxValue()
     public static void test2() {
-        Integer in1 = new Integer(12);
+        Integer in1 = Integer.valueOf(12);
 
         int i1 = in1.intValue();
         System.out.println(i1 + 1);
@@ -47,11 +47,11 @@ public class WrapperTest {
 
         final int num1 = 10;
 //		System.out.println(num1.toString());
-        Integer in1 = new Integer(num1);
-        System.out.println(in1.toString());
+        Integer in1 = Integer.valueOf(num1);
+        System.out.println(in1);
 
-        Integer in2 = new Integer("123");
-        System.out.println(in2.toString());
+        Integer in2 = Integer.valueOf("123");
+        System.out.println(in2);
 
         //报异常
 //		Integer in3 = new Integer("123abc");
@@ -62,10 +62,10 @@ public class WrapperTest {
         System.out.println(f1);
         System.out.println(f2);
 
-        Boolean b1 = new Boolean(true);
-        Boolean b2 = new Boolean("TrUe");
+        Boolean b1 = Boolean.TRUE;
+        Boolean b2 = Boolean.TRUE;
         System.out.println(b2);
-        Boolean b3 = new Boolean("true123");
+        Boolean b3 = Boolean.valueOf("true123");
         System.out.println(b3);//false
 
 
@@ -90,7 +90,7 @@ public class WrapperTest {
         final Boolean b2 = b1;//自动装箱
 
         //自动拆箱：包装类--->基本数据类型
-        System.out.println(in1.toString());
+        System.out.println(in1);
 
         final int num3 = in1;//自动拆箱
 
@@ -120,6 +120,3 @@ class Order1 {
     Boolean isFemale;
 
 }
-
-
-

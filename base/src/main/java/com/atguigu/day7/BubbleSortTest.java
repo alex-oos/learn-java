@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * @author Alex
- * @date 2021/11/26 5:29 下午
+ * @since 2021/11/26 5:29 下午
  * <P>冒泡排序</p>
  */
 public class BubbleSortTest {

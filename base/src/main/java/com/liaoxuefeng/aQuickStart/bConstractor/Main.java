@@ -1,7 +1,7 @@
 package com.liaoxuefeng.aQuickStart.bConstractor;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/28 11:59
  * @Descprition:
  */
@@ -38,4 +38,3 @@ public class Main {
 
     }
 }
-

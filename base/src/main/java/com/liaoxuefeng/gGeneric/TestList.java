@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/8 17:26
  * @Descprition:
  */
@@ -25,7 +25,7 @@ public class TestList {
 
 
         List<Number> list1 = new ArrayList<Number>();
-        list1.add(new Integer(123));
+        list1.add(Integer.valueOf(123));
         list1.add(new Double(12.34));
         Number first1 = list1.get(0);
         Number first2 = list1.get(1);
@@ -64,4 +64,3 @@ class Person implements Comparable<Person> {
                 '}';
     }
 }
-

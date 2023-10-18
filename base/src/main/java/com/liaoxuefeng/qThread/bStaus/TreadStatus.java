@@ -1,7 +1,7 @@
 package com.liaoxuefeng.qThread.bStaus;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/7/18 15:33
  * <p>
  * 线程的状态：

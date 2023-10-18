@@ -1,7 +1,7 @@
 package com.liaoxuefeng.cExcethion;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 19:45
  * @Descprition: NullPointerException异常，因为city为空，所以报错
  */
@@ -23,4 +23,3 @@ class Address {
     String street;
     String zipcode;
 }
-

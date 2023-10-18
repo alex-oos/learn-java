@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 15:57
  * @Descprition: SecureRandom：生成安全的随机数
  */

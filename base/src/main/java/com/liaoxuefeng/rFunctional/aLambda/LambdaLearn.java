@@ -4,7 +4,7 @@ package com.liaoxuefeng.rFunctional.aLambda;
 
 /**
  * @author Alex
- * @date 2021/8/16 5:43 下午
+ * @since 2021/8/16 5:43 下午
  */
 public class LambdaLearn {
 

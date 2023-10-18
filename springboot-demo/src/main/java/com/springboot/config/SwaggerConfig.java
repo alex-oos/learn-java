@@ -50,7 +50,7 @@ public class SwaggerConfig {
                 // 文档描述
                 .description("文档描述")
                 // 设置管理该API人员的联系信息
-                .contact(new Contact("李将", "Alex.com", "alex.li@paytm.com"))
+                .contact(new Contact("Alex", "Alex.com", "alex.li@paytm.com"))
                 // 文档版本
                 .version("1.0")
                 .build();

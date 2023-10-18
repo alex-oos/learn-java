@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 
 /**
  * @author Alex
- * @date 2021/9/10 2:09 下午
+ * @since 2021/9/10 2:09 下午
  * <P></p>
  */
 public class IntStreamDemo {
