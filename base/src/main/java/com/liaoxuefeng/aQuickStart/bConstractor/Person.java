@@ -1,7 +1,7 @@
 package com.liaoxuefeng.aQuickStart.bConstractor;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/27 17:30
  * @Descprition:父类，主要是学习构造方法，构造器，set，get方法，重写
  */

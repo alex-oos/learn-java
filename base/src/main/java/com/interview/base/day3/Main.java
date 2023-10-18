@@ -15,7 +15,7 @@ package day3;
  * 一个类只能继承一个类，但是可以实现多个接口。
  * 接口中的成员变量只能是 public static final 类型的，不能被修改且必须有初始值，而抽象类的成员变量默认 default，可在子类中被重新定义，也可被重新赋值
  * @Author Alex
- * @Date 2022/6/12 21:22
+ * @since 2022/6/12 21:22
  * @Version 1.0
  */
 public class Main {

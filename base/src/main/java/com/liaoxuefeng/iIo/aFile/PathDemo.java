@@ -4,8 +4,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * @author: lijiang
- * @date: 2023/10/7 下午6:52
+ * @autoer lijiang
+ * @since: 2023/10/7 下午6:52
  * @Descprition: Path 类，用来获取相关的路径，并且创建文件
  */
 public class PathDemo {

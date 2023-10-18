@@ -3,7 +3,7 @@ package com.atguigu.day10;
 
 /**
  * @author Alex
- * @date 2021/12/13 2:08 下午
+ * @since 2021/12/13 2:08 下午
  * <P>
  * javaBean 是一种 Java 语言 写成 的可重用的组件
  * 所谓JavaBean，是符合如下标准的Java类：
@@ -38,10 +38,3 @@ public class Customer {
     }
 
 }
-
-
-
-
-
-
-

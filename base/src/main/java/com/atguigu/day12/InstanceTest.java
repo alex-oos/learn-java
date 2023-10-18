@@ -3,7 +3,7 @@ package com.atguigu.day12;
 
 /**
  * @author Alex
- * @date 2021/12/13 3:56 下午
+ * @since 2021/12/13 3:56 下午
  * 子类对象实例化的全过程
  *
  * 1. 从结果上来看：（继承性）

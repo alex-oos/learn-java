@@ -6,13 +6,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/8 16:51
  * @Descprition:
  */
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
+@Target(ElementType.FIELD) //
 public @interface Range {
 
     int min() default 0;

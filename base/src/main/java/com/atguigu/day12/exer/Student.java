@@ -3,7 +3,7 @@ package com.atguigu.day12.exer;
 
 /**
  * @author Alex
- * @date 2021/12/13 4:02 下午
+ * @since 2021/12/13 4:02 下午
  * <P></p>
  */
 public class Student extends Person {
@@ -43,4 +43,3 @@ public class Student extends Person {
     }
 
 }
-

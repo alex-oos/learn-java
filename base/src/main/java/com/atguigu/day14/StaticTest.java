@@ -3,7 +3,7 @@ package com.atguigu.day14;
 
 /**
  * @author Alex
- * @date 2021/12/22 4:14 下午
+ * @since 2021/12/22 4:14 下午
  * static关键字的使用
  * 1.static:静态的
  * 2.static可以用来修饰：属性、方法、代码块、内部类

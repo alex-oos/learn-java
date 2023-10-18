@@ -3,7 +3,7 @@ package com.atguigu.day7;
 
 /**
  * @author Alex
- * @date 2021/12/2 7:12 上午
+ * @since 2021/12/2 7:12 上午
  * <P>
  * <p>
  * * 数组中的常见异常：
@@ -31,7 +31,7 @@ public class ArrayException {
         //情况三：
         String[] arr3 = new String[]{"AA", "BB", "CC"};
         arr3[0] = null;
-        System.out.println(arr3[0].toString());
+        System.out.println(arr3[0]);
 
 
     }

@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 /**
- * @author: TangKaiZe
+ * @autoer Alex
  * @since: 2021/7/13 下午 9:39
  * <p>
  * Stream 流的创建方式：

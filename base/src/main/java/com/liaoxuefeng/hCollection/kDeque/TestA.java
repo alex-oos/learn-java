@@ -5,7 +5,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/18 12:08
  * @Descprition: 栈
  */

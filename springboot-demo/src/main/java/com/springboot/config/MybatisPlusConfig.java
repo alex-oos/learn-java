@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author : 李将
+ * @author : Alex
  * @since : 2021/1/22 15:15
  */
 // 加入到bean里面，让spring进行管理

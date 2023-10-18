@@ -5,13 +5,13 @@ package day7proxy;
  * @ClassName SmsProxy
  * @Description 创建一个代理类
  * @Author Alex
- * @Date 2022/6/14 21:17
+ * @since 2022/6/14 21:17
  * @Version 1.0
  */
-public class SmsProxy implements SmsService {
+public class SmsProxy implements day7proxy.SmsService {
 
-    private final SmsService smsService;
-    public SmsProxy(SmsService smsService) {
+    private final day7proxy.SmsService smsService;
+    public SmsProxy(day7proxy.SmsService smsService) {
         this.smsService = smsService;
     }
 

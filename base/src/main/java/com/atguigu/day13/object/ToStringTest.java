@@ -3,7 +3,7 @@ package com.atguigu.day13.object;
 
 /**
  * @author Alex
- * @date 2021/12/17 3:32 下午
+ * @since 2021/12/17 3:32 下午
  * Object类中toString()的使用：
  * <p>
  * 1. 当我们输出一个对象的引用时，实际上就是调用当前对象的toString()

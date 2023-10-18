@@ -3,7 +3,7 @@ package com.atguigu.day13.object;
 
 /**
  * @author Alex
- * @date 2021/12/17 3:17 下午
+ * @since 2021/12/17 3:17 下午
  * java.lang.Object类
  * 1.Object类是所有Java类的根父类
  * 2.如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.lang.Object类

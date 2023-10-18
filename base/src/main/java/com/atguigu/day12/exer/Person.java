@@ -1,11 +1,9 @@
 package com.atguigu.day12.exer;
 
 
-import java.util.IdentityHashMap;
-
 /**
  * @author Alex
- * @date 2021/12/13 3:58 下午
+ * @since 2021/12/13 3:58 下午
  * <P></p>
  */
 public class Person {

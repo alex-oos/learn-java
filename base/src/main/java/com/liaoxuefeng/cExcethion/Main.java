@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 16:19
  * @Descprition: java使用异常来表示错误，并通过try ... catch捕获异常；
  * <p>

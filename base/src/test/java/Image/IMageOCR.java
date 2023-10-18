@@ -13,7 +13,7 @@ import java.util.Map;
 
 /**
  * @author alex
- * @date 2023-07-11 下午3:26
+ * @since 2023-07-11 下午3:26
  * @Description :  OCR验证码图片识别
  * 百度OCR: 一年之内免费识别500次
  * 阿里云OCR:免费量（剩余/月赠）: 200/200次

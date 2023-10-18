@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author Alex
- * @date 2021/8/27 7:48 下午
+ * @since 2021/8/27 7:48 下午
  * <p>
  * 使用@value 读取配置中的文件，默认是application.yml 文件，也可以指定路径，使用 @PropertySource 可以指定文件读取
  * InitializingBean 当项目已启动，spring接口，spring加载之后，执行接口的一个方法

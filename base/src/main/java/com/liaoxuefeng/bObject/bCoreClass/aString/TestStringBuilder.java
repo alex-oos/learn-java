@@ -1,7 +1,7 @@
 package com.liaoxuefeng.bObject.bCoreClass.aString;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/29 上午 12:14
  * @Descprition:
  */

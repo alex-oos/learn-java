@@ -6,7 +6,7 @@ import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/5/29 17:30
  * @Descprition:
  */

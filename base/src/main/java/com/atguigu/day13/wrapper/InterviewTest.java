@@ -3,7 +3,7 @@ package com.atguigu.day13.wrapper;
 
 /**
  * @author Alex
- * @date 2021/12/17 4:29 下午
+ * @since 2021/12/17 4:29 下午
  * 关于包装类使用的面试题
  */
 public class InterviewTest {
@@ -11,21 +11,21 @@ public class InterviewTest {
 
     public static void test1() {
 
-        Object o1 = true ? new Integer(1) : new Double(2.0);
+        Object o1 = (double) Integer.valueOf(1);
         System.out.println("o1 = " + o1);
     }
 
     public static void test2() {
         Object o2;
-        if (true) o2 = new Integer(1);
+        if (true) o2 = Integer.valueOf(1);
         else o2 = new Double(2.0);
         System.out.println(o2);// 1
 
     }
 
     public static void test3() {
-        Integer i = new Integer(1);
-        Integer j = new Integer(1);
+        Integer i = Integer.valueOf(1);
+        Integer j = Integer.valueOf(1);
         System.out.println(i == j);//false
 
         //Integer内部定义了IntegerCache结构，IntegerCache中定义了Integer[],
@@ -42,4 +42,3 @@ public class InterviewTest {
     }
 
 }
-

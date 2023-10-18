@@ -6,7 +6,7 @@ import java.util.stream.LongStream;
  * @ClassName LongStreamDemo
  * @Description
  * @Author Alex
- * @Date 2023/9/26 22:32
+ * @since 2023/9/26 22:32
  * @Version 1.0
  */
 public class LongStreamDemo {

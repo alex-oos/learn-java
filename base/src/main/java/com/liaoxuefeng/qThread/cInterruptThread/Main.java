@@ -1,7 +1,7 @@
 package com.liaoxuefeng.qThread.cInterruptThread;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/8/27 上午 7:21
  * @Descprition: 中断线程
  * <p>

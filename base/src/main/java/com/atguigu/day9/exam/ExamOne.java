@@ -3,7 +3,7 @@ package com.atguigu.day9.exam;
 
 /**
  * @author Alex
- * @date 2022/1/20 8:20 上午
+ * @since 2022/1/20 8:20 上午
  * 要求：使用swap 方法 打印出 m = 100，n = 200
  */
 public class ExamOne {

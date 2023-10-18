@@ -1,7 +1,7 @@
 package com.liaoxuefeng.cExcethion;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 16:54
  * @Descprition:
  */

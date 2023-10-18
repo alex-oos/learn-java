@@ -3,7 +3,7 @@ package com.liaoxuefeng.cExcethion;
 import java.util.logging.Logger;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 19:55
  * @Descprition:
  */

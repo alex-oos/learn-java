@@ -3,7 +3,7 @@ package com.liaoxuefeng.jsince.old;
 import java.util.TimeZone;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/24 16:32
  * @Descprition:
  */
@@ -22,4 +22,3 @@ public class TestTimeZone {
         function();
     }
 }
-

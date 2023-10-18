@@ -3,7 +3,7 @@ package com.atguigu.day10.exer2;
 
 /**
  * @author Alex
- * @date 2022/4/20 08:19
+ * @since 2022/4/20 08:19
  */
 public class Account {
 
@@ -71,9 +71,3 @@ public class Account {
 
 
 }
-
-
-
-
-
-

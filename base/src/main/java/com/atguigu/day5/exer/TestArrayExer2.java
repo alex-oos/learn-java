@@ -1,12 +1,11 @@
 package com.atguigu.day5.exer;
 
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  * @author Alex
- * @date 2021/11/19 3:47 下午
+ * @since 2021/11/19 3:47 下午
  * <P>
  * 2. 从键盘读入学生成绩，找出最高分，并输出学生成绩等级。
  * 成绩>=最高分-10    等级为’A’

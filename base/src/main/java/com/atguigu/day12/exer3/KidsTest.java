@@ -3,7 +3,7 @@ package com.atguigu.day12.exer3;
 
 /**
  * @author Alex
- * @date 2021/12/16 4:36 下午
+ * @since 2021/12/16 4:36 下午
  * <P></p>
  */
 public class KidsTest {
@@ -19,4 +19,3 @@ public class KidsTest {
     }
 
 }
-

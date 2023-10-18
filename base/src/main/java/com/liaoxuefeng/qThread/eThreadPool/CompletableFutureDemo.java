@@ -6,8 +6,8 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author: Alex
- * @date: 2023/9/18 下午4:02
+ * @autoer Alex
+ * @since: 2023/9/18 下午4:02
  * @Descprition:
  */
 public class CompletableFutureDemo {

@@ -3,7 +3,7 @@ package com.liaoxuefeng.fAnnotation;
 import com.liaoxuefeng.bObject.bCoreClass.bJavaBean.Person;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/8 12:22
  * @Descprition:
  */

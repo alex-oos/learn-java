@@ -3,7 +3,7 @@ package com.atguigu.day11.exer;
 
 /**
  * @author Alex
- * @date 2021/12/16 2:50 下午
+ * @since 2021/12/16 2:50 下午
  * 编写一个类实现银行账户的概念，包含的属性有“帐号”、“密码”、“存款余额”、“利率”、“最小余额”，
  * 定义封装这些属性的方法。账号要自动生成。
  * 编写主类，使用银行账户类，输入、输出3个储户的上述信息。
@@ -11,7 +11,7 @@ package com.atguigu.day11.exer;
  */
 public class BankAccount {
 
-    private int id;
+    private final int id;
 
     private String password;
 
@@ -70,11 +70,11 @@ public class BankAccount {
     }
     public static void main(String[] args) {
         BankAccount accountA = new BankAccount("00000", 100, 0.1);
-        System.out.println(accountA.toString());
+        System.out.println(accountA);
         BankAccount accountB = new BankAccount("00000", 100, 0.1);
-        System.out.println(accountB.toString());
+        System.out.println(accountB);
         BankAccount accountC = new BankAccount("00000", 100, 0.1);
-        System.out.println(accountC.toString());
+        System.out.println(accountC);
 
 
     }

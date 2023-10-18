@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/7/10 17:06
  * @Descprition: TestNG： 是java语言流行的一种测试框架，用于测试，功能比junit强大
  */

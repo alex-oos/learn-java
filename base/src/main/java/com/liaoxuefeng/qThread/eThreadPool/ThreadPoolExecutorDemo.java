@@ -8,7 +8,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author TangKaiZe
+ * @author Alex
  * @since 2021/7/1 15:28
  * @deprecated 动态创建线程池的方式
  */

@@ -7,8 +7,8 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 /**
- * @author: Alex
- * @date: 2023/9/26 下午5:51
+ * @autoer Alex
+ * @since: 2023/9/26 下午5:51
  * @Descprition:
  */
 public class StreamFilterDemo {

@@ -4,7 +4,7 @@ package cn.javaguide.base;
  * @ClassName DemoAbstract
  * @Description
  * @Author Alex
- * @Date 2023/4/28 10:14
+ * @since 2023/4/28 10:14
  * @Version 1.0
  */
 public abstract class DemoAbstract {

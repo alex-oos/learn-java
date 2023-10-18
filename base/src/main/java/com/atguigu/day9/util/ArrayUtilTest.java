@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * @author Alex
- * @date 2021/12/8 5:52 下午
+ * @since 2021/12/8 5:52 下午
  * <P></p>
  */
 public class ArrayUtilTest {

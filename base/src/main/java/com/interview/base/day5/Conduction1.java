@@ -5,7 +5,7 @@ package day5;
  * @ClassName Conduction1
  * @Description
  * @Author Alex
- * @Date 2022/6/12 22:32
+ * @since 2022/6/12 22:32
  * @Version 1.0
  */
 public class Conduction1 {

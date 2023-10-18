@@ -3,7 +3,7 @@ package com.liaoxuefeng.gGeneric;
 import java.util.Arrays;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/9 21:01
  * @Descprition:
  */

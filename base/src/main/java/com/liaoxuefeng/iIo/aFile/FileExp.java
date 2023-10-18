@@ -11,8 +11,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * @author: lijiang
- * @date: 2023/10/7 下午5:16
+ * @autoer lijiang
+ * @since: 2023/10/7 下午5:16
  * @Descprition:
  */
 public class FileExp {

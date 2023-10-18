@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  * @author Alex
- * @date 2021/12/17 3:17 下午
+ * @since 2021/12/17 3:17 下午
  * 面试题： == 和 equals() 区别
  * <p>
  * 一、回顾 == 的使用：
@@ -57,8 +57,8 @@ public class EqualsTest {
         Customer cust1 = new Customer("Tom", 21);
         Customer cust2 = new Customer("Tom", 21);
         System.out.println("cust1==cust2 = " + (cust1 == cust2));
-        String str1 = new String("atguigu");
-        String str2 = new String("atguigu");
+        String str1 = "atguigu";
+        String str2 = "atguigu";
         System.out.println(str1 == str2);//false
         System.out.println("****************************");
         System.out.println(cust1.equals(cust2));//false--->true

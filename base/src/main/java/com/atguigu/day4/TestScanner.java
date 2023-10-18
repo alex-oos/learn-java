@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 /**
  * @author Alex
- * @date 2021/11/16 11:35 上午
+ * @since 2021/11/16 11:35 上午
  * <P>
  * 如何从键盘获取不同类型的变量：需要使用Scanner类
  * 具体实现步骤：

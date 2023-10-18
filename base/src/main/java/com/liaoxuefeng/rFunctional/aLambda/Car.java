@@ -4,8 +4,8 @@ package com.liaoxuefeng.rFunctional.aLambda;
 import java.util.function.Supplier;
 
 /**
- * @author: Alex
- * @date: 2023/9/26 下午4:01
+ * @autoer Alex
+ * @since: 2023/9/26 下午4:01
  * @Descprition:
  */
 public class Car {

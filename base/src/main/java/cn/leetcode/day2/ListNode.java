@@ -5,7 +5,7 @@ package cn.leetcode.day2;
  * @ClassName ListNode
  * @Description
  * @Author Alex
- * @Date 2022/7/23 10:25
+ * @since 2022/7/23 10:25
  * @Version 1.0
  */
 public class ListNode {

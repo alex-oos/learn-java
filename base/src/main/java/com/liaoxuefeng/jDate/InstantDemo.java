@@ -6,8 +6,8 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * @author: 李将
- * @Date: 2020/7/8 15:20
+ * @autoer Alex
+ * @since: 2020/7/8 15:20
  * @Descprition: Java提供的System.currentTimeMillis()返回的就是以毫秒表示的当前时间戳
  * 这个当前时间戳在java.time中以Instant类型表示，我们用Instant.now()获取当前时间戳，效果和System.currentTimeMillis()类似
  */

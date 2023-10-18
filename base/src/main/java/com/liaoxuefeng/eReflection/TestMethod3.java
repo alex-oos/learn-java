@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 
 /**
- * @author: Alex
+ * @autoer Alex
  * @since: 2020/6/6 上午 12:15
  * @Descprition: 一个Menthod 对象可以包含一个方法的所有信息：
  * 1、getName() 返回方法，例如："getScore"

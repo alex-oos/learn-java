@@ -7,7 +7,7 @@ import java.util.function.Predicate;
 
 /**
  * @author Alex
- * @date 2021/8/16 7:15 下午
+ * @since 2021/8/16 7:15 下午
  * 函数式编程: 是把函数作为基本运算单位，函数可以作为变量，可以接收函数，还可以返回函数，一般支持 函数式编程的编码风格叫做Lambda表达式
  * 函数式接口： 只包含一个抽象方法的接口，称为函数式接口。可以使用@FunctionalInterface注解修饰，可以检查是否是函数式接口
  */

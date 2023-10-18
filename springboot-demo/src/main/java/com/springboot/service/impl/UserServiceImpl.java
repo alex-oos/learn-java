@@ -30,7 +30,7 @@ public class UserServiceImpl extends ServiceImpl<Usermapper, User> implements Us
         User user = baseMapper.selectOne(new QueryWrapper<User>().eq("name", name));
 
 
-        if (StringUtils.isEmpty(user)) {
+        if (StringUtils.hasText((CharSequence) user)) {
             return false;
         }
 

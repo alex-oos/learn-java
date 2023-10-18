@@ -6,7 +6,7 @@ enum Weekday1 {
 }
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/2 14:25
  * @Descprition:
  */
@@ -31,4 +31,3 @@ public class TestSwich {
         }
     }
 }
-

@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @author: 李将
+ * @autoer Alex
  * @since: 2020/6/18 11:57
  * @Descprition: Deque: 双端队列，允许两头都进，两头都出
  * Deque 队列，功能是：
