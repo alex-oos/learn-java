@@ -10,7 +10,9 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Alex
  * @since 2021/7/1 15:28
- * @deprecated 动态创建线程池的方式
+ * <p>
+ * 动态创建线程池的方式
+ * </p>
  */
 public class ThreadPoolExecutorDemo {
 

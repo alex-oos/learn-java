@@ -6,9 +6,13 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @autoer Alex
- * @since: 2023/9/18 下午4:02
- * @Descprition:
+ * <p>
+ * CompletableFuture： 异步任务完成时的回调
+ * 主要是配合线程池使用的
+ * </p>
+ *
+ * @author Alex
+ * @since : 2023/9/18 下午4:02
  */
 public class CompletableFutureDemo {
 
@@ -27,8 +31,10 @@ public class CompletableFutureDemo {
     public static String queryCode(String name) {
 
         try {
+            System.out.println("name = " + name);
             Thread.sleep(100);
         } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         return "601857";
     }
@@ -36,8 +42,11 @@ public class CompletableFutureDemo {
     public static Double fetchPrice(String code) {
 
         try {
+            System.out.println("code = " + code);
             Thread.sleep(100);
         } catch (InterruptedException e) {
+            e.printStackTrace();
+
         }
         return 5 + Math.random() * 20;
     }
@@ -72,7 +81,7 @@ public class CompletableFutureDemo {
     /**
      * 使用com
      */
-    public static void f2() {
+    public static void function2() {
 
         ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 5, 1L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(100), new ThreadPoolExecutor.CallerRunsPolicy());
         // 第一个任务
@@ -89,7 +98,7 @@ public class CompletableFutureDemo {
     public static void main(String[] args) throws InterruptedException {
 
         function();
-        f2();
+        function2();
     }
 
 }

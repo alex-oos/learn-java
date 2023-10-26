@@ -23,6 +23,7 @@ package com.atguigu.day13;
 public class PersonTest {
 
     public static void main(String[] args) {
+
         Person p1 = new Person();
         p1.eat();
 
@@ -41,18 +42,18 @@ public class PersonTest {
         p2.walk();
         System.out.println(p2.id);
         System.out.println("****************************");
-        //不能调用子类所特有的方法、属性：编译时，p2是Person类型
+        // 不能调用子类所特有的方法、属性：编译时，p2是Person类型
         // p2.earnMoney
-        //p2.isSmoking = true;
+        // p2.isSmoking = true;
         p2.name = "Tom";
 
-        //有了对象的多态性以后，内存中实际时加载了子类特有的属性和方法，但是由于变量声明为父类类型，导致，有编译时，只能调用父类中声明的属性和方法，子类特有的属性和方法不能调用
-        //如何才能调用子类特有的属性和方法？
-        //向下转型：使用强制类型转换符。
+        // 有了对象的多态性以后，内存中实际时加载了子类特有的属性和方法，但是由于变量声明为父类类型，导致，有编译时，只能调用父类中声明的属性和方法，子类特有的属性和方法不能调用
+        // 如何才能调用子类特有的属性和方法？
+        // 向下转型：使用强制类型转换符。
         Man man1 = (Man) p2;
         Man.earnMoney();
         man1.isSmoking = true;
-        //使用强转时，可能出现ClassCastException的异常。
+        // 使用强转时，可能出现ClassCastException的异常。
        /* Woman woman1 = (Woman) p2;
         woman1.goShopping();*/
 
