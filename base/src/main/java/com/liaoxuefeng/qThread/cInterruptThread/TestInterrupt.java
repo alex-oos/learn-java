@@ -2,8 +2,8 @@ package com.liaoxuefeng.qThread.cInterruptThread;
 
 
 /**
- * @autoer Alex
- * @since: 2020/7/18 15:45
+ * @author Alex
+ * @since 2020/7/18 15:45
  * <p>
  * interrupt()  中断线程  目标线程需要反复检测自身状态是否是interrupted状态，如果是，就立刻结束运行。
  * 对目标线程调用interrupt()方法可以请求中断一个线程，目标线程通过检测isInterrupted()标志获取自身是否已中断。如果目标线程处于等待状态，该线程会捕获到InterruptedException；

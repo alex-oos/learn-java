@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.stream.Stream;
 
 /**
- * @autoer Alex
- * @since: 2023/9/26 下午6:19
+ * @author Alex
+ * @since 2023/9/26 下午6:19
  * @Descprition:
  */
 public class StreamReduceDemo {

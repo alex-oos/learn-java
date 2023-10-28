@@ -1,8 +1,8 @@
 package com.liaoxuefeng.kJnuit;
 
 /**
- * @autoer Alex
- * @since: 2020/7/10 10:40
+ * @author Alex
+ * @since 2020/7/10 10:40
  * @Descprition:
  */
 public class Factorial {

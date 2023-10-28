@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @autoer lijiang
- * @since: 2023/9/27 上午11:10
+ * @author lijiang
+ * @since 2023/9/27 上午11:10
  * @Descprition:
  */
 @Data

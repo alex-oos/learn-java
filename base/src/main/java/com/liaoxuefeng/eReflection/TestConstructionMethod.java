@@ -4,8 +4,8 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * @autoer Alex
- * @since: 2020/6/7 下午 5:48
+ * @author Alex
+ * @since 2020/6/7 下午 5:48
  * @Descprition: 反射调用构造方法
  */
 public class TestConstructionMethod {

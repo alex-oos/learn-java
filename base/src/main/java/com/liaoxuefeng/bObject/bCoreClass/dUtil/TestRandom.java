@@ -3,8 +3,8 @@ package com.liaoxuefeng.bObject.bCoreClass.dUtil;
 import java.util.Random;
 
 /**
- * @autoer Alex
- * @since: 2020/6/2 15:51
+ * @author Alex
+ * @since 2020/6/2 15:51
  * @Descprition:
  */
 public class TestRandom {

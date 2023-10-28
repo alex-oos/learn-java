@@ -3,8 +3,8 @@ package com.liaoxuefeng.eReflection;
 import java.lang.reflect.Field;
 
 /**
- * @autoer Alex
- * @since: 2020/6/5 16:28
+ * @author Alex
+ * @since 2020/6/5 16:28
  * @Descprition: 获取字段值
  */
 public class TestField2 {

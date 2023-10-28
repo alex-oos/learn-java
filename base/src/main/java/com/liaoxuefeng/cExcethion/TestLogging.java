@@ -3,8 +3,8 @@ package com.liaoxuefeng.cExcethion;
 import java.util.logging.Logger;
 
 /**
- * @autoer Alex
- * @since: 2020/6/2 19:55
+ * @author Alex
+ * @since 2020/6/2 19:55
  * @Descprition:
  */
 public class TestLogging {

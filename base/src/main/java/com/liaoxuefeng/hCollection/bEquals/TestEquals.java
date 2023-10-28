@@ -7,8 +7,8 @@ import java.util.List;
  * equals方法，使用规则
  * </p>
  *
- * @autoer Alex
- * @since: 2020/6/10 21:04
+ * @author Alex
+ * @since 2020/6/10 21:04
  * @Descprition:
  */
 public class TestEquals {

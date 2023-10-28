@@ -4,8 +4,8 @@ package cn.leetcode.old.day2;
 import java.util.Arrays;
 
 /**
- * @autoer Alex
- * @since: 2021/7/13 下午 12:10
+ * @author Alex
+ * @since 2021/7/13 下午 12:10
  * <p>
  * 给两个有序的数组，进行拼接，最后返回一个新的数组
  * </p>

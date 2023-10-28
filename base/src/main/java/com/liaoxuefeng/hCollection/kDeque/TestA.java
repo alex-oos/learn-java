@@ -5,8 +5,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * @autoer Alex
- * @since: 2020/6/18 12:08
+ * @author Alex
+ * @since 2020/6/18 12:08
  * @Descprition: 栈
  */
 public class TestA {

@@ -5,8 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @autoer Alex
- * @since: 2023/9/26 下午6:11
+ * @author Alex
+ * @since 2023/9/26 下午6:11
  * @Descprition:
  */
 @Data

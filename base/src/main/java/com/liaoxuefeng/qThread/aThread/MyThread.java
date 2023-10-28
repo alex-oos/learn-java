@@ -1,8 +1,8 @@
 package com.liaoxuefeng.qThread.aThread;
 
 /**
- * @autoer Alex
- * @since: 2020/7/13 14:47
+ * @author Alex
+ * @since 2020/7/13 14:47
  * @Descprition:
  */
 

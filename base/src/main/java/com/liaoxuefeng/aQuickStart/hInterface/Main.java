@@ -2,8 +2,8 @@ package com.liaoxuefeng.aQuickStart.hInterface;
 
 
 /**
- * @autoer Alex
- * @since: 2020/5/28 15:54
+ * @author Alex
+ * @since 2020/5/28 15:54
  * @Descprition:
  */
 public class Main {

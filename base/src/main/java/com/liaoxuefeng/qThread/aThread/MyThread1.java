@@ -1,8 +1,8 @@
 package com.liaoxuefeng.qThread.aThread;
 
 /**
- * @autoer Alex
- * @since: 2020/7/13 17:15
+ * @author Alex
+ * @since 2020/7/13 17:15
  * @Descprition:
  */
 public class MyThread1 extends Thread {

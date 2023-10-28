@@ -3,8 +3,8 @@ package com.atguigu.day5;
 import java.util.Scanner;
 
 /**
- * @autoer Alex
- * @since: 2020/5/19 下午 10:28
+ * @author Alex
+ * @since 2020/5/19 下午 10:28
  * @Descprition: break的作用
  */
 public class TestBreak {

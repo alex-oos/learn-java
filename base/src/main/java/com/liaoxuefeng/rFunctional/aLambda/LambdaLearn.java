@@ -1,7 +1,6 @@
 package com.liaoxuefeng.rFunctional.aLambda;
 
 
-
 /**
  * @author Alex
  * @since 2021/8/16 5:43 下午
@@ -45,11 +44,6 @@ public class LambdaLearn {
         greetingService2.sayMessage("Google");
     }
 
-    public static void main(String[] args) {
-
-        function();
-
-    }
 
     private int operate(int a, int b, MathOperation mathOperation) {
 
@@ -65,6 +59,12 @@ public class LambdaLearn {
     interface GreetingService {
 
         void sayMessage(String message);
+
+    }
+
+    public static void main(String[] args) {
+
+        function();
 
     }
 

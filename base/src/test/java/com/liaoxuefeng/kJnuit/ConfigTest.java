@@ -7,8 +7,8 @@ import org.junit.jupiter.api.condition.OS;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * @autoer Alex
- * @since: 2020/7/10 18:35
+ * @author Alex
+ * @since 2020/7/10 18:35
  * @Descprition:
  */
 /*

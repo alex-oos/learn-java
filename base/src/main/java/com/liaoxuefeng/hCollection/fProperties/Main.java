@@ -5,8 +5,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 /**
- * @autoer Alex
- * @since: 2020/6/14 下午 10:08
+ * @author Alex
+ * @since 2020/6/14 下午 10:08
  * @Descprition:
  */
 public class Main {

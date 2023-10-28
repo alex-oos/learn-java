@@ -1,8 +1,8 @@
 package com.liaoxuefeng.kJnuit;
 
 /**
- * @autoer Alex
- * @since: 2020/7/10 17:56
+ * @author Alex
+ * @since 2020/7/10 17:56
  * @Descprition:
  */
 public class Calculator {

@@ -2,8 +2,8 @@ package com.interview.base.day1;
 
 
 /**
- * @autoer Alex
- * @since: 2021/7/6 下午 9:35
+ * @author Alex
+ * @since 2021/7/6 下午 9:35
  * <p>
  * 字符串比较
  * </p>

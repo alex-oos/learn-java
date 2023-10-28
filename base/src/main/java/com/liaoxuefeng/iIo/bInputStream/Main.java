@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * @autoer Alex
- * @since: 2020/6/27 18:00
+ * @author Alex
+ * @since 2020/6/27 18:00
  * @Descprition: inputStream 文件流读写操作
  */
 public class Main {

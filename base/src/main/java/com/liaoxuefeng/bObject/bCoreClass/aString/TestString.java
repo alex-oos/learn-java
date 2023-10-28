@@ -3,8 +3,8 @@ package com.liaoxuefeng.bObject.bCoreClass.aString;
 import java.util.Arrays;
 
 /**
- * @autoer Alex
- * @since: 2020/5/28 17:21
+ * @author Alex
+ * @since 2020/5/28 17:21
  * @Descprition: String 常用的一些方法
  */
 public class TestString {

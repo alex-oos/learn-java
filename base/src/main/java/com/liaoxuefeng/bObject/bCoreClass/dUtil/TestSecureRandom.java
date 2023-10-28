@@ -5,8 +5,8 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 
 /**
- * @autoer Alex
- * @since: 2020/6/2 15:57
+ * @author Alex
+ * @since 2020/6/2 15:57
  * @Descprition: SecureRandom：生成安全的随机数
  */
 public class TestSecureRandom {

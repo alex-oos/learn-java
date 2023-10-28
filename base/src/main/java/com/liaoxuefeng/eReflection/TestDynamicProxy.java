@@ -7,8 +7,8 @@ import java.lang.reflect.Proxy;
 
 
 /**
- * @autoer ALex
- * @since: 2020/6/7 下午 6:47
+ * @author ALex
+ * @since 2020/6/7 下午 6:47
  * @Descprition: 动态代理（Dynamic Proxy）:
  * 1、
  * 2、

@@ -1,8 +1,8 @@
 package com.atguigu.day4.exer;
 
 /**
- * @autoer Alex
- * @since: 2020/5/16 下午 11:46
+ * @author Alex
+ * @since 2020/5/16 下午 11:46
  * @Descprition:
  */
 /*

@@ -3,8 +3,8 @@ package com.atguigu.day4.exer;
 import java.util.Scanner;
 
 /**
- * @autoer Alex
- * @since: 2020/5/16 下午 11:51
+ * @author Alex
+ * @since 2020/5/16 下午 11:51
  * @Descprition:
  */
 /*

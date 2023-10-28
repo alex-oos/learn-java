@@ -3,8 +3,8 @@ package com.liaoxuefeng.qThread.eThreadPool;
 import java.util.concurrent.*;
 
 /**
- * @autoer Alex
- * @since: 2023/9/18 下午3:45
+ * @author Alex
+ * @since 2023/9/18 下午3:45
  * @Descprition: futrue 是用来接收线程执行的结果
  */
 public class FutureDemo {

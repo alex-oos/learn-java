@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
- * @autoer Alex
- * @since: 2021/7/7 上午 10:48
+ * @author Alex
+ * @since 2021/7/7 上午 10:48
  * <p>
  * 数组反转
  * </p>

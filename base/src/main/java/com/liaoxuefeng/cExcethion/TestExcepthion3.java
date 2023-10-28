@@ -1,8 +1,8 @@
 package com.liaoxuefeng.cExcethion;
 
 /**
- * @autoer Alex
- * @since: 2020/6/2 16:54
+ * @author Alex
+ * @since 2020/6/2 16:54
  * @Descprition:
  */
 public class TestExcepthion3 {

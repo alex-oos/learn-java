@@ -1,8 +1,8 @@
 package com.liaoxuefeng.gGeneric;
 
 /**
- * @autoer Alex
- * @since: 2020/6/8 18:32
+ * @author Alex
+ * @since 2020/6/8 18:32
  * @Descprition: ，泛型类型<T>不能用于静态方法
  */
 class Pair<T> {

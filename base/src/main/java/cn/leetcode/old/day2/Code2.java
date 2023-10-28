@@ -2,8 +2,8 @@ package cn.leetcode.old.day2;
 
 
 /**
- * @autoer Alex
- * @since: 2021/7/8 下午 4:48
+ * @author Alex
+ * @since 2021/7/8 下午 4:48
  * <p>
  * </p>
  */

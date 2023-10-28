@@ -3,8 +3,8 @@ package com.liaoxuefeng.iIo.bInputStream;
 import java.io.*;
 
 /**
- * @autoer Alex
- * @since: 2020/6/27 16:51
+ * @author Alex
+ * @since 2020/6/27 16:51
  * @Descprition:
  */
 public class TestFileInputStream {

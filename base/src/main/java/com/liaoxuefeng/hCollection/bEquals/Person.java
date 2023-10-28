@@ -3,8 +3,8 @@ package com.liaoxuefeng.hCollection.bEquals;
 import java.util.Objects;
 
 /**
- * @autoer Alex
- * @since: 2020/6/10 21:04
+ * @author Alex
+ * @since 2020/6/10 21:04
  * @Descprition:
  */
 public class Person {

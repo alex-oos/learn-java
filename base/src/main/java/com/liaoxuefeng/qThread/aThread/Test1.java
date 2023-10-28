@@ -8,21 +8,9 @@ package com.liaoxuefeng.qThread.aThread;
 public class Test1 extends Thread {
 
 
-    @Override
-    public synchronized void start() {
-        super.start();
-        System.out.println("线程已经开始启动： " + true);
-    }
-
-    @Override
-    public void run() {
-        super.run();
-        System.out.println("线程正在运行 " + true);
-    }
-
-
     public static void main(String[] args) throws InterruptedException {
- /*       RegexGroup thread = new RegexGroup();
+
+        Test1 thread = new Test1();
         thread.setName("线程一");
         thread.start();
         Thread.sleep(1000);
@@ -32,9 +20,22 @@ public class Test1 extends Thread {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-*/
 
 
+    }
+
+    @Override
+    public synchronized void start() {
+
+        super.start();
+        System.out.println("线程已经开始启动： " + true);
+    }
+
+    @Override
+    public void run() {
+
+        super.run();
+        System.out.println("线程正在运行 " + true);
     }
 
 }

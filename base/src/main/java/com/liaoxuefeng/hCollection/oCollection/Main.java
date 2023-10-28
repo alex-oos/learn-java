@@ -6,8 +6,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @autoer Alex
- * @since: 2020/6/18 20:08
+ * @author Alex
+ * @since 2020/6/18 20:08
  * @Descprition: Collections 工具类常用方法:
  * <p>
  * 排序

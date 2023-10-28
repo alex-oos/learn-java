@@ -1,8 +1,8 @@
 package com.atguigu.day3;
 
 /**
- * @autoer Alex
- * @since: 2020/5/7 下午 11:57
+ * @author Alex
+ * @since 2020/5/7 下午 11:57
  * @Descprition:
  */
 /*

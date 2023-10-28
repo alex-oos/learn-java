@@ -1,8 +1,8 @@
 package com.liaoxuefeng.qThread.cInterruptThread;
 
 /**
- * @autoer Alex
- * @since: 2020/8/27 上午 7:21
+ * @author Alex
+ * @since 2020/8/27 上午 7:21
  * @Descprition: 中断线程
  * <p>
  * 线程间共享变量需要使用volatile关键字标记，确保每个线程都能读取到更新后的变量值

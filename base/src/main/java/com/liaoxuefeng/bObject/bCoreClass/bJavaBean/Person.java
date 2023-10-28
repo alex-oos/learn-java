@@ -6,8 +6,8 @@ import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
 
 /**
- * @autoer Alex
- * @since: 2020/5/29 17:30
+ * @author Alex
+ * @since 2020/5/29 17:30
  * @Descprition:
  */
 public class Person {

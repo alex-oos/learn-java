@@ -1,8 +1,8 @@
 package com.liaoxuefeng.fAnnotation;
 
 /**
- * @autoer Alex
- * @since: 2020/6/8 16:50
+ * @author Alex
+ * @since 2020/6/8 16:50
  * @Descprition:
  */
 public class Person {

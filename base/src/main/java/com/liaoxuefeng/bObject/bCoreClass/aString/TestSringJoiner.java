@@ -3,8 +3,8 @@ package com.liaoxuefeng.bObject.bCoreClass.aString;
 import java.util.StringJoiner;
 
 /**
- * @autoer Alex
- * @since: 2020/5/29 11:39
+ * @author Alex
+ * @since 2020/5/29 11:39
  * @Descprition:
  */
 public class TestSringJoiner {

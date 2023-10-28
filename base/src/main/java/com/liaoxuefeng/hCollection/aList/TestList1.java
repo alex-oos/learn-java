@@ -8,8 +8,8 @@ import java.util.List;
  * 随机删除一个数，随机找到这个数
  * </p>
  *
- * @autoer Alex
- * @since: 2020/6/10 20:25
+ * @author Alex
+ * @since 2020/6/10 20:25
  * @Descprition:
  */
 public class TestList1 {

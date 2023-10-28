@@ -2,8 +2,8 @@ package com.interview.base.day1;
 
 
 /**
- * @autoer Alex
- * @since: 2021/7/6 下午 9:41
+ * @author Alex
+ * @since 2021/7/6 下午 9:41
  * <p>
  * 查找字符串最后一次出现的位置
  * </p>

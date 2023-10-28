@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 /**
- * @autoer Alex
- * @since: 2020/6/2 15:38
+ * @author Alex
+ * @since 2020/6/2 15:38
  * @Descprition:
  */
 public class TestBIgDecimal {

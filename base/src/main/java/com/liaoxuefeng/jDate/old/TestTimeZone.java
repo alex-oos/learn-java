@@ -3,8 +3,8 @@ package com.liaoxuefeng.jsince.old;
 import java.util.TimeZone;
 
 /**
- * @autoer Alex
- * @since: 2020/6/24 16:32
+ * @author Alex
+ * @since 2020/6/24 16:32
  * @Descprition:
  */
 //jdk1.8 之前设置时区

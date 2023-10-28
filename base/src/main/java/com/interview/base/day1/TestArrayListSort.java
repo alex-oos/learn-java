@@ -4,8 +4,8 @@ package com.interview.base.day1;
 import java.util.Arrays;
 
 /**
- * @autoer Alex
- * @since: 2021/7/6 下午 9:54
+ * @author Alex
+ * @since 2021/7/6 下午 9:54
  * <p>
  * 数组排序以及元素查找
  * </p>

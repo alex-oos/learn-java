@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
- * @autoer Alex
- * @since: 2021/7/13 下午 10:00
+ * @author Alex
+ * @since 2021/7/13 下午 10:00
  * <p>
  * 给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串，判断该字符串是否有效。
  * 1.左括号必须用相同类型的右括号闭合。

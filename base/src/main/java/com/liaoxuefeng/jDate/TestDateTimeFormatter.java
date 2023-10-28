@@ -5,8 +5,8 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 /**
- * @autoer Alex
- * @since: 2020/7/8 15:06
+ * @author Alex
+ * @since 2020/7/8 15:06
  * @Descprition: 用旧的Date对象时，我们用SimpleDateFormat进行格式化显示。使用新的LocalDateTime或ZonedLocalDateTime时，我们要进行格式化显示，就要使用DateTimeFormatter。
  * 使用的时候，只能在方法内部创建新的局部变量。而DateTimeFormatter可以只创建一个实例，到处引用
  */

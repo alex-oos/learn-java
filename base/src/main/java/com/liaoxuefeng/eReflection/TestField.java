@@ -6,8 +6,8 @@ import java.lang.reflect.Modifier;
 import java.util.Arrays;
 
 /**
- * @autoer Alex
- * @since: 2020/6/5 15:33
+ * @author Alex
+ * @since 2020/6/5 15:33
  * @Descprition: 反射中访问字段
  */
 public class TestField {

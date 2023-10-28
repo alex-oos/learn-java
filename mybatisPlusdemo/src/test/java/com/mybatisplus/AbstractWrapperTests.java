@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * @Auther: Alex
- * @since: 2021/1/22 18:27
+ * @since 2021/1/22 18:27
  * @Descprition: Wrapper ： 条件构造抽象类，最顶端父类
  * AbstractWrapper ： 用于查询条件封装，生成 sql 的 where 条件
  * QueryWrapper ： Entity 对象封装操作类，不是用lambda语法

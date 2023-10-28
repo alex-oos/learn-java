@@ -2,8 +2,8 @@ package com.liaoxuefeng.qThread.aThread;
 
 
 /**
- * @autoer Alex
- * @since: 2020/7/18 15:19
+ * @author Alex
+ * @since 2020/7/18 15:19
  * <p>Java用Thread对象表示一个线程，通过调用start()启动一个新线程；
  * 一个线程对象只能调用一次start()方法；
  * 线程的执行代码写在run()方法中；

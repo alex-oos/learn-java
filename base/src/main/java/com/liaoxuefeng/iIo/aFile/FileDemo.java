@@ -8,8 +8,8 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 /**
- * @autoer lijiang
- * @since: 2023/10/7 下午3:55
+ * @author lijiang
+ * @since 2023/10/7 下午3:55
  * @Descprition: File类 的使用
  */
 public class FileDemo {

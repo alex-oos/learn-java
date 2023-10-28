@@ -1,8 +1,8 @@
 package com.liaoxuefeng.eReflection;
 
 /**
- * @autoer Alex
- * @since: 2023/9/6 下午4:04
+ * @author Alex
+ * @since 2023/9/6 下午4:04
  * @Descprition:
  */
 public class HelloWorld implements Hello {

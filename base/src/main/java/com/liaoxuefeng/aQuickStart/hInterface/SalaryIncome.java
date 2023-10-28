@@ -1,8 +1,8 @@
 package com.liaoxuefeng.aQuickStart.hInterface;
 
 /**
- * @autoer Alex
- * @since: 2020/5/28 16:11
+ * @author Alex
+ * @since 2020/5/28 16:11
  * @Descprition:
  */
 

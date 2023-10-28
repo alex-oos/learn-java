@@ -1,8 +1,8 @@
 package com.atguigu.day2Operator;
 
 /**
- * @autoer 唐凯泽
- * @since: 2020/5/4 11:09
+ * @author 唐凯泽
+ * @since 2020/5/4 11:09
  * @Descprition:
  */
 /*

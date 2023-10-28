@@ -1,8 +1,8 @@
 package com.liaoxuefeng.qThread.bStaus;
 
 /**
- * @autoer Alex
- * @since: 2020/7/18 15:33
+ * @author Alex
+ * @since 2020/7/18 15:33
  * <p>
  * 线程的状态：
  * 通过对另一个线程对象调用join()方法可以等待其执行结束；

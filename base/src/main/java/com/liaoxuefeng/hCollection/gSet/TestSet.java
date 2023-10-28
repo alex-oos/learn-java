@@ -5,8 +5,8 @@ import java.util.Set;
 import java.util.TreeSet;
 
 /**
- * @autoer Alex
- * @since: 2020/6/15 下午 11:04
+ * @author Alex
+ * @since 2020/6/15 下午 11:04
  * <p>
  * set用于存储不重复的元素，主要方法如下：
  * 1、boolean add(E,e) 将元素添加到Set<E>

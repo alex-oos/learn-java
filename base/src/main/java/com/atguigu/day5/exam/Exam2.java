@@ -1,8 +1,8 @@
 package com.atguigu.day5.exam;
 
 /**
- * @autoer Alex
- * @since: 2020/5/17 上午 6:38
+ * @author Alex
+ * @since 2020/5/17 上午 6:38
  * @Descprition:
  */
 /*

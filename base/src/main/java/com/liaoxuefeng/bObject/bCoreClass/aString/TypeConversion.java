@@ -5,8 +5,8 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @autoer Alex
- * @since: 2020/5/28 21:13
+ * @author Alex
+ * @since 2020/5/28 21:13
  * @Descprition:
  */
 public class TypeConversion {

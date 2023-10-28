@@ -7,8 +7,8 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 /**
- * @autoer Alex
- * @since: 2023/9/26 下午5:25
+ * @author Alex
+ * @since 2023/9/26 下午5:25
  * @Descprition: Stream 中常见的映射流
  */
 public class StreamMapDemo {

@@ -5,8 +5,8 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @autoer Alex
- * @since: 2020/6/11 16:37
+ * @author Alex
+ * @since 2020/6/11 16:37
  * <p>
  * LinkList
  * </p>

@@ -1,8 +1,8 @@
 package com.liaoxuefeng.eReflection;
 
 /**
- * @autoer Alex
- * @since: 2020/6/7 下午 6:05
+ * @author Alex
+ * @since 2020/6/7 下午 6:05
  * @Descprition: 反射获取继承关系
  */
 public class TestExtends {

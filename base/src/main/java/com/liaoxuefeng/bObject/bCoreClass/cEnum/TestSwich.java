@@ -6,8 +6,8 @@ enum Weekday1 {
 }
 
 /**
- * @autoer Alex
- * @since: 2020/6/2 14:25
+ * @author Alex
+ * @since 2020/6/2 14:25
  * @Descprition:
  */
 public class TestSwich {

@@ -6,8 +6,8 @@ import java.io.Writer;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @autoer Alex
- * @since: 2020/6/29 17:01
+ * @author Alex
+ * @since 2020/6/29 17:01
  * @Descprition:
  */
 public class Main {

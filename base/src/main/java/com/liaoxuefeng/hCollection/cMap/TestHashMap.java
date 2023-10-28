@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @autoer Alex
- * @since: 2021/7/6 下午 9:21
+ * @author Alex
+ * @since 2021/7/6 下午 9:21
  * <p>
  * HashMap 的基本用法
  * </p>

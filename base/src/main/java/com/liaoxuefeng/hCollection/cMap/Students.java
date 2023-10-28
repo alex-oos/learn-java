@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @autoer Alex
- * @since: 2020/6/11 11:19
+ * @author Alex
+ * @since 2020/6/11 11:19
  * @Descprition:
  */
 public class Students {

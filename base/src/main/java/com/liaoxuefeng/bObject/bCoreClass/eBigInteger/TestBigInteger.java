@@ -3,8 +3,8 @@ package com.liaoxuefeng.bObject.bCoreClass.eBigInteger;
 import java.math.BigInteger;
 
 /**
- * @autoer Alex
- * @since: 2020/6/2 15:32
+ * @author Alex
+ * @since 2020/6/2 15:32
  * @Descprition: BigInteger 用来模拟大整数， BigInteger内部用一个int[]数组来模拟一个非常大的整数：
  */
 public class TestBigInteger {

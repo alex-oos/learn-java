@@ -3,8 +3,8 @@ package com.liaoxuefeng.gGeneric;
 import java.util.Arrays;
 
 /**
- * @autoer Alex
- * @since: 2020/6/9 21:01
+ * @author Alex
+ * @since 2020/6/9 21:01
  * @Descprition:
  */
 public class TestReflection {

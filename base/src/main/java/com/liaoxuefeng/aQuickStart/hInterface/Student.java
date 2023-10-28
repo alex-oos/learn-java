@@ -5,8 +5,8 @@ import com.liaoxuefeng.aQuickStart.dOverload.Hello;
 import com.liaoxuefeng.aQuickStart.gAbstract.Person;
 
 /**
- * @autoer Alex
- * @since: 2020/5/28 15:32
+ * @author Alex
+ * @since 2020/5/28 15:32
  * @Descprition:
  */
 

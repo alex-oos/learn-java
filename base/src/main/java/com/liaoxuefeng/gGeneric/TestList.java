@@ -5,8 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @autoer Alex
- * @since: 2020/6/8 17:26
+ * @author Alex
+ * @since 2020/6/8 17:26
  * @Descprition:
  */
 public class TestList {

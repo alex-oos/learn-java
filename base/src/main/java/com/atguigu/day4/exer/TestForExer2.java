@@ -1,8 +1,8 @@
 package com.atguigu.day4.exer;
 
 /**
- * @autoer Alex
- * @since: 2020/5/17 上午 12:11
+ * @author Alex
+ * @since 2020/5/17 上午 12:11
  * @Descprition:
  */
 public class TestForExer2 {

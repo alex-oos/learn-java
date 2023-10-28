@@ -2,8 +2,8 @@ package cn.leetcode.old.day2;
 
 
 /**
- * @autoer Alex
- * @since: 2021/7/8 下午 3:52
+ * @author Alex
+ * @since 2021/7/8 下午 3:52
  * <p>
  * 整数反转
  * </p>

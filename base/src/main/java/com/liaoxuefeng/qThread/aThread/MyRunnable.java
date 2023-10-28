@@ -2,8 +2,8 @@ package com.liaoxuefeng.qThread.aThread;
 
 
 /**
- * @autoer Alex
- * @since: 2020/7/13 16:14
+ * @author Alex
+ * @since 2020/7/13 16:14
  * <p>
  * 创建线程的方式二：实现接口Runnable
  * 在 Runnable 中只有 一个 public void run() 的抽象方法

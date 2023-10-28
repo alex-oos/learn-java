@@ -7,8 +7,8 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * @autoer Alex
- * @since: 2020/6/24 17:39
+ * @author Alex
+ * @since 2020/6/24 17:39
  * @Descprition: 日期新的API：
  * LocalDate：表示一个日期，比如2020-06-24
  * LocalTime：表示一个时间，比如13:45:20

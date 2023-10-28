@@ -1,8 +1,8 @@
 package com.liaoxuefeng.aQuickStart.gAbstract;
 
 /**
- * @autoer Alex
- * @since: 2020/5/28 12:29
+ * @author Alex
+ * @since 2020/5/28 12:29
  * @Descprition:
  */
 

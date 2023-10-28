@@ -7,8 +7,8 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 /**
- * @autoer Alex
- * @since: 2021/7/13 下午 9:39
+ * @author Alex
+ * @since 2021/7/13 下午 9:39
  * <p>
  * Stream 流的创建方式：
  * </p>

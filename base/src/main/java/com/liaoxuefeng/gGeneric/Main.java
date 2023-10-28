@@ -1,8 +1,8 @@
 package com.liaoxuefeng.gGeneric;
 
 /**
- * @autoer Alex
- * @since: 2020/6/9 19:45
+ * @author Alex
+ * @since 2020/6/9 19:45
  * @Descprition: 擦拭法：决定了泛型<T>:
  * 1、不能是基本类型，例如：int；
  * 2、不能获取带泛型类型的Class，例如：Pair<String>.class；

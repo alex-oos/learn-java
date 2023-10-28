@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @autoer Alex
- * @since: 2020/6/24 15:49
+ * @author Alex
+ * @since 2020/6/24 15:49
  * @Descprition:
  */
 public class TestDate {

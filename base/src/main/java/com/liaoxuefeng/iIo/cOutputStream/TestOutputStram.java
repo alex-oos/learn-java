@@ -6,8 +6,8 @@ import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
 /**
- * @autoer Alex
- * @since: 2020/6/27 18:10
+ * @author Alex
+ * @since 2020/6/27 18:10
  * @Descprition:
  */
 public class TestOutputStram {

@@ -6,8 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * @autoer Alex
- * @since: 2020/6/8 16:51
+ * @author Alex
+ * @since 2020/6/8 16:51
  * @Descprition:
  */
 

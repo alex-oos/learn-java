@@ -3,8 +3,8 @@ package com.liaoxuefeng.eReflection;
 import java.lang.reflect.Field;
 
 /**
- * @autoer Alex
- * @since: 2020/6/5 17:03
+ * @author Alex
+ * @since 2020/6/5 17:03
  * @Descprition:
  *              设置字段值
  */

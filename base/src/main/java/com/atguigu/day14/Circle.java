@@ -1,8 +1,8 @@
 package com.atguigu.day14;
 
 /**
- * @autoer Alex
- * @since: 2023/9/13 下午3:43
+ * @author Alex
+ * @since 2023/9/13 下午3:43
  * @Descprition:
  */
 public class Circle {

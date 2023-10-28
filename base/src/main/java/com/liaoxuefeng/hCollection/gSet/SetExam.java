@@ -4,8 +4,8 @@ package com.liaoxuefeng.hCollection.gSet;
 import java.util.*;
 
 /**
- * @autoer Alex
- * @since: 2020/6/15 下午 11:35
+ * @author Alex
+ * @since 2020/6/15 下午 11:35
  * @Descprition: 在聊天软件中，发送方发送消息时，遇到网络超时后就会自动重发，因此，接收方可能会收到重复的消息，在显示给用户看的时候，需要首先去重。请练习使用Set去除重复的消息：
  */
 public class SetExam {

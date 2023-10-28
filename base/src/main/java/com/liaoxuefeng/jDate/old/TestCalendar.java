@@ -4,8 +4,8 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 /**
- * @autoer Alex
- * @since: 2020/6/24 15:59
+ * @author Alex
+ * @since 2020/6/24 15:59
  * @Descprition:
  */
 public class TestCalendar {

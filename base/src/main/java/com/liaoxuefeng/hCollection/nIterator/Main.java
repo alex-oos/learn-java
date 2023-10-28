@@ -5,8 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 
 /**
- * @autoer Alex
- * @since: 2020/6/18 12:17
+ * @author Alex
+ * @since 2020/6/18 12:17
  * @Descprition:
  */
 public class Main {
