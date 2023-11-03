@@ -21,6 +21,11 @@ public class UUIDUtil {
         String string1 = UUID.fromString(string).toString();
         System.out.println("string1 = " + string1);
         System.out.println("UUID.randomUUID().toString() = " + UUID.randomUUID());
+        long mostSignificantBits = UUID.randomUUID().getMostSignificantBits();
+        System.out.println("mostSignificantBits = " + mostSignificantBits);
+
+        long leastSignificantBits = UUID.randomUUID().getLeastSignificantBits();
+        System.out.println("leastSignificantBits = " + leastSignificantBits);
     }
 
 }
