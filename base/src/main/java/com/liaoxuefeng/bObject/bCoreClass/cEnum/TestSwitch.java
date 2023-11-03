@@ -1,18 +1,16 @@
 package com.liaoxuefeng.bObject.bCoreClass.cEnum;
 
-enum Weekday1 {
-    MON, TUE, WED, THU, FRI, SAT, SUN
-
-}
 
 /**
  * @author Alex
- * @since 2020/6/2 14:25
  * @Descprition:
+ * @since 2020/6/2 14:25
  */
-public class TestSwich {
+public class TestSwitch {
+
     public static void main(String[] args) {
-        Weekday1 day = Weekday1.SUN;
+
+        WeekDay day = WeekDay.SUN;
 
         switch (day) {
             case MON:
@@ -30,4 +28,5 @@ public class TestSwich {
                 throw new RuntimeException("cannot process " + day);
         }
     }
+
 }

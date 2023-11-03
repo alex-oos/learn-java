@@ -3,13 +3,17 @@ package com.liaoxuefeng.bObject.bCoreClass.aString;
 import java.util.Arrays;
 
 /**
+ * <p>
+ *     String 常用的一些方法
+ * </p>
  * @author Alex
+ * @Descprition:
  * @since 2020/5/28 17:21
- * @Descprition: String 常用的一些方法
  */
 public class TestString {
 
     public static void main(String[] args) {
+
         String s1 = "hello";
 
         s1.charAt(1);
@@ -19,21 +23,21 @@ public class TestString {
         String s2 = new String(new char[]{'H', 'e'});
 
         s2.length();
-        System.out.println("s2的长度为："+s2.length());
+        System.out.println("s2的长度为：" + s2.length());
 
         String s3 = "hello";
 
         // 将字符串转化为小写
-        String sLower= "HELLO".toLowerCase();
+        String sLower = "HELLO".toLowerCase();
 
         // 将字符串转化为大写
         String sUpper = "hello".toUpperCase();
 
         System.out.println(s3 == sLower);
-        //比较是否相等
+        // 比较是否相等
         System.out.println(s3.equals(sLower));
 
-        //与equals方法类型，忽略大小写
+        // 与equals方法类型，忽略大小写
         System.out.println(s3.equalsIgnoreCase(sLower));
 
 
@@ -43,7 +47,7 @@ public class TestString {
         System.out.println(s3.compareTo("hello"));
 
 
-        //搜索子串的更多的例子：
+        // 搜索子串的更多的例子：
         System.out.println(s3.indexOf(1));
         System.out.println(s3.lastIndexOf(1));
         System.out.println(s3.startsWith("he"));
@@ -53,15 +57,15 @@ public class TestString {
         System.out.println(s3.substring(2));
         System.out.println(s3.substring(2, 4));
 
-        //去除首尾空白字符
+        // 去除首尾空白字符
         // 1.trim()去除 ，trim()并没有改变字符串的内容，而是返回了一个新字符串
         String str = " asdsad  ";
         System.out.println(str.trim());
 
-        //String还提供了isEmpty()和isBlank()来判断字符串是否为空和空白字符串：
+        // String还提供了isEmpty()和isBlank()来判断字符串是否为空和空白字符串：
 
         System.out.println("".isEmpty());
-        System.out.println(" ".isEmpty());
+        System.out.println(" ".isBlank());
 
         // 正则表达式
 
@@ -69,12 +73,12 @@ public class TestString {
         String c = s.replaceAll("[\\,\\;\\s]+", ",");
         System.out.println(c);
 
-        //分割字符串
+        // 分割字符串
         String str11 = "A,B,C,D";
         String[] ss = str11.split("\\,");
         System.out.println(Arrays.toString(ss));
 
-        //拼接字符串
+        // 拼接字符串
         String[] arr = {"A", "B", "c", "D"};
         String sss = String.join("***", arr);
         System.out.println(sss);
@@ -85,7 +89,11 @@ public class TestString {
         %s：显示字符串；
         %d：显示整数；
         %x：显示十六进制整数；
-        %f：显示浮点数*/
+        %f：显示浮点数 %.2f 代表保留两位小数*/
         System.out.printf("Hi %s, your score is %.2f!%n", "Bob", 59.5);
+        String format = String.format("欢迎 %s 来到我的世界,我今年 %d 岁，体重 %.2f 千克", "你", 18, 56.23);
+        System.out.println("format = " + format);
+
     }
+
 }

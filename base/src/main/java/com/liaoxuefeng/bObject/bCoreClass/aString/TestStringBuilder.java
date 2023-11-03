@@ -17,7 +17,7 @@ public class TestStringBuilder {
         System.out.println("stringBuilder.toString() = " + stringBuilder);
 
         // string builder 链式操作
-        var sb = new StringBuilder(1024);
+        StringBuilder sb = new StringBuilder(1024);
         sb.append("Mr ")
                 .append("Bob")
                 .append("!")

@@ -6,16 +6,19 @@ import java.util.Arrays;
 
 /**
  * @author Alex
- * @since 2020/6/2 15:57
  * @Descprition: SecureRandom：生成安全的随机数
+ * @since 2020/6/2 15:57
  */
 public class TestSecureRandom {
+
     public static void f() {
+
         SecureRandom sr = new SecureRandom();
         System.out.println("sr.nextInt(100) = " + sr.nextInt(100));
     }
 
     public static void f1() {
+
         SecureRandom sr = null;
         try {
             sr = SecureRandom.getInstanceStrong(); // 获取高强度安全随机数生成器
@@ -29,7 +32,9 @@ public class TestSecureRandom {
     }
 
     public static void main(String[] args) {
+
         f();
         f1();
     }
+
 }

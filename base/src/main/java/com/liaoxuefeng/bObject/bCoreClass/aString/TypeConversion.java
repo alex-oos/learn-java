@@ -6,36 +6,37 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * @author Alex
- * @since 2020/5/28 21:13
  * @Descprition:
+ * @since 2020/5/28 21:13
  */
 public class TypeConversion {
+
     public static void main(String[] args) {
-        //要把任意基本类型或引用类型转换为字符串，可以使用静态方法valueOf()。这是一个重载方法，编译器会根据参数自动选择合适的方法：
+        // 要把任意基本类型或引用类型转换为字符串，可以使用静态方法valueOf()。这是一个重载方法，编译器会根据参数自动选择合适的方法：
         String.valueOf(123);
         String.valueOf(46.23);
         String.valueOf(true);
         String.valueOf(new Object());
 
-        //要把字符串转换为其他类型，就需要根据情况。例如，把字符串转换为int类型：
+        // 要把字符串转换为其他类型，就需要根据情况。例如，把字符串转换为int类型：
         int n1 = Integer.parseInt("123");
         int n2 = Integer.parseInt("ff", 16);
 
-        //把字符串转换为boolean类型：
+        // 把字符串转换为boolean类型：
         boolean b1 = Boolean.parseBoolean("true");
         boolean b2 = Boolean.parseBoolean("FALSE");
 
-        //Integer有个getInteger(String)方法，它不是将字符串转换为int，而是把该字符串对应的系统变量转换为Integer：
+        // Integer有个getInteger(String)方法，它不是将字符串转换为int，而是把该字符串对应的系统变量转换为Integer：
 
         Integer.getInteger("java.version");
         System.out.println(Integer.getInteger("java.version"));
 
-        //字符串转化为int型
+        // 字符串转化为int型
         String a = "122345";
         System.out.println(Integer.parseInt(a));
 
 
-        //String和char[]类型可以互相转换，方法是：
+        // String和char[]类型可以互相转换，方法是：
         char[] cs = "hello".toCharArray();
         String s = new String(cs);
 
@@ -62,4 +63,5 @@ public class TypeConversion {
 
 
     }
+
 }

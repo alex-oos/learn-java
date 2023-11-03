@@ -4,7 +4,7 @@ package com.liaoxuefeng.bObject.bCoreClass.cEnum;
  * @author LiJiang
  * @since 2021/6/28 15:39
  */
-public enum Weekey {
+public enum WeekDay {
     /**
      * 星期一
      */
@@ -38,7 +38,7 @@ public enum Weekey {
 
     private final String chinese;
 
-    Weekey(int dayVaule, String chinese) {
+    WeekDay(int dayVaule, String chinese) {
         this.dayVaule = dayVaule;
         this.chinese = chinese;
     }
@@ -48,4 +48,3 @@ public enum Weekey {
         return this.chinese;
     }
 }
-

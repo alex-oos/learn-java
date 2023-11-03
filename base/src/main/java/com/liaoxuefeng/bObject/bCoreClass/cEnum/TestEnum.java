@@ -29,7 +29,8 @@ package com.liaoxuefeng.bObject.bCoreClass.cEnum;
 public class TestEnum {
 
     public static void main(String[] args) {
-        Weekey day = Weekey.SUN;
+
+        WeekDay day = WeekDay.SUN;
         if (day.dayVaule == 6 || day.dayVaule == 0) {
             System.out.println("Today is " + day + ". Work at home!");
         } else {
@@ -38,11 +39,11 @@ public class TestEnum {
 
         // 内部函数
         // name() 返回常量名（）
-        String s = Weekey.SUN.name();
+        String s = WeekDay.SUN.name();
         System.out.println(s);
 
         // ordinal() 返回自你故意的常量的顺序，从0 开始计数
-        int n = Weekey.MON.ordinal();
+        int n = WeekDay.MON.ordinal();
         System.out.println(n);
     }
 }

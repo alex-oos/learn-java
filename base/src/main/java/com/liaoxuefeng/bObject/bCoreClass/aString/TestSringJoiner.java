@@ -12,7 +12,7 @@ public class TestSringJoiner {
     //字符串拼接
     public static void f1() {
         String[] names = {"liuyan", "xiaoai", "xiaomi"};
-        var sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         sb.append("hello ");
         for (String name : names) {
             sb.append(name).append(", ");
@@ -27,7 +27,7 @@ public class TestSringJoiner {
     public static void f2() {
 
         String[] names = {"liuyan", "xiaoai", "xiaomi"};
-        var sj = new StringJoiner(", ", "Hello ", "!");
+        StringJoiner sj = new StringJoiner(", ", "Hello ", "!");
         for (String name : names) {
             sj.add(name);
         }
