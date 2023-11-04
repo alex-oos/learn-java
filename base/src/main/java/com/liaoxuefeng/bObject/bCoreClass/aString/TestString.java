@@ -89,7 +89,9 @@ public class TestString {
         %s：显示字符串；
         %d：显示整数；
         %x：显示十六进制整数；
-        %f：显示浮点数 %.2f 代表保留两位小数*/
+        %f：显示浮点数 %.2f 代表保留两位小数
+
+        */
         System.out.printf("Hi %s, your score is %.2f!%n", "Bob", 59.5);
         String format = String.format("欢迎 %s 来到我的世界,我今年 %d 岁，体重 %.2f 千克", "你", 18, 56.23);
         System.out.println("format = " + format);

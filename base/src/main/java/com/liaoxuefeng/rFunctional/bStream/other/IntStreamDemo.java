@@ -1,6 +1,8 @@
 package com.liaoxuefeng.rFunctional.bStream.other;
 
 
+import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
@@ -22,6 +24,12 @@ public class IntStreamDemo {
         // 求个数
         long count = IntStream.of(1, 2, 2, 3).distinct().count();
         System.out.println("count = " + count);
+
+        // instream 转换为list boxed()方法是将IntStream转换为Stream<Integer>： 在使用collect()方法转换为list
+        List<Integer> collect = IntStream.range(0, 10).boxed().collect(Collectors.toList());
+        System.out.println("collect = " + collect);
+        // boxed 在类型转化中特别有用
+
 
 
     }
