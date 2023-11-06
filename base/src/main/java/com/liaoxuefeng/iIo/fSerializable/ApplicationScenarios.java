@@ -1,24 +1,28 @@
 package com.liaoxuefeng.iIo.fSerializable;
 
 import com.alibaba.fastjson2.JSONObject;
+import com.liaoxuefeng.iIo.fSerializable.enity.User;
 
 /**
- * <P></p>
+ * <P>
+ * 序列化和反序列化的应用场景：
+ * 1、json序列化和反序列化 主要使用的fastjson
+ * 2、网络传输 xml
+ * </p>
  *
- * @author lijiang
+ * @author Alex
  * @since 2023/10/28 下午5:45
  */
 public class ApplicationScenarios {
 
     /**
-     * 序列化和反序列化的应用场景：
-     * 1、json序列化和反序列化 主要使用的fastjson
-     * 2、网络传输 xml
+     * JSON的序列化与反序列化
+     * JSON的序列化指的就是将JavaBean对象转化为JSON格式的字符串
+     * JSON的反序列化指的就是将JSON格式的字符串转化为JavaBean对象
      */
 
-    public static void function() {
-        // 序列化：将java 对象转化为json字符串
-        // 先将java对象转换为json对象，在将json对象转换为json字符串
+    public static void jsonScenarios() {
+
         User user = new User("序列化", 23);
         JSONObject jsonObject = JSONObject.from(user);
         System.out.println("序列化后：  " + jsonObject);
@@ -28,12 +32,12 @@ public class ApplicationScenarios {
         User user1 = JSONObject.parseObject(jsonString, User.class);
         System.out.println("反序列化： " + user1);
 
-
     }
+
 
     public static void main(String[] args) {
 
-        function();
+        jsonScenarios();
     }
 
 

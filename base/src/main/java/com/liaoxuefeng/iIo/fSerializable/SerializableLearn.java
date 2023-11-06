@@ -1,14 +1,16 @@
 package com.liaoxuefeng.iIo.fSerializable;
 
 
+import com.liaoxuefeng.iIo.fSerializable.enity.User;
+
 import java.io.*;
 
 /**
  * <p>
- * 序列化和反序列化学习
+ * 序列化和反序列化介绍：
  * </p>
  *
- * @author LiJiang
+ * @author ALex
  * @since 2021/6/25 16:55
  */
 public class SerializableLearn {

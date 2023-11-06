@@ -1,9 +1,11 @@
-package com.liaoxuefeng.bObject.bCoreClass.dUtil;
+package com.liaoxuefeng.bObject.bCoreClass.dUtil.entity;
 
 /**
  * @author Alex
  * @since 2020/6/2 15:28
- * @Descprition:
+ * <p>
+ *     常用类
+ * </p>
  */
 public final class Point1 {
     private final int x;
