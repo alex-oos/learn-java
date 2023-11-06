@@ -6,22 +6,45 @@ import java.util.Arrays;
 
 /**
  * @author Alex
- * @since 2020/6/6 上午 12:15
  * @Descprition:
- * 一个Menthod 对象可以包含一个方法的所有信息：
- * 1、getName() 返回方法，例如："getScore"
- * 2、getReturnType(): 返回方法返回值类型，也是一个Class类型，例如：String.class
- * 3、getParameterType():返回方法的参数类型，是一个Class数据，例如：{String.class,int,class}
- * 4、getModifiers():返回方法的修饰符，它是一个int,不同的bit有不同的含义
+ * @since 2020/6/6 上午 12:15
  */
 public class ReflectionMethods {
 
     /**
+     * 获取Method的几种方法：
+     * Class类提供以下几种方法获取Method:
+     * 1、Menthod  getMenthod(name,Class ，，，)： 获取某个public的metho（包括父类）
+     * 2、Menthod getDeclaredMethod(name.Class ...):获取当前类的某个method（不包括父类）
+     * 3、Menthod  getMethods() : 获取所有public 的Menthod（包括父类）
+     * 4、Menthod getDeclareMenthods() : 获取当前类的所有Menthod（不包括父类）
+     **/
+    public static void getMethodWays() throws NoSuchMethodException {
+
+        Class stdClass = Student4.class;
+        // 获取private方法getScore，参数为String
+        System.out.println("stdClass.getMethod(\"getScore\", String.class) = " + stdClass.getMethod("getScore", String.class));
+        // 获取继承的public getName 方法，无参数
+        System.out.println("stdClass.getMethod(\"getName\") = " + stdClass.getMethod("getName"));
+        // 获取private方法getGrade，参数为int:
+        System.out.println("stdClass.getDeclaredMethod(\"getGrade\", int.class) = " + stdClass.getDeclaredMethod("getGrade", int.class));
+        // 获取所有public 的Menthod（包括父类）
+        System.out.println("stdClass = " + Arrays.toString(stdClass.getMethods()));
+        // 获取当前类中所有方法，包括private方法
+        System.out.println("stdClass.getDeclaredMethods() = " + Arrays.toString(stdClass.getDeclaredMethods()));
+    }
+
+    /**
      * 反射 Methond 里面常用的一些方法
+     * * 一个Menthod 对象可以包含一个方法的所有信息：
+     * * 1、getName() 返回方法，例如："getScore"
+     * * 2、getReturnType(): 返回方法返回值类型，也是一个Class类型，例如：String.class
+     * * 3、getParameterType():返回方法的参数类型，是一个Class数据，例如：{String.class,int,class}
+     * * 4、getModifiers():返回方法的修饰符，它是一个int,不同的bit有不同的含义
      *
      * @throws NoSuchMethodException
      */
-    public static void f1() throws NoSuchMethodException {
+    public static void methodClass() throws NoSuchMethodException {
         // String对象:
         String s = "Hello world";
         // 获取String substring(int)方法，参数为int:
@@ -40,7 +63,7 @@ public class ReflectionMethods {
      * @throws IllegalAccessException
      * @throws NoSuchMethodException
      */
-    public static void f2() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+    public static void methodsScenarios() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
         // 原来实现逻辑
         String s = "Hello world";
         String r = s.substring(6); // "world"
@@ -76,8 +99,11 @@ public class ReflectionMethods {
 
 
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        f1();
-        f2();
+
+        getMethodWays();
+        methodClass();
+        methodsScenarios();
+
 
 
     }
