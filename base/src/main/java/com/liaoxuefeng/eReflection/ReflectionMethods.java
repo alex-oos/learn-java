@@ -1,5 +1,7 @@
 package com.liaoxuefeng.eReflection;
 
+import com.liaoxuefeng.eReflection.entity.Student4;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;

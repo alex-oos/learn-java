@@ -1,6 +1,9 @@
 package com.liaoxuefeng.eReflection;
 
 
+import com.liaoxuefeng.eReflection.entity.Hello;
+import com.liaoxuefeng.eReflection.entity.HelloWorld;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;

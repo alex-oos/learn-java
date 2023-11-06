@@ -1,4 +1,4 @@
-package com.liaoxuefeng.eReflection;
+package com.liaoxuefeng.eReflection.entity;
 
 /**
  * <P></p>
@@ -6,7 +6,7 @@ package com.liaoxuefeng.eReflection;
  * @author lijiang
  * @since 2023/11/6 下午4:33
  */
-class Student4 extends Person4 {
+public class Student4 extends Person4 {
 
     public int getScore(String type) {
 

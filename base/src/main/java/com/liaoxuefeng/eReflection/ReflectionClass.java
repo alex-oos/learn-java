@@ -7,7 +7,7 @@ import com.liaoxuefeng.bObject.bCoreClass.bJavaBean.Person;
  * @since 2020/6/4 18:05
  * @Descprition: 反射：通过Classs实例获取class信息的方法称为反射
  */
-public class TestClass {
+public class ReflectionClass {
 
     /**
      * 通过反射获取class实例的方法有三种：

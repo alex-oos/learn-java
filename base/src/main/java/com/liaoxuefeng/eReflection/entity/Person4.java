@@ -1,4 +1,4 @@
-package com.liaoxuefeng.eReflection;
+package com.liaoxuefeng.eReflection.entity;
 
 /**
  * <P></p>
