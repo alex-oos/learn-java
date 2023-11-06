@@ -3,7 +3,9 @@ package com.liaoxuefeng.eReflection;
 /**
  * @author Alex
  * @since 2023/9/6 下午4:04
- * @Descprition:
+ * <p>
+ *     接口实现类
+ * </p>
  */
 public class HelloWorld implements Hello {
     @Override

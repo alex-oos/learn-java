@@ -7,13 +7,14 @@ import java.util.Arrays;
 /**
  * @author Alex
  * @since 2020/6/6 上午 12:15
- * @Descprition: 一个Menthod 对象可以包含一个方法的所有信息：
+ * @Descprition:
+ * 一个Menthod 对象可以包含一个方法的所有信息：
  * 1、getName() 返回方法，例如："getScore"
  * 2、getReturnType(): 返回方法返回值类型，也是一个Class类型，例如：String.class
  * 3、getParameterType():返回方法的参数类型，是一个Class数据，例如：{String.class,int,class}
  * 4、getModifiers():返回方法的修饰符，它是一个int,不同的bit有不同的含义
  */
-public class TestMethod3 {
+public class ReflectionMethods {
 
     /**
      * 反射 Methond 里面常用的一些方法
