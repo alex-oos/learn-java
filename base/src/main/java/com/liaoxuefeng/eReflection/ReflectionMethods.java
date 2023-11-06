@@ -60,10 +60,8 @@ public class ReflectionMethods {
 
     /**
      * 使用反射调用方法的实际应用
-     *
-     * @throws InvocationTargetException
-     * @throws IllegalAccessException
-     * @throws NoSuchMethodException
+     * 核心就是invoke() 方法调用
+     * invoke 需要传入一个实例对象，对Method实例调用invoke就相当于调用该方法，invoke的第一个参数是对象实例，即在哪个实例上调用该方法，后面的可变参数要与方法参数一致，否则将报错。
      */
     public static void methodsScenarios() throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
         // 原来实现逻辑
