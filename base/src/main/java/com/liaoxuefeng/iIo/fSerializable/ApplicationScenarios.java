@@ -34,10 +34,23 @@ public class ApplicationScenarios {
 
     }
 
+    /**
+     * json 反序列化的时候，值不需要与对象的属性一一对应，只要json字符串中的key与对象的属性有一个相同即可,不存在的值会被赋值为null
+     */
+    public static void f() {
+
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("name", "测试反序列化");
+        jsonObject.put("key", "测试key");
+        User user = JSONObject.parseObject(jsonObject.toJSONString(), User.class);
+        System.out.println("反序列化： " + user);
+    }
+
 
     public static void main(String[] args) {
 
         jsonScenarios();
+        f();
     }
 
 
