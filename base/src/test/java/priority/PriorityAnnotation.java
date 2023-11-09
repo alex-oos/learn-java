@@ -1,13 +1,15 @@
-package demo;
+package priority;
 
 import java.lang.annotation.*;
 
 /**
- * @ClassName demo.PriorityAnnotation
- * @Description
- * @Author Alex
+ * <p>
+ * 优先级注解
+ * </p>
+ *
+ * @author Alex
+ * @version 1.0
  * @since 2022/8/1 12:34
- * @Version 1.0
  */
 
 
@@ -16,6 +18,6 @@ import java.lang.annotation.*;
 @Documented
 public @interface PriorityAnnotation {
 
-    String value() default "P1";
+    String value() default "P3";
 
 }

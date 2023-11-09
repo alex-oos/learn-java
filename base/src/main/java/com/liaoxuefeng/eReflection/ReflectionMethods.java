@@ -16,10 +16,10 @@ public class ReflectionMethods {
     /**
      * 获取Method的几种方法：
      * Class类提供以下几种方法获取Method:
-     * 1、Menthod  getMenthod(name,Class ，，，)： 获取某个public的metho（包括父类）
-     * 2、Menthod getDeclaredMethod(name.Class ...):获取当前类的某个method（不包括父类）
-     * 3、Menthod  getMethods() : 获取所有public 的Menthod（包括父类）
-     * 4、Menthod getDeclareMenthods() : 获取当前类的所有Menthod（不包括父类）
+     * 1、Method  getMethod(name,Class ，，，)： 获取某个public的method（包括父类）
+     * 2、Method getDeclaredMethod(name.Class ...):获取当前类的某个method（不包括父类）
+     * 3、Method  getMethods() : 获取所有public 的Menthod（包括父类）
+     * 4、Method getDeclareMethods() : 获取当前类的所有Menthod（不包括父类）
      **/
     public static void getMethodWays() throws NoSuchMethodException {
 
