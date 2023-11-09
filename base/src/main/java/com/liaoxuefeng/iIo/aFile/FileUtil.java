@@ -11,11 +11,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * @author lijiang
+ * @author Alex
  * @since 2023/10/7 下午5:16
- * 
  */
-public class FileExp {
+public class FileUtil {
 
     /**
      * 获取某个目录下的所有文件的绝对路径
@@ -60,9 +59,8 @@ public class FileExp {
         List<String> filePaths = null;
         Path path = Paths.get(folderPath);
 
-        Stream<Path> walk;
         try {
-            walk = Files.walk(path);
+            Stream<Path> walk = Files.walk(path);
             filePaths = walk.filter(Files::isRegularFile).map(a -> a.toAbsolutePath().toString()).collect(Collectors.toList());
         } catch (IOException e) {
             throw new RuntimeException(e);
