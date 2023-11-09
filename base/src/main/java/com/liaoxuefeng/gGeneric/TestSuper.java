@@ -3,7 +3,7 @@ package com.liaoxuefeng.gGeneric;
 /**
  * @author Alex
  * @since 2020/6/9 20:25
- * @Descprition: <? super Integer>通配符表示：
+ *  <? super Integer>通配符表示：
  * 1、允许调用set（？ super Integer） 方法传入Integer的引用
  * 2、不允许调用get（）方法获取到Interger的引用
  * 3、例外获取Object的引用：Object o = p.getFirst()。

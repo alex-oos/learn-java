@@ -4,7 +4,7 @@ package com.atguigu.day6;
 /**
  * @author Alex
  * @since 2020/5/26 18:40
- * @Descprition: <p>
+ *  <p>
  * * 二维数组的使用
  * * 1.理解：
  * * 对于二维数组的理解，我们可以看成是一维数组array1又作为另一个一维数组array2的元素而存在。

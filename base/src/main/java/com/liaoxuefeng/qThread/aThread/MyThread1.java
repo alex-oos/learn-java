@@ -3,7 +3,7 @@ package com.liaoxuefeng.qThread.aThread;
 /**
  * @author Alex
  * @since 2020/7/13 17:15
- * @Descprition:
+ * 
  */
 public class MyThread1 extends Thread {
 

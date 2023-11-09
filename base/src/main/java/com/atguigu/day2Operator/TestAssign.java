@@ -3,7 +3,7 @@ package com.atguigu.day2Operator;
 /**
  * @author 唐凯泽
  * @since 2020/5/5 15:20
- * @Descprition:
+ *
  */
 /*
 二、赋值运算符

@@ -3,7 +3,7 @@ package com.liaoxuefeng.cExcethion;
 /**
  * @author Alex
  * @since 2020/6/2 16:42
- * @Descprition:
+ * 
  */
 public class TestException2 {
 

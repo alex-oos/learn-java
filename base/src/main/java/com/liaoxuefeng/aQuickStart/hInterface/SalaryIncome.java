@@ -3,7 +3,7 @@ package com.liaoxuefeng.aQuickStart.hInterface;
 /**
  * @author Alex
  * @since 2020/5/28 16:11
- * @Descprition:
+ * 
  */
 
 public class SalaryIncome implements Income {

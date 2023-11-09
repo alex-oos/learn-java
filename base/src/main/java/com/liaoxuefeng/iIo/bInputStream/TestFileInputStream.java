@@ -5,7 +5,7 @@ import java.io.*;
 /**
  * @author Alex
  * @since 2020/6/27 16:51
- * @Descprition:
+ * 
  */
 public class TestFileInputStream {
 

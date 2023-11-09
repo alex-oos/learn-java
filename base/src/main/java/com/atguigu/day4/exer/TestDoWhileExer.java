@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/16 下午 6:05
- * @Descprition:
+ * 
  */
 
 public class TestDoWhileExer {

@@ -8,7 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * @author Alex
  * @since 2020/6/7 下午 5:48
- * @Descprition: 反射调用构造方法
+ *  反射调用构造方法
  */
 public class TestConstructionMethod {
 

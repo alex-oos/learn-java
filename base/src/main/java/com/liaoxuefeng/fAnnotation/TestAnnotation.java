@@ -3,7 +3,7 @@ package com.liaoxuefeng.fAnnotation;
 /**
  * @author Alex
  * @since 2020/6/8 上午 7:21
- * @Descprition: 注解：（Annotation）
+ *  注解：（Annotation）
  * 注解分为三类：
  * 1、编译器使用的注解
  * ,例如：@Override：让编译器检查该方法是否正确地实现了覆写； @SuppressWarnings：告诉编译器忽略此处代码产生的警告。

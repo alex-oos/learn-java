@@ -4,7 +4,7 @@ package com.liaoxuefeng.aQuickStart.hInterface;
 /**
  * @author Alex
  * @since 2020/5/28 15:54
- * @Descprition:
+ * 
  */
 public class Main {
 

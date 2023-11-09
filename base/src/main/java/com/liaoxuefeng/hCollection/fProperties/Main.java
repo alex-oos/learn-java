@@ -7,7 +7,7 @@ import java.util.Properties;
 /**
  * @author Alex
  * @since 2020/6/14 下午 10:08
- * @Descprition:
+ * 
  */
 public class Main {
 

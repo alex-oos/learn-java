@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/19 下午 9:38
- * @Descprition:
+ * 
  */
 /*
 从键盘输入本组学员的人数，本组学员的成绩。

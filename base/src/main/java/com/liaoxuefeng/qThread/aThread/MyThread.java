@@ -3,7 +3,7 @@ package com.liaoxuefeng.qThread.aThread;
 /**
  * @author Alex
  * @since 2020/7/13 14:47
- * @Descprition:
+ * 
  */
 
 

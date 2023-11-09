@@ -3,7 +3,7 @@ package com.atguigu.day4.exer;
 /**
  * @author Alex
  * @since 2020/5/17 上午 12:10
- * @Descprition:
+ *
  */
 /*
 打印1-100之间的偶数

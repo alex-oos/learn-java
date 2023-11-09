@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/17 上午 12:13
- * @Descprition:
+ * 
  */
 /*
 7、赌数游戏：随机产生3个1-6的整数，如果三个数相等，那么称为“豹子”，

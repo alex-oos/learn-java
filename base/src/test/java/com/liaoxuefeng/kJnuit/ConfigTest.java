@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * @author Alex
  * @since 2020/7/10 18:35
- * @Descprition:
+ *
  */
 /*
  *   条件测试：

@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * @author Alex
  * @since 2020/6/11 14:39
- * @Descprition: Map的key是enum类型，推荐使用EnumMap，既保证速度，也不浪费空间。
+ *  Map的key是enum类型，推荐使用EnumMap，既保证速度，也不浪费空间。
  */
 public class Main {
     public static void main(String[] args) {

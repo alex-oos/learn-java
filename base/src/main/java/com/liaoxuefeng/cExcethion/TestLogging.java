@@ -5,7 +5,7 @@ import java.util.logging.Logger;
 /**
  * @author Alex
  * @since 2020/6/2 19:55
- * @Descprition:
+ *
  */
 public class TestLogging {
     public static void main(String[] args) {

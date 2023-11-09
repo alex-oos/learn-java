@@ -3,7 +3,7 @@ package com.liaoxuefeng.gGeneric;
 /**
  * @author Alex
  * @since 2020/6/8 18:32
- * @Descprition: ，泛型类型<T>不能用于静态方法
+ *  ，泛型类型<T>不能用于静态方法
  */
 class Pair<T> {
     private T first;

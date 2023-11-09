@@ -3,7 +3,7 @@ package com.liaoxuefeng.aQuickStart.bConstractor;
 /**
  * @author Alex
  * @since 2020/5/28 11:59
- * @Descprition:
+ *
  */
 public class Main {
     public static void main(String[] args) {

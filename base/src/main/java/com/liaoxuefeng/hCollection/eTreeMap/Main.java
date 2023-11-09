@@ -10,7 +10,7 @@ import java.util.TreeMap;
 /**
  * @author Alex
  * @since 2020/6/11 14:49
- * @Descprition: SortedMap在遍历时严格按照Key的顺序遍历，最常用的实现类是TreeMap；
+ *  SortedMap在遍历时严格按照Key的顺序遍历，最常用的实现类是TreeMap；
  * <p>
  * 作为SortedMap的Key必须实现Comparable接口，或者传入Comparator；
  * <p>

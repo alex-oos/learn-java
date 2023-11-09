@@ -7,7 +7,7 @@ import com.liaoxuefeng.aQuickStart.gAbstract.Person;
 /**
  * @author Alex
  * @since 2020/5/28 15:32
- * @Descprition:
+ * 
  */
 
 public class Student implements Person, Hello {

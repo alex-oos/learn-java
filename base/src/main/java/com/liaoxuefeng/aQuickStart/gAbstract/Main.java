@@ -3,7 +3,7 @@ package com.liaoxuefeng.aQuickStart.gAbstract;
 /**
  * @author Alex
  * @since 2020/5/28 12:29
- * @Descprition:
+ *
  */
 
 /*方法入口*/

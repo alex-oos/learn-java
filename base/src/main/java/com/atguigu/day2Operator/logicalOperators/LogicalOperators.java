@@ -4,7 +4,7 @@ package com.atguigu.day2Operator.logicalOperators;
 /**
  * @author 唐凯泽
  * @since 2020/5/6 20:49
- * @Descprition:
+ * 
  */
 /*
 四、逻辑运算符

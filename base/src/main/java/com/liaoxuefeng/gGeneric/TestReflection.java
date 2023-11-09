@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @author Alex
  * @since 2020/6/9 21:01
- * @Descprition:
+ * 
  */
 public class TestReflection {
 

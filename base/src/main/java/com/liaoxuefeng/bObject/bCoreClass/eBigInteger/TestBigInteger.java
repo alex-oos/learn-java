@@ -4,7 +4,7 @@ import java.math.BigInteger;
 
 /**
  * @author Alex
- * @Descprition: BigInteger 用来模拟大整数， BigInteger内部用一个int[]数组来模拟一个非常大的整数：
+ *  BigInteger 用来模拟大整数， BigInteger内部用一个int[]数组来模拟一个非常大的整数：
  * @since 2020/6/2 15:32
  */
 public class TestBigInteger {

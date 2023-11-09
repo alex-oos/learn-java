@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 /**
  * @author alex
  * @since 2021/1/21 13:46
- * @descprition:
+ * 
  */
 //@Mapper
 @Repository // 也可以使用@Component，效果都是一样的，只是为了声明为bean

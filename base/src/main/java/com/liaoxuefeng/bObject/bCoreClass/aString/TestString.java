@@ -7,7 +7,7 @@ import java.util.Arrays;
  *     String 常用的一些方法
  * </p>
  * @author Alex
- * @Descprition:
+ * 
  * @since 2020/5/28 17:21
  */
 public class TestString {

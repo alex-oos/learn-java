@@ -3,7 +3,7 @@ package com.atguigu.day2Operator.logicalOperators.exer;
 /**
  * @author 唐凯泽
  * @since 2020/5/6 21:04
- * @Descprition:
+ * 
  */
 public class TestLogicExer1 {
     public static void main(String[] args) {

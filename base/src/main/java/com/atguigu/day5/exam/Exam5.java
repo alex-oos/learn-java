@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/19 下午 9:28
- * @Descprition:
+ * 
  */
 /*
 5、使用循环实现如下功能，

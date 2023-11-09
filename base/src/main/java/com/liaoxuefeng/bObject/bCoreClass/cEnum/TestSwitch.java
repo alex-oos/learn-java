@@ -3,7 +3,7 @@ package com.liaoxuefeng.bObject.bCoreClass.cEnum;
 
 /**
  * @author Alex
- * @Descprition:
+ *
  * @since 2020/6/2 14:25
  */
 public class TestSwitch {

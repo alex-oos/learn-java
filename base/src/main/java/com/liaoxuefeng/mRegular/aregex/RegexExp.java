@@ -3,7 +3,7 @@ package com.liaoxuefeng.mRegular.aregex;
 /**
  * @author Alex
  * @since 2023/9/8 上午10:51
- * @Descprition: 正则表达式：练习题
+ *  正则表达式：练习题
  */
 public class RegexExp {
 

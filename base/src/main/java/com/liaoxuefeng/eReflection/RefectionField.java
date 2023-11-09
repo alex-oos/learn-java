@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 /**
  * @author Alex
- * @Descprition: 反射中访问字段
+ *  反射中访问字段
  * @since 2020/6/5 15:33
  */
 public class RefectionField {

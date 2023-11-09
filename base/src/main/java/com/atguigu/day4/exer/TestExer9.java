@@ -3,7 +3,7 @@ package com.atguigu.day4.exer;
 /**
  * @author Alex
  * @since 2020/5/16 下午 11:56
- * @Descprition:
+ * 
  */
 /*
 9、一个数如果恰好等于它的因子之和，这个数就称为"完数"。（因子：除去这个数本身的约数）

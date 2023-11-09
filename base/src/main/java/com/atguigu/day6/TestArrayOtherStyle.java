@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * @author Alex
  * @since 2020/5/20 上午 12:00
- * @Descprition:
+ * 
  */
 /*
 数组的不同写法：了解

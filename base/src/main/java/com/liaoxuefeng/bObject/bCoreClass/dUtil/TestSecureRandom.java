@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 /**
  * @author Alex
- * @Descprition: SecureRandom：生成安全的随机数
+ *  SecureRandom：生成安全的随机数
  * @since 2020/6/2 15:57
  */
 public class TestSecureRandom {

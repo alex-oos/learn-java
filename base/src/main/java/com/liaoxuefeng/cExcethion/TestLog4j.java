@@ -9,7 +9,7 @@ import java.io.UnsupportedEncodingException;
 /**
  * @author Alex
  * @since 2020/6/2 20:22
- * @Descprition:
+ * 
  */
 public class TestLog4j {
     static final Log log = LogFactory.getLog(Main.class);

@@ -7,7 +7,7 @@ import java.util.LinkedList;
 /**
  * @author Alex
  * @since 2020/6/18 12:08
- * @Descprition: 栈
+ *  栈
  */
 public class TestA {
 

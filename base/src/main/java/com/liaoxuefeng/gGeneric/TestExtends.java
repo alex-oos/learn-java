@@ -3,7 +3,7 @@ package com.liaoxuefeng.gGeneric;
 /**
  * @author Alex
  * @since 2020/6/9 20:12
- * @Descprition: 使用类似<? extends Number>通配符作为方法参数时表示：
+ *  使用类似<? extends Number>通配符作为方法参数时表示：
  * 方法内部可以调用获取Number引用的方法，例如：Number n = obj.getFirst();；
  * 1、方法内部无法调用传入Number引用的方法（null除外），例如：obj.setFirst(Number n);。
  * 2、即一句话总结：使用extends通配符表示可以读，不能写。

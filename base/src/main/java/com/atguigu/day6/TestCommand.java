@@ -3,7 +3,7 @@ package com.atguigu.day6;
 /**
  * @author Alex
  * @since 2020/5/26 19:02
- * @Descprition:
+ * 
  */
 public class TestCommand {
     public static void main(String[] args) {

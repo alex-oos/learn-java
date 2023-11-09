@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 /**
  * @author Alex
  * @since 2023/9/18 下午3:45
- * @Descprition: futrue 是用来接收线程执行的结果
+ *  future 是用来接收线程执行的结果
  */
 public class FutureDemo {
 

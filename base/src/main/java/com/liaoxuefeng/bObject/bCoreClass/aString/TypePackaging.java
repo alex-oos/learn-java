@@ -2,7 +2,7 @@ package com.liaoxuefeng.bObject.bCoreClass.aString;
 
 /**
  * @author Alex
- * @Descprition: Java核心库提供的包装类型可以把基本类型包装为class；
+ *  Java核心库提供的包装类型可以把基本类型包装为class；
  * <p>
  * 自动装箱和自动拆箱都是在编译期完成的（JDK>=1.5）；
  * <p>

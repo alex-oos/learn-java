@@ -5,7 +5,7 @@ import java.util.TimeZone;
 /**
  * @author Alex
  * @since 2020/6/24 16:32
- * @Descprition:
+ * 
  */
 //jdk1.8 之前设置时区
 public class TestTimeZone {

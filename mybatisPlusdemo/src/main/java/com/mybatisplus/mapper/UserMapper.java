@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @Auther: Alex
  * @since 2021/1/21 13:46
- * @Descprition:
+ * 
  */
 @Mapper
 @Repository // 也可以使用@Component，效果都是一样的，只是为了声明为bean

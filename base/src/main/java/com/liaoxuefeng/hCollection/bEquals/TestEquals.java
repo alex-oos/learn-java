@@ -9,7 +9,7 @@ import java.util.List;
  *
  * @author Alex
  * @since 2020/6/10 21:04
- * @Descprition:
+ * 
  */
 public class TestEquals {
 

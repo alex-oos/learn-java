@@ -4,7 +4,7 @@ package com.liaoxuefeng.bObject.bCoreClass.cEnum;
 /**
  * @author Alex
  * @since 2020/6/2 12:16
- * @Descprition: enum : 枚举类
+ *  enum : 枚举类
  * 枚举类的比较，只能使用== ，不能使用equals()方法
  * 用类型比较，要使用equals()方法，如果使用==比较，它比较的是两个引用类型的变量是否是同一个对象
  * <p>

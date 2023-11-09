@@ -3,7 +3,7 @@ package com.atguigu.day6;
 /**
  * @author Alex
  * @since 2020/5/20 上午 12:00
- * @Descprition:
+ *
  */
 /*
 数组的工具类：Arrays

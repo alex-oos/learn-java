@@ -3,7 +3,7 @@ package com.liaoxuefeng.kJnuit;
 /**
  * @author Alex
  * @since 2020/7/10 18:35
- * @Descprition:
+ *
  */
 public class Config {
     public String getConfigFile(String filename) {

@@ -6,7 +6,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * @author Alex
- * @Descprition:
+ * 
  * @since 2020/5/28 21:13
  */
 public class TypeConversion {

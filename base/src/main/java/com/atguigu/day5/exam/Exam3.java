@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/19 下午 8:46
- * @Descprition:
+ *
  */
 /*3、使用循环实现如下功能
 从键盘不断输入整数，统计偶数的个数和奇数的个数，输入0结束。

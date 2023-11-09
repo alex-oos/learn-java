@@ -3,7 +3,7 @@ package com.atguigu.day1;
 /**
  * @author Alex
  * @since 2019/11/24
- * @Descprition: 打印个人信息：包括，姓名，年龄，手机号码，性别。要求一样一行
+ *  打印个人信息：包括，姓名，年龄，手机号码，性别。要求一样一行
  */
 public class MyInfo {
 

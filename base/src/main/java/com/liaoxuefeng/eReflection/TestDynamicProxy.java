@@ -12,7 +12,7 @@ import java.lang.reflect.Proxy;
 /**
  * @author ALex
  * @since 2020/6/7 下午 6:47
- * @Descprition: 动态代理（Dynamic Proxy）:
+ *  动态代理（Dynamic Proxy）:
  * 1、
  * 2、
  * 在运行期动态创建一个interface实例的方法如下：

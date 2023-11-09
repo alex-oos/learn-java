@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * @author Alex
  * @since 2020/6/24 15:49
- * @Descprition:
+ * 
  */
 public class TestDate {
     public static void function() {

@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * @author Alex
  * @since 2020/6/16 下午 11:28
- * @Descprition: 列（Queue）是一种经常使用的集合。Queue实际上是实现了一个先进先出（FIFO：First In First Out）的有序表。它和List的区别在于，List可以在任意位置添加和删除元素，而Queue只有两个操作：
+ *  列（Queue）是一种经常使用的集合。Queue实际上是实现了一个先进先出（FIFO：First In First Out）的有序表。它和List的区别在于，List可以在任意位置添加和删除元素，而Queue只有两个操作：
  * <p>
  * 把元素添加到队列末尾；
  * 从队列头部取出元素。

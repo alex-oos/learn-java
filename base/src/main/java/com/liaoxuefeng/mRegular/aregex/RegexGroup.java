@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * @author Alex
  * @since 2020/7/13 11:48
- * @Descprition: 正则表达式：分组匹配
+ *  正则表达式：分组匹配
  */
 public class RegexGroup {
 

@@ -6,7 +6,7 @@ import java.util.Arrays;
 /**
  * @author Alex
  * @since 2020/6/2 16:19
- * @Descprition: java使用异常来表示错误，并通过try ... catch捕获异常；
+ *  java使用异常来表示错误，并通过try ... catch捕获异常；
  * <p>
  * Java的异常是class，并且从Throwable继承；
  * <p>

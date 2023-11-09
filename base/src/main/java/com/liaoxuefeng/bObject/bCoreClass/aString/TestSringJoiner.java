@@ -5,7 +5,7 @@ import java.util.StringJoiner;
 /**
  * @author Alex
  * @since 2020/5/29 11:39
- * @Descprition:
+ *
  */
 public class TestSringJoiner {
 

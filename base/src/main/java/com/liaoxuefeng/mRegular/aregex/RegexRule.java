@@ -3,7 +3,7 @@ package com.liaoxuefeng.mRegular.aregex;
 /**
  * @author Alex
  * @since 2023/9/8 上午11:27
- * @Descprition: 正则表达式匹配规则: <br>
+ *  正则表达式匹配规则: <br>
  * 从左到右按规则进行匹配
  * 一、精准匹配：
  */

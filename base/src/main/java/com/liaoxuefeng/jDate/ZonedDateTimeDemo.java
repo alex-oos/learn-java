@@ -8,7 +8,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * @author Alex
  * @since 2020/6/29 17:46
- * @Descprition: LocalDateTime ：表示本地日期和时间
+ *  LocalDateTime ：表示本地日期和时间
  * ZonedDateTime： 表示 一个带时区的日期和时间
  */
 public class ZonedDateTimeDemo {

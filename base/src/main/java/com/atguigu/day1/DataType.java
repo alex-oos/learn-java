@@ -3,7 +3,7 @@ package com.atguigu.day1;
 /**
  * @author 唐凯泽
  * @since 2019/11/24
- * @Descprition: 1、基本数据类型 8种
+ *  1、基本数据类型 8种
  * 1）整型：
  * byte： 字节类型     1个字节    -128~127
  * short:  短整型      2个字节

@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/19 下午 10:55
- * @Descprition:
+ *
  */
 
 public class TestMax {

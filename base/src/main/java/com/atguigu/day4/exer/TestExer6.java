@@ -3,7 +3,7 @@ package com.atguigu.day4.exer;
 /**
  * @author Alex
  * @since 2020/5/16 下午 11:46
- * @Descprition:
+ * 
  */
 /*
 6、编写程序FooBizBaz.java，从1循环到150并在每行打印一个值，

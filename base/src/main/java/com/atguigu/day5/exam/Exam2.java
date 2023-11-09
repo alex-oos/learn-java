@@ -3,7 +3,7 @@ package com.atguigu.day5.exam;
 /**
  * @author Alex
  * @since 2020/5/17 上午 6:38
- * @Descprition:
+ *
  */
 /*
 2、用循环打印如下图形

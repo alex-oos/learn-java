@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * @author Alex
  * @since 2023/9/26 下午3:57
- * @Descprition: java 8 特性，方法引用.方法引用可以使语言的构造更紧凑简洁，减少冗余代码。
+ *  java 8 特性，方法引用.方法引用可以使语言的构造更紧凑简洁，减少冗余代码。
  * 方法引用使用一对冒号 :: 。
  */
 public class MethodReferences {

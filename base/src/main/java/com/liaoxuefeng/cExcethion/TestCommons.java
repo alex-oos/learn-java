@@ -6,7 +6,7 @@ import org.apache.commons.logging.LogFactory;
 /**
  * @author Alex
  * @since 2020/6/2 20:03
- * @Descprition:
+ *
  */
 public class TestCommons {
     public static void main(String[] args) {

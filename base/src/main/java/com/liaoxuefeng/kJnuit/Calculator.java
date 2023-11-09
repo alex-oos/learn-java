@@ -3,7 +3,7 @@ package com.liaoxuefeng.kJnuit;
 /**
  * @author Alex
  * @since 2020/7/10 17:56
- * @Descprition:
+ *
  */
 public class Calculator {
     private long n = 0;

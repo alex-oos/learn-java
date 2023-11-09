@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * @author Alex
  * @since 2020/6/18 11:57
- * @Descprition: Deque: 双端队列，允许两头都进，两头都出
+ *  Deque: 双端队列，允许两头都进，两头都出
  * Deque 队列，功能是：
  * 1、既可以添加到队尾，可以添加到队首
  * 2、既可以从队首获取，又可以从队尾获取

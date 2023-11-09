@@ -3,7 +3,7 @@ package com.liaoxuefeng.bObject.bCoreClass.aString;
 /**
  * @author Alex
  * @since 2020/5/29 上午 12:14
- * @Descprition:
+ *
  */
 public class TestStringBuilder {
 

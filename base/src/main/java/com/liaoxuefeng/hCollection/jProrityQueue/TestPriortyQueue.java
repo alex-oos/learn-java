@@ -7,7 +7,7 @@ import java.util.Queue;
 /**
  * @author Alex
  * @since 2020/6/18 11:36
- * @Descprition:
+ *
  */
 public class TestPriortyQueue {
     public static void main(String[] args) {

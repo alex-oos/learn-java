@@ -3,7 +3,7 @@ package com.atguigu.day4.exer;
 /**
  * @author Alex
  * @since 2020/5/17 上午 12:11
- * @Descprition:
+ * 
  */
 public class TestForExer2 {
     public static void main(String[] args){

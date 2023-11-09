@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/16 下午 11:51
- * @Descprition:
+ *
  */
 /*
 输入两个正整数m和n，求其最大公约数和最小公倍数

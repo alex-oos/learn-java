@@ -5,7 +5,7 @@ import java.util.Objects;
 /**
  * @author Alex
  * @since 2020/6/10 21:04
- * @Descprition:
+ * 
  */
 public class Person {
 

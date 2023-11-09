@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/16 下午 7:00
- * @Descprition:
+ * 
  */
 /*
 4、随机生成一个100以内的数，猜数字游戏

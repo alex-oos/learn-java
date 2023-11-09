@@ -3,7 +3,7 @@ package com.liaoxuefeng.kJnuit;
 /**
  * @author Alex
  * @since 2020/7/10 10:40
- * @Descprition:
+ *
  */
 public class Factorial {
 

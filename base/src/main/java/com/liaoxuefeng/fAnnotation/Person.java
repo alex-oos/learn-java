@@ -3,7 +3,7 @@ package com.liaoxuefeng.fAnnotation;
 /**
  * @author Alex
  * @since 2020/6/8 16:50
- * @Descprition:
+ *
  */
 public class Person {
 

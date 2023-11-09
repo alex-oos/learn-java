@@ -3,7 +3,7 @@ package com.liaoxuefeng.aQuickStart.gAbstract;
 /**
  * @author Alex
  * @since 2020/5/28 12:25
- * @Descprition:
+ *
  */
 
 /*工资水平*/

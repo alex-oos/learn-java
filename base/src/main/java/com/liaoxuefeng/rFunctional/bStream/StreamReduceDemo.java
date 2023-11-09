@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 /**
  * @author Alex
  * @since 2023/9/26 下午6:19
- * @Descprition:
+ * 
  */
 public class StreamReduceDemo {
 

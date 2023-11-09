@@ -3,7 +3,7 @@ package com.atguigu.day5;
 /**
  * @author Alex
  * @since 2020/5/19 下午 10:53
- * @Descprition:
+ * 
  */
 // 请打印1-10之间不是3或5的倍数的数字
 public class TestContinue {

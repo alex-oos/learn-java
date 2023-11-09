@@ -6,7 +6,7 @@ import java.math.RoundingMode;
 /**
  * @author Alex
  * @since 2020/6/2 15:38
- * @Descprition:
+ *
  */
 public class TestBIgDecimal {
     public static void main(String[] args) {
