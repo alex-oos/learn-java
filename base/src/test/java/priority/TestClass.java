@@ -11,6 +11,14 @@ package priority;
 @PriorityAnnotation("P2")
 public class TestClass extends Base {
 
+
+    @PriorityAnnotation("P0")
+    private void caseDemo() {
+
+        System.out.println("true  = " + true);
+
+    }
+
     public static void main(String[] args) throws NoSuchMethodException {
 
         // 通过反射获取类上的注解
@@ -20,13 +28,6 @@ public class TestClass extends Base {
         // 使用反射获取方法上的注解
         PriorityAnnotation caseDemo = TestClass.class.getDeclaredMethod("caseDemo").getAnnotation(PriorityAnnotation.class);
         System.out.println("caseDemo = " + caseDemo.value());
-    }
-
-    @PriorityAnnotation("P0")
-    private void caseDemo() {
-
-        System.out.println("true  = " + true);
-
     }
 
 
