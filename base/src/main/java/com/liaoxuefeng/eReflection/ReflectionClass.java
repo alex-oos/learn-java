@@ -15,6 +15,7 @@ public class ReflectionClass {
     public static void f() {
 
         // 方法一：直接通过一个class的静态变量class获取：
+        // 1. 知道具体类的情况下可以使用：
         Class cls = String.class;
 
         // 方法二：如果我们有一个实例变量，可以通过该实例变量提供getClass（）方法获取：
