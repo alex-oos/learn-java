@@ -12,6 +12,7 @@ public class TestReport {
         Class cls = Person.class;
         if (cls.isAnnotationPresent(Report.class)) {
             Report report = (Report) cls.getAnnotation(Report.class);
+            System.out.println("report = " + report);
         }
     }
 }

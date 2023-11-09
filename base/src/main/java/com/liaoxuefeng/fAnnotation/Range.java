@@ -12,7 +12,7 @@ import java.lang.annotation.Target;
  */
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD) //
+@Target(ElementType.FIELD)
 public @interface Range {
 
     int min() default 0;

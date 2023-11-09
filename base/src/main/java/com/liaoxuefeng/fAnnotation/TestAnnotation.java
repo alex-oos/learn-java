@@ -3,7 +3,7 @@ package com.liaoxuefeng.fAnnotation;
 /**
  * @author Alex
  * @since 2020/6/8 上午 7:21
- *  注解：（Annotation）
+ * 注解：（AnnotationUse）
  * 注解分为三类：
  * 1、编译器使用的注解
  * ,例如：@Override：让编译器检查该方法是否正确地实现了覆写； @SuppressWarnings：告诉编译器忽略此处代码产生的警告。
@@ -19,17 +19,17 @@ package com.liaoxuefeng.fAnnotation;
  * 此外，大部分注解会有一个名为value的配置参数，对此参数赋值，可以只写常量，相当于省略了value参数。
  */
 public class TestAnnotation {
-/*
+
     @Check(min = 0, max = 100, value = 55)
     public int n;
 
-    @Check(value = 99)*/
+    // @Check(value = 99)
     public int p;
 
     //    @Check(99) // @Check(value=99)
     public int x;
 
-    @Check
+    // @Check
     public int y;
 
 
