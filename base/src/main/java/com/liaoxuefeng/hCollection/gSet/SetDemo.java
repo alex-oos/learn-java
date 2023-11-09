@@ -14,11 +14,11 @@ public class SetDemo {
      * Set接口实现类：
      * HashSet：内部使用HashMap实现，不保证有序；
      * TreeSet：内部使用TreeMap实现，保证元素有序（不是按插入顺序排序，而是按元素大小排序）；
+     * set 中如何保证元素有序？ 通过TreeSet实现
      * Set接口并不保证有序，而SortedSet接口则保证元素是有序的：
      * HashSet是无序的，因为它实现了Set接口，并没有实现SortedSet接口；
      * TreeSet是有序的，因为它实现了SortedSet接口。
-     * TreeSet是有序的，因为它实现了SortedSet接口。
-     */
+     * */
 
     public static void setClass() {
 
