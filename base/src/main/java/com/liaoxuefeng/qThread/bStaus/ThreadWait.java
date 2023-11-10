@@ -2,7 +2,7 @@ package com.liaoxuefeng.qThread.bStaus;
 
 
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/7/1 14:19
  * <p>
  * 两个线程按照指定方式有序交叉运行呢

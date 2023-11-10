@@ -3,7 +3,7 @@ package com.liaoxuefeng.eReflection.entity;
 /**
  * <P></p>
  *
- * @author lijiang
+ * @author Alex
  * @since 2023/11/6 下午4:33
  */
 class Person4 {

@@ -2,7 +2,7 @@ package com.liaoxuefeng.qThread.aThread;
 
 
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/29 18:13
  */
 public class Test1 extends Thread {

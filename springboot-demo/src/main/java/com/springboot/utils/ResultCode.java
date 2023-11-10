@@ -1,7 +1,7 @@
 package com.springboot.utils;
 
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/23 16:25
  */
 public interface ResultCode {

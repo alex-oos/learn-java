@@ -8,7 +8,7 @@ import java.util.*;
  * arrayList 的基本用法
  * </p>
  *
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/28 11:47
  */
 public class TestArrayList {

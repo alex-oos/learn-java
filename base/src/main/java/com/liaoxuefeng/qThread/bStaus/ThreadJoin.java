@@ -1,10 +1,8 @@
 package com.liaoxuefeng.qThread.bStaus;
 
 
-import com.sun.jdi.PathSearchingVirtualMachine;
-
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/7/1 14:05
  * <p>
  * join()方法使用,一个线程等待另一个线程，直到等待结束，可以指定等待时间，超过等待时间线程仍然没有结束就不再等待；

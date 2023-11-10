@@ -1,7 +1,7 @@
 package com.liaoxuefeng.bObject.bCoreClass.cEnum;
 
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/28 15:48
  */
 public enum PinType {

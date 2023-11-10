@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/24 11:32
  */
 
@@ -110,7 +110,7 @@ public class HuJwtUtils {
     }
 
  /*   public static void main(String[] args) {
-        String jwtToken = HuJwtUtils.getJwtToken("1", "lijiang");
+        String jwtToken = HuJwtUtils.getJwtToken("1", "Alex");
         boolean token = HuJwtUtils.checkToken(jwtToken);
     }*/
 }

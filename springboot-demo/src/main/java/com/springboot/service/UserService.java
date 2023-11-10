@@ -5,7 +5,7 @@ import com.springboot.entity.User;
 import com.springboot.entity.vo.LoginVo;
 
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/23 15:24
  */
 public interface UserService extends IService<User> {

@@ -5,7 +5,7 @@ package com.liaoxuefeng.fAnnotation;
  * 注解一般如何使用呢
  * </p>
  *
- * @author lijiang
+ * @author Alex
  * @since 2023/11/9 下午6:41
  */
 public class AnnotationUse {

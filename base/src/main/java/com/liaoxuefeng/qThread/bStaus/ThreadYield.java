@@ -1,7 +1,7 @@
 package com.liaoxuefeng.qThread.bStaus;
 
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/30 17:40
  * * 线程的状态：
  * * yield():暂停当前正在执行的线程对象，并执行其他线程。
@@ -15,7 +15,7 @@ public class ThreadYield extends Thread {
         for (int i = 0; i < 10; i++) {
             System.out.println(" " + this.getName() + " i: " + i);
             if (i == 5) {
-                this.yield();
+                yield();
             }
         }
     }

@@ -3,7 +3,7 @@ package com.liaoxuefeng.rFunctional.cOptional;
 import java.util.Optional;
 
 /**
- * @author lijiang
+ * @author Alex
  * @since 2023/9/27 上午10:47
  *  1. Optional是一个容器对象，它包括了我们需要的对象，使用Optional我们就不用显式进行空指针检查。
  * 2.Optional类的Javadoc描述如下：这是一个可以为null的容器对象。如果值存在

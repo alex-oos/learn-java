@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.Arrays;
 
 /**
- * @author lijiang
+ * @author Alex
  * @since 2023/10/7 下午3:55
  *  File类 的使用
  */

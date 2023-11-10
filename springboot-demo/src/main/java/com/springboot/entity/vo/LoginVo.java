@@ -9,7 +9,7 @@ import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 /**
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/23 15:32
  */
 @Schema(description = "登录实体类")

@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
  * 面试总结
  * <p>java引用类型传递,</p>
  *
- * @author LiJiang
+ * @author Alex
  * @since 2021/6/25 11:30
  */
 

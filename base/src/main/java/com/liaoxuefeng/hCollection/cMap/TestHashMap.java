@@ -16,7 +16,7 @@ public class TestHashMap {
     public static void function() {
 
         Map<String, Object> hashMap = new HashMap<>();
-        hashMap.put("username", "lijiang");
+        hashMap.put("username", "Alex");
         hashMap.put("password", "Wlx123456.");
         for (String s : hashMap.keySet()) {
             System.out.println("key : " + s + " value: " + hashMap.get(s));

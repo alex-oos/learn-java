@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * @author lijiang
+ * @author Alex
  * @since 2023/10/7 下午6:48
  *  java.nio.file.Files 用于操作文件或目录的工具类
  */
