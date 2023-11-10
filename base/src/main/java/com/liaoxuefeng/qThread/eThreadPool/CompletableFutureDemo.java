@@ -59,13 +59,13 @@ public class CompletableFutureDemo {
      * 异步任务出错时，会自动回调某个对象的方法；
      * 主线程设置好回调后，不再关心异步任务的执行。
      */
-    public static void function() throws InterruptedException {
+    public static void compleFutureDemo() throws InterruptedException {
 
         ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 5, 1L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(10), new ThreadPoolExecutor.CallerRunsPolicy());
         // 创建异步执行任务：
         // 通过：CompletableFuture.supplyAsync() 实现，其实就是实现了Supplier接口，需要一个实现Supplier接口的对象 和线程池对象
         CompletableFuture<Double> completableFuture = CompletableFuture.supplyAsync(() -> fetchPrice(), executor);
-        // 如果执行成功
+        // 如果执行成功,打印结果
         completableFuture.thenAccept((result) -> {
             System.out.println("price = " + result);
         });
@@ -85,19 +85,20 @@ public class CompletableFutureDemo {
 
         ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 5, 1L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(100), new ThreadPoolExecutor.CallerRunsPolicy());
         // 第一个任务
-        CompletableFuture cfQuery = CompletableFuture.supplyAsync(() -> {
+        CompletableFuture<String> cfQuery = CompletableFuture.supplyAsync(() -> {
             return queryCode("中国石油");
         }, executor);
         // 执行完执行下一个任务
-        // cfQuery.thenAcceptAsync(((code) -> {
-        //     return fetchPrice((String) code);
-        // }), executor);
+        cfQuery.thenAcceptAsync(((code) -> {
+            Double a = fetchPrice(code);
+            System.out.println("fetchPrice is  = " + a);
+        }), executor);
 
     }
 
     public static void main(String[] args) throws InterruptedException {
 
-        function();
+        compleFutureDemo();
         function2();
     }
 
