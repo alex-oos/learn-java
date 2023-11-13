@@ -35,10 +35,6 @@ public class MyRunnable implements Runnable {
         t2.start();
     }
 
-    public static void main(String[] args) {
-
-        function();
-    }
 
     public String getThreadName() {
 
@@ -60,6 +56,11 @@ public class MyRunnable implements Runnable {
             System.out.println("当前线程的名字是：" + strName + "，第" + i + "次执行！");
         }
 
+    }
+
+    public static void main(String[] args) {
+
+        function();
     }
 
 }

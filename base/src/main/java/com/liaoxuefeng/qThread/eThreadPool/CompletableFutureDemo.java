@@ -59,7 +59,7 @@ public class CompletableFutureDemo {
      * 异步任务出错时，会自动回调某个对象的方法；
      * 主线程设置好回调后，不再关心异步任务的执行。
      */
-    public static void compleFutureDemo() throws InterruptedException {
+    public static void completableClass() throws InterruptedException {
 
         ThreadPoolExecutor executor = new ThreadPoolExecutor(1, 5, 1L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(10), new ThreadPoolExecutor.CallerRunsPolicy());
         // 创建异步执行任务：
@@ -98,7 +98,7 @@ public class CompletableFutureDemo {
 
     public static void main(String[] args) throws InterruptedException {
 
-        compleFutureDemo();
+        completableClass();
         function2();
     }
 
