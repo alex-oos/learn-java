@@ -24,7 +24,6 @@ public class ThreadWait {
                     System.out.println("A 1");
                     try {
                         System.out.println("INFO: A 准备进入等待状态，放弃锁 lock 的控制权 ");
-
                         lock.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -42,6 +41,7 @@ public class ThreadWait {
             public void run() {
 
                 System.out.println("INFO: B 等待锁 ");
+                // 同步锁，保证线程安全
                 synchronized (lock) {
                     System.out.println("INFO: B 得到了锁 lock");
                     System.out.println("B 1");
@@ -58,7 +58,6 @@ public class ThreadWait {
     }
 
     public static void main(String[] args) {
-
         function();
     }
 
