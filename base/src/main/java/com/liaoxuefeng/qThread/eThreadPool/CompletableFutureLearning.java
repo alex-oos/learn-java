@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * <P>
  * completableFuture 教程：https://juejin.cn/post/6844903594165026829#heading-4
- * completableFuture 异步任务
+ * completableFuture：异步任务，用于异步任务创建
  * </p>
  *
  * @author Alex
@@ -21,7 +21,7 @@ public class CompletableFutureLearning {
      * 1. 使用runAsync()执行异步无返回值的任务:
      * 2. 使用supplyAsync()执行异步有返回值的任务
      */
-    public static void createCompletableFutureClass() throws ExecutionException, InterruptedException {
+    public static void createAsyncTask() throws ExecutionException, InterruptedException {
         // 1、使用runAsync()执行异步无返回值的任务:，返回的CompletableFuture对象的get()方法永远返回null
         // 传入Runnable对象，CompletableFuture会自动在一个新线程中执行
         CompletableFuture<Void> future = CompletableFuture.runAsync(new Runnable() {
@@ -118,6 +118,11 @@ public class CompletableFutureLearning {
      * 异常处理：
      * 1. 使用exceptionally()处理异常
      * 2. 使用handle()处理异常
+     * 3. 使用whenComplete()处理异常
+     * 4. 使用handleAsync()处理异常
+     * 5. 使用whenCompleteAsync()处理异常
+     * 6. 使用exceptionallyCompose()处理异常
+     * 7. 使用handleCompose()处理异常
      */
     public static void function1() {
 
@@ -125,7 +130,7 @@ public class CompletableFutureLearning {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
-        createCompletableFutureClass();
+        createAsyncTask();
         taskAsyncCallback();
     }
 
