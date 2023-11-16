@@ -110,7 +110,7 @@ public class CompletableFutureLearning {
      * 3. 使用allOf()实现多个CompletableFuture的并行执行
      * 4. 使用anyOf()实现多个CompletableFuture的并行执行
      */
-    public static void function() {
+    public static void asyncTask() {
 
     }
 
@@ -124,7 +124,7 @@ public class CompletableFutureLearning {
      * 6. 使用exceptionallyCompose()处理异常
      * 7. 使用handleCompose()处理异常
      */
-    public static void function1() {
+    public static void asyncException() {
 
     }
 
