@@ -130,6 +130,8 @@ public class MyThreadPool {
         threadPoolExecutor.execute(() -> {
             System.out.println("任务2执行线程：" + Thread.currentThread().getName());
         });
+        // 立刻关闭线程池
+        threadPoolExecutor.shutdown();
 
     }
 
