@@ -1,4 +1,4 @@
-package com.liaoxuefeng.qThread.eThreadPool;
+package com.liaoxuefeng.qThread.eThreadPool.completablefuredemo.demo;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.LinkedBlockingQueue;

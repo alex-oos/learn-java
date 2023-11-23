@@ -1,12 +1,14 @@
 package com.liaoxuefeng.qThread.aThread;
 
 import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
  * @author Alex
  * @since 2020/7/13 16:32
  * <p>
+ * 线程实现的方式三：
  * 1. 创建 Callable 接口的实现类，并实现 call() 方法，该 call() 方法将作为线程执行体，并且有返回值。
  * 2. 创建 Callable 实现类的实例，使用 FutureTask 类来包装 Callable 对象，该 FutureTask 对象封装了该 Callable 对象的 call() 方法的返回值。
  * 3. 使用 FutureTask 对象作为 Thread 对象的 target 创建并启动新线程。
@@ -15,36 +17,31 @@ import java.util.concurrent.FutureTask;
  */
 public class MyCallable implements Callable<Integer> {
 
-    @Override
-    public Integer call() throws Exception {
-        int i = 0;
-        while (i < 10) {
-            System.out.println("子线程" + Thread.currentThread().getName() + " : " + i);
-            i++;
-        }
-        return i;
-
-    }
-
-    public static void function() {
-
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        // 创建了一个MyCallable的对象，表示多线程要执行的任务
         MyCallable callable = new MyCallable();
-        FutureTask<Integer> f1 = new FutureTask<>(callable);
-        for (int i = 0; i < 10; i++) {
-            System.out.println("主线程： " + Thread.currentThread().getName() + " 循环变量i的值: " + i);
-            if (i == 7) {
-                new Thread(f1, "有返回的线程--call（）").start();
-            }
-        }
-        try {
-            System.out.println(" 有返回值的线程返回的数值：" + f1.get());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        // 创建FutureTask对象（作用管理多线程运行的结果）
+        FutureTask<Integer> futureTask = new FutureTask<>(callable);
+        //  创建线程的对象
+        Thread t1 = new Thread(futureTask);
+        // 启动线程
+        t1.start();
+        // 获取多线程运行的结果
+        Integer result = futureTask.get();
+        System.out.println(result);
+
+
     }
 
-    public static void main(String[] args) {
-        function();
+    @Override
+    public Integer call() {
+        // 求 1-100的和
+        int sum = 0;
+        for (int i = 1; i <= 100; i++) {
+            sum += i;
+        }
+        return sum;
+
     }
 
 

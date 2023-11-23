@@ -118,7 +118,8 @@ public class MyThreadPool {
         int maximumPoolSize = 10;
         long keepAliveTime = 1L;
 
-        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.SECONDS, new LinkedBlockingQueue<>(100), new ThreadPoolExecutor.CallerRunsPolicy());
+        ExecutorService threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.SECONDS,
+                new LinkedBlockingQueue<>(100), new ThreadPoolExecutor.CallerRunsPolicy());
         threadPoolExecutor.execute(() -> {
             try {
                 Thread.sleep(3 * 1000);
