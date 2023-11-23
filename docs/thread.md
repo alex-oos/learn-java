@@ -2,6 +2,8 @@
 
 # Thread 线程
 
+视频地址：https://www.bilibili.com/video/BV1LG4y1T7n2/?p=5&vd_source=e33a356475cf6a18a9f6345f4e44a209
+
 ## 一、线程创建的三种方式
 
 #### 方式一：继承Thread类的方式进行实现
@@ -49,7 +51,7 @@ public class MyThread extends Thread {
 
 #### 方式二：实现Runnable接口的方式进行实现
 
-1. 自己定义一个类实现Runnble接口
+1. 自己定义一个类实现Runnable接口
 2. 重写里面的run方法
 3. 创建自己类的对象
 4. 创建一个Thread类的对象，并开启线程
@@ -134,7 +136,37 @@ public class MyCallable implements Callable<Integer> {
 ```
 
 ![thread](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread.png)
-![thread](./assets/thread.png)
+
+ thread中常见的成员方法：
+
+![thread-methods](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-methods.png)
+
+- String getName()  返回线程的名称
+
+- void setName(String name) 设置线程的名字（构造方法也可以设置名称）
+
+  > 细节：
+  > 1、如果我们没有给线程设置名字，线程也是默认有名字的  格式：Thread-X(X是序号，从0开始)
+  >  2、如果我们要给线程设置名称，可以用set 方法设置，也可以用构造方法设置
+  
+- static Thread currentThread() 获取当前线程的对象
+  >  细节：
+  >   当JVM虚拟机启动之后，会自动的启动多线程，其中一条线程叫做main线程，他的作用就是调用main方法，并执行里面的代码，在以前我们写的所有代码，其实都在main线程中运行
+  
+- static void sleep(long time)  让线程休眠指定的时间，单位为毫秒
+
+  > 细节:
+  >
+  > 1、那条线程执行到这个方法，那么哪条线程就会在这里停留对应的时间
+  >
+  > 2、方法的参数：就表示睡眠的时间，单位毫秒，1秒=1000毫秒
+  >
+  > 3、当时间到了之后，线程会自动的醒来，继续执行下面的其他代码
+
+- 
+
+
+
 
 ## 二、Thread状态
 

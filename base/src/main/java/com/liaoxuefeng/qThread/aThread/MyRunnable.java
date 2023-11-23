@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author Alex
- * @since 2020/7/13 16:14
+ * @since 2023/11/23 16:14
  * <p>
  * 创建线程的方式二：
  * 实现接口Runnable

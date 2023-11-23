@@ -26,6 +26,15 @@ public class MyThread extends Thread {
 
     private int x = 0;
 
+    public MyThread() {
+
+    }
+
+    public MyThread(String name) {
+
+        super(name);
+    }
+
 
     @Override
     public void run() {
