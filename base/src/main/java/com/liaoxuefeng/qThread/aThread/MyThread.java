@@ -41,6 +41,8 @@ public class MyThread extends Thread {
         // 书写执行代码
         for (int i = 0; i < 10; i++) {
             System.out.println(this.getName() + " x : " + (this.x++));
+            // 表示出让 当前CPU的执行权
+            Thread.yield();
         }
 
     }
