@@ -18,20 +18,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class MyRunnable implements Runnable {
 
-    public static void main(String[] args) {
-
-        // 创建myRunnable任务
-        MyRunnable myRunnable = new MyRunnable();
-        // 创建线程对象，将任务传递给线程
-        Thread t1 = new Thread(myRunnable);
-        Thread t2 = new Thread(myRunnable);
-        t1.setName("线程一");
-        t2.setName("线程二");
-        // 开启线程
-        t1.start();
-        t2.start();
-
-    }
 
     @Override
     public void run() {
@@ -44,6 +30,21 @@ public class MyRunnable implements Runnable {
         for (int i = 0; i < n; i++) {
             System.out.println("当前线程的名字是：" + strName + "，第" + i + "次执行！");
         }
+
+    }
+
+    public static void main(String[] args) {
+
+        // 创建myRunnable任务
+        MyRunnable myRunnable = new MyRunnable();
+        // 创建线程对象，将任务传递给线程
+        Thread t1 = new Thread(myRunnable);
+        Thread t2 = new Thread(myRunnable);
+        t1.setName("线程一");
+        t2.setName("线程二");
+        // 开启线程
+        t1.start();
+        t2.start();
 
     }
 

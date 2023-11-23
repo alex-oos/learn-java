@@ -26,6 +26,16 @@ public class MyThread extends Thread {
 
     private int x = 0;
 
+
+    @Override
+    public void run() {
+        // 书写执行代码
+        for (int i = 0; i < 10; i++) {
+            System.out.println(this.getName() + " x : " + (this.x++));
+        }
+
+    }
+
     public static void main(String[] args) {
 
         MyThread t1 = new MyThread();
@@ -36,15 +46,6 @@ public class MyThread extends Thread {
         t1.start();
         t2.start();
         System.out.println("main方法执行结束");
-    }
-
-    @Override
-    public void run() {
-        // 书写执行代码
-        for (int i = 0; i < 10; i++) {
-            System.out.println(this.getName() + " x : " + (this.x++));
-        }
-
     }
 
 }
