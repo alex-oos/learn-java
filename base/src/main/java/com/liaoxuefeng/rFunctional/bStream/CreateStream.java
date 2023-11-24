@@ -4,6 +4,7 @@ package com.liaoxuefeng.rFunctional.bStream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -58,6 +59,14 @@ public class CreateStream {
         });
         // 注意： 无限流必须先变成有限流再打印，否则会无限执行下去
         natual.limit(20).forEach(System.out::println);
+
+        // lambda表达式来创建一个list，数据是某个数的平方和
+        List<Integer> collect = Stream.generate(() -> {
+            int n = 0;
+            n++;
+            // 平方和
+            return (int) Math.pow(n, 2);
+        }).limit(20).collect(Collectors.toList());
 
     }
 

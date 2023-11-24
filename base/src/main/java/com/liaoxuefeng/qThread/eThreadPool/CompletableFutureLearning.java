@@ -1,4 +1,4 @@
-package com.liaoxuefeng.qThread.eThreadPool.completablefuredemo.demo;
+package com.liaoxuefeng.qThread.eThreadPool;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;

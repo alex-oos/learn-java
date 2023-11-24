@@ -540,7 +540,7 @@ public class Main {
            list.add("apple");
            list.add("pear");
            list.add("orange");
-   //        排序前
+   		//排序前
            System.out.println(list);
            //排序
            Collections.sort(list);
@@ -551,21 +551,24 @@ public class Main {
 6. 洗牌
 
    ```java
+           Collections.shuffle(list);
+   ```
+   
+   ```java
     List<Integer> list = new ArrayList<>();
            for (int i = 0; i < 10; i++) {
                list.add(i);
            }
-   
            // 洗牌前：
            System.out.println(list);
+   		// 洗牌
            Collections.shuffle(list);
-   
            //洗牌后
            System.out.println(list);
    ```
-
    
-
    
-
+   
+   
+   
    ​	

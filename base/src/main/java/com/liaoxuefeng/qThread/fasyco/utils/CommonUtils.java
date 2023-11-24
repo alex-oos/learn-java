@@ -1,4 +1,4 @@
-package com.liaoxuefeng.qThread.eThreadPool.completablefuredemo.utills;
+package com.liaoxuefeng.qThread.fasyco.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
  * 异步工具辅助类
  * </p>
  *
- * @author lijiang
+ * @author Alex
  * @since 2023/11/17 上午10:16
  */
 public class CommonUtils {
@@ -22,13 +22,14 @@ public class CommonUtils {
         try {
             return Files.readString(Paths.get(pathToFile));
         } catch (IOException e) {
-            throw new RuntimeException(e);
-            // return "";
+            e.printStackTrace();
+            // throw new RuntimeException(e);
+            return "";
         }
     }
 
     // 休眠指定的毫秒数
-    public static void sleepMillis(Long millis) {
+    public static void sleepMillis(long millis) {
 
         try {
             TimeUnit.MILLISECONDS.sleep(millis);
@@ -38,7 +39,7 @@ public class CommonUtils {
     }
 
     // 休眠指定的秒数
-    public static void sleepSeconds(Long seconds) {
+    public static void sleepSecond(long seconds) {
 
         try {
             TimeUnit.SECONDS.sleep(seconds);
@@ -48,7 +49,6 @@ public class CommonUtils {
     }
 
     // 打印线程的信息
-
     public static void printThreadLog(String message) {
         // 格式为： 时间戳|线程id|线程名|日志信息
         String result = new StringJoiner("|")

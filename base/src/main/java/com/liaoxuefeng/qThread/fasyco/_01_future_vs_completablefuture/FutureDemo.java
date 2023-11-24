@@ -1,6 +1,6 @@
-package com.liaoxuefeng.qThread.eThreadPool.completablefuredemo.futuredemo;
+package com.liaoxuefeng.qThread.fasyco._01_future_vs_completablefuture;
 
-import com.liaoxuefeng.qThread.eThreadPool.completablefuredemo.utills.CommonUtils;
+import com.liaoxuefeng.qThread.fasyco.utils.CommonUtils;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 /**
  * <P></p>
  *
- * @author lijiang
+ * @author Alex
  * @since 2023/11/17 上午11:07
  */
 public class FutureDemo {
@@ -24,15 +24,15 @@ public class FutureDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         // 创建固定大小的线程池
         ExecutorService executorService = Executors.newFixedThreadPool(5);
-
+        // step1:获取新闻稿
         Future<String> newsFuture = executorService.submit(() -> {
             return CommonUtils.readFile("base/src/main/resources/data/news.txt");
         });
-
+        // step2：获取关键字
         Future<String> wordsFuture = executorService.submit(() -> {
-            return CommonUtils.readFile("base/src/main/resources/data/words.txt");
+            return CommonUtils.readFile("base/src/main/resources/data/filter_words.txt");
         });
-
+        // step3：替换操作
         Future<String> filedNewsFuture = executorService.submit(() -> {
 
             String news = newsFuture.get();
@@ -49,7 +49,7 @@ public class FutureDemo {
 
         });
 
-
+        // step4: 打印输出替换后的新闻稿-》main
         String result = filedNewsFuture.get();
         System.out.println(result);
 

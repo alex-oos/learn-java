@@ -268,9 +268,6 @@ public class MyCallable implements Callable<Integer> {
   
   ```
 
-  
-
-
 
 ## 三、Thread的生命周期
 
@@ -322,8 +319,8 @@ interrupt() 中断线程，对线程的调用看她是否中断，isInterrupted�
 
 ### 异步ComletableFuture:
 
-- 教程：https://www.bilibili.com/video/BV1S54y1u79K/?spm_id_from=333.337.search-card.all.click&vd_source=e33a356475cf6a18a9f6345f4e44a209
-- 代码地址：https://github.com/Acyco/CompletableFuture
+- 教程：
+- 代码地址：
 
 
 1. 分别是什么？然后如何使用？
