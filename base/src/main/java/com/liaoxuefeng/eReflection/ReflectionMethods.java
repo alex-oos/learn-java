@@ -8,7 +8,6 @@ import java.util.Arrays;
 
 /**
  * @author Alex
- *
  * @since 2020/6/6 上午 12:15
  */
 public class ReflectionMethods {
@@ -17,9 +16,9 @@ public class ReflectionMethods {
      * 获取Method的几种方法：
      * Class类提供以下几种方法获取Method:
      * 1、Method  getMethod(name,Class ，，，)： 获取某个public的method（包括父类）
-     * 2、Method getDeclaredMethod(name.Class ...):获取当前类的某个method（不包括父类）
-     * 3、Method  getMethods() : 获取所有public 的Menthod（包括父类）
-     * 4、Method getDeclareMethods() : 获取当前类的所有Menthod（不包括父类）
+     * 2、Method  getMethods() : 获取所有public 的Menthod（包括父类）
+     * 2、Method getDeclareMethods() : 获取当前类的所有Menthod，包含括private方法 （不包括父类）
+     * 3、Method getDeclaredMethod(name.Class ...):获取当前类的某个method，包含括private方法（不包括父类）
      **/
     public static void getMethodWays() throws NoSuchMethodException {
 
@@ -31,7 +30,7 @@ public class ReflectionMethods {
         // 获取private方法getGrade，参数为int:
         System.out.println("stdClass.getDeclaredMethod(\"getGrade\", int.class) = " + stdClass.getDeclaredMethod("getGrade", int.class));
         // 获取所有public 的Menthod（包括父类）
-        System.out.println("stdClass = " + Arrays.toString(stdClass.getMethods()));
+        System.out.println("stdClass.getMethods() = " + Arrays.toString(stdClass.getMethods()));
         // 获取当前类中所有方法，包括private方法
         System.out.println("stdClass.getDeclaredMethods() = " + Arrays.toString(stdClass.getDeclaredMethods()));
     }
@@ -103,7 +102,6 @@ public class ReflectionMethods {
         getMethodWays();
         methodClass();
         methodsScenarios();
-
 
 
     }
