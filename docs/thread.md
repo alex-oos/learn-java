@@ -139,7 +139,7 @@ public class MyCallable implements Callable<Integer> {
 
 ![thread](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread.png)
 
-####  Thread中常见的成员方法：
+## 二、Thread中常见的成员方法：
 
 
 
@@ -259,7 +259,7 @@ public class MyCallable implements Callable<Integer> {
           // 当前线程：main线程
           thread5.join();
   
-          //    执行main线程中
+          //执行main线程中
           for (int i = 0; i < 10; i++) {
               System.out.println("main线程" + i);
           }
@@ -272,7 +272,7 @@ public class MyCallable implements Callable<Integer> {
 
 
 
-## 二、Thread状态
+## 三、Thread的生命周期
 
 - New：新创建的线程，尚未执行；
 - Runnable：运行中的线程，正在执行`run()`方法的Java代码；
@@ -316,7 +316,11 @@ join()：一个线程等待另一个线程，直到等待结束，可以指定�
 
 interrupt() 中断线程，对线程的调用看她是否中断，isInterrupted（）标示获取自身是否中断，如果目标线程处于等待状态，该线程会抛出异常InterruptedException，一般线程处于中断状态，应该立刻结束自身线程，线程间共享变量需要使用`volatile`关键字标记，确保每个线程都能读取到更新后的变量值
 
-## 三、异步ComletableFuture:
+
+
+## 四、线程池
+
+### 异步ComletableFuture:
 
 - 教程：https://www.bilibili.com/video/BV1S54y1u79K/?spm_id_from=333.337.search-card.all.click&vd_source=e33a356475cf6a18a9f6345f4e44a209
 - 代码地址：https://github.com/Acyco/CompletableFuture
