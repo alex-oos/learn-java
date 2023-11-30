@@ -76,6 +76,8 @@ public class FilesDemo {
         System.out.println(s1);
         // 写入string
         // Path path = Files.writeString(path1, "ss");
+        // 文件写入
+        // Path write = Files.write(path1, "s".getBytes());
 
     }
 
