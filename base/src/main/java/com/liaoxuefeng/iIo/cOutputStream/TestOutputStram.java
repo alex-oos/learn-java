@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * @author Alex
  * @since 2020/6/27 18:10
- *
+ *输出流：字节流：
  */
 public class TestOutputStram {
 

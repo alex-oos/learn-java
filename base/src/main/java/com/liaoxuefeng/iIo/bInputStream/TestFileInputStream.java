@@ -1,23 +1,25 @@
 package com.liaoxuefeng.iIo.bInputStream;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 /**
  * @author Alex
  * @since 2020/6/27 16:51
- * 
  */
 public class TestFileInputStream {
 
     public static final String pathName = "base/src/main/resources/data/";
 
-    //    FileInputStream 文件输入输出流
-    public static void function() {
+    /**
+     * FileInputStream 文件输入输出流
+     */
+    public static void fileInputStreamDemo() {
 
-        try (FileInputStream fin = new FileInputStream(pathName + "1.log")) {
-
+        try (FileInputStream fin = new FileInputStream(pathName + "inputstream.txt")) {
             byte byteData;
-            int i;
             while ((byteData = (byte) fin.read()) != -1) {
                 System.out.print((char) byteData);
             }
@@ -28,10 +30,12 @@ public class TestFileInputStream {
         }
     }
 
-    // 缓存输入流
-    public static void function2() {
+    /**
+     * BufferedInputStream:缓存输入流
+     */
+    public static void bufferedInputStreamDemo() {
 
-        try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(pathName + "1.log"))) {
+        try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(pathName + "inputstream.txt"))) {
 
             byte byteData;
             while ((byteData = (byte) bufferedInputStream.read()) != -1) {
@@ -42,29 +46,30 @@ public class TestFileInputStream {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
-    public static void readFile() throws IOException {
-
-        InputStream input = null;
-        try {
-            input = new FileInputStream(pathName + "1.log");
-            int n;
-            while ((n = input.read()) != -1) { // 利用while同时读取并判断
-                System.out.println((char) n);
-            }
-        } finally {
-            if (input != null) {
-                input.close();
-            }
-        }
-    }
+    //
+    // public static void readFile() throws IOException {
+    //
+    //     InputStream input = null;
+    //     try {
+    //         input = new FileInputStream(pathName + "inputstream.txt");
+    //         int n;
+    //         while ((n = input.read()) != -1) { // 利用while同时读取并判断
+    //             System.out.println((char) n);
+    //         }
+    //     } finally {
+    //         if (input != null) {
+    //             input.close();
+    //         }
+    //     }
+    // }
 
 
     public static void main(String[] args) throws IOException {
 
-        readFile();
+        fileInputStreamDemo();
+        bufferedInputStreamDemo();
+        // readFile();
 
     }
 
