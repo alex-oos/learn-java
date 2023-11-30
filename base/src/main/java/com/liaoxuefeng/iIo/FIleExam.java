@@ -1,8 +1,6 @@
 package com.liaoxuefeng.iIo;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
@@ -19,26 +17,29 @@ public class FIleExam {
     public static void main(String[] args) throws IOException {
 
         Path oldFilePath = Files.createFile(Path.of("./tmp.text"));
+        // Path oldFilePath1 = Files.write(oldFilePath, "files create demo".getBytes());
 
-        Path oldFilePath1 = Files.write(oldFilePath, "files create demo".getBytes());
-        StringBuilder content = new StringBuilder();
-
-        // 文件流读取文件
-        try (FileInputStream inputStream = new FileInputStream(oldFilePath1.toFile())) {
-            byte byteData = 0;
-            while ((byteData = (byte) inputStream.read()) != -1) {
-                content.append((char) byteData);
-            }
-            System.out.println("读取文件" + content);
-
-
+        try (FileWriter fileWriter = new FileWriter(oldFilePath.toFile())) {
+            System.out.println("使用 FileWriter 字符流写入文件：");
+            fileWriter.write("file create demo");
         }
 
+        StringBuilder content = new StringBuilder();
+
+        try (FileReader fileReader = new FileReader(oldFilePath.toFile())) {
+            System.out.println("使用 FileReader 字符流读取文件：");
+            int data = 0;
+            while ((data = fileReader.read()) != -1) {
+                content.append((char) data);
+            }
+            System.out.println("内容为：" + content);
+        }
 
         Path newFilePath = Files.createFile(Path.of("./tmp-back.text"));
 
         // 文件流写入文件
         try (FileOutputStream fileOutputStream = new FileOutputStream(newFilePath.toFile())) {
+            System.out.println("用FileOutputStream 字节流写入文件");
             fileOutputStream.write(content.toString().getBytes());
         }
         // 读取新的文件，看看文件是否写入成功
@@ -48,6 +49,7 @@ public class FIleExam {
             while ((byteData = (byte) inputStream.read()) != -1) {
                 content1.append((char) byteData);
             }
+            System.out.println("使用FileInputStream流 读取文件：");
             System.out.println(content1);
         }
 
