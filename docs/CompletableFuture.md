@@ -80,7 +80,7 @@ public class CommonUtils {
     }
   }
   // 打印输出带线程信息的日志
-  public static void printTheadLog(String message) {
+  public static void printThreadLog(String message) {
     // 时间戳 | 线程id | 线程名 | 日志信息
     String result = new StringJoiner(" | ")
             .add(String.valueOf(System.currentTimeMillis()))
@@ -464,26 +464,31 @@ CompletableFuture<Void> thenAccept(Consumer<? super T> action)
 
 ```java
 public class ThenAcceptDemo {
+
     public static void main(String[] args) {
         // 需求：异步读取filter_words.txt文件中的内容，读取完成后，把内容转换成敏感词数组，然后打印敏感词数组
-        CommonUtils.printTheadLog("main start");
-
-        CompletableFuture.supplyAsync(()->{
-            CommonUtils.printTheadLog("读取filter_words.txt文件");
-            String filterWordsContent = CommonUtils.readFile("filter_words.txt");
-            return filterWordsContent;
-        }).thenApply(content ->{
-            CommonUtils.printTheadLog("把文件内容转换成敏感词数组");
+        CommonUtils.printThreadLog("main start");
+        // 链式操作
+        CompletableFuture.supplyAsync(() -> {
+            CommonUtils.printThreadLog("读取filter_words文件");
+            String filterWordContent = CommonUtils.readFile("base/src/main/resources/data/filter_words.txt");
+            return filterWordContent;
+        }).thenApply((content) -> {
+            CommonUtils.printThreadLog("把文件内容转换成敏感词数组");
             String[] filterWords = content.split(",");
             return filterWords;
-        }).thenAccept(filterWords->{
-            CommonUtils.printTheadLog("filterWorlds = " + Arrays.toString(filterWords));
+
+        }).thenAccept(filterWords -> {
+            CommonUtils.printThreadLog("filterWorlds = " + Arrays.toString(filterWords));
+
         });
 
-        CommonUtils.printTheadLog("main continue");
+        CommonUtils.printThreadLog("main continue");
         CommonUtils.sleepSecond(4);
-        CommonUtils.printTheadLog("main end");
+        CommonUtils.printThreadLog("main end");
     }
+
+
 }
 ```
 #### 3.3 thenRun
@@ -501,22 +506,24 @@ CompletableFuture<Void> thenRun(Runnable action);
 
 ```java
 public class ThenRunDemo {
+
     public static void main(String[] args) {
         // 演示案例： 我们仅仅想知道敏感词汇的文件是否读取完成
-        CommonUtils.printTheadLog("main start");
+        CommonUtils.printThreadLog("main start");
 
         CompletableFuture.supplyAsync(() -> {
-            CommonUtils.printTheadLog("读取filter_words文件");
-            String filterWordsContent = CommonUtils.readFile("filter_words.txt");
-            return filterWordsContent;
+            CommonUtils.printThreadLog("读取filter_words文件");
+            String filterWordContent = CommonUtils.readFile("base/src/main/resources/data/filter_words.txt");
+            return filterWordContent;
         }).thenRun(() -> {
-            CommonUtils.printTheadLog("读取filter_words文件读取完成");
-        });
+            CommonUtils.printThreadLog("读取filter_words文件读取完成");
 
-        CommonUtils.printTheadLog("main continue");
+        });
+        CommonUtils.printThreadLog("main continue");
         CommonUtils.sleepSecond(4);
-        CommonUtils.printTheadLog("main end");
+        CommonUtils.printThreadLog("main end");
     }
+
 }
 ```
 #### 3.4 更进一步提供并行化

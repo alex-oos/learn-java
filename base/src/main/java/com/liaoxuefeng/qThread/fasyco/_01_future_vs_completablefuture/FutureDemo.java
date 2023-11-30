@@ -51,6 +51,8 @@ public class FutureDemo {
 
         // step4: 打印输出替换后的新闻稿-》main
         String result = filedNewsFuture.get();
+        // 关闭线程池
+        executorService.shutdown();
         System.out.println(result);
 
 

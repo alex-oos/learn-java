@@ -268,7 +268,6 @@ public class MyCallable implements Callable<Integer> {
   
   ```
 
-
 ## 三、Thread的生命周期
 
 - New：新创建的线程，尚未执行；
