@@ -1,8 +1,11 @@
 package com.springboot.controller;
 
 
+import com.springboot.bean.Car;
+import com.springboot.bean.Person;
 import com.springboot.config.UserConfig;
 import com.springboot.utils.ConstantPropertiesUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
  * <P></p>
  */
 /*解决跨域*/
+@Slf4j
 @CrossOrigin(originPatterns = "*", allowCredentials = "true", maxAge = 3600)
 @RestController
 public class HelloController {
@@ -21,12 +25,32 @@ public class HelloController {
     @Autowired
     private UserConfig userConfig;
 
+    @Autowired
+    Car car;
+
+    @Autowired
+    Person person;
+
     @GetMapping("readData")
     public String readData() {
 
         String tmp = "id: " + ConstantPropertiesUtil.ID + "name: " + ConstantPropertiesUtil.NAME + "password: " +
                 ConstantPropertiesUtil.PASSWORD + "===" + userConfig.getId();
         return tmp;
+    }
+
+    @GetMapping("car")
+    public Car hit() {
+
+        log.info("进入日志...");
+        return car;
+    }
+
+    @GetMapping("person")
+    public Person person() {
+
+        return person;
+
     }
 
 }
