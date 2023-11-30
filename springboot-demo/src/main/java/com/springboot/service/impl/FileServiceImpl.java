@@ -31,7 +31,18 @@ public class FileServiceImpl implements FileService {
     @Override
     public void downloadCsv(HttpServletResponse response) {
 
-        Path path = Paths.get("./data/checkSet" + UUID.randomUUID() + ".csv");
+        Path path1 = Path.of("data/checkSet");
+        Path data1 = null;
+        try {
+            if (!path1.toFile().exists()) {
+                data1 = Files.createDirectories(path1);
+
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        Path path = Paths.get(data1.toString() + UUID.randomUUID() + ".csv");
 
         CsvWriter csvWriter = new CsvWriter(path.toString());
 
@@ -84,7 +95,6 @@ public class FileServiceImpl implements FileService {
         File newFile = new File(Objects.requireNonNull(file.getOriginalFilename()));
         try (FileOutputStream fos = new FileOutputStream(newFile)) {
             fos.write(file.getBytes());
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
