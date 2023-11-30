@@ -4,15 +4,17 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.List;
 
 /**
  * @author Alex
  * @since 2023/10/7 下午6:48
- *  java.nio.file.Files 用于操作文件或目录的工具类
+ * java.nio.file.Files 用于操作文件或目录的工具类
  */
 public class FilesDemo {
 
     /**
+     * 关于文件操作：
      * Path copy(Path src, Path dest, CopyOption … how) : 文件的复制
      *  Path createDirectory(Path path, FileAttribute<?> … attr) : 创建一个目录
      *  Path createFile(Path path, FileAttribute<?> … arr) : 创建一个文件
@@ -21,14 +23,13 @@ public class FilesDemo {
      *  Path move(Path src, Path dest, CopyOption…how) : 将 src 移动到 dest 位置
      *  long size(Path path) : 返回 path 指定文件的大小
      */
-    public static void function() {
+    public static void fileOperation() {
 
         try {
             Path file = Files.createFile(Paths.get("./tmp.text"));
             System.out.println("file.toFile() = " + file.toFile());
             boolean deleted = Files.deleteIfExists(file);
             System.out.println("是否删除成功= " + deleted);
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -60,9 +61,29 @@ public class FilesDemo {
 
     }
 
-    public static void main(String[] args) {
+    /**
+     * 读写文件方法：
+     * readAllLines()
+     */
+    public static void function3() throws IOException {
+        // 按照行读取
+        Path path1 = Path.of("base/src/main/resources/data/files.text");
+        List<String> list = Files.readAllLines(path1);
+        System.out.println(list);
 
-        function();
+        // 读取所有，最后输出string
+        String s1 = Files.readString(path1);
+        System.out.println(s1);
+        // 写入string
+        // Path path = Files.writeString(path1, "ss");
+
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        fileOperation();
+        function3();
+
     }
 
 }

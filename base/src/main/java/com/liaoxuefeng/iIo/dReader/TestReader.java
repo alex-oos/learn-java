@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * @author Alex
  * @since 2020/6/29 16:51
+ * 字符流： Reader 读取文件
  */
 public class TestReader {
 

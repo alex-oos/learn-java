@@ -22,11 +22,15 @@ public class SerializableLearn {
         user.setAge(23);
         System.out.println(user);
         // 序列化对象到文件中
+        // 对象流 序列化到文件中
+        // 序列化：用ObjectOutputStream类保存基本类型数据或对象的机制
         ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("template"));
         oos.writeObject(user);
         oos.close();
         // 反序列化
         File file = new File("template");
+        // 对象流，
+        // 反序列化：用ObjectInputStream类读取基本类型数据或对象的机制
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file));
         User newUser = (User) ois.readObject();
         System.out.println(newUser.toString());

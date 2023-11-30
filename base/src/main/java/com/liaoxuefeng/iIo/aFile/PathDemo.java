@@ -27,11 +27,13 @@ public class PathDemo {
      */
     public static void function() {
 
-        Path path = Paths.get("./tmp.text");
+        Path path = Paths.get("base/src/main/resources/data/path.text");
         System.out.println("path.toAbsolutePath() = " + path.toAbsolutePath());
         System.out.println("path.toFile() = " + path.toFile());
         Path fileName = path.getFileName();
         System.out.println("fileName = " + fileName);
+        String string = path.getParent().toString();
+        System.out.println(string);
 
 
     }
