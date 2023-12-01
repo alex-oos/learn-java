@@ -213,7 +213,7 @@ public static void fileInputStreamDemo(){
 
 2.打印流
 
-3.数据输出刘
+3.数据输出流
 
 4.管道
 
