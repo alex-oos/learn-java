@@ -2,10 +2,10 @@ package com.springboot.controller;
 
 
 import com.springboot.commom.R;
+import com.springboot.commom.result.ResultCode;
 import com.springboot.entity.vo.LoginVo;
 import com.springboot.service.UserService;
 import com.springboot.utils.HuJwtUtils;
-import com.springboot.utils.ResultCode;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;

@@ -26,7 +26,7 @@ public class ParameterTestController {
      * @return
      */
     @PostMapping("/saveUser")
-    public Person saveuser(Person person) {
+    public Person saveUser(Person person) {
 
         return person;
     }

@@ -1,4 +1,4 @@
-package com.springboot.utils;
+package com.springboot.commom.result;
 
 /**
  * @author Alex
