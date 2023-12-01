@@ -148,7 +148,7 @@
 
 1.文件输入流:FileInputStream
 
-> ​ 文件的输入流和输出流
+> 文件的输入流和输出流
 
 ```java
     /**
@@ -158,7 +158,9 @@ public static void fileInputStreamDemo(){
 
         try(FileInputStream fin=new FileInputStream(pathName+"inputstream.txt")){
         byte byteData;
+         // read 读取的是一个ASCII码，为-1的时候就代码读取结束
         while((byteData=(byte)fin.read())!=-1){
+            // 将ascii码转化为char类型
         System.out.print((char)byteData);
         }
         }catch(FileNotFoundException e){ // 捕获文件不存在异常
@@ -166,7 +168,7 @@ public static void fileInputStreamDemo(){
         }catch(IOException e){ // 捕获读取异常
         e.printStackTrace();
         }
-        }
+ }
 ```
 
 2.缓存输入流:BufferedInputStream
@@ -180,11 +182,9 @@ public static void fileInputStreamDemo(){
     public static void bufferedInputStreamDemo() {
 
         try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(pathName + "inputstream.txt"))) {
-
             byte byteData;
             while ((byteData = (byte) bufferedInputStream.read()) != -1) {
                 System.out.print((char) byteData);
-
             }
 
         } catch (Exception e) {

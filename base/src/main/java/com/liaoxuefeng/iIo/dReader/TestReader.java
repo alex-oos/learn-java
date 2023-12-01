@@ -17,14 +17,6 @@ public class TestReader {
     public static void readFile() throws IOException {
 
         Reader reader = new FileReader("base/src/main/resources/data/reader.txt", StandardCharsets.UTF_8);
- /*        for (; ; ) {
-            int n = reader.read();
-            if (n == -1) {
-                break;
-            }
-            System.out.print((char) n);
-
-        } */
         int n = 0;
         while ((n = reader.read()) != -1) {
             System.out.print((char) n);

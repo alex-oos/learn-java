@@ -8,7 +8,7 @@ import java.nio.charset.StandardCharsets;
 /**
  * @author Alex
  * @since 2020/6/29 17:01
- *
+ *  字符流：FileWriter的应用
  */
 public class Main {
 
