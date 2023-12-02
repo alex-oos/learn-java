@@ -1,6 +1,6 @@
-package com.liaoxuefeng.qThread.fasyco._01_future_vs_completablefuture;
+package com.liaoxuefeng.qThread.fasync._01_future_vs_completablefuture;
 
-import com.liaoxuefeng.qThread.fasyco.utils.CommonUtils;
+import com.liaoxuefeng.qThread.fasync.utils.CommonUtils;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

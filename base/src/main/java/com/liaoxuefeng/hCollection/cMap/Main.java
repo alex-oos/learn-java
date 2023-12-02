@@ -66,7 +66,7 @@ public class Main {
                 new Student("Newton", 85)
 
         );
-        var holder = new Students(list);
+        Students holder = new Students(list);
         System.out.println(holder.getScore("Bob") == 78 ? "测试成功" : "测试失败");
         System.out.println(holder.getScore("Alice") == 105 ? "测试成功" : "测试失败");
         System.out.println(holder.getScore("Tom") == -1 ? "测试成功!" : "测试失败!");
@@ -75,6 +75,7 @@ public class Main {
     public static void f4() {
         Map<Student, Integer> map = new HashMap<>();
         map.put(new Student("liuyan", 100), 1);
+        System.out.println(map);
 
 
     }

@@ -47,6 +47,12 @@ public static void main(String[] args){
 4. 删除某个元素：int remove(Object e)
 5. 获取指定索引的元素：E get(int index)
 6. 获取链表大小（包含元素的个数）：int size()
+6. 获取元素第一次出现位置： int indexof(Object var1)
+6. 获取元素最后一次出现位置：int lastIndexOf(Object var1)
+6. 将此集合中指定索引位置的元素修改为 element 参数指定的对象。 此方法返回此集合中指定索引位置的原元素:E set(int index,
+   Eelement)
+10. 返回一个新的集合，新集合中包含 fromlndex 和 tolndex 索引之间的所有元素。包含 fromlndex 处的元素，不包含 tolndex
+    索引处的元素:List<E> subList(int fromlndex, int tolndex)
 ```java
   List<String> list = new ArrayList<>();
         list.add("apple");
@@ -58,7 +64,6 @@ public static void main(String[] args){
         list.size();
         System.out.println("list = " + list);
         System.out.println("list = " + list.size());
-
 ```
 
 
@@ -78,7 +83,6 @@ public static void main(String[] args){
 
 ```java
         List<String> list = new ArrayList<>();
-
 ```
 
 ###### 		3.LinkList
@@ -87,7 +91,6 @@ public static void main(String[] args){
 
 ```java
         List<String> list1 = new LinkedList<>();
-
 ```
 
 
@@ -285,7 +288,6 @@ public class Main {
         }
     }
 }
-
 ```
 
 #### 七、Queue
@@ -321,7 +323,6 @@ Queues方法：
            System.out.println(q.peek()); // apple
        }
    }
-   
    ```
 
 ##### 1. PriorityQueue:

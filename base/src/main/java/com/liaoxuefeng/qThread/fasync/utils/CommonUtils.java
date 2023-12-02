@@ -1,4 +1,4 @@
-package com.liaoxuefeng.qThread.fasyco.utils;
+package com.liaoxuefeng.qThread.fasync.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;

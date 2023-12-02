@@ -7,7 +7,6 @@ import java.util.Properties;
 /**
  * @author Alex
  * @since 2020/6/14 下午 10:08
- * 
  */
 public class Main {
 
@@ -36,6 +35,7 @@ public class Main {
     /*从内存读取一个字节流
      * */
     public static void function3() throws IOException {
+
         String settings = "# test" + "\n" + "course=Java" + "\n" + "last_open_since=2019-08-07T12:35:01";
         ByteArrayInputStream input = new ByteArrayInputStream(settings.getBytes(StandardCharsets.UTF_8));
         Properties props = new Properties();
@@ -48,7 +48,13 @@ public class Main {
 
     }
 
+    /*
+     * 写入配置文件：
+     *setProperty()修改了Properties实例，可以把配置写入文件，以便下次启动时获得最新配置。写入配置文件使用store()方法：
+     *load(InputStream)默认总是以ASCII编码读取字节流，所以会导致读到乱码。我们需要用另一个重载方法load(Reader)读取：
+     * */
     public static void function4() throws IOException {
+
         Properties props = new Properties();
         props.setProperty("url", "https://www.liaoxuefeng.com");
         props.setProperty("language", "java");
@@ -61,22 +67,19 @@ public class Main {
 
     }
 
-/* 写入配置文件：
-setProperty()修改了Properties实例，可以把配置写入文件，以便下次启动时获得最新配置。写入配置文件使用store()方法：
-load(InputStream)默认总是以ASCII编码读取字节流，所以会导致读到乱码。我们需要用另一个重载方法load(Reader)读取：
-* */
-
-    public static void main(String[] args) throws IOException {
-        function4();
-
-
-    }
 
     public void function2() throws IOException {
 
         Properties properties = new Properties();
         properties.load(getClass().getResourceAsStream("base/src/main/resources/setting.properties"));
         System.out.println("properties.getProperty(\"open_file\") = " + properties.getProperty("open_file"));
+
+    }
+
+    public static void main(String[] args) throws IOException {
+
+        function4();
+
 
     }
 

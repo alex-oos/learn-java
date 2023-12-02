@@ -12,7 +12,7 @@ import java.util.List;
  * @since 2020/6/10 20:25
  * 
  */
-public class TestList1 {
+public class ListExam {
     /**
      * 随机删除的一个数
      *

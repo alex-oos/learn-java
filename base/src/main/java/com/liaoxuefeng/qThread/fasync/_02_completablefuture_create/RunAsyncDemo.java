@@ -1,6 +1,6 @@
-package com.liaoxuefeng.qThread.fasyco._02_completablefuture_create;
+package com.liaoxuefeng.qThread.fasync._02_completablefuture_create;
 
-import com.liaoxuefeng.qThread.fasyco.utils.CommonUtils;
+import com.liaoxuefeng.qThread.fasync.utils.CommonUtils;
 
 import java.util.concurrent.CompletableFuture;
 
