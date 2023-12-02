@@ -12,30 +12,32 @@ public class FileUtil {
 
 
     // 寻找File文件夹下所有的jmx结尾的文件名
-    public static List<String> printFileName(File file1) {
+    public static List<String> scriptNum(File file1) {
 
-        File file = new File("./scprit");
+        File file = new File("./script");
         List<String> list = new ArrayList<>();
 
         if (file.isDirectory() && file.exists()) {// 参数file是目录并且存在
             // 生成File数组
             File[] fileList = file.listFiles();
             // 遍历集合
-            for (File f : fileList) {
-                if (f.isDirectory()) {// 次元素是目录
-                    list.addAll(printFileName(f));// 递归调用
-                } else {
-                    if (f.getName().endsWith(".jmx")) {// 如果是以.jmx结尾
-//                            System.out.println(f.getName());//打印该文件的名字
-                        StringBuffer a = new StringBuffer(f.getName());
-                        a.delete(a.length() - 4, a.length());
-                        list.add(a.toString());
+            if (fileList != null) {
+                for (File f : fileList) {
+                    if (f.isDirectory()) {// 次元素是目录
+                        list.addAll(scriptNum(f));// 递归调用
+                    } else {
+                        if (f.getName().endsWith(".jmx")) {// 如果是以.jmx结尾
+                            //                            System.out.println(f.getName());//打印该文件的名字
+                            StringBuffer a = new StringBuffer(f.getName());
+                            a.delete(a.length() - 4, a.length());
+                            list.add(a.toString());
+                        }
                     }
                 }
             }
             return list;
         } else {
-            System.out.println("未找到scprit文件夹,退出运行");
+            System.out.println("未找到script文件夹,退出运行");
             // 强制退出进程
             System.exit(1);
         }

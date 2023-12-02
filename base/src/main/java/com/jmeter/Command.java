@@ -53,8 +53,8 @@ public class Command {
 
 
         long startTime = System.currentTimeMillis();
-        // 获取所有的脚本：
-        List<String> list = FileUtil.printFileName(new File("./"));
+        // 获取所有的脚本名称
+        List<String> list = FileUtil.scriptNum(new File("./"));
         FileUtil.createDirectory("./jtl");
         FileUtil.createDirectory("./report");
         String jmx = null;
