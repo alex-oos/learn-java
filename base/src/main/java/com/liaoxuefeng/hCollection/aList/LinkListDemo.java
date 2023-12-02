@@ -27,7 +27,9 @@ public class LinkListDemo {
         System.out.println("i = " + i);
         String s = linkList.get(i);
         System.out.println(s);
+        // 添加为第一个元素
         linkList.addFirst("first");
+        // 添加为最后一个元素
         linkList.addLast("last");
         // 获取第一个元素
         String last = linkList.getFirst();
