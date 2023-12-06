@@ -7,9 +7,9 @@ import java.util.StringJoiner;
  * @since 2020/5/29 11:39
  *
  */
-public class TestSringJoiner {
+public class StringJoinerDemo {
 
-    //字符串拼接
+    // 字符串拼接,使用StringBuilder手动拼接
     public static void f1() {
         String[] names = {"liuyan", "xiaoai", "xiaomi"};
         StringBuilder sb = new StringBuilder();

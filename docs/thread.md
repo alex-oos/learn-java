@@ -270,6 +270,8 @@ public class MyCallable implements Callable<Integer> {
 
 ## 三、Thread的生命周期
 
+![thread-life-cycle](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-life-cycle)
+
 - New：新创建的线程，尚未执行；
 - Runnable：运行中的线程，正在执行`run()`方法的Java代码；
 - Blocked：运行中的线程，因为某些操作被阻塞而挂起；
@@ -312,9 +314,245 @@ join()：一个线程等待另一个线程，直到等待结束，可以指定�
 
 interrupt() 中断线程，对线程的调用看她是否中断，isInterrupted（）标示获取自身是否中断，如果目标线程处于等待状态，该线程会抛出异常InterruptedException，一般线程处于中断状态，应该立刻结束自身线程，线程间共享变量需要使用`volatile`关键字标记，确保每个线程都能读取到更新后的变量值
 
+## 四、线程安全
 
+### 1. 同步代码块
 
-## 四、线程池
+> 把操作共享的自动代码锁起来，运行完毕则释放锁
+
+- 格式
+
+```java
+synchronized(锁){
+        操作共享数据的代码
+        }
+```
+
+特点：
+
+- 锁默认打开，有一个线程进去了，锁默认关闭
+- 里面的代码全部执行完毕，线程出现，锁自动打开
+
+代码demo:
+
+```java
+public class MyThread extends Thread {
+    // 业务场景：某电影院正在上映国产大片，共有100张票，而它有3个窗口卖票，设计一个程序模拟该电影院卖票
+    // 存在3个问题：
+    // 1、三个窗口在售卖同一张票
+    // 2、票会被超卖
+    // 最终原因：线程的随机性，随机执行的时候会进行抢夺资源，导致变量ticket没有被修改，从而售卖同一张票
+    // 解决方案：线程A售卖票1的时候将其锁住，线程A售卖完毕，然后再让B进行售卖其他票，从而开始使用同步代码块
+
+    static int ticket = 0;  // 0-99
+
+    // 锁对象，锁对象必须是唯一的，加入static 变成一个唯一值
+    static Object object = new Object();
+
+    @Override
+    public void run() {
+
+        while (true) {
+            // 同步代码块
+            // 锁一个对象 一般使用的是当前类的字节码，用其保证唯一
+            synchronized (MyThread.class) {
+                if (ticket < 100) {
+                    try {
+                        Thread.sleep(10);
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    ticket++;
+                    System.out.println(this.getName() + ",正在售卖，第" + ticket + "张票！");
+                } else {
+                    System.out.println("票已经售罄！");
+                    break;
+                }
+            }
+        }
+    }
+
+}
+```
+
+### 2.同步方法
+
+> 就是将synchronized 关键字加到方法上
+
+格式：
+
+```java
+修饰符 synchronized 返回值类型 方法名（方法参数）{}
+```
+
+特点：
+
+- 同步方法是锁住方法里面所有的代码
+- 锁对象不能自己指定，如果是非静态，则是this， 如果是静态，则是当前类的字节码文件对象
+
+  代码demo：
+
+```java
+public class MyRunnable implements Runnable {
+
+    // 场景：某电影院正在上映国产大片，共有100张票，而它有3个窗口卖票，设计一个程序模拟该电影院卖票
+    // 使用同步方法来实现
+
+    // 定义的共享数据
+    int ticket = 0;
+    // 1.循环
+    // 2.同步代码块，同步方法
+    // 3.判断共享数据是否到达了末尾，如果到了末尾就结束
+
+    @Override
+    public void run() {
+
+        while (true) {
+            if (method()) break;
+        }
+
+    }
+
+    private synchronized boolean method() {
+
+        if (ticket < 100) {
+            try {
+                TimeUnit.MILLISECONDS.sleep(100);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            ticket++;
+            System.out.println(Thread.currentThread().getName() + "：正在售卖第" + ticket + "张票！");
+        } else {
+            System.out.println("票已经售罄！");
+            return true;
+        }
+        return false;
+    }
+}
+
+```
+
+### 3.Lock锁
+
+> lock锁 比synchronized 提供了更多的操作规范，可以手动释放锁，手动加锁
+
+常用的方法：
+
+- void lock():获取锁
+- void unlock():释放锁
+
+使用:
+
+> Lock是接口不能实例化，这里采用它的实现类ReentrantLock实例化，ReentrantLock的构造方法ReentrantLock() ：创建一个ReentrantLock实例
+
+代码demo：
+
+```java
+public class MyCallable implements Callable<Integer> {
+
+    // 场景：某电影院正在上映国产大片，共有100张票，而它有3个窗口卖票，设计一个程序模拟该电影院卖票
+
+    static int ticket = 1;
+
+    // 定义了一个锁lock，静态的是为了防止多线程锁不生效，这里使用的Callable接口实现，不需要添加静态，因为这个Callable的实现类是共用的
+    static Lock lock = new ReentrantLock();
+
+    @Override
+    public Integer call() throws Exception {
+
+        while (true) {
+            // 手动加锁
+            lock.lock();
+            // 这里使用try  catch  finally 是为了保证每次运行完，一定释放锁，不然锁没有被释放，占用资源
+            try {
+                if (ticket > 100) {
+                    break;
+                } else {
+                    TimeUnit.MILLISECONDS.sleep(10);
+                    System.out.println(Thread.currentThread().getName() + "：正在售卖第" + ticket + "张票！");
+                    ticket++;
+                }
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            } finally {
+                // 手动释放锁
+                lock.unlock();
+            }
+
+        }
+        return 0;
+    }
+
+}
+```
+
+## 五、死锁
+
+> 死锁是指两个或两个以上的进程（线程）在执行过程中，由于竞争资源或者由于彼此通信而造成的一种阻塞的现象，若无外力作用，它们都将无法推进下去。此时称系统处于死锁状态或系统产生了死锁，这些永远在互相等待的进程（线程）称为死锁进程（线程）。
+
+形成死锁的条件：
+
+（1）互斥条件：线程(进程)对于所分配到的资源具有排它性，即一个资源只能被一个线程(进程)占用，直到被该线程(进程)释放
+
+（2）请求与保持条件：一个线程(进程)因请求被占用资源而发生阻塞时，对已获得的资源保持不放。
+
+（3）不剥夺条件：线程(进程)已获得的资源在末使用完之前不能被其他线程强行剥夺，只有自己使用完毕后才释放资源。
+
+（4）循环等待条件：当发生死锁时，所等待的线程(进程)必定会形成一个环路（类似于死循环），造成永久阻塞
+
+代码演示：
+
+```java
+public class DeadLockDemo {
+    private static Object resource1 = new Object();//资源 1
+    private static Object resource2 = new Object();//资源 2
+
+    public static void main(String[] args) {
+        new Thread(() -> {
+            synchronized (resource1) {
+                System.out.println(Thread.currentThread() + "get resource1");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(Thread.currentThread() + "waiting get resource2");
+                synchronized (resource2) {
+                    System.out.println(Thread.currentThread() + "get resource2");
+                }
+            }
+        }, "线程 1").start();
+        new Thread(() -> {
+            synchronized (resource2) {
+                System.out.println(Thread.currentThread() + "get resource2");
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                System.out.println(Thread.currentThread() + "waiting get resource1");
+                synchronized (resource1) {
+                    System.out.println(Thread.currentThread() + "get resource1");
+                }
+            }
+        }, "线程 2").start();
+    }
+}
+```
+
+## 六、生产者和消费者（等待唤醒机制）
+
+> 生产者消费者模式是一个十分经典的多线程协作的模式
+
+1. 常见方法
+
+    - void wait():  当前线程等待，直到被其他线程唤醒
+
+    - void notity():  随机唤醒单个线程
+    - void notifyAll(): 唤醒所有线程
+
+## 十、线程池
 
 ### 异步ComletableFuture:
 
