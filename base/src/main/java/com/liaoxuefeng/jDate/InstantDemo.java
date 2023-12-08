@@ -4,6 +4,7 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Alex
@@ -22,6 +23,7 @@ public class InstantDemo {
         System.out.println("秒 " + instant.getEpochSecond()); // 秒
         System.out.println("毫秒 " + instant.toEpochMilli()); // 毫秒
         System.out.println("时间戳： " + System.currentTimeMillis()); // 时间戳，毫秒
+
 
 
     }
@@ -48,12 +50,28 @@ public class InstantDemo {
 
     }
 
+    public static void function3() {
+
+        long begin = Instant.now().toEpochMilli();
+        try {
+            TimeUnit.SECONDS.sleep(10);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+        long end = Instant.now().toEpochMilli();
+        long difference = (end - begin) / 1000;
+        System.out.println(difference);
+
+    }
+
     public static void main(String[] args) {
 
         function();
         //  获取到当前时间戳，毫秒级别，然后除以1000 转化为秒级别
         long time = System.currentTimeMillis() / 1000;
         function1(time);
+        function3();
     }
 
 }

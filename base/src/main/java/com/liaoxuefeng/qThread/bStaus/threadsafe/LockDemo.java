@@ -5,7 +5,7 @@ import java.util.concurrent.FutureTask;
 /**
  * <P></p>
  *
- * @author lijiang
+ * @author Alex
  * @since 2023/12/6 下午4:52
  */
 public class LockDemo {

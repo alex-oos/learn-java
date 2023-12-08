@@ -145,7 +145,7 @@ public class MyCallable implements Callable<Integer> {
 
 ![thread-methods](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-methods.png)
 
-- String getName()  返回线程的名称
+### 1. String getName()  返回线程的名称
 
 - void setName(String name) 设置线程的名字（构造方法也可以设置名称）
 
@@ -162,13 +162,12 @@ public class MyCallable implements Callable<Integer> {
           t1.start();
           t2.start();
   ```
-  
-  
-  
-- static Thread currentThread() 获取当前线程的对象
+
+### 2. static Thread currentThread() 获取当前线程的对象
+
   >  细节：
   >  当JVM虚拟机启动之后，会自动的启动多线程，其中一条线程叫做main线程，他的作用就是调用main方法，并执行里面的代码，在以前我们写的所有代码，其实都在main线程中运行
-  
+
   ```java
       public static void getThreadObject() {
           // 获取当前线程对象
@@ -177,10 +176,8 @@ public class MyCallable implements Callable<Integer> {
           System.out.println("thread.getId() = " + t.getId());
       }
   ```
-  
-  
-  
-- static void sleep(long time)  让线程休眠指定的时间，单位为毫秒
+
+### 3. static void sleep(long time)  让线程休眠指定的时间，单位为毫秒
 
   > 细节:
   >
@@ -201,11 +198,9 @@ public class MyCallable implements Callable<Integer> {
       }
   ```
 
-  
+### 4. final void setPriority(int newPriority)  设置线程的优先级
 
-- final void setPriority(int newPriority)  设置线程的优先级
-
-- final int getPriority() 获取线程的优先级
+### ### 5. final int getPriority() 获取线程的优先级
 
   > 10 是最高优先级 ,Thread.MAX_PRIORITY 默认是 5  Thread.NORM_PRIORITY  1 是最低 Thread.MIN_PRIORITY
 
@@ -220,9 +215,7 @@ public class MyCallable implements Callable<Integer> {
       }
   ```
 
-  
-
-- final void setDaemon(boolean on) 设置为守护线程
+### 6. final void setDaemon(boolean on) 设置为守护线程
 
   > 细节：
   >
@@ -244,9 +237,9 @@ public class MyCallable implements Callable<Integer> {
       }
   ```
 
-- static native void yield() 礼让线程
+### 7. static native void yield() 礼让线程
 
-- final void join() 插入线程 当该线程执行完毕之后，再执行其他线程
+### 8. final void join() 插入线程 当该线程执行完毕之后，再执行其他线程
 
   ```java
       public static void threadJoin() throws InterruptedException {
@@ -505,8 +498,8 @@ public class MyCallable implements Callable<Integer> {
 
 ```java
 public class DeadLockDemo {
-    private static Object resource1 = new Object();//资源 1
-    private static Object resource2 = new Object();//资源 2
+    private static final Object resource1 = new Object();//资源 1
+    private static final Object resource2 = new Object();//资源 2
 
     public static void main(String[] args) {
         new Thread(() -> {
@@ -545,12 +538,17 @@ public class DeadLockDemo {
 
 > 生产者消费者模式是一个十分经典的多线程协作的模式
 
-1. 常见方法
+### 1. 常见方法
 
     - void wait():  当前线程等待，直到被其他线程唤醒
-
     - void notity():  随机唤醒单个线程
     - void notifyAll(): 唤醒所有线程
+
+### 2. 思路分析
+
+![image-20231207101205816](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-wait-notify)
+
+​
 
 ## 十、线程池
 
