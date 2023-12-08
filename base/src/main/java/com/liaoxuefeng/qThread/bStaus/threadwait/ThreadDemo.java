@@ -15,6 +15,11 @@ public class ThreadDemo {
 
     public static void main(String[] args) {
 
+        Cookie cookie = new Cookie();
+        Foodie foodie = new Foodie();
+
+        foodie.start();
+        cookie.start();
     }
 
 }

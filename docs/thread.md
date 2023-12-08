@@ -548,7 +548,10 @@ public class DeadLockDemo {
 
 ![image-20231207101205816](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-wait-notify)
 
-​
+### 3. 代码演示
+
+```java
+```
 
 ## 十、线程池
 
