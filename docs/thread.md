@@ -553,6 +553,62 @@ public class DeadLockDemo {
 ```java
 ```
 
+### 4. 等待唤醒机制（阻塞队列方式来实现）
+
+实现思路：
+
+![thread-blockingqueue-1](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-blockingqueue-1)
+
+具体实现类
+
+- ArrayBlockingQueue,有界阻塞队列，底层是一个数组，必须需要指定大小实现方式如下
+
+```java
+    public static void arrayBlockQueue(){
+        // 创建了一个有界阻塞队列，并且指定大小为1，必须指定大小
+        ArrayBlockingQueue<String> queue=new ArrayBlockingQueue<>(1);
+        try{
+        // 向队列里面存放了一条数据
+        queue.put("面条");
+        }catch(InterruptedException e){
+        throw new RuntimeException(e);
+        }
+        try{
+        // 从队列中取出数据
+        String take=queue.take();
+        System.out.println(take);
+        }catch(InterruptedException e){
+        throw new RuntimeException(e);
+        }
+
+        }
+```
+
+- LinkedBlockingQueue 无界数组，最大值为int的最大值，
+
+```java
+    public static void linkedBlockingQueue(){
+
+        LinkedBlockingQueue<String> queue=new LinkedBlockingQueue<>(1);
+        try{
+        // 存放数据
+        queue.put("数据");
+        }catch(InterruptedException e){
+        throw new RuntimeException(e);
+        }
+        String take=null;
+        try{
+        // 取出数据
+        take=queue.take();
+        }catch(InterruptedException e){
+        throw new RuntimeException(e);
+        }
+        System.out.println(take);
+        }
+```
+
+![thread-blockingqueue](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-blockingqueue)
+
 ## 十、线程池
 
 ### 异步ComletableFuture:
