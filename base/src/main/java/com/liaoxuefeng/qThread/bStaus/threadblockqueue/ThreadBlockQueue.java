@@ -6,7 +6,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 /**
  * <P></p>
  *
- * @author lijiang
+ * @author Alex
  * @since 2023/12/11 上午10:21
  */
 public class ThreadBlockQueue {

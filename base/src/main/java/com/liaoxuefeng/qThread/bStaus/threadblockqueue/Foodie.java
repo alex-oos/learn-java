@@ -5,7 +5,7 @@ import java.util.concurrent.ArrayBlockingQueue;
 /**
  * <P></p>
  *
- * @author lijiang
+ * @author Alex
  * @since 2023/12/11 上午10:40
  */
 public class Foodie extends Thread {

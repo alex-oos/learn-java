@@ -261,39 +261,18 @@ public class MyCallable implements Callable<Integer> {
   
   ```
 
-## 三、Thread的生命周期
+## 三、Thread的生命周期（包含线程状态）
 
-![thread-life-cycle](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-life-cycle)
+![thread-life-cycle](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-life-cycle.png)
 
-- New：新创建的线程，尚未执行；
-- Runnable：运行中的线程，正在执行`run()`方法的Java代码；
-- Blocked：运行中的线程，因为某些操作被阻塞而挂起；
-- Waiting：运行中的线程，因为某些操作在等待中；
-- Timed Waiting：运行中的线程，因为执行`sleep()`方法正在计时等待；
-- Terminated：线程已终止，因为`run()`方法执行完毕。
+![thread-status](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-status.png)
 
-图示如下：
-
-```ascii
-         ┌─────────────┐
-         │     New     │
-         └─────────────┘
-                │
-                ▼
-┌ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┐
- ┌─────────────┐ ┌─────────────┐
-││  Runnable   │ │   Blocked   ││
- └─────────────┘ └─────────────┘
-│┌─────────────┐ ┌─────────────┐│
- │   Waiting   │ │Timed Waiting│
-│└─────────────┘ └─────────────┘│
- ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─
-                │
-                ▼
-         ┌─────────────┐
-         │ Terminated  │
-         └─────────────┘
-```
+- New：新建：新创建的线程，尚未执行；
+- Runnable： 就绪：运行中的线程，正在执行`run()`方法的Java代码；
+- Blocked：阻塞：运行中的线程，无法获取锁对象被阻塞而挂起；
+- Waiting：等待：运行中的线程，因为某些操作在等待中；
+- Timed Waiting：计时等待：运行中的线程，因为执行`sleep()`方法正在计时等待；
+- Terminated：死亡：线程已终止，因为`run()`方法执行完毕。
 
 线程终止的原因是：
 
@@ -546,7 +525,7 @@ public class DeadLockDemo {
 
 ### 2. 思路分析
 
-![image-20231207101205816](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-wait-notify)
+![thread-wait-notify](/home/alex/IdeaProjects/learn-java/docs/assets/thread-wait-notify.png)
 
 ### 3. 代码演示
 
@@ -557,7 +536,7 @@ public class DeadLockDemo {
 
 实现思路：
 
-![thread-blockingqueue-1](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-blockingqueue-1)
+![thread-blockingqueue-1](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-blockingqueue-1.png)
 
 具体实现类
 
@@ -607,7 +586,7 @@ public class DeadLockDemo {
         }
 ```
 
-![thread-blockingqueue](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-blockingqueue)
+![thread-blockingqueue](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-blockingqueue.png)
 
 ## 十、线程池
 

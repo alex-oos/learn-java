@@ -41,7 +41,7 @@ public class ListExam {
         int removed = list.remove((int) (Math.random() * list.size()));
         int found = findMissingNumber(start, end, list);
         System.out.println(list);
-        System.out.println("missing number: " + found);
+        System.out.println("missing Number: " + found);
         System.out.println(removed == found ? "测试成功" : "测试失败");
     }
 
