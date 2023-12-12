@@ -200,7 +200,7 @@ public class MyCallable implements Callable<Integer> {
 
 ### 4. final void setPriority(int newPriority)  设置线程的优先级
 
-### ### 5. final int getPriority() 获取线程的优先级
+### 5. final int getPriority() 获取线程的优先级
 
   > 10 是最高优先级 ,Thread.MAX_PRIORITY 默认是 5  Thread.NORM_PRIORITY  1 是最低 Thread.MIN_PRIORITY
 
@@ -525,7 +525,7 @@ public class DeadLockDemo {
 
 ### 2. 思路分析
 
-![thread-wait-notify](/home/alex/IdeaProjects/learn-java/docs/assets/thread-wait-notify.png)
+![thread-wait-notify](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-wait-notify.png)
 
 ### 3. 代码演示
 
