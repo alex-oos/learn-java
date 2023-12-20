@@ -1,9 +1,12 @@
 package com.liaoxuefeng.mRegular.aregex;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * @author Alex
  * @since 2023/9/8 上午11:27
- *  正则表达式匹配规则: <br>
+ * 正则表达式匹配规则: <br>
  * 从左到右按规则进行匹配
  * 一、精准匹配：
  */
@@ -142,7 +145,25 @@ public class RegexRule {
 
     }
 
+    /**
+     * 部分匹配规则
+     * 使用find()方法进行部分匹配
+     */
     public static void function() {
+        // 需求是：str里面的字符只要不是数字和下划线就返回false
+        String str = "1234567890_asdfghjkl";
+        String regex = "[^\\d_]";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(str);
+        // find()方法可以在字符串内部查找，它不要求匹配整个字符串 但是只要找到一个匹配的子串就返回true
+        boolean isFindMatcher = matcher.find();
+        System.out.println("isFindMatcher = " + isFindMatcher);
+        // matches()方法要求匹配整个字符串，也就是说，只有整个字符串都匹配成功，才返回true
+        boolean matches = str.matches(regex);
+        System.out.println("matches = " + matches);
+        boolean isMatchesMatcher = matcher.matches();
+        System.out.println("matches = " + isMatchesMatcher);
 
     }
 
@@ -152,6 +173,7 @@ public class RegexRule {
         f2();
         f3();
         f4();
+        function();
     }
 
 }

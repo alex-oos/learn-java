@@ -45,8 +45,9 @@ public class RegexGroup {
             String whole = matcher.group(0);
             String area = matcher.group(1);
             String tel = matcher.group(2);
-            System.out.println(area);
-            System.out.println(tel);
+            System.out.println(whole); // 010-12345678 整个字符串
+            System.out.println(area); // 010
+            System.out.println(tel);// 12345678
 
         }
 
@@ -66,6 +67,7 @@ public class RegexGroup {
     }
 
     /**
+     * 搜索的使用
      * 正则表达式分割字符串可以实现更加灵活的功能。String.split()方法传入的正是正则表达式。
      * 分割字符串：String.split()
      * 搜索子串：Matcher.find()
@@ -75,14 +77,14 @@ public class RegexGroup {
     public static void function3() {
 
         String s = "the quick brown fox jumps over the lazy dog";
-
+        // 用正则表达式分割字符串  \wo\w 搜索的规则是3个字符：中间必须是o
         Pattern pattern = Pattern.compile("\\wo\\w");
         Matcher matcher = pattern.matcher(s);
         while (matcher.find()) {
             String sub = s.substring(matcher.start(), matcher.end());
             System.out.println(sub);
         }
-
+        // \s+ 表示匹配至少一个空格  \s+ 表示匹配至少一个空格 \s表示匹配一个空格
         String r = s.replaceAll("\\s+", " ");
         System.out.println(r); // "The quick brown fox jumps over the lazy dog."
 
