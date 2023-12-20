@@ -12,3 +12,6 @@
 
 数据库使用h2内存数据库，
 访问地址就是服务器+端口号：http://localhost:8099/h2-console/login.jsp
+
+h2 数据库 教程
+https://juejin.cn/post/7129139859603619854

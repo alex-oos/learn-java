@@ -46,14 +46,19 @@ spring:
     #    type: com.alibaba.druid.pool.DruidDataSource  # 使用 DruidDataSource作为数据源
     # h2 内存数据库数据源
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:mybatisdb # mybatisdb  内存数据库库名
+    url: jdbc:h2:mem:mybatisdb # mybatisdb  内存数据库库名，内存模式，数据库关闭后，数据将丢失
+    #    url: jdbc:h2:file:./mybatisPlusdemo/src/main/resources/db/h2 # 文件模式，数据库关闭后，数据将保存在文件中 jdbc:h2:file:[path]，
     username: root
     password: 123456 # 无密码也可以123456
   sql:
     init:
       schema-locations: classpath:db/schema-h2.sql
       data-locations: classpath:db/data-h2.sql
-    # sqlite 数据库数据源
+  h2:
+    console:
+      # 是否开启 H2 服务
+      enabled: true
+  # sqlite 数据库数据源
 #    driver-class-name: org.sqlite.JDBC
 #    #  这里因为是相对路径，所以是相对于项目的根目录
 #    url: jdbc:sqlite:mybatisPlusdemo/src/main/resources/db/sqlite.db
