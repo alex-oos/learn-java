@@ -40,11 +40,32 @@ public class IntStreamDemo {
                 return i;
             }
         }).limit(10).forEach(System.out::print);
+
         System.out.println();
 
 
     }
 
+    /**
+     * IntStream的常用方法如下：
+     * <p>
+     * count()：返回元素个数；
+     * average()：返回元素平均值；
+     * max()：返回最大值；
+     * min()：返回最小值；
+     * sum()：返回总和。
+     * distinct()：去除重复元素；
+     * limit(n)：只保留前n个元素；
+     * skip(n)：跳过前n个元素；
+     * mapToXxx(ToXxxFunction)：把每个元素都通过mapToXxxFunction转换为另一个流；
+     * filter(Predicate)：通过测试predicate的元素被保留；
+     * peek(Consumer)：遍历每个元素时，执行consumer；
+     * sorted()：排序，只能对Comparable的元素排序；
+     * parallel()：并行处理流元素；
+     * sequential()：恢复为串行处理流元素。
+     * boxed()：把IntStream转换为Stream<Integer>；
+     * toArray()：把IntStream转换为int[]数组。
+     */
     public static void methods() {
 
         IntStream.of(10, 2, 3, 4, 5).filter(e -> e > 2).forEach(System.out::print);
