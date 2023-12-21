@@ -66,6 +66,7 @@ public class IntStreamDemo {
 
         createIntStream();
         methods();
+        IntStream.range(0, 1).forEach(System.out::println);
     }
 
 }
