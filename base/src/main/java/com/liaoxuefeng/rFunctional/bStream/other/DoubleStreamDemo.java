@@ -1,14 +1,15 @@
 package com.liaoxuefeng.rFunctional.bStream.other;
 
 import java.util.OptionalDouble;
+import java.util.function.DoubleSupplier;
 import java.util.stream.DoubleStream;
 
 /**
  * @ClassName DoubleStreamDemo
  * @Description
  * @Author Alex
- * @since 2023/9/26 22:34
  * @Version 1.0
+ * @since 2023/9/26 22:34
  */
 public class DoubleStreamDemo {
 
@@ -22,6 +23,20 @@ public class DoubleStreamDemo {
 
         OptionalDouble average = doubleStrea1.average();
         System.out.println("average = " + average);
+        // double 生成器
+        DoubleStream.iterate(1, n -> n + 1).limit(10).forEach(System.out::print);
+        System.out.println();
+        // double 生成器
+        DoubleStream.generate(new DoubleSupplier() {
+            double i = 0.1;
+
+            @Override
+            public double getAsDouble() {
+
+                i++;
+                return i;
+            }
+        }).limit(10).forEach(System.out::print);
 
 
     }
