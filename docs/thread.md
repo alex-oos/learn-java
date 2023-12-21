@@ -590,16 +590,186 @@ public class DeadLockDemo {
 
 ## 十、线程池
 
-### （一）创建线程池四种方式：
+创建线程池的步骤：
 
-- 创建线程池
-- 提交任务
-- 所有的任务全部执行完毕，关闭线程池（在实际开发中，线程池不用关闭，）
+1. 创建线程池
 
-### 异步ComletableFuture:
+2. 提交任务
 
-- 教程：
-- 代码地址：
+3. 所有的任务全部执行完毕，关闭线程池（在实际开发中，线程池不用关闭，服务器中静态变量初始化好连接池，所以不能关闭）
+
+### （一）创建线程池三种方式：
+
+![threadpool](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/threadpool.png)
+
+```java
+/**
+     * 方式一：缓存线程池 缓存类型，大小不受限制
+     */
+    public static void cashedThreadPool() {
+
+        // 1、创建一个可缓存的线程池对象
+        ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+
+        // 2、线程池提交任务，里面需要传一个线程的任务，Runnable 接口和 Callable接口均可以，这里使用的是匿名对象的方式来实现
+        cachedThreadPool.submit(new Runnable() {
+            @Override
+            public void run() {
+
+                for (int j = 0; j < 5; j++) {
+                    System.out.println(Thread.currentThread().getName() + "-----" + j);
+                }
+            }
+        });
+
+        // 3.关闭线程池，
+        cachedThreadPool.shutdown();
+
+    }
+
+```
+
+```java
+  public static void fixThreadPool() {
+
+        int numberOfThreads = 3; // 指定线程池中的线程数量
+        // 创建一个固定大小的线程池
+        ExecutorService executorService = Executors.newFixedThreadPool(numberOfThreads);
+        // 提交任务给线程池 10个线程，每个线程执行10次
+        for (int i = 0; i < 5; i++) {
+            // 提交任务
+            executorService.submit(new Runnable() {
+                @Override
+                public void run() {
+
+                    for (int j = 0; j < 10; j++) {
+                        System.out.println(Thread.currentThread().getName() + "  " + j);
+                    }
+                }
+            });
+
+        }
+        // 关闭任务：它会等待正在执行的任务先完成，然后再关闭
+        executorService.shutdown();
+    }
+    /**
+     * 方式二：singleThreadPoolExecutor 单线程池
+     * /单线程化
+     */
+
+    public static void singleThreadPoolExecutor() {
 
 
-1. 分别是什么？然后如何使用？
+        ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+        for (int i = 0; i < 10; i++) {
+            singleThreadExecutor.submit(new Runnable() {
+                @Override
+                public void run() {
+
+                    for (int j = 0; j < 5; j++) {
+                        System.out.println(Thread.currentThread().getName() + "  " + j);
+                    }
+                }
+            });
+        }
+
+        singleThreadExecutor.shutdown();
+
+    }
+```
+
+线程池主要核心原理
+
+- 创建一个池子，池子中是空的
+- 提交任务时，池子会创建新的线程对象，任务执行完毕，线程归还池子下回再次提交任务时，不需要创建新的线程，直接复用已有的线程即可
+- 但是如果提交任务时，池子中没有空闲线程，也无法创建新的线程，任务就会排队等待
+
+### （二）自定义线程池：
+
+使用 ThreadPoolExecutor构造函数创建 (推荐使用这种方式）
+
+- corePoolSize:核心线程数
+- maximumPoolSize:最大线程数 (最大线程数 = 核心线程数 + 非核心线程数)
+- keepAliveTime:线程空闲时间（值）
+- unit: 参数keepAliveTime的时间单位，比如秒，分，小时，天等 TimeUnit.SECONDS,TimeUnit.MINUTES,TimeUnit.HOURS,TimeUnit.DAYS
+  等等,其实就是空闲时间（单位）
+- workQueue:任务队列
+  1. linkedBlockingQueue (无界队列) ：队列长度不受限制，当请求越来越多时(任务处理速度跟不上任务提交速度造成请求堆积)
+  可能导致内存占用过多OOM
+  2. ArrayBlockingQueue,（有界队列） 队列长度受限，当队列满了就需要创建多余的线程来执行任务
+  3. SynchronousQueue,（同步移交队列） 队列不作为任务的缓冲方式，可以简单理解为队列长度为零
+- threadFactory:线创建线程的工厂类，（其实就是创建线程的方式）默认使用Executors.defaultThreadFactory()
+  ，也可以使用guava库的ThreadFactoryBuilder来创建，一般默认实现了，不用传递
+
+- 饱和策略或拒绝策略
+
+    1. AbortPolicy：中断抛出异常
+
+    2. DiscardPolicy：默默丢弃任务，不进行任何通知
+
+    3. DiscardOldestPolicy：丢弃掉在队列中存在时间最久的任务
+
+    4. CallerRunsPolicy：让提交任务的线程去执行任务(对比前三种比较友好一丢丢)
+
+![thread-policy](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-policy.png)
+
+#### 演示：
+
+```java
+
+
+    /**
+     * 方式四：使用 ThreadPoolExecutor构造函数创建 (推荐使用这种方式）
+     * 参数一：corePoolSize:核心线程数
+     * 参数二：maximumPoolSize:最大线程数 (最大线程数 = 核心线程数 + 非核心线程数)
+     * 参数三：keepAliveTime:线程空闲时间
+     * 参数四：unit: 参数keepAliveTime的时间单位，比如秒，分，小时，天等 TimeUnit.SECONDS,TimeUnit.MINUTES,TimeUnit.HOURS,TimeUnit.DAYS 等等
+     * 参数五：workQueue:任务队列，
+     * 1. linkedBlockingQueue (无界队列) ：队列长度不受限制，当请求越来越多时(任务处理速度跟不上任务提交速度造成请求堆积)可能导致内存占用过多或OOM
+     * 2. ArrayBlockingQueue,（有界队列） 队列长度受限，当队列满了就需要创建多余的线程来执行任务
+     * 3. SynchronousQueue,（同步移交队列） 队列不作为任务的缓冲方式，可以简单理解为队列长度为零
+     * DelayedWorkQueue （）
+     * 参数六：threadFactory:线创建线程的工厂类，默认使用Executors.defaultThreadFactory()，也可以使用guava库的ThreadFactoryBuilder来创建
+     * 参数七：handler:饱和策略/拒绝处理任务时的策略
+     * AbortPolicy：中断抛出异常
+     * DiscardPolicy：默默丢弃任务，不进行任何通知
+     * DiscardOldestPolicy：丢弃掉在队列中存在时间最久的任务
+     * CallerRunsPolicy：让提交任务的线程去执行任务(对比前三种比较友好一丢丢)
+     */
+    public static void threadPoolExecutorTest() {
+
+        int corePoolSize = 1;
+        int maximumPoolSize = 10;
+        long keepAliveTime = 1L;
+        // 创建线程池
+        ExecutorService threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime,
+                TimeUnit.SECONDS, new LinkedBlockingQueue<>(100),
+                Executors.defaultThreadFactory(),new ThreadPoolExecutor.CallerRunsPolicy());
+        // 提交任务
+        threadPoolExecutor.execute(() -> {
+            try {
+                Thread.sleep(3 * 1000);
+                System.out.println("任务1执行线程：" + Thread.currentThread().getName());
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        threadPoolExecutor.execute(() -> {
+            System.out.println("任务2执行线程：" + Thread.currentThread().getName());
+        });
+        // 立刻关闭线程池  shutdownNow() 立刻关闭线程池，不管任务是否执行完毕
+        threadPoolExecutor.shutdown();
+
+    }
+```
+
+自定义线程池小结
+
+1. 创建一个空的池子
+2. 有任务提交时，线程池会创建线程去执行任务，执行完毕归还线程
+
+不断地提交任务，会有三个临界点：
+
+1. 当核心线程满时，再提交任务就会排队
+2. 当核心线程满，队伍满时，会创建临时线程
+3. 当核心线程满，队伍满，临时线程满时，会触发任务拒绝策略

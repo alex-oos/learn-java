@@ -72,8 +72,6 @@ public class ThreadBlockQueue {
 
         cookie.start();
         foodie.start();
-
-
     }
 
 }

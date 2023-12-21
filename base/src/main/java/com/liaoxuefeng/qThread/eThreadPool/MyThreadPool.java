@@ -24,11 +24,11 @@ public class MyThreadPool {
      */
     public static void fixThreadPool() {
 
-        int numberOfThreads = 10; // 指定线程池中的线程数量
+        int numberOfThreads = 3; // 指定线程池中的线程数量
         // 创建一个固定大小的线程池
         ExecutorService executorService = Executors.newFixedThreadPool(numberOfThreads);
-        // 提交任务给线程池
-        for (int i = 0; i < numberOfThreads; i++) {
+        // 提交任务给线程池 10个线程，每个线程执行10次
+        for (int i = 0; i < 5; i++) {
             // 提交任务
             executorService.submit(new Runnable() {
                 @Override
@@ -71,25 +71,28 @@ public class MyThreadPool {
     }
 
     /**
-     * 方式三：缓存线程池
-     * //缓存类型，大小不受限制
+     * 方式三：缓存线程池 缓存类型，大小不受限制
      */
     public static void cashedThreadPool() {
 
-
+        // 1、创建一个可缓存的线程池对象
         ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+
+        // 2、线程池提交任务
         for (int i = 0; i < 10; i++) {
             cachedThreadPool.submit(new Runnable() {
                 @Override
                 public void run() {
 
                     for (int j = 0; j < 5; j++) {
-                        System.out.println(Thread.currentThread().getName() + "  " + j);
+                        System.out.println(Thread.currentThread().getName() + "-----" + j);
                     }
                 }
             });
         }
 
+
+        // 3.关闭线程池，
         cachedThreadPool.shutdown();
 
     }
@@ -117,9 +120,11 @@ public class MyThreadPool {
         int corePoolSize = 1;
         int maximumPoolSize = 10;
         long keepAliveTime = 1L;
-
-        ExecutorService threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime, TimeUnit.SECONDS,
-                new LinkedBlockingQueue<>(100), new ThreadPoolExecutor.CallerRunsPolicy());
+        // 创建线程池
+        ExecutorService threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime,
+                TimeUnit.SECONDS, new LinkedBlockingQueue<>(100),
+                Executors.defaultThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());
+        // 提交任务
         threadPoolExecutor.execute(() -> {
             try {
                 Thread.sleep(3 * 1000);
@@ -131,7 +136,7 @@ public class MyThreadPool {
         threadPoolExecutor.execute(() -> {
             System.out.println("任务2执行线程：" + Thread.currentThread().getName());
         });
-        // 立刻关闭线程池
+        // 立刻关闭线程池  shutdownNow() 立刻关闭线程池，不管任务是否执行完毕
         threadPoolExecutor.shutdown();
 
     }
