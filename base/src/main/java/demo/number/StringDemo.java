@@ -17,11 +17,11 @@ public class StringDemo {
     /**
      * 字符串格式化
      */
-    public static void function() {
+    public static void format() {
 
-        String name = "李将";
+        String name = "Alex";
         int age = 28;
-        String format = String.format("大家好，我叫 %s ,今年 %d 岁", name, age);
+        String format = String.format("大家好，我叫 %s ,今年 %d 岁,%d", name, age);
         System.out.println("format = " + format);
     }
 
@@ -42,7 +42,7 @@ public class StringDemo {
     /**
      * 获取geometry字段数量
      */
-    public static void f3(String geometryStr) {
+    public static void getGeometryFiledCount(String geometryStr) {
 
  /*        Scanner scanner = new Scanner(System.in);
         System.out.println("请输入从数据库中查询出来的geometryStr数据：");
@@ -64,12 +64,12 @@ public class StringDemo {
         // List<String> list = Files.readAllLines(Paths.get("./data/geometry.txt"));
         // // System.out.println("list = " + list);
         // list.forEach(StringDemo::f3);
-
+        // 字符串与字节数组的转换
         String a = "你好";
         byte[] bytes = a.getBytes();
-
         String s = new String(bytes, StandardCharsets.UTF_8);
         System.out.println("s = " + s);
+        format();
 
     }
 
