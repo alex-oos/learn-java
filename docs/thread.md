@@ -428,7 +428,7 @@ public class MyCallable implements Callable<Integer> {
     static int ticket = 1;
 
     // 定义了一个锁lock，静态的是为了防止多线程锁不生效，这里使用的Callable接口实现，不需要添加静态，因为这个Callable的实现类是共用的
-    static Lock lock = new ReentrantLock();
+    static   lock = new ReentrantLock();
 
     @Override
     public Integer call() throws Exception {
@@ -659,7 +659,6 @@ public class DeadLockDemo {
 
     public static void singleThreadPoolExecutor() {
 
-
         ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
         for (int i = 0; i < 10; i++) {
             singleThreadExecutor.submit(new Runnable() {
@@ -713,36 +712,62 @@ public class DeadLockDemo {
 
 ![thread-policy](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/thread-policy.png)
 
+线程池执行任务的过程：
+
+1. 当线程数小于核心线程数，创建线程
+2. 当线程数大于等于核心线程数，且任务队列未满时，将任务放到任务队列中
+3. 当线程大于等于核心线程数，且任务队列已满
+4. 若线程数小于最大线程数，创建线程
+5. 若线程数等于最大线程数，抛出异常，拒绝任务
+
+所有参数的默认值：
+
+- corePoolSize=1
+- queueCapacity=Integer.MAX_VALUE
+- maxPoolSize=Integer.MAX_VALUE
+- keepAliveTime=60s
+- allowCoreThreadTimeout=false
+- rejectedExecutionHandler=AbortPolicy()
+
+如何设置,需要根据几个参数来决定
+
+- task:每秒的任务数，假设为1000
+
+- taskcost：每个任务花费时间，假设为0.1s
+
+- responsetime：系统允许容忍的最大响应时间，假设为1s * 做几个计算
+
+- corePoolSize =每秒需要多少个线程处理？
+
+  一颗CPU核心同一时刻只能执行一个线程，然后操作系统切换上下文，核心开始执行另一个线程的代码，以此类推，超过cpu核心数，就会放入队列，如果队列也满了，就另起一个新的线程执行，所有推荐：
+  corePoolSize =((cpu核心数 * 2) + 有效磁盘数)，java可以使用Runtime.getRuntime().availableProcessors()获取cpu核心数
+
+- queueCapacity =* (coreSizePool/taskcost)*responsetime * 计算可得
+  queueCapacity = corePoolSize/0.1*
+  1。意思是队列里的线程可以等待1s，超过了的需要新开线程来执行。切记不能设置为Integer.MAX_VALUE，这样队列会很大，线程数只会保持在corePoolSize大小，当任务陡增时，不能新开线程来执行，响应时间会随之陡增。
+
+- maxPoolSize = (max(tasks)-queueCapacity)/(1/taskcost) * 计算可得 maxPoolSize = (1000-corePoolSize)/10，即(
+  每秒并发数-corePoolSize大小) / 10 *
+
+  （最大任务数-队列容量）/每个线程每秒处理能力 = 最大线程数 -
+  rejectedExecutionHandler：根据具体情况来决定，任务不重要可丢弃，任务重要则要利用一些缓冲机制来处理
+
+- keepAliveTime和allowCoreThreadTimeout采用默认通常能满足 计算密集型线程池：数量一般为 N+1个 N为CPU核心数
+  IO密集型：数量一般为：2N + 1个 N为CPU核心数
+
 #### 演示：
 
 ```java
 
+    // 获取服务器的cpu个数
+    private static final int CPU_COUNT = Runtime.getRuntime().availableProcessors();
+    private static final int COUR_SIZE = CPU_COUNT * 2;
+    private static final int MAX_COUR_SIZE = CPU_COUNT * 4;
 
-    /**
-     * 方式四：使用 ThreadPoolExecutor构造函数创建 (推荐使用这种方式）
-     * 参数一：corePoolSize:核心线程数
-     * 参数二：maximumPoolSize:最大线程数 (最大线程数 = 核心线程数 + 非核心线程数)
-     * 参数三：keepAliveTime:线程空闲时间
-     * 参数四：unit: 参数keepAliveTime的时间单位，比如秒，分，小时，天等 TimeUnit.SECONDS,TimeUnit.MINUTES,TimeUnit.HOURS,TimeUnit.DAYS 等等
-     * 参数五：workQueue:任务队列，
-     * 1. linkedBlockingQueue (无界队列) ：队列长度不受限制，当请求越来越多时(任务处理速度跟不上任务提交速度造成请求堆积)可能导致内存占用过多或OOM
-     * 2. ArrayBlockingQueue,（有界队列） 队列长度受限，当队列满了就需要创建多余的线程来执行任务
-     * 3. SynchronousQueue,（同步移交队列） 队列不作为任务的缓冲方式，可以简单理解为队列长度为零
-     * DelayedWorkQueue （）
-     * 参数六：threadFactory:线创建线程的工厂类，默认使用Executors.defaultThreadFactory()，也可以使用guava库的ThreadFactoryBuilder来创建
-     * 参数七：handler:饱和策略/拒绝处理任务时的策略
-     * AbortPolicy：中断抛出异常
-     * DiscardPolicy：默默丢弃任务，不进行任何通知
-     * DiscardOldestPolicy：丢弃掉在队列中存在时间最久的任务
-     * CallerRunsPolicy：让提交任务的线程去执行任务(对比前三种比较友好一丢丢)
-     */
     public static void threadPoolExecutorTest() {
-
-        int corePoolSize = 1;
-        int maximumPoolSize = 10;
         long keepAliveTime = 1L;
         // 创建线程池
-        ExecutorService threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime,
+        ExecutorService threadPoolExecutor = new ThreadPoolExecutor(COUR_SIZE, MAX_COUR_SIZE, keepAliveTime,
                 TimeUnit.SECONDS, new LinkedBlockingQueue<>(100),
                 Executors.defaultThreadFactory(),new ThreadPoolExecutor.CallerRunsPolicy());
         // 提交任务

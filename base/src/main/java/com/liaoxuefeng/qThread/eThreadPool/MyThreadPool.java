@@ -116,13 +116,14 @@ public class MyThreadPool {
      * CallerRunsPolicy：让提交任务的线程去执行任务(对比前三种比较友好一丢丢)
      */
     public static void threadPoolExecutorTest() {
-
-        int corePoolSize = 1;
-        int maximumPoolSize = 10;
+        // 获取服务器的CPU的个数
+        int cpu_count = Runtime.getRuntime().availableProcessors();
+        int corePoolSize = cpu_count * 2;
+        int maximumPoolSize = cpu_count * 4;
         long keepAliveTime = 1L;
         // 创建线程池
         ExecutorService threadPoolExecutor = new ThreadPoolExecutor(corePoolSize, maximumPoolSize, keepAliveTime,
-                TimeUnit.SECONDS, new LinkedBlockingQueue<>(100),
+                TimeUnit.MINUTES, new LinkedBlockingQueue<>(100),
                 Executors.defaultThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());
         // 提交任务
         threadPoolExecutor.execute(() -> {
@@ -143,9 +144,9 @@ public class MyThreadPool {
 
     public static void main(String[] args) {
 
-        fixThreadPool();
+/*         fixThreadPool();
         singleThreadPoolExecutor();
-        cashedThreadPool();
+        cashedThreadPool(); */
         threadPoolExecutorTest();
     }
 

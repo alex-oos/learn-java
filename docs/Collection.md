@@ -31,9 +31,7 @@ public static void main(String[] args){
         for (Iterator<Integer> integerIterator = integerList.iterator(); 			           integerIterator.hasNext(); ) {
             Integer next = integerIterator.next();
             System.out.println("next = " + next);
-
         }
-  
 }
        
 ```
@@ -92,8 +90,6 @@ public static void main(String[] args){
 ```java
         List<String> list1 = new LinkedList<>();
 ```
-
-
 
 ##### 3.遍历List
 
@@ -164,7 +160,7 @@ public static void main(String[] args){
         Map<String, Integer> map = new HashMap<>();
         map.put(key1, 123);
 
-        String key2 = new String("a");
+        String key2 = "a";
         map.get(key2); // 123
 
         System.out.println(key1 == key2); // false
