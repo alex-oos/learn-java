@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
  * @author Alex
  * @since 2021/8/11 2:33 下午
  * <P>
- * 登录拦截器
+ * 鉴权拦截器 或者权限拦截器 都可以使用这个方法来实现
  * </p>
  */
 @Slf4j
@@ -29,7 +29,8 @@ public class LoginInterceptor implements HandlerInterceptor {
      * @throws Exception
      */
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
+        throws Exception {
 
         String requestURI = request.getRequestURI();
         log.info("preHandle拦截器拦截的请求路径是：{}", requestURI);
@@ -40,10 +41,11 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (loginUser != null) {
             return true;
         } else {
-            // 拦截住，未登录，跳转到登录页
-            request.setAttribute("msg", "请先登录");
+            // 拦截住，未登录，跳转到登录页 关闭浏览器后，session会自动销毁 关闭一下登录拦截器，因为会影响其他非鉴权接口使用
+            // request.setAttribute("msg", "请先登录");
             // request.getRequestDispatcher("/").forward(request, response);
-            return false;
+            // return false;
+            return true;
         }
     }
 
@@ -57,7 +59,8 @@ public class LoginInterceptor implements HandlerInterceptor {
      * @throws Exception
      */
     @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
+    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
+        ModelAndView modelAndView) throws Exception {
 
         log.info("postHandle拦截器执行{}", modelAndView);
 
@@ -74,7 +77,8 @@ public class LoginInterceptor implements HandlerInterceptor {
      * @throws Exception
      */
     @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
+    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
+        throws Exception {
 
         log.info("afterCompletion拦截器执行：{}", request);
         HandlerInterceptor.super.afterCompletion(request, response, handler, ex);

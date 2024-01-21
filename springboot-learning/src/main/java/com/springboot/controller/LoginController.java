@@ -26,7 +26,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
-@Tag(name = "login-controller", description = "登录控制器")
+@Tag(name = "Login-controller", description = "登录控制器")
 @Slf4j
 public class LoginController {
 
@@ -37,9 +37,9 @@ public class LoginController {
     @PostMapping("login")
     public R<?> login(@RequestBody @Validated LoginVo loginVo) {
 
-        boolean isSucess = userService.login(loginVo);
+        boolean isSuccess = userService.login(loginVo);
         Map<String, Object> map = new HashMap<>();
-        if (isSucess) {
+        if (isSuccess) {
             String token = HuJwtUtils.getJwtToken("1", loginVo.getUsername());
             map.put("token", token);
             log.info("token:{}", token);

@@ -1,6 +1,7 @@
 package com.springboot.controller;
 
 
+import com.springboot.annotation.WebLog;
 import com.springboot.bean.Car;
 import com.springboot.bean.Person;
 import com.springboot.config.UserConfig;
@@ -16,8 +17,9 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021/8/27 7:57 下午
  * <P></p>
  */
-/*解决跨域*/
+
 @Slf4j
+// 解决跨域
 @CrossOrigin(originPatterns = "*", allowCredentials = "true", maxAge = 3600)
 @RestController
 public class HelloController {
@@ -31,17 +33,18 @@ public class HelloController {
     @Autowired
     Person person;
 
+    @WebLog
     @GetMapping("readData")
     public String readData() {
 
         String tmp = "id: " + ConstantPropertiesUtil.ID + "name: " + ConstantPropertiesUtil.NAME + "password: " +
-                ConstantPropertiesUtil.PASSWORD + "===" + userConfig.getId();
+            ConstantPropertiesUtil.PASSWORD + "===" + userConfig.getId();
         return tmp;
     }
 
+    @WebLog
     @GetMapping("car")
-    public Car hit() {
-
+    public Car car() {
         log.info("进入日志...");
         return car;
     }
@@ -51,6 +54,13 @@ public class HelloController {
 
         return person;
 
+    }
+
+    @WebLog
+    @GetMapping("hello")
+    public String hello() {
+        System.out.println("hello");
+        return "hello";
     }
 
 }

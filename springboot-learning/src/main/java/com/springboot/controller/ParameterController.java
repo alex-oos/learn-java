@@ -1,6 +1,7 @@
 package com.springboot.controller;
 
 
+import com.springboot.annotation.WebLog;
 import com.springboot.bean.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.parser.Cookie;
@@ -17,7 +18,7 @@ import java.util.Map;
  */
 @Slf4j
 @RestController
-public class ParameterTestController {
+public class ParameterController {
 
     /**
      * 数据绑定：页面提交的请求数据数据，都可以和对象属性进行绑定
@@ -25,15 +26,16 @@ public class ParameterTestController {
      * @param person
      * @return
      */
+    @WebLog
     @PostMapping("/saveUser")
     public Person saveUser(Person person) {
 
         return person;
     }
-
+    @WebLog
     // car/2/ower/zhangsan
     @GetMapping("/car/{id}/owner/{username}")
-    public Map<String, Object> aa(@PathVariable("id") Integer id,
+    public Map<String, Object> demo(@PathVariable("id") Integer id,
                                   @PathVariable("username") String name,
                                   @PathVariable Map<String, Object> pv,
                                   @RequestHeader("user-agent") String userAgent,
@@ -60,9 +62,9 @@ public class ParameterTestController {
         map.put("cookie", cookie);
         return map;
     }
-
+    @WebLog
     @PostMapping("/save")
-    public Map postSave(@RequestBody String content) {
+    public Map save(@RequestBody String content) {
 
         Map<String, String> map = new HashMap<>();
         map.put("content", content);
