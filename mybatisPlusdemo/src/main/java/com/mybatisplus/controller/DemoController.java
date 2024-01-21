@@ -1,11 +1,13 @@
 package com.mybatisplus.controller;
 
-import com.mybatisplus.config.annotation.WebLog;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
+import com.mybatisplus.annotation.WebLog;
+import com.mybatisplus.entity.User;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -20,17 +22,17 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     @WebLog
-    @GetMapping("/test")
-    public String test() {
-        System.out.println("test");
-        return "test";
+    @GetMapping("/demo")
+    public JSONObject demo(@RequestParam("name") String name) {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("name", name);
+        return jsonObject;
     }
 
     @WebLog
-    @PostMapping("/test2")
-    public String test2(@RequestBody JSONObject jsonObject) {
-        System.out.println("test2");
-        return "test2";
+    @PostMapping("/user")
+    public JSONObject user(@RequestBody User user) {
+        return JSONObject.parseObject(JSONObject.toJSONString(user));
     }
 
 }

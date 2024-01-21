@@ -1,6 +1,7 @@
-package com.mybatisplus.config.annotation;
+package com.mybatisplus.aspect;
 
 import com.alibaba.fastjson.JSONObject;
+import com.mybatisplus.annotation.WebLog;
 import java.lang.reflect.Method;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,8 +19,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
- * @ClassName LogPrintAspect
- * @Description
+ * @ClassName WebLogAspect
+ * @Description apo 切面类
  * @Author Alex
  * @Date 2024/1/21 22:37
  * @Version 1.0
@@ -38,7 +39,7 @@ public class WebLogAspect {
     /**
      * 以自定义 @WebLog 注解为切点
      */
-    @Pointcut("@annotation(com.mybatisplus.config.annotation.WebLog)")
+    @Pointcut("@annotation(com.mybatisplus.annotation.WebLog)")
     public void webLog() {
     }
 
@@ -61,6 +62,7 @@ public class WebLogAspect {
         log.info("========================================== Start ==========================================");
         // 打印请求 url
         log.info("URL            : {}", request.getRequestURL().toString());
+        String remoteUser = request.getRemoteUser();
         // 打印描述信息
         log.info("Description    : {}", methodDescription);
         // 打印 Http method
