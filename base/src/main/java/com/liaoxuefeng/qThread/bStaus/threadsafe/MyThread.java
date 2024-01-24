@@ -28,8 +28,9 @@ public class MyThread extends Thread {
 
         while (true) {
             // 同步代码块
-            // 锁一个对象 一般使用的是当前类的字节码，用其保证唯一
+            // 锁一个对象 一般使用的是当前类的字节码，用其保证唯一性
             synchronized (MyThread.class) {
+                // synchronized (object) {
                 if (ticket < 100) {
                     try {
                         TimeUnit.MILLISECONDS.sleep(10);
