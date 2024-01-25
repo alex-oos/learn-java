@@ -14,6 +14,9 @@ import java.util.concurrent.ExecutionException;
  */
 public class ThenApplyDemo2 {
 
+    /**
+     *
+     */
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
         CommonUtils.printThreadLog("main start");

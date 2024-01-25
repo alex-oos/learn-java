@@ -16,7 +16,7 @@ public class SupplyAsyncDemo2 {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         // 需求： 开启异步任务读取news.txt文件中的新闻稿，返回文件中内容并在主线程打印输出
         CommonUtils.printThreadLog("main start");
-
+        // 方式二：使用Lambda表达式
         CompletableFuture<String> newsFuture = CompletableFuture.supplyAsync(() -> {
             CommonUtils.printThreadLog("读取文件");
             return CommonUtils.readFile("base/src/main/resources/data/news.txt");

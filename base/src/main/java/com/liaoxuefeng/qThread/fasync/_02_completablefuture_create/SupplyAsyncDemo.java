@@ -14,10 +14,14 @@ import java.util.function.Supplier;
  */
 public class SupplyAsyncDemo {
 
+    /**
+     * CompletableFuture.supplyAsync（）创建有返回值的异步线程
+     * static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier)
+     */
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         // 需求： 开启异步任务读取news.txt文件中的新闻稿，返回文件中内容并在主线程打印输出
         CommonUtils.printThreadLog("main start");
-        //
+        // 方式一：使用 匿名类
         CompletableFuture<String> newsFuture = CompletableFuture.supplyAsync(new Supplier<String>() {
 
             @Override

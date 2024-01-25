@@ -13,6 +13,10 @@ import java.util.concurrent.CompletableFuture;
  */
 public class ThenAcceptDemo {
 
+    /**
+     * 异步任务回调：
+     * 1、thenAccept()
+     */
     public static void main(String[] args) {
         // 需求：异步读取filter_words.txt文件中的内容，读取完成后，把内容转换成敏感词数组，然后打印敏感词数组
         CommonUtils.printThreadLog("main start");
@@ -25,14 +29,13 @@ public class ThenAcceptDemo {
             CommonUtils.printThreadLog("把文件内容转换成敏感词数组");
             String[] filterWords = content.split(",");
             return filterWords;
-
         }).thenAccept(filterWords -> {
             CommonUtils.printThreadLog("filterWorlds = " + Arrays.toString(filterWords));
 
         });
 
         CommonUtils.printThreadLog("main continue");
-        CommonUtils.sleepSecond(4);
+        CommonUtils.sleepSeconds(4);
         CommonUtils.printThreadLog("main end");
     }
 

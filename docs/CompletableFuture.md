@@ -543,25 +543,25 @@ CompletableFuture<U> thenApplyAsync(Function<? super T,? extends U> fn, Executor
 
 ```java
 public class ThenApplyAsyncDemo {
+
     public static void main(String[] args) throws ExecutionException, InterruptedException {
-        //回顾： 异步读取filter_words.txt文件中的内容，读取完成后，转换成敏感词数组，主线程获取结果打印输出这个数组
-        CommonUtils.printTheadLog("main start");
-        CompletableFuture<String[]> filterWordFuture = CompletableFuture.supplyAsync(() -> {
-            /*
-            CommonUtils.printTheadLog("读取filter_words.txt文件");
-            String filterWordsContent = CommonUtils.readFile("filter_words.txt");
-            return filterWordsContent;
-            */
+        // 回顾： 异步读取filter_words.txt文件中的内容，读取完成后，转换成敏感词数组，主线程获取结果打印输出这个数组
+        CommonUtils.printThreadLog("main start");
+
+        CompletableFuture<String[]> future = CompletableFuture.supplyAsync(() -> {
+            CommonUtils.printThreadLog("读取filter_words的文件");
+            // CommonUtils.sleepSeconds(20);
+            // return CommonUtils.readFile("base/src/main/resources/data/filter_words.txt");
             return "尼玛,NB,tmd";
         }).thenApply(content -> {
-            CommonUtils.printTheadLog("把文件内容转换成敏感词数组");
-            String[] filterWords = content.split(",");
-            return filterWords;
+            System.out.println(content);
+            CommonUtils.printThreadLog("把文件内容转换成敏感词数组");
+            return content.split(",");
         });
-        CommonUtils.printTheadLog("main continue");
-        String[] filterWords = filterWordFuture.get();
-        CommonUtils.printTheadLog("filterWords = " + Arrays.toString(filterWords));
-        CommonUtils.printTheadLog("main end");
+        CommonUtils.printThreadLog("main continue");
+        String[] filterWords = future.get();
+        CommonUtils.printThreadLog("filterWords = " + Arrays.toString(filterWords));
+        CommonUtils.printThreadLog("main end");
 
         /**
          * 总结
@@ -570,7 +570,9 @@ public class ThenApplyAsyncDemo {
          * 特殊情况
          * 如果supplyAsync中的任务是立即返回结果（不是耗时的任务），那么thenApply回调任务也会在主线程执行
          */
+
     }
+
 }
 
 ```
@@ -1184,7 +1186,7 @@ CompletableFuture 虽然提高了任务并行处理能力，如果它和 Stream 
 
 ```java
 public class MyTask {
-    private int duration;
+    private final int duration;
 
     public MyTask(int duration) {
         this.duration = duration;

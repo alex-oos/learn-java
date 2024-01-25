@@ -25,7 +25,7 @@ public class ThenRunDemo {
 
         });
         CommonUtils.printThreadLog("main continue");
-        CommonUtils.sleepSecond(4);
+        CommonUtils.sleepSeconds(4);
         CommonUtils.printThreadLog("main end");
     }
 

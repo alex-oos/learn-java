@@ -14,6 +14,10 @@ import java.util.concurrent.ExecutionException;
  */
 public class ThenApplyDemo {
 
+    /**
+     * 异步任务回调：
+     * 2、thenApply，有返回值
+     */
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         // 需求：异步读取filter_words.txt文件中的内容，读取完成后，把内容转换成数组（敏感词数组），异步任务返回敏感词数组
         CommonUtils.printThreadLog("main start");

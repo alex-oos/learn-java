@@ -15,7 +15,11 @@ import java.util.concurrent.Executors;
  */
 public class SupplyAsyncDemo3 {
 
+    /**
+     * 练习：
+     */
     public static void main(String[] args) throws ExecutionException, InterruptedException {
+
         // 需求： 开启异步任务读取news.txt文件中的新闻稿，返回文件中内容并在主线程打印输出
         ExecutorService executor = Executors.newFixedThreadPool(5);
         CommonUtils.printThreadLog("main start");

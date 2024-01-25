@@ -39,7 +39,7 @@ public class CommonUtils {
     }
 
     // 休眠指定的秒数
-    public static void sleepSecond(long seconds) {
+    public static void sleepSeconds(long seconds) {
 
         try {
             TimeUnit.SECONDS.sleep(seconds);
