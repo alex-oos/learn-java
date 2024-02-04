@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 /**
  * <p>
- *     String 常用的一些方法
+ * String 常用的一些方法
  * </p>
+ *
  * @author Alex
- * 
  * @since 2020/5/28 17:21
  */
-public class TestString {
+public class StringDemo {
 
     public static void main(String[] args) {
 
@@ -48,10 +48,10 @@ public class TestString {
 
 
         // 搜索子串的更多的例子：
-        System.out.println(s3.indexOf(1));
-        System.out.println(s3.lastIndexOf(1));
-        System.out.println(s3.startsWith("he"));
-        System.out.println(s3.endsWith("lo"));
+        System.out.println(s3.indexOf(1));  // 找到返回索引，找不到返回-1
+        System.out.println(s3.lastIndexOf(1)); // 从后往前找,找到返回索引，找不到返回-1
+        System.out.println(s3.startsWith("he"));// 是否以he开头
+        System.out.println(s3.endsWith("lo")); // 是否以lo结尾
 
         // subString(int beginindex(),int endindex()),返回一个新字符串，从beginindex 截取到endinex
         System.out.println(s3.substring(2));

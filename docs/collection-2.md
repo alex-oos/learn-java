@@ -4,6 +4,22 @@
 
 ## 01-单列集合顶层接口Collection
 
+集合分为单列结合和双列集合，典型代表是 Collection，双列集合代表是Map
+
+**Collection 分为 List，Set ，List分为 Arraylist，Linkedlist ，Set 分为 Hashset，Treeset**
+
+List集合特点：有序，可重复，有索引
+
+Set集合特点：无序，不重复，无索引
+
+Colletion 是单列集合的祖宗接口，他的功能是全部单列集合都可以继承使用
+
+常用的方法如下：
+
+1. void add(Element e ) 添加元素
+2. void clear 清除所有元素
+3.
+
 ## 02-迭代器
 
 ## 03-增强for介lambda表达式
