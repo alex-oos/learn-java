@@ -18,7 +18,7 @@ public class SetDemo {
      * Set接口并不保证有序，而SortedSet接口则保证元素是有序的：
      * HashSet是无序的，因为它实现了Set接口，并没有实现SortedSet接口；
      * TreeSet是有序的，因为它实现了SortedSet接口。
-     * */
+     */
 
     public static void setClass() {
 
@@ -51,13 +51,38 @@ public class SetDemo {
      */
     public static void setMethods() {
 
-        Set<String> set = new HashSet<>();
-        System.out.println("set.add(\"asd\") = " + set.add("asd"));
-        System.out.println("set.add(\"shj\") = " + set.add("shj"));
-        System.out.println("set.add(\"shj\") = " + set.add("shj"));
-        System.out.println("set.contains(\"asd\") = " + set.contains("asd"));
-        System.out.println("set.remove(\"hello\") = " + set.remove("hello"));
-        System.out.println("set = " + set.size());
+        Set<String> stringSet = new HashSet<>();
+        System.out.println("set.add(\"asd\") = " + stringSet.add("asd"));
+        System.out.println("set.add(\"shj\") = " + stringSet.add("shj"));
+        System.out.println("set.add(\"shj\") = " + stringSet.add("shj"));
+        System.out.println("set.contains(\"asd\") = " + stringSet.contains("asd"));
+        System.out.println("set.remove(\"hello\") = " + stringSet.remove("hello"));
+        System.out.println("set = " + stringSet.size());
+    }
+
+    /**
+     * Set 求交集，差集，并集
+     */
+    public static void other() {
+
+        Set<String> set1 = new HashSet<>();
+        Set<String> set2 = new HashSet<>();
+        set1.add("a");
+        set1.add("b");
+        set1.add("c");
+        set2.add("c");
+        set2.add("d");
+        set2.add("e");
+
+        // 求交集
+        // set1.retainAll(set2);
+        System.out.println(set1);
+        // 求并集
+        // set1.addAll(set2);
+        System.out.println(set1);
+        // 求差集
+        set1.removeAll(set2);
+        System.out.println(set1);
     }
 
 
@@ -65,6 +90,7 @@ public class SetDemo {
 
         setClass();
         setMethods();
+        other();
 
 
     }
