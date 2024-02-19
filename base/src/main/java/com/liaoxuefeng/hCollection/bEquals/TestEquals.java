@@ -9,23 +9,24 @@ import java.util.List;
  *
  * @author Alex
  * @since 2020/6/10 21:04
- * 
  */
 public class TestEquals {
 
     /**
-     *
+     * 对比两个字符串是否相等
      */
     public static void function() {
+
         String str = null;
-        boolean equals = "SnailClimb".equals(str);
-        System.out.println("equals = " + equals);
+        boolean isEquals = "SnailClimb".equals(str);
+        System.out.println("equals = " + isEquals);
     }
 
     /**
-     *
+     * 对比list中是否包含某个对象
      */
-    public static void listContatins() {
+    public static void listContains() {
+
         List<Person> list = List.of(
                 new Person("xiao ming", 10),
                 new Person("xiao hong", 10),
@@ -36,7 +37,9 @@ public class TestEquals {
     }
 
     public static void main(String[] args) {
-        function();
 
+        function();
+        listContains();
     }
+
 }

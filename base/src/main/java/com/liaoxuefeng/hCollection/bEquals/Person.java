@@ -17,6 +17,12 @@ public class Person {
         this.age = age;
     }
 
+    /**
+     * 重写了equals方法，对比的对象的值是否相等
+     *
+     * @param o
+     * @return
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

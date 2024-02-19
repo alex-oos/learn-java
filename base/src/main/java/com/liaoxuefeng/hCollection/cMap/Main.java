@@ -7,12 +7,12 @@ import java.util.Map;
 /**
  * @author Alex
  * @since 2020/6/10 21:19
- * 
  */
 public class Main {
 
-    //用Map来实现根据name查询某个Student的代码如下：
+    // 用Map来实现根据name查询某个Student的代码如下：
     public static void f() {
+
         Student student = new Student("xiao ming", 99);
         Map<String, Student> map = new HashMap<>();
         map.put("xiao ming", student); // 将"Xiao Ming"和Student实例映射并关联
@@ -26,6 +26,7 @@ public class Main {
     // map 中key不能重复，但是value是可以的
     // Map中不存在重复的key，因为放入相同的key，只会把原有的key-value对应的value给替换掉。
     public static void f1() {
+
         Map<String, Integer> map = new HashMap<>();
         map.put("apple", 123);
         map.put("pear", 456);
@@ -36,9 +37,10 @@ public class Main {
 
     }
 
-    //遍历Map
-    //对Map来说，要遍历key可以使用for each循环遍历Map实例的keySet()方法返回的Set集合，它包含不重复的key的集合：
+    // 遍历Map
+    // 对Map来说，要遍历key可以使用for each循环遍历Map实例的keySet()方法返回的Set集合，它包含不重复的key的集合：
     public static void f2() {
+
         Map<String, Integer> map = new HashMap<>();
         map.put("apple", 123);
         map.put("pear", 456);
@@ -55,15 +57,23 @@ public class Main {
             Integer value = entry.getValue();
             System.out.println(key + " = " + value);
         }
+        // 方式三：使用stream流遍历
+        map.forEach((k, v) -> {
+            System.out.println(k + ":" + v);
+        });
+        // 方式四：使用迭代器
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            String key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println(key + ":" + value);
+        }
+
     }
 
 
     public static void f3() {
-        List<Student> list = List.of(
-                new Student("Bob", 78),
-                new Student("Alice", 85),
-                new Student("Branch", 85),
-                new Student("Newton", 85)
+
+        List<Student> list = List.of(new Student("Bob", 78), new Student("Alice", 85), new Student("Branch", 85), new Student("Newton", 85)
 
         );
         Students holder = new Students(list);
@@ -73,6 +83,7 @@ public class Main {
     }
 
     public static void f4() {
+
         Map<Student, Integer> map = new HashMap<>();
         map.put(new Student("liuyan", 100), 1);
         System.out.println(map);
@@ -85,4 +96,5 @@ public class Main {
         f2();
 //        f3();
     }
+
 }

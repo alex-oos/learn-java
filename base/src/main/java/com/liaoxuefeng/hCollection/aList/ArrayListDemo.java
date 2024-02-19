@@ -34,8 +34,12 @@ public class ArrayListDemo {
         List<String> stringList2 = new ArrayList<>();
         stringList2.add("c");
         stringList2.add("b");
-        // 方式三：
+        // 方式三：只有jdk11以上才能使用，jdk版本低于11以下的均不能使用
         List<String> stringList3 = new ArrayList<>(List.of("a", "b", "c", "d"));
+
+        //  方式四：
+        List<String> stringList4 = new ArrayList<>();
+        Collections.addAll(stringList4, "a", "b", "c");
 
     }
 

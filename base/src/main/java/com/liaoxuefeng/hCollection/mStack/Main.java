@@ -22,15 +22,16 @@ public class Main {
 
         System.out.println("stack = " + stack);
         // 移除堆栈顶部的对象，并作为此函数的值返回该对象。
-        stack.pop();
+        String pop = stack.pop();
+        System.out.println("pop = " + pop);
         System.out.println("stack = " + stack);
         // 查看堆栈顶部的对象，但不从堆栈中移除它。
         String peek = stack.peek();
         System.out.println("peek = " + peek);
-        // 返回对象在堆栈中的位置，以 1 为基数。
+        // 返回对象在堆栈中的位置，以 1 为基数。 如果对象是堆栈中的一个项，则返回到堆栈顶部的距离；堆栈中最靠近顶部的项距离为 1。使用 equals 方法比较 item。
         int a = stack.search("A");
         System.out.println("a = " + a);
-
+        // 测试堆栈是否为空。
         boolean empty = stack.isEmpty();
         System.out.println("empty = " + empty);
 
