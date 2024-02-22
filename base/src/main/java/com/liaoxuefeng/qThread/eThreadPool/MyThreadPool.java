@@ -24,7 +24,7 @@ public class MyThreadPool {
      */
     public static void fixThreadPool() {
 
-        int numberOfThreads = 3; // 指定线程池中的线程数量
+        int numberOfThreads = 1; // 指定线程池中的线程数量
         // 创建一个固定大小的线程池
         ExecutorService executorService = Executors.newFixedThreadPool(numberOfThreads);
         // 提交任务给线程池 10个线程，每个线程执行10次
@@ -144,9 +144,9 @@ public class MyThreadPool {
 
     public static void main(String[] args) {
 
-/*         fixThreadPool();
+        fixThreadPool();
         singleThreadPoolExecutor();
-        cashedThreadPool(); */
+        cashedThreadPool();
         threadPoolExecutorTest();
     }
 

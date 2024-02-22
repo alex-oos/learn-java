@@ -1,4 +1,4 @@
-package day7proxy;
+package com.interview.base.day7proxy;
 
 
 /**

@@ -1,4 +1,4 @@
-package day7proxy;
+package com.interview.base.day7proxy;
 
 
 /**
@@ -8,10 +8,11 @@ package day7proxy;
  * @since 2022/6/14 21:17
  * @Version 1.0
  */
-public class SmsProxy implements day7proxy.SmsService {
+public class SmsProxy implements SmsService {
 
-    private final day7proxy.SmsService smsService;
-    public SmsProxy(day7proxy.SmsService smsService) {
+    private final SmsService smsService;
+
+    public SmsProxy(SmsService smsService) {
         this.smsService = smsService;
     }
 

@@ -1,4 +1,4 @@
-package day7proxy;
+package com.interview.base.day7proxy;
 
 
 /**
@@ -12,10 +12,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        day7proxy.SmsService smsService = new day7proxy.SmsServiceImpl();
+        SmsService smsService = new SmsServiceImpl();
         smsService.send("send message");
 
-        day7proxy.SmsProxy smsProxy = new day7proxy.SmsProxy(smsService);
+        SmsProxy smsProxy = new SmsProxy(smsService);
         smsProxy.send("send message ");
     }
 

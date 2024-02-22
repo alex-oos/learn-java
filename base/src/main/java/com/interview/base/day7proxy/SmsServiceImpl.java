@@ -1,4 +1,4 @@
-package day7proxy;
+package com.interview.base.day7proxy;
 
 
 /**
@@ -8,7 +8,7 @@ package day7proxy;
  * @since 2022/6/14 21:15
  * @Version 1.0
  */
-public class SmsServiceImpl implements day7proxy.SmsService {
+public class SmsServiceImpl implements SmsService {
 
     /**
      * @param message
