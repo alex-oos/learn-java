@@ -1,4 +1,4 @@
-package com.atguigu.day3;
+package com.atguigu.day3ProgramFlowControl;
 
 
 import java.util.Scanner;

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author Alex
  * @since 2020/7/8 15:20
- *  Java提供的System.currentTimeMillis()返回的就是以毫秒表示的当前时间戳
+ * Java提供的System.currentTimeMillis()返回的就是以毫秒表示的当前时间戳
  * 这个当前时间戳在java.time中以Instant类型表示，我们用Instant.now()获取当前时间戳，效果和System.currentTimeMillis()类似
  */
 public class InstantDemo {
@@ -23,7 +23,6 @@ public class InstantDemo {
         System.out.println("秒 " + instant.getEpochSecond()); // 秒
         System.out.println("毫秒 " + instant.toEpochMilli()); // 毫秒
         System.out.println("时间戳： " + System.currentTimeMillis()); // 时间戳，毫秒
-
 
 
     }
@@ -64,6 +63,7 @@ public class InstantDemo {
         System.out.println(difference);
 
     }
+
 
     public static void main(String[] args) {
 
