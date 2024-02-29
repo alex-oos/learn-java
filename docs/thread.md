@@ -715,10 +715,16 @@ public class DeadLockDemo {
 线程池执行任务的过程：
 
 1. 当线程数小于核心线程数，创建线程
+
 2. 当线程数大于等于核心线程数，且任务队列未满时，将任务放到任务队列中
+
 3. 当线程大于等于核心线程数，且任务队列已满
+
 4. 若线程数小于最大线程数，创建线程
+
 5. 若线程数等于最大线程数，抛出异常，拒绝任务
+
+   ![threadpool-wrok](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/threadpool-wrok.png)
 
 所有参数的默认值：
 

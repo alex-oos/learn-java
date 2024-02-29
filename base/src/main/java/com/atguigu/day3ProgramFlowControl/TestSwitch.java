@@ -1,5 +1,7 @@
 package com.atguigu.day3ProgramFlowControl;
 
+import java.util.Scanner;
+
 /**
  * @author Alex
  * @since 2020/5/8 上午 12:04
@@ -48,7 +50,7 @@ switch(表达式){
 所有的分支情况，都可以使用if..else，换句话说，可以使用switch..case解决的，一定可以使用if..else。
 但是当所有的判断都是常量值的等值判断的话，使用switch..case效率更高，可读性更好。
 */
-import java.util.Scanner;
+
 
 class TestSwitch{
     public static void main(String[] args){

@@ -6,7 +6,7 @@ import java.util.Scanner;
 /**
  * @author Alex
  * @since 2020/5/8 上午 12:03
- * 
+ * @description 练习： 嵌套条件判断
  */
 
 class TestQianTao {
