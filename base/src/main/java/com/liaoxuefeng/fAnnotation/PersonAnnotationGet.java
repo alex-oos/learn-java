@@ -57,13 +57,9 @@ public class PersonAnnotationGet {
         for (Person p : new Person[]{p1, p2, p3}) {
 
             try {
-
                 check(p);
-
                 System.out.println("Person " + p + " checked ok.");
-
             } catch (IllegalArgumentException e) {
-
                 System.out.println("Person " + p + " checked failed: " + e);
 
             }

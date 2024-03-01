@@ -14,10 +14,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Check {
 
-    int min();
+    int min() default Integer.MIN_VALUE;
 
-    int max();
+    int max() default Integer.MAX_VALUE;
 
-    int value();
+    int value() default 0;
 
 }

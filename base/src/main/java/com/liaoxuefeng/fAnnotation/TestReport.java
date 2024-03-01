@@ -1,7 +1,5 @@
 package com.liaoxuefeng.fAnnotation;
 
-import com.liaoxuefeng.bObject.bCoreClass.bJavaBean.Person;
-
 /**
  * @author Alex
  * @since 2020/6/8 12:22
