@@ -527,3 +527,26 @@ Jvm内存概念：
     }
 ```
 
+## 九、数组的异常
+
+- **数组脚标越界异常(ArrayIndexOutOfBoundsException)**
+
+  ```java
+  int[] arr = new int[2];
+  
+  System.out.println(arr[2]);
+  
+  System.out.println(arr[-1]);
+  ```
+
+  访问到了数组中的不存在的脚标时发生。
+
+- **空指针异常(NullPointerException)**
+
+```java
+int[] arr = null;
+
+System.out.println(arr[0]);
+```
+
+arr引用没有指向实体，却在操作实体中的元素时
