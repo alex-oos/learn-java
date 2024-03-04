@@ -41,7 +41,7 @@ public class TestTwoArrays2 {
         System.out.println(arr2[1][1]);
 
         System.out.println("**********");
-        double[][] arr3 = new double[4][];
+        double[][] arr3 = new double[4][2]; // 二维数组，最好都赋值长度，不然 arr3[1] 因没有长度，取值的时候直接报空指针异常
         System.out.println(arr3[1]);
         System.out.println(arr3[1][0]);
     }

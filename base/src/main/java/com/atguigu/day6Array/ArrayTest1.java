@@ -1,6 +1,8 @@
 package com.atguigu.day6Array;
 
 
+import java.util.Random;
+
 /**
  * @author Alex
  * @since 2021/11/26 3:00 下午
@@ -18,10 +20,12 @@ package com.atguigu.day6Array;
 public class ArrayTest1 {
 
     public static void main(String[] args) {
+
         int[] array = new int[10];
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (Math.random() * (99 - 10 + 1) + 10);
+            // array[i] = (int) (Math.random() * (99 - 10 + 1) + 10);
+            array[i] = new Random().nextInt(100);
             sum += array[i];
 
         }
