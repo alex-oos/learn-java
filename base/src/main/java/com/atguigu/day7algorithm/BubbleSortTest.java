@@ -1,4 +1,4 @@
-package com.atguigu.day7;
+package com.atguigu.day7algorithm;
 
 
 import java.util.Arrays;
