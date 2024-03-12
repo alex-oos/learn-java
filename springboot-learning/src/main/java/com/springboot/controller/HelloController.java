@@ -42,6 +42,7 @@ public class HelloController {
         return tmp;
     }
 
+
     @WebLog
     @GetMapping("car")
     public Car car() {

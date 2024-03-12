@@ -11,6 +11,7 @@ import java.util.concurrent.ThreadPoolExecutor;
  *
  * @author lijiang
  * @since 2024/3/12 下午5:09
+ * 线程池配置类
  */
 @Configuration
 public class ThreadPoolConfig {

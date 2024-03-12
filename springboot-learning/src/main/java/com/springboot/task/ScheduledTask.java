@@ -1,9 +1,11 @@
 package com.springboot.task;
 
 
-import java.time.LocalDateTime;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDateTime;
 
 /**
  * @author Alex
@@ -13,7 +15,6 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-// @Async
 public class ScheduledTask {
 
 
@@ -25,6 +26,8 @@ public class ScheduledTask {
         isExecute = !isExecute;
     }
 
+    // 异步调用，使用更快一些
+    @Async
     // @Scheduled(cron = "10 * * * * ?")
     // @Scheduled(cron = "0/10 * * * * ?")
     public void runFlowTask() {
