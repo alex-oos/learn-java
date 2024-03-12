@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 
 @Configuration
-public class AdminWebconfig implements WebMvcConfigurer {
+public class WebMvcConfig implements WebMvcConfigurer {
 
     /**
      * 拦截器，拦截所有请求，也可以拦截指定请求，多用于登录拦截，是否鉴权
