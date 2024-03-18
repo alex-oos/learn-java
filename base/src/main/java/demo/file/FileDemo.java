@@ -24,12 +24,14 @@ public class FileDemo {
 
         String[] split = a.split("/");
         System.out.println("Arrays.toString(split) = " + Arrays.toString(split));
-        StringBuffer s = new StringBuffer();
-        for (int i = 0; i < split.length - 1; i++) {
-            s.append(split[i]);
-            s.append("/");
-
-        }
+        // StringBuffer s = new StringBuffer();
+        // for (int i = 0; i < split.length - 1; i++) {
+        //     s.append(split[i]);
+        //     s.append("/");
+        //
+        // }
+        String s = String.join("/", split);
+        System.out.println(s);
         System.out.println("s = " + s);
         String s1 = split[split.length - 1];
         System.out.println("s1 = " + s1);

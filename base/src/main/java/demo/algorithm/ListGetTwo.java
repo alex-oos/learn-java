@@ -40,7 +40,6 @@ public class ListGetTwo {
      */
     public static List<List<Integer>> f1(List<Integer> list) {
 
-
         List<List<Integer>> collect = IntStream.range(0, list.size() - 1).mapToObj(i -> List.of(list.get(i), list.get(i + 1))).collect(Collectors.toList());
         System.out.println("collect = " + collect);
         return collect;
@@ -50,7 +49,7 @@ public class ListGetTwo {
     public static void main(String[] args) {
 
 
-        List<Integer> list = List.of(1, 2, 3, 4);
+        List<Integer> list = List.of(1, 4, 7, 9);
         function(list);
         f1(list);
 
