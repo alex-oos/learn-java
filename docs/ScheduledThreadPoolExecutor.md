@@ -227,7 +227,15 @@ ScheduleWithFixedDelay 每次执行时间为上一次任务结束起向后推一
 
 ## 三、ScheduledExecutorService的创建方式
 
+```java
+  public static void classCreate() {
+        // 方式一
+        ScheduledExecutorService scheduledExecutorService = new ScheduledThreadPoolExecutor(1);
+        // 方式二，方式二和方式一可以等价
+        ScheduledExecutorService scheduledExecutorService1 = Executors.newScheduledThreadPool(1);
 
+    }
+```
 
 参考地址：
 
