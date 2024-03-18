@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
  * @author lijiang
  * @since 2024/3/18 下午2:49
  */
-public class ScheduleTask {
+public class ScheduleExecutorServiceDemo {
 
     /**
      * 定时任务schedule方法的应用场景
