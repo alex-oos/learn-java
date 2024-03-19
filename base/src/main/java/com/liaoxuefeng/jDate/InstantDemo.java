@@ -5,6 +5,7 @@ import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -55,21 +56,23 @@ public class InstantDemo {
      */
     public static void function3() {
 
-        Instant now = Instant.now();
-        long begin = Instant.now().toEpochMilli();
+        Instant begin = Instant.now();
         try {
             TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-        Instant now1 = Instant.now();
-        long end = Instant.now().toEpochMilli();
-        long difference = (end - begin) / 1000;
+        Instant end = Instant.now();
+        // 方式一：直接减
+        long difference = (end.toEpochMilli() - begin.toEpochMilli()) / 1000;
         System.out.println("耗时：" + difference);
-
-        // 也可以使用 Duration
-        Duration duration = Duration.between(now, now1);
+        // 方式二：使用 Duration
+        Duration duration = Duration.between(begin, end);
         System.out.println("耗时：" + duration.toMillis() + "毫秒");
+
+        // 方式三：使用内置方法
+        long until = begin.until(end, ChronoUnit.MILLIS);
+        System.out.println("耗时:" + until + "毫秒");
     }
 
 
