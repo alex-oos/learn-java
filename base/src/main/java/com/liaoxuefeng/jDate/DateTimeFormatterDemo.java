@@ -1,5 +1,7 @@
 package com.liaoxuefeng.jDate;
 
+import java.time.Clock;
+import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
@@ -10,7 +12,7 @@ import java.util.Locale;
  *  用旧的Date对象时，我们用SimpleDateFormat进行格式化显示。使用新的LocalDateTime或ZonedLocalDateTime时，我们要进行格式化显示，就要使用DateTimeFormatter。
  * 使用的时候，只能在方法内部创建新的局部变量。而DateTimeFormatter可以只创建一个实例，到处引用
  */
-public class TestDateTimeFormatter {
+public class DateTimeFormatterDemo {
 
     // DateTimeFormatters实例化的两种方法
     public static void function() {
@@ -31,9 +33,9 @@ public class TestDateTimeFormatter {
 
         DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy MM dd EE  HH:mm ", Locale.CHINA);
         System.out.println(formatter1.format(zonedDateTime));
-
+        // 按照美国习惯，输出日期和时间：
         DateTimeFormatter formater2 = DateTimeFormatter.ofPattern("E, MMMM/dd/yyyy HH:mm", Locale.US);
-        System.out.println(formater2.format(zonedDateTime));
+        System.out.println(formater2.format(ZonedDateTime.now(Clock.system(ZoneId.of("America/New_York")))));
 
     }
 

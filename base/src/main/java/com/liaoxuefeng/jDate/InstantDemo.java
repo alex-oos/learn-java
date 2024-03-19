@@ -1,5 +1,6 @@
 package com.liaoxuefeng.jDate;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
@@ -17,7 +18,7 @@ public class InstantDemo {
     /**
      * 时间戳类 Instant 的基本应用
      */
-    public static void function() {
+    public static void use() {
 
         Instant instant = Instant.now();
         System.out.println("秒 " + instant.getEpochSecond()); // 秒
@@ -38,7 +39,7 @@ public class InstantDemo {
      *
      * @param time 传入时间戳，秒级别
      */
-    public static void function1(long time) {
+    public static void methods(long time) {
 
         Instant instant = Instant.ofEpochSecond(time);
         // Instant instant1 = Instant.ofEpochMilli(System.currentTimeMillis());
@@ -49,28 +50,35 @@ public class InstantDemo {
 
     }
 
+    /**
+     * 计算时间差
+     */
     public static void function3() {
 
+        Instant now = Instant.now();
         long begin = Instant.now().toEpochMilli();
         try {
-            TimeUnit.SECONDS.sleep(10);
+            TimeUnit.SECONDS.sleep(1);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
+        Instant now1 = Instant.now();
         long end = Instant.now().toEpochMilli();
         long difference = (end - begin) / 1000;
-        System.out.println(difference);
+        System.out.println("耗时：" + difference);
 
+        // 也可以使用 Duration
+        Duration duration = Duration.between(now, now1);
+        System.out.println("耗时：" + duration.toMillis() + "毫秒");
     }
 
 
     public static void main(String[] args) {
 
-        function();
+        use();
         //  获取到当前时间戳，毫秒级别，然后除以1000 转化为秒级别
         long time = System.currentTimeMillis() / 1000;
-        function1(time);
+        methods(time);
         function3();
     }
 
