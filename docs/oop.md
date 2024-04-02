@@ -88,7 +88,7 @@ public class Person {
 
 > 我们也可以不定义对象的句柄，而直接调用这个对象的方法。这样的对象叫做匿名对象
 
-​ 如：**new Person().shout();**
+ 如：**new Person().shout();**
 
 使用情况
 
@@ -135,11 +135,226 @@ public class Person {
 
 **，Method = (成员)方法 = 函数**
 
+#### 2.1 声明格式
+
+```java
+修饰符 返回值类型 方法名（参数类型 形参1，参数类型，形参2）{
+    方法体程序代码
+    return 返回值;
+}
+```
+
+其中：
+
+​      修饰符： public，缺省，private,protected 等
+
+​		返回值类型
+
+			- 没有返回值：Void
+			- 有返回值：声明返回值的类型 
+
+#### 2.2 方法的重载
+
+1. 概念
+
+> 在同一个类中，允许一个以上的同名方法，只要他们的参数个数或参数类型不同即可
+
+2. 特点
+
+   > 与返回值类型无关，只看参数列表，且参数列表必须不同，（参数个数或参数类型），调用时，根据方法参数列表不同来区分
+两同一不同":同一个类、相同方法名 参数列表不同：参数个数不同，参数类型不同
+
+
+   ```java
+   public class OverLoadTest {
+   
+       public static void main(String[] args) {
+           OverLoadTest o = new OverLoadTest();
+           o.sum(1, 2);
+           o.sum(0.1, 0.3);
+           o.sum(1, "1");
+           o.sum("1", 1);
+   
+   
+       }
+   
+       /*如果sum(int i, int j) 这个不存在，直接调用 o.sum(1, 2），会被调用 sum(double i, double j)，自动类型提升*/
+       public void sum(int i, int j) {
+           System.out.println(1);
+       }
+   
+       public void sum(double i, double j) {
+           System.out.println(2);
+       }
+   
+       public void sum(String str, int i) {
+           System.out.println(3);
+       }
+   
+       public void sum(int i, String str) {
+           System.out.println(4);
+       }
+   
+   }
+   
+   ```
+
+   
+
+#### 2.3 可变形参的方法
+
+可变个数形参的方法： 可变参数传递相当于传递了一个数组
+
+1. 具体使用：
+1.1可变个数形参的格式：数据类型 ... 变量名
+1.2 当调用可变个数形参的方法时，传入的参数个数可以是：0个，1个,2个，。。。
+1.3 可变个数形参的方法与本类中方法名相同，形参不同的方法之间构成重载
+1.4可变个数形参的方法与本类中方法名相同，形参类型也相同的数组之间不构成重载。换句话说，二者不能共存。
+1.5 可变个数形参在方法的形参中，必须声明在末尾
+1.6可变个数形参在方法的形参中,最多只能声明一个可变形参。
+
+代码demo
+
+```java
+public class MethodArgsTest {
+
+    public static void main(String[] args) {
+
+        MethodArgsTest m = new MethodArgsTest();
+        m.show(1);
+        m.show("AA");
+        m.show("A", "B", "C");
+
+    }
+
+    public void show(int i) {
+
+        System.out.println(i);
+    }
+
+    public void show(String str) {
+
+        System.out.println(str);
+    }
+
+    /* public void show(String[] arr) {
+         System.out.println(arr);
+     }*/
+    public void show(String... sts) {
+
+        for (int i = 0; i < sts.length; i++) {
+            System.out.println(sts[i]);
+        }
+    }
+
+
+}
+
+```
+
+
+
+#### 2.4  方法参数的值传递机制
+
+ 1形参：方法定义时，声明的小括号内的参数
+ 实参：方法调用时，实际传递给形参的数据
+
+2.值传递机制：
+如果参数是基本数据类型，此时实参赋给形参的是实参真实存储的数据值。
+如果参数是引用数据类型，此时实参赋给形参的是实参存储数据的地址值。
+
+```java
+public class ValueTransferTest1 {
+
+    public static void main(String[] args) {
+
+        int m = 10;
+        int n = 20;
+        System.out.println("m = " + m + ", n = " + n);
+
+        ValueTransferTest1 v = new ValueTransferTest1();
+        v.swap(m, n);
+
+        System.out.println("交换后");
+        System.out.println("m = " + m + "  n=" + n);
+    }
+
+    public void swap(int m, int n) {
+        int tmp = m;
+        m = n;
+        n = tmp;
+    }
+
+}
+
+```
+
+```java
+public class ValueTransferTest2 {
+
+    public static void main(String[] args) {
+
+        int m = 10;
+        int n = 20;
+        System.out.println("m = " + m + ", n = " + n);
+
+
+        //-----------------------------------------
+        Data data = new Data();
+        data.m = 10;
+        data.n = 20;
+        ValueTransferTest2 v = new ValueTransferTest2();
+        v.swap(data);
+        System.out.println("交换后");
+        System.out.println("m:" + data.m + " n:" + data.n);
+
+    }
+
+    public void swap(Data data) {
+        int temp = data.m;
+        data.m = data.n;
+        data.n = temp;
+
+    }
+
+
+}
+
+class Data {
+
+    int m;
+
+    int n;
+
+}
+
+```
+
+
+
+
+#### 2.5 递归方法
+
+概念
+
+> 一个方法体内调用它自身。 方法递归包含了一种隐式的循环，它会重复执行某段代码，但这种重复执行无须循环控制。递归一定要向已知方向递归，否则这种递归就变成了无穷递归，类似于死循环。
+
+```java
+```
+
+
+
 ### 3. 构造器
+
+
 
 ### 4. 代码块
 
+
+
 ### 5. 内部类
+
+
 
 ## 五、面向对象的三大特征
 
@@ -148,6 +363,8 @@ public class Person {
 ### 继承
 
 ### 多态
+
+
 
 抽象类与类型方法
 
