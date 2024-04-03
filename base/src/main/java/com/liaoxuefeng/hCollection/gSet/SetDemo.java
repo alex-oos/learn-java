@@ -75,7 +75,8 @@ public class SetDemo {
         set2.add("e");
 
         // 求交集
-        // set1.retainAll(set2);
+        boolean b = set1.retainAll(set2);
+        System.out.println(b);
         System.out.println(set1);
         // 求并集
         // set1.addAll(set2);

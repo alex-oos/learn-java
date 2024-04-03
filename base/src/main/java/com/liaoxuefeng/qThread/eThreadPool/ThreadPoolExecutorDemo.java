@@ -18,16 +18,29 @@ import java.util.concurrent.TimeUnit;
 public class ThreadPoolExecutorDemo {
 
     /**
-     * corePoolSize: 核心线程数为 5。
-     * maximumPoolSize ：最大线程数 10
-     * keepAliveTime : 等待时间为 1L。
-     * unit: 等待时间的单位为 TimeUnit.SECONDS。
-     * workQueue：任务队列为 ArrayBlockingQueue，并且容量为 100;
-     * handler:饱和策略为 CallerRunsPolicy
+     * 线程池按以下行为执行任务 1. 当线程数小于核心线程数时，创建线程。
+     * 2. 当线程数大于等于核心线程数，且任务队列未满时，将任务放入任务队列。
+     * 3. 当线程数大于等于核心线程数，且任务队列已满 -1
+     * 若线程数小于最大线程数，创建线程 -2 若线程数等于最大线程数，抛出异常，拒绝任务
+     * <p>
+     * 说明: 1、默认值 * corePoolSize=1 * queueCapacity=Integer.MAX_VALUE * maxPoolSize=Integer.MAX_VALUE * keepAliveTime=60s
+     * * allowCoreThreadTimeout=false * rejectedExecutionHandler=AbortPolicy() 2、如何来设置 * 需要根据几个值来决定 - tasks
+     * ：每秒的任务数，假设为1000 - taskcost：每个任务花费时间，假设为0.1s - responsetime：系统允许容忍的最大响应时间，假设为1s * 做几个计算 - corePoolSize =
+     * 每秒需要多少个线程处理？ *
+     * 一颗CPU核心同一时刻只能执行一个线程，然后操作系统切换上下文，核心开始执行另一个线程的代码，以此类推，超过cpu核心数，就会放入队列，如果队列也满了，就另起一个新的线程执行，所有推荐：corePoolSize =
+     * ((cpu核心数 * 2) + 有效磁盘数)，java可以使用Runtime.getRuntime().availableProcessors()获取cpu核心数 - queueCapacity =
+     * (coreSizePool/taskcost)*responsetime * 计算可得 queueCapacity = corePoolSize/0.1*1。意思是队列里的线程可以等待1s，超过了的需要新开线程来执行 *
+     * 切记不能设置为Integer.MAX_VALUE，这样队列会很大，线程数只会保持在corePoolSize大小，当任务陡增时，不能新开线程来执行，响应时间会随之陡增。 - maxPoolSize = (max(tasks)-
+     * queueCapacity)/(1/taskcost) * 计算可得 maxPoolSize = (1000-corePoolSize)/10，即(每秒并发数-corePoolSize大小) / 10 *
+     * （最大任务数-队列容量）/每个线程每秒处理能力 = 最大线程数 - rejectedExecutionHandler：根据具体情况来决定，任务不重要可丢弃，任务重要则要利用一些缓冲机制来处理 -
+     * keepAliveTime和allowCoreThreadTimeout采用默认通常能满足 计算密集型线程池：数量一般为 N+1个 N为CPU核心数 IO密集型：数量一般为：2N + 1个 N为CPU核心数
      */
-    private static final int CORE_POOL_SIZE = 5;
+    private static final int CPU_COUNT = Runtime.getRuntime().availableProcessors();
 
-    private static final int MAX_POOL_SIZE = 10;
+    private static final int CORE_POOL_SIZE = CPU_COUNT * 2;
+
+    private static final int MAX_POOL_SIZE = CPU_COUNT * 4;
+
 
     private static final int QUEUE_CAPACITY = 100;
 
