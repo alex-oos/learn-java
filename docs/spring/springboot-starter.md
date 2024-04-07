@@ -8,7 +8,17 @@
 
 
 
-# springboot start 封装
+# springboot 自定义starter封装
+
+## 一、概念：
+
+> 定义：Spring Boot 中的 Starter 是 Spring Boot 相对于传统的 Spring 的优势原因之一。Starter 相当于模块，它能将模块所需要的依赖进行整合并对模块内部的 Bean 根据环境进行自动配置。
+
+
+
+
+
+
 
 https://pdai.tech/md/spring/springboot-starter-demo.html
 
