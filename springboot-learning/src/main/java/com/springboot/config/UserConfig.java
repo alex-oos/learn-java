@@ -21,7 +21,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Configuration
 @ConfigurationProperties(prefix = "user")
-@PropertySource(value = "classpath:data/data.yml", encoding = "UTF-8", factory = YmlFactory.class)
+@PropertySource(value = "classpath:data/data.yml", encoding = "UTF-8", factory = YmlFactory.class) // 指定了一下路径
 public class UserConfig {
 
     private String name;

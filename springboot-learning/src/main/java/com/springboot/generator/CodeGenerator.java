@@ -14,7 +14,7 @@ import java.util.List;
  * @author Alex
  * @since 2023/10/9 下午7:00
  * <P>
- * 代码生成器
+ *  将数据库表，自动生成对应实体类 代码生成器
  * </p>
  */
 public class CodeGenerator {

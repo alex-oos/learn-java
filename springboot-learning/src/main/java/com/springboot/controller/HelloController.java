@@ -6,6 +6,7 @@ import com.springboot.bean.Car;
 import com.springboot.bean.Person;
 import com.springboot.config.UserConfig;
 import com.springboot.utils.ConstantPropertiesUtil;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 // 解决跨域
+@Api(value = "HelloController", tags = "hello 相关接口")
 @CrossOrigin(originPatterns = "*", allowCredentials = "true", maxAge = 3600)
 @RestController
 public class HelloController {

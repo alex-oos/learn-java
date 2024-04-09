@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 /**
  * @author Alex
  * @since 2021/9/13 3:10 下午
- * <P></p>
+ * <P>结果封装</p>
  */
 public class ApiController {
 

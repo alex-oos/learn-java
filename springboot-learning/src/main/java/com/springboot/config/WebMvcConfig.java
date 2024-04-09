@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * @author Alex
  * @since 2021/8/27 9:08 下午
- * <P></p>
+ * <P>webmvc 全局拦截器</p>
  */
 
 

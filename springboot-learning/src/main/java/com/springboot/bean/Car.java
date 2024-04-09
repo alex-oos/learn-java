@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-@ConfigurationProperties(prefix = "car")
+@ConfigurationProperties(prefix = "car") // 默认是从 applicationyml 中读取
 @Data
 public class Car {
 

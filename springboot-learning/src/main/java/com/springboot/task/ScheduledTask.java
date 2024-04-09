@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 /**
  * @author Alex
  * @since 2021/9/18 1:06 下午
- * <P></p>
+ * <P>常见的定时任务</p>
  */
 
 @Slf4j
@@ -27,7 +27,7 @@ public class ScheduledTask {
     }
 
     // 异步调用，使用更快一些
-    @Async
+    @Async // 异步执行该方法
     // @Scheduled(cron = "10 * * * * ?")
     // @Scheduled(cron = "0/10 * * * * ?")
     public void runFlowTask() {

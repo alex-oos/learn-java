@@ -4,7 +4,7 @@ package com.springboot.commom;
 /**
  * @author Alex
  * @since 2021/9/13 3:08 下午
- * <P></p>
+ * <P>结果状态码</p>
  */
 public enum ApiErrorCode implements IErrorCode {
     /**

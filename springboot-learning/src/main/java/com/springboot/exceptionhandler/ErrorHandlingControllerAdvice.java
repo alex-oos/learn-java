@@ -12,7 +12,7 @@ import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
 
 /**
- * @ClassName ErrorHandlingControllerAdvice
+ * @ClassName ErrorHandlingControllerAdvice 异常拦截器
  * @Description
  * @Author Alex
  * @Date 2023/10/22 18:48

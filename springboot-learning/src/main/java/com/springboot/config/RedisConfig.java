@@ -22,9 +22,12 @@ import java.time.Duration;
 /**
  * @author Alex
  * @since 2021/6/6 23:34
+ * <p>
+ *     redis配置类
+ * </p>
  */
-@EnableCaching
-@Configuration
+@EnableCaching  // 激活缓存
+@Configuration // 指定该类是配置类
 public class RedisConfig extends CachingConfigurerSupport {
 
     @Bean

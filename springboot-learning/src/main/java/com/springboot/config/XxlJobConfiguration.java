@@ -12,11 +12,12 @@ import org.springframework.context.annotation.Configuration;
 /**
  * @author Alex
  * @since 2021/9/18 5:18 下午
- * <P></p>
+ * <P>XXl job 配置类</p>
  */
 @Slf4j
 @Data
 @Configuration
+// 条件注入
 @ConditionalOnProperty(
         prefix = "xxl.job.admin",
         name = {"addresses"}

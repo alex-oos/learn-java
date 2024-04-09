@@ -6,8 +6,8 @@ import com.springboot.commom.result.ResultCode;
 import com.springboot.entity.vo.LoginVo;
 import com.springboot.service.UserService;
 import com.springboot.utils.HuJwtUtils;
+import io.swagger.annotations.Api;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -26,7 +26,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
-@Tag(name = "Login-controller", description = "登录控制器")
+@Api(value = "Login-controller", tags = "登录控制器")
 @Slf4j
 public class LoginController {
 

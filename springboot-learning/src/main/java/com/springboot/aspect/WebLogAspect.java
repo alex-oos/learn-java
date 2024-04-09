@@ -2,25 +2,22 @@ package com.springboot.aspect;
 
 import com.alibaba.fastjson2.JSONObject;
 import com.springboot.annotation.WebLog;
-import java.lang.reflect.Method;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
-import org.aspectj.lang.annotation.After;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.lang.reflect.Method;
+
 /**
  * @ClassName WebLogAspect
- * @Description apo 切面类
+ * @Description apo 切面类的实际应用场景，日志管理打印出日志
  * @Author Alex
  * @Date 2024/1/21 22:37
  * @Version 1.0
@@ -122,7 +119,7 @@ public class WebLogAspect {
         Object[] arguments = joinPoint.getArgs();
         Class targetClass = Class.forName(targetName);
         Method[] methods = targetClass.getMethods();
-        StringBuilder description = new StringBuilder("");
+        StringBuilder description = new StringBuilder();
         for (Method method : methods) {
             if (method.getName().equals(methodName)) {
                 Class[] clazzs = method.getParameterTypes();
