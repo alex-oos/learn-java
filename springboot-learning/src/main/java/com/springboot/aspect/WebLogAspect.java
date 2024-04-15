@@ -1,7 +1,6 @@
 package com.springboot.aspect;
 
 import com.alibaba.fastjson2.JSONObject;
-import com.springboot.annotation.WebLog;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -36,8 +35,8 @@ public class WebLogAspect {
     /**
      * 以自定义 @WebLog 注解为切点
      */
-    @Pointcut("@annotation(com.springboot.annotation.WebLog)")
-    public void webLog() {
+    @Pointcut("execution(public * com.springboot.controller.*.*(..))")
+    public void aopPointCut() {
     }
 
     /**
@@ -46,7 +45,7 @@ public class WebLogAspect {
      * @param joinPoint
      * @throws Throwable
      */
-    @Before("webLog()")
+    @Before("aopPointCut()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
         // 开始打印请求日志
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
@@ -79,7 +78,7 @@ public class WebLogAspect {
      *
      * @throws Throwable
      */
-    @After("webLog()")
+    @After("aopPointCut()")
     public void doAfter() throws Throwable {
         // 接口结束后换行，方便分割查看
         log.info("=========================================== End ==========================================="
@@ -93,7 +92,7 @@ public class WebLogAspect {
      * @return
      * @throws Throwable
      */
-    @Around("webLog()")
+    @Around("aopPointCut()")
     public Object doAround(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         long startTime = System.currentTimeMillis();
         Object result = proceedingJoinPoint.proceed();
@@ -119,17 +118,16 @@ public class WebLogAspect {
         Object[] arguments = joinPoint.getArgs();
         Class targetClass = Class.forName(targetName);
         Method[] methods = targetClass.getMethods();
-        StringBuilder description = new StringBuilder();
+        String description = "";
         for (Method method : methods) {
             if (method.getName().equals(methodName)) {
                 Class[] clazzs = method.getParameterTypes();
                 if (clazzs.length == arguments.length) {
-                    description.append(method.getAnnotation(WebLog.class).description());
                     break;
                 }
             }
         }
-        return description.toString();
+        return description;
     }
 
     private String getParams(JoinPoint joinPoint) {

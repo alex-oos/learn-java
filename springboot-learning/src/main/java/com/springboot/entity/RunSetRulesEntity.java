@@ -3,7 +3,6 @@ package com.springboot.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import io.swagger.annotations.ApiParam;
 import lombok.Builder;
 import lombok.Data;
 
@@ -32,7 +31,7 @@ public class RunSetRulesEntity implements Serializable {
     /**
      * 检查套餐名称
      */
-    @ApiParam(value = "检查套餐名称")
+    // @ApiParam(value = "检查套餐名称")
     @NotBlank
     private String set_name;
 
@@ -40,7 +39,7 @@ public class RunSetRulesEntity implements Serializable {
      * 检查项逗号分割
      */
     @NotBlank
-    @ApiParam(value = "检查项逗号分割")
+    // @ApiParam(value = "检查项逗号分割")
     private String rules;
 
     /**

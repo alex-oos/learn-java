@@ -121,4 +121,4 @@ mybatis-plus:
 #logging:
 #  config: classpath:logback-spring.xml
 #  level:
-#    root: INfO
+#    root: info

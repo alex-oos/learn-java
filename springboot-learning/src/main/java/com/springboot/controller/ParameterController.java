@@ -1,7 +1,6 @@
 package com.springboot.controller;
 
 
-import com.springboot.annotation.WebLog;
 import com.springboot.bean.Person;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.tomcat.util.http.parser.Cookie;
@@ -26,25 +25,23 @@ public class ParameterController {
      * @param person
      * @return
      */
-    @WebLog
-    @PostMapping("/saveUser")
+    // @PostMapping("/saveUser")
     public Person saveUser(Person person) {
 
         return person;
     }
-    @WebLog
     // car/2/ower/zhangsan
-    @GetMapping("/car/{id}/owner/{username}")
-    public Map<String, Object> demo(@PathVariable("id") Integer id,
-                                  @PathVariable("username") String name,
-                                  @PathVariable Map<String, Object> pv,
-                                  @RequestHeader("user-agent") String userAgent,
-                                  @RequestHeader Map<String, Object> headers,
-                                  @RequestParam("age") String age,
-                                  @RequestParam("inters") List<String> inters,
-                                  @RequestParam Map<String, String> params,
-                                  @CookieValue("_ga") String _ga,
-                                  @CookieValue() Cookie cookie
+    // @GetMapping("/car/{id}/owner/{username}")
+    public Map<String, Object> moreParamater(@PathVariable("id") Integer id,
+                                             @PathVariable("username") String name,
+                                             @PathVariable Map<String, Object> pv,
+                                             @RequestHeader("user-agent") String userAgent,
+                                             @RequestHeader Map<String, Object> headers,
+                                             @RequestParam("age") String age,
+                                             @RequestParam("inters") List<String> inters,
+                                             @RequestParam Map<String, String> params,
+                                             @CookieValue("_ga") String _ga,
+                                             @CookieValue() Cookie cookie
     ) {
 
         String[] split = userAgent.split(":");
@@ -62,8 +59,8 @@ public class ParameterController {
         map.put("cookie", cookie);
         return map;
     }
-    @WebLog
-    @PostMapping("/save")
+
+    // @PostMapping("/save")
     public Map save(@RequestBody String content) {
 
         Map<String, String> map = new HashMap<>();

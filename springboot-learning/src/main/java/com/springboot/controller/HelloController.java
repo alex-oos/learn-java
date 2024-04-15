@@ -1,12 +1,10 @@
 package com.springboot.controller;
 
 
-import com.springboot.annotation.WebLog;
 import com.springboot.bean.Car;
 import com.springboot.bean.Person;
 import com.springboot.config.UserConfig;
 import com.springboot.utils.ConstantPropertiesUtil;
-import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 // 解决跨域
-@Api(value = "HelloController", tags = "hello 相关接口")
+// @Api(value = "HelloController", tags = "hello 相关接口")
 @CrossOrigin(originPatterns = "*", allowCredentials = "true", maxAge = 3600)
 @RestController
 public class HelloController {
@@ -35,7 +33,6 @@ public class HelloController {
     @Autowired
     Person person;
 
-    @WebLog
     @GetMapping("readData")
     public String readData() {
 
@@ -45,7 +42,6 @@ public class HelloController {
     }
 
 
-    @WebLog
     @GetMapping("car")
     public Car car() {
         log.info("进入日志...");
@@ -59,7 +55,6 @@ public class HelloController {
 
     }
 
-    @WebLog
     @GetMapping("hello")
     public String hello() {
         System.out.println("hello");
