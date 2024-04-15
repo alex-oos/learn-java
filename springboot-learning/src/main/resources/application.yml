@@ -2,6 +2,9 @@ server:
   port: 8080
 
 spring:
+#  激活指定环境
+  profiles:
+    active: test
   jackson: # 返回JSON的全局时间格式
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -50,9 +53,10 @@ spring:
     use-global-data-source-stat: true
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  # 需要增加文件路径匹配，不然会报错，导致项目起不来
   mvc:
     pathmatch:
-      matching-strategy: ant_path_matcher
+      matching-strategy: ANT_PATH_MATCHER
 
 #  redis:
 #    database: 0
@@ -121,4 +125,4 @@ mybatis-plus:
 #logging:
 #  config: classpath:logback-spring.xml
 #  level:
-#    root: info
+#    root: INFO

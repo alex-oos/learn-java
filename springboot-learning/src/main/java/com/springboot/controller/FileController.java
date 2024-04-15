@@ -1,6 +1,8 @@
 package com.springboot.controller;
 
 import com.springboot.service.FileService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  * @since 2023/11/27 下午7:19
  */
 @Slf4j
-// @Api(value = "FileController", tags = "文件相关接口")
+@Api(value = "FileController", tags = "文件相关接口")
 @RestController
 @RequestMapping("/file")
 public class FileController {
@@ -26,7 +28,7 @@ public class FileController {
     @Autowired
     FileService fileService;
 
-    // @ApiOperation(value = "上传", tags = "")
+    @ApiOperation(value = "上传", tags = "")
     @PostMapping("/upload")
     public void upload(@RequestPart MultipartFile file) {
 
