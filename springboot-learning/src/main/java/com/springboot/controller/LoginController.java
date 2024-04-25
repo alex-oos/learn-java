@@ -6,6 +6,7 @@ import com.springboot.commom.result.ResultCode;
 import com.springboot.entity.vo.LoginVo;
 import com.springboot.service.UserService;
 import com.springboot.utils.HuJwtUtils;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -31,7 +32,7 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    // @Operation(summary = "登录")
+    @Operation(summary = "登录")
     @PostMapping("login")
     public R<?> login(@RequestBody @Validated LoginVo loginVo) {
 

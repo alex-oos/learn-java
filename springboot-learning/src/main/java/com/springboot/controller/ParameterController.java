@@ -25,13 +25,13 @@ public class ParameterController {
      * @param person
      * @return
      */
-    // @PostMapping("/saveUser")
+    @PostMapping("/saveUser")
     public Person saveUser(Person person) {
 
         return person;
     }
     // car/2/ower/zhangsan
-    // @GetMapping("/car/{id}/owner/{username}")
+    @GetMapping("/car/{id}/owner/{username}")
     public Map<String, Object> moreParamater(@PathVariable("id") Integer id,
                                              @PathVariable("username") String name,
                                              @PathVariable Map<String, Object> pv,
@@ -60,7 +60,7 @@ public class ParameterController {
         return map;
     }
 
-    // @PostMapping("/save")
+    @PostMapping("/save")
     public Map save(@RequestBody String content) {
 
         Map<String, String> map = new HashMap<>();
