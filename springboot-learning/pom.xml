@@ -105,11 +105,11 @@
 
         <!--knife4j 接口文档 -->
         <!--版本需要与springboot 2.7.1 对应-->
-        <!--        <dependency>-->
-        <!--            <groupId>com.github.xiaoymin</groupId>-->
-        <!--            <artifactId>knife4j-spring-boot-starter</artifactId>-->
-        <!--            <version>3.0.3</version>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>3.0.3</version>
+        </dependency>
 
 
         <!--xxljob-->
