@@ -59,7 +59,7 @@ public class AbstractWrapperTests {
 
      * */
     @Test
-    public void testSlectOne() {
+    public void testSelectOne() {
 
         QueryWrapper<User> queryWrappe = new QueryWrapper<>();
         queryWrappe.eq("name", "Tom");
@@ -75,7 +75,7 @@ public class AbstractWrapperTests {
      *
      * */
     @Test
-    public void testSlectCout() {
+    public void testSelectCount() {
 
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.between("age", 10, 30);
@@ -88,7 +88,7 @@ public class AbstractWrapperTests {
      *  SELECT id,name,age,email,create_time,update_time,deleted,version FROM user WHERE deleted=0 AND name = ? AND id = ? AND age = ?
      * */
     @Test
-    public void testSlectList() {
+    public void testSelectList() {
 
         QueryWrapper<User> queryWrapper = new QueryWrapper();
         Map<String, Object> map = new HashMap<>();
