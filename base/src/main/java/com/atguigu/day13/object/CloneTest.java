@@ -9,6 +9,7 @@ package com.atguigu.day13.object;
 public class CloneTest {
 
     public static void main(String[] args) {
+
         Animal a1 = new Animal("AA");
         try {
             Animal a2 = (Animal) a1.clone();
@@ -24,33 +25,41 @@ public class CloneTest {
 
 }
 
+//使用 clone 方法一定要实现 Cloneable 接口
 class Animal implements Cloneable {
 
     private String name;
 
     public Animal() {
+
         super();
     }
 
     Animal(String name) {
+
         super();
         this.name = name;
     }
 
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
+
     @Override
     protected Object clone() throws CloneNotSupportedException {
         // Auto-generated method stub
         return super.clone();
     }
+
     @Override
     public String toString() {
+
         return "Animal [name=" + name + "]";
     }
 

@@ -1,6 +1,9 @@
 package com.atguigu.day13;
 
 
+import com.atguigu.day13.entity.Man;
+import com.atguigu.day13.entity.Person;
+
 /**
  * @author Alex
  * @since 2021/12/16 4:00 下午

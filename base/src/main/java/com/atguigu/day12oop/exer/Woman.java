@@ -1,25 +1,23 @@
-package com.atguigu.day13;
+package com.atguigu.day12oop.exer;
 
-
-import com.atguigu.day13.entity.Person;
 
 /**
  * @author Alex
- * @since 2021/12/16 4:02 下午
+ * @since 2021/12/13 4:16 下午
  * <P></p>
  */
 public class Woman extends Person {
+
+    boolean isBeauty;
 
     public void goShopping() {
         System.out.println("女人喜欢购物");
     }
 
-    @Override
     public void eat() {
         System.out.println("女人少吃，为了减肥");
     }
 
-    @Override
     public void walk() {
         System.out.println("女人窈窕的走路");
     }

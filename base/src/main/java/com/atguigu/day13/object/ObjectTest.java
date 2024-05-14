@@ -22,8 +22,17 @@ package com.atguigu.day13.object;
 public class ObjectTest {
 
     public static void main(String[] args) {
+
         Order order = new Order();
+        //调用 object 类中的getClass方法
         System.out.println(order.getClass().getSuperclass());
+        //调用object 类中的toString方法
+        System.out.println(order.toString());
+        //调用 object 类中的equals方法
+        System.out.println(order.equals("demo"));
+        //调用hashcode 方法
+        System.out.println(order.hashCode());
+
     }
 
 }

@@ -48,21 +48,16 @@ public class StaticTest {
 
     public static void main(String[] args) {
 
+        /**
+         * 打印静态变量，静态变量随着类的加载而加载，可以通过"类.静态变量"的方式进行调用
+         */
+        System.out.println(Circle.name);
         Circle c1 = new Circle(2.0);
         Circle c2 = new Circle(3.0);
-        c1.display();
-        c2.display();
+        c1.toString();
+        c2.toString();
+
+
     }
-
-}
-
-class Chinese {
-
-    static String nation;
-
-    String name;
-
-    int age;
-
 
 }

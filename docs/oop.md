@@ -495,6 +495,37 @@ public class Animal {
 - 隐式无参构造器（系统默认提供）
 - 显示定义一个或多个构造器（无参、有参）
 
+### 4. static 关键字
+
+使用范围：
+
+> 在java 类中，可用static 修饰属性、方法、代码块、内部类
+
+被修饰后的成员具备以下特点：
+
+- 随着类的加载而加载
+- 优先于对象存在
+- 修饰的成员，被所有对象所共享
+- 访问权限允许时，可补偿价对象，直接被对象调用
+
+类变量（class Variable）：由该类的所有实例共享
+
+```java
+public static String name ="demo"；
+```
+
+代码demo:
+
+```
+```
+
+类方法（class method）
+
+
+
+```
+```
+
 
 
 ### 4. 代码块
@@ -519,20 +550,510 @@ public class Animal {
 
 一般为了符合封装性，类中的属性都是private, 通过set 方法或 get 方法进行赋值，而方法一般的权限一般都是public
 
+javaBean
+
 ### 2. 继承
 
->
+  概念： 多个类中存在相同的属性 和行为时，将这些内容抽取到单独的一个类中，那么多个类中无序再定义这些属性和行为，只要继承那个类即可。此处的多个类称为子类（派生类），单独的这个类称作父类（基类或超类）。
+
+#### 2.1语法格式：
+
+```java
+class Stubclass extends SuperClass{
+
+}
+```
+
+
+
+#### 2.2作用：
+
+- 继承的出现减少了代码的冗余，提高了代码的复用性
+- 继承的出现，更有利于功能的扩展
+- 继承的出现让类与类之间产生了关系，提供了多态的前提
+
+#### 2.3 继承性：
+
+- 子类继承了父类，就继承了父类的方法和属性
+- 在子类中，可以使用父类中定义的方法和属性，也可以创建新的数据和方法
+- 在Java中，继承的关键字用的extends，即子类不是父类的字迹，而是对父类的扩展
+
+#### 2.4 规则：
+
+- 子类不能直接访问父类中私有的（private）的成员变量和方法
+-  Java 中只支持单继承和多层继承，不允许多重继承（即 一个子类只能有一个父类，而一个父类却可以派生出多个子类）
+
+代码demo：
+
+父类
+
+```java
+public class Person {
+
+    String name;
+
+    int age;
+
+    int id = 1001;
+    public Person() {
+    }
+    public Person(String name) {
+        this.name = name;
+    }
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public void eat() {
+        System.out.println("人：吃饭");
+    }
+    public void walk() {
+        System.out.println("人：走路");
+    }
+
+
+}
+
+```
+
+```java
+// 子类
+public class Student extends Person {
+
+    String major;
+
+    int id = 1002;
+    public Student() {
+    }
+    public Student(String name, String major) {
+        super(name);
+        this.major = major;
+    }
+
+    public Student(String name, int age, String major) {
+        super(name, age);
+        this.major = major;
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("学生：多吃有营养的食物");
+    }
+
+
+    public void study() {
+        System.out.println("学生：学习知识");
+        this.eat();
+        super.eat();
+        walk();
+    }
+
+    public void show() {
+        System.out.println("name = " + name + ", age = " + age);
+        System.out.println("id = " + this.id);
+        System.out.println("id = " + super.id);
+    }
+
+}
+
+```
+
+```java
+// 调用类
+public class SuperTest {
+
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.show();
+
+        System.out.println();
+        s.study();
+
+        Student s1 = new Student("Tom", 21, "1T");
+        s1.show();
+
+        System.out.println("******");
+
+    }
+
+}
+```
+
+
+
+#### 2.5 方法的重写
+
+  子类继承父类，有的时候因业务需求，需要重写父类的方法，这就是方法的重写。
+
+#### 2.6 super 关键字
+
+使用规则：
+
+- 存在继承关系
+
+使用方法：
+
+- super 可用于访问父类中定义的属性
+- super 可用于访问父类中定义的成员方法
+- super 可以在子类构造器中调用父类的构造器
+
+注意：
+
+- 当子父类出现同名成员时，可以用super 表明调用的是父类中的成员
+- super 追溯不限于直接父类
+- super 和this 的用法相像，this代表本类对象的引用，super 代表父类的内存空间的标识
+
+![image-20240511155430124](https://cdn.jsdelivr.net/gh/alex-oos/picture-bed/img/notebook/image-20240511155430124.png)
+
+
+
+
 
 ### 3. 多态
 
->
+#### 3.1 概念：
+
+   对象的多态性：父类的引用指向子类的对象 （可以直接应用在抽象类和接口上）
+
+对象的多态- 在Java中，子类的对象可以替代父类的对象使用
+
+- 一个变量只能有一种确定的数据类型
+- 一个引用类型变量可能指向（引用）多种不同类型的对象
+
+子类可看做特殊的父类，所以父类类型的引用可以指向子类的对象：向上转型
 
 
 
-抽象类与类型方法
+#### 3.2 前提：
 
->
+- 存在继承关系或实现关系
 
-工具类Objects 
+- 有方法的重写
 
-> 
+
+
+#### 3.3 对象类型转化(Casting)
+
+基本舒蕾行的Casting：
+
+- 自动类型转换： 小的数据类型可以自动转换成大的数据类型。如： long g =20 ; double d = 12.0f
+- 强制类型转换：可以把大的数据类型强制转换（Casting）成小的数据类型。 如： float f = (float)12.0; int a = (int) 1200L;
+
+对Java对象的强制类型转换称为造型
+
+- 从子类到父类的类型转换可以自动进行
+- 从父类到子类的类型必须通过造型（强制类型转换）实现
+- 无继承关系的引用类型间的转换是非法的
+- 在造型前可以使用instanceof 操作符测试一个对象的类型
+
+#### 3.4  父类Object
+
+Object 类位于 java.lang 包中，编译时会自动导入，我们创建一个类时，如果没有明确继承一个父类，那么它就会自动继承 Object，成为 Object 的子类。所以默认Object 类中的方法，在具体的类中均可以使用
+
+常用的方法：
+
+```java
+equals() / toString() / getClass() /hashCode() / clone() / finalize()/wait()/notify()/notifyAll()
+```
+
+
+
+代码demo: getClass() 方法
+
+```java
+public class ObjectTest {
+
+    public static void main(String[] args) {
+        Order order = new Order();
+        System.out.println(order.getClass().getSuperclass());
+    }
+}
+
+class Order {
+    
+}
+```
+
+代码demo: clone 方法
+
+```java
+public class CloneTest {
+
+    public static void main(String[] args) {
+        Animal a1 = new Animal("AA");
+        try {
+            Animal a2 = (Animal) a1.clone();
+            System.out.println("原始对象：" + a1);
+            a2.setName("毛毛");
+            System.out.println("clone之后的对象：" + a2);
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+
+}
+
+class Animal implements Cloneable {
+
+    private String name;
+
+    public Animal() {
+        super();
+    }
+
+    Animal(String name) {
+        super();
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        // Auto-generated method stub
+        return super.clone();
+    }
+    @Override
+    public String toString() {
+        return "Animal [name=" + name + "]";
+    }
+
+}
+
+```
+
+代码demo: equals 方法
+
+```java
+public class EqualsTest {
+
+    public static void main(String[] args) {
+        //基本数据类型
+        final int i = 10;
+        final int j = 10;
+        final double d = 10.0;
+        System.out.println(i == j);
+        System.out.println(i == d);
+
+        final boolean b = true;
+        // System.out.println(i == b);
+
+        final char c = 10;
+        System.out.println(i == c);
+
+        final char c1 = 'A';
+        final char c2 = 65;
+        System.out.println(c1 == c2);
+
+        //    引用类型
+        Customer cust1 = new Customer("Tom", 21);
+        Customer cust2 = new Customer("Tom", 21);
+        System.out.println("cust1==cust2 = " + (cust1 == cust2));
+        String str1 = "atguigu";
+        String str2 = "atguigu";
+        System.out.println(str1 == str2);//false
+        System.out.println("****************************");
+        System.out.println(cust1.equals(cust2));//false--->true
+        System.out.println(str1.equals(str2));//true
+
+        Date date1 = new Date(32432525324L);
+        Date date2 = new Date(32432525324L);
+        System.out.println(date1.equals(date2));//true
+
+    }
+
+}
+```
+
+
+
+== 和equals 的区别：
+
+- == 既可以比较基本类型也可以比较引用类型，对于基本类型就是比较值，对于引用类型就是比较内存地址
+- equals 的话，它是属于java.lang.Object 类里面的方法，如果该方法没有重写默认也是==；我们可以看到String 等类的equals 的方法是被重写的，而且String 类在日常开发中用的比较多，
+- 通常情况下，重写equals 方法，会比较类中的响应属性是否相等。
+
+toString 方法：
+
+
+Object类中toString()的使用：
+
+1. 当我们输出一个对象的引用时，实际上就是调用当前对象的toString()
+
+2. Object类中toString()的定义：
+
+   ```java
+   public String toString() {
+   return getClass().getName() + "@" + Integer.toHexString(hashCode());
+   }
+   ```
+
+3. 像String、Date、File、包装类等都重写了Object类中的toString()方法。
+使得在调用对象的toString()时，返回"实体内容"信息
+
+4. 自定义类也可以重写toString()方法，当调用此方法时，返回对象的"实体内容"
+
+
+#### 3.5 包装类
+
+  基础数据类型   --- 包装类
+
+   byte  --- Byte
+
+​	short --- Short
+
+​	int ---- Integer
+
+​	long-----Long
+
+​	float --- Float
+
+​	double--- Double
+
+​	boolean--- Boolean
+
+​	char --- Character 
+
+装箱： 基本数据类型包装成包装类的实例
+
+拆箱： 获取包装类对象中的基本类型变量
+
+jdk1.5之后，支持自动装箱和拆箱。但是类型必须匹配
+
+代码demo
+
+```java
+public class WrapperTest {
+
+    public static void method(Object obj) {
+        System.out.println(obj);
+    }
+    //基本数据类型、包装类--->String类型：调用String重载的valueOf(Xxx xxx)
+    public static void test4() {
+
+        final int num1 = 10;
+        //方式1：连接运算
+        final String str1 = num1 + "";
+        //方式2：调用String的valueOf(Xxx xxx)
+        final float f1 = 12.3f;
+        String str2 = String.valueOf(f1);//"12.3"
+
+        Double d1 = new Double(12.4);
+        String str3 = String.valueOf(d1);
+        System.out.println(str2);
+        System.out.println(str3);//"12.4"
+
+    }
+    //包装类--->基本数据类型:调用包装类Xxx的xxxValue()
+    public static void test2() {
+        Integer in1 = Integer.valueOf(12);
+
+        int i1 = in1.intValue();
+        System.out.println(i1 + 1);
+
+
+        Float f1 = new Float(12.3);
+        float f2 = f1.floatValue();
+        System.out.println(f2 + 1);
+    }
+    //基本数据类型 --->包装类：调用包装类的构造器
+
+    public static void test1() {
+
+        final int num1 = 10;
+//		System.out.println(num1.toString());
+        Integer in1 = Integer.valueOf(num1);
+        System.out.println(in1);
+
+        Integer in2 = Integer.valueOf("123");
+        System.out.println(in2);
+
+        //报异常
+//		Integer in3 = new Integer("123abc");
+//		System.out.println(in3.toString());
+
+        Float f1 = new Float(12.3f);
+        Float f2 = new Float("12.3");
+        System.out.println(f1);
+        System.out.println(f2);
+
+        Boolean b1 = Boolean.TRUE;
+        Boolean b2 = Boolean.TRUE;
+        System.out.println(b2);
+        Boolean b3 = Boolean.valueOf("true123");
+        System.out.println(b3);//false
+
+
+        Order1 order = new Order1();
+        System.out.println(order.isMale);//false
+        System.out.println(order.isFemale);//null
+    }
+    /*
+     * JDK 5.0 新特性：自动装箱 与自动拆箱
+     */
+
+    public static void test3() {
+//		int num1 = 10;
+//		//基本数据类型-->包装类的对象
+//		method(num1);
+
+        //自动装箱：基本数据类型 --->包装类
+        final int num2 = 10;
+        final Integer in1 = num2;//自动装箱
+
+        final boolean b1 = true;
+        final Boolean b2 = b1;//自动装箱
+
+        //自动拆箱：包装类--->基本数据类型
+        System.out.println(in1);
+
+        final int num3 = in1;//自动拆箱
+
+    }
+    //String类型 --->基本数据类型、包装类：调用包装类的parseXxx(String s)
+
+    public static void test5() {
+        final String str1 = "123";
+        //错误的情况：
+//		int num1 = (int)str1;
+//		Integer in1 = (Integer)str1;
+        //可能会报NumberFormatException
+        int num2 = Integer.parseInt(str1);
+        System.out.println(num2 + 1);
+
+        final String str2 = "true1";
+        boolean b1 = Boolean.parseBoolean(str2);
+        System.out.println(b1);
+    }
+
+}
+
+class Order1 {
+
+    boolean isMale;
+
+    Boolean isFemale;
+
+}
+
+```
+
+
+
+
+
+## 六、接口
+
+## 七、设计模式
+
+  ### 1. 单例模式
+
+
+

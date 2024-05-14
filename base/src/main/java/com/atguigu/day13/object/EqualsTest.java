@@ -1,7 +1,7 @@
 package com.atguigu.day13.object;
 
 
-import com.atguigu.day13.exer.Customer;
+import com.atguigu.day13.entity.Customer;
 
 import java.util.Date;
 

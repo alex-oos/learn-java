@@ -1,6 +1,10 @@
 package com.atguigu.day13.object;
 
 
+import com.atguigu.day13.entity.Customer;
+
+import java.util.Date;
+
 /**
  * @author Alex
  * @since 2021/12/17 3:32 下午
@@ -21,6 +25,19 @@ package com.atguigu.day13.object;
 public class ToStringTest {
 
     public static void main(String[] args) {
+
+        Customer customer = new Customer("Alex", 28);
+        //toString 方法已经被重写
+        System.out.println(customer.toString());
+
+
+        String s = new String("abc");
+        //toString 方法已经被重写
+        System.out.println(s.toString());
+
+        Date date = new Date();
+        //toString 方法已经被重写
+        System.out.println(date.toString());
 
     }
 
