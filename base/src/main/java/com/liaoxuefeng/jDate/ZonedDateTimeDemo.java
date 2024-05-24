@@ -17,7 +17,7 @@ public class ZonedDateTimeDemo {
      * ZonedDateTime的简单使用
      * ZoneId.of("America/New_York") 指定时区
      */
-    public static void function() {
+    public static void zoneDateTimeUse() {
 
         ZonedDateTime zbj = ZonedDateTime.now();  // 默认时区,默认时当前时间的时区
         ZonedDateTime zny = ZonedDateTime.now(ZoneId.of("America/New_York")); // 用指定时区获取当前时间
@@ -29,7 +29,7 @@ public class ZonedDateTimeDemo {
      * ZonedDateTime 与LocalDateTime 之间转化
      * LocalDateTime 转化为ZonedDateTime 使用的是 atZone，然后在里面指定时区
      */
-    public static void function1() {
+    public static void transform() {
 
         LocalDateTime ldt = LocalDateTime.now();
         ZonedDateTime zbj = ldt.atZone(ZoneId.systemDefault());
@@ -44,7 +44,7 @@ public class ZonedDateTimeDemo {
     }
 
     // 时区转换
-    public static void function2() {
+    public static void zoneTransform() {
 
         // 获取中国区的时间
         ZonedDateTime zbj = ZonedDateTime.now(ZoneId.of("Asia/Shanghai"));
@@ -63,7 +63,7 @@ public class ZonedDateTimeDemo {
      * 当前的纽约时间 使用 atZone 获取到纽约时间
      * 然后纽约时间+13小时20分钟，即可 使用 plusMinutes（）  plusHours（） 进行计算即可
      */
-    public static void function3() {
+    public static void demo() {
 
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
@@ -83,10 +83,10 @@ public class ZonedDateTimeDemo {
 
     public static void main(String[] args) {
 
-        function();
-        function1();
-        function2();
-        function3();
+        zoneDateTimeUse();
+        transform();
+        zoneTransform();
+        demo();
     }
 
 }

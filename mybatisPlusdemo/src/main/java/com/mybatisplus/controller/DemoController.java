@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class DemoController {
 
     @WebLog
-    @GetMapping("/demo")
+    @GetMapping("/get")
     public JSONObject demo(@RequestParam("name") String name) {
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("name", name);
@@ -34,5 +34,7 @@ public class DemoController {
     public JSONObject user(@RequestBody User user) {
         return JSONObject.parseObject(JSONObject.toJSONString(user));
     }
+
+
 
 }

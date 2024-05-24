@@ -1,6 +1,7 @@
 package com.liaoxuefeng.jDate;
 
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -24,15 +25,15 @@ public class LocalDateTimeDemo {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         String format = dateTimeFormatter.format(LocalDateTime.now());
         System.out.println(format);
-        String format1 = LocalTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
+        String format1 = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"));
         System.out.println(format1);
 
     }
 
     /**
-     * localdata用法
+     * 用法
      */
-    public static void function() {
+    public static void use() {
 
         LocalDate localDate = LocalDate.now(); // 获取当前日期
         LocalTime localTime = LocalTime.now(); // 获取当前时间
@@ -46,7 +47,7 @@ public class LocalDateTimeDemo {
     /**
      * 日期之间的转化
      */
-    public static void function1() {
+    public static void transform() {
         //  方式一：toLocalDate  toLocalTime
         LocalDateTime dt = LocalDateTime.now();
         LocalDate localDate = dt.toLocalDate(); // 转化成当前日期
@@ -62,11 +63,33 @@ public class LocalDateTimeDemo {
 
     }
 
+    /**
+     * LocalDateTime 计算
+     */
+    public static void timeCalculate() {
+        //加时间
+        LocalDateTime plus = LocalDateTime.now().plus(Duration.ofDays(1));
+        LocalDateTime localDateTime = LocalDateTime.now().plusHours(1);
+        System.out.println(localDateTime);
+        System.out.println(plus);
+        //时间减
+        LocalDateTime minus = LocalDateTime.now().minus(Duration.ofDays(1));
+        System.out.println(minus);
+        LocalDateTime localDateTime1 = LocalDateTime.now().minusHours(1);
+        System.out.println(localDateTime1);
+        //获取当前时间，并且将小时设置为1
+        LocalDateTime with = LocalDateTime.now().with(LocalTime.of(1, 1, 1));
+        System.out.println(with);
+        LocalDateTime localDateTime2 = LocalDateTime.now().withHour(1);
+        System.out.println(localDateTime2);
+    }
+
     public static void main(String[] args) {
 
         format();
-        function();
-        function1();
+        use();
+        transform();
+        timeCalculate();
     }
 
 }

@@ -1,9 +1,6 @@
 package com.liaoxuefeng.jDate;
 
-import java.time.Duration;
-import java.time.Instant;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.concurrent.TimeUnit;
@@ -19,7 +16,7 @@ public class InstantDemo {
     /**
      * 时间戳类 Instant 的基本应用
      */
-    public static void use() {
+    public static void instantUse() {
 
         Instant instant = Instant.now();
         System.out.println("秒 " + instant.getEpochSecond()); // 秒
@@ -54,7 +51,7 @@ public class InstantDemo {
     /**
      * 计算时间差
      */
-    public static void function3() {
+    public static void timeCalculate() {
 
         Instant begin = Instant.now();
         try {
@@ -75,14 +72,27 @@ public class InstantDemo {
         System.out.println("耗时:" + until + "毫秒");
     }
 
+    /**
+     * localDateTime 与 instant 的转换
+     */
+    public static void transform() {
+        //转化一：instant 转 localDateTime
+        LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.now(), ZoneId.systemDefault());
+        System.out.println(localDateTime);
+        //转化二：localDateTime 转 instant
+        Instant instant = localDateTime.toInstant(ZoneOffset.of("+8"));
+        System.out.println(instant);
+    }
+
 
     public static void main(String[] args) {
 
-        use();
+        instantUse();
         //  获取到当前时间戳，毫秒级别，然后除以1000 转化为秒级别
         long time = System.currentTimeMillis() / 1000;
         methods(time);
-        function3();
+        timeCalculate();
+        transform();
     }
 
 }

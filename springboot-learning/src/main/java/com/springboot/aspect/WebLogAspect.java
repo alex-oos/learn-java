@@ -33,7 +33,7 @@ public class WebLogAspect {
     private static final String LINE_SEPARATOR = System.lineSeparator();
 
     /**
-     * 以自定义 @WebLog 注解为切点
+     *  正则匹配 controller 为切点，
      */
     @Pointcut("execution(public * com.springboot.controller.*.*(..))")
     public void aopPointCut() {

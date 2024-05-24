@@ -9,13 +9,16 @@ import java.util.Locale;
 /**
  * @author Alex
  * @since 2020/7/8 15:06
- *  用旧的Date对象时，我们用SimpleDateFormat进行格式化显示。使用新的LocalDateTime或ZonedLocalDateTime时，我们要进行格式化显示，就要使用DateTimeFormatter。
+ * 用旧的Date对象时，我们用SimpleDateFormat进行格式化显示。使用新的LocalDateTime或ZonedLocalDateTime时，我们要进行格式化显示，就要使用DateTimeFormatter。
  * 使用的时候，只能在方法内部创建新的局部变量。而DateTimeFormatter可以只创建一个实例，到处引用
  */
 public class DateTimeFormatterDemo {
 
-    // DateTimeFormatters实例化的两种方法
-    public static void function() {
+
+    /**
+     * 用法
+     */
+    public static void classUse() {
 
         // 方法一：创建DateTimeFormatter时，我们仍然通过传入格式化字符串实现：
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -24,8 +27,10 @@ public class DateTimeFormatterDemo {
 
     }
 
-    //
-    public static void function1() {
+    /**
+     * 各类时间格式化
+     */
+    public static void transform() {
 
         ZonedDateTime zonedDateTime = ZonedDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd 'T' HH:mm ZZZZ");
@@ -41,7 +46,8 @@ public class DateTimeFormatterDemo {
 
     public static void main(String[] args) {
 
-        function1();
+        classUse();
+        transform();
     }
 
 }

@@ -48,7 +48,6 @@ public class ListGetTwo {
 
     public static void main(String[] args) {
 
-
         List<Integer> list = List.of(1, 4, 7, 9);
         function(list);
         f1(list);
