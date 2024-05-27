@@ -84,7 +84,7 @@ public class TimeCalculation {
     public static void main(String[] args) {
 
         durationDemo();
-        //periodDemo();
+        periodDemo();
     }
 
 }
