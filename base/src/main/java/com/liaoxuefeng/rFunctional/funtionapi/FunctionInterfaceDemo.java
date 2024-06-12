@@ -112,7 +112,7 @@ public class FunctionInterfaceDemo {
         } else {
             System.out.println("我觉得还OK啦");
         }
-
+ 
     }
 
     public static void main(String[] args) {

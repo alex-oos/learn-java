@@ -17,13 +17,13 @@ public class Student extends Person {
     }
 
     public Student(String name, String major) {
-        //super 调用构造函数必须卸载在构造函数第一行
+        //super 调用构造函数必须写在构造函数第一行
         super(name);
         this.major = major;
     }
 
     public Student(String name, int age, String major) {
-
+          //super 调用构造函数必须写在构造函数第一行
         super(name, age);
         this.major = major;
     }

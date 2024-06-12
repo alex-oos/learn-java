@@ -159,6 +159,26 @@ public class StreamOther {
         System.out.println("列表中最小的数 : " + stats.getMin());
         System.out.println("所有数之和 : " + stats.getSum());
         System.out.println("平均数 : " + stats.getAverage());
+        //统计
+        IntSummaryStatistics statistics = numbers.stream().collect(Collectors.summarizingInt(x -> x));
+        System.out.println("列表中最大的数 : " + statistics.getMax());
+        System.out.println("列表中最小的数 : " + statistics.getMin());
+        System.out.println("所有数之和 :+ " + statistics.getSum());
+        System.out.println("平均数 : " + statistics.getAverage());
+
+        //anyMatch()，只要有一个元素匹配传入的条件，就返回 true。
+        //allMatch()，只有有一个元素不匹配传入的条件，就返回 false；如果全部匹配，则返回 true。
+        //noneMatch()，只要有一个元素匹配传入的条件，就返回 false；如果全部匹配，则返回 true。
+
+        List<String> list = Arrays.asList("a", "b", "c", "d", "e");
+        boolean anyMatch = list.stream().anyMatch(s -> s.equals("a"));
+        System.out.println(anyMatch);
+        boolean allMatch = list.stream().allMatch(s -> s.equals("a"));
+        System.out.println(allMatch);
+        boolean noneMatch = list.stream().noneMatch(s -> s.equals("a"));
+        System.out.println(noneMatch);
+
+
     }
 
 
