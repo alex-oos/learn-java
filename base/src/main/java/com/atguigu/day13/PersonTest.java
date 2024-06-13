@@ -43,6 +43,7 @@ public class PersonTest {
         //    多态的使用：当调用子父类同名同参数的方法时，实际执行的时子类重写父类的方法---虚拟方法使用
         p2.eat();
         p2.walk();
+        //这个值 还是person 中的id，父类的id，属性不存在重写一说，所以，不能调用子类特有的属性和方法
         System.out.println(p2.id);
         System.out.println("****************************");
         // 不能调用子类所特有的方法、属性：编译时，p2是Person类型
@@ -57,8 +58,8 @@ public class PersonTest {
         Man.earnMoney();
         man1.isSmoking = true;
         // 使用强转时，可能出现ClassCastException的异常。
-       /* Woman woman1 = (Woman) p2;
-        woman1.goShopping();*/
+ /*       Woman woman1 = (Woman) p2;
+        woman1.goShopping(); */
 
         /*
          * instanceof关键字的使用
@@ -82,9 +83,13 @@ public class PersonTest {
             Man.earnMoney();
             System.out.println("*******Man******");
         }
-        if (p2 instanceof Person) System.out.println("*****Person****");
+        if (p2 instanceof Person) {
+            System.out.println("*****Person****");
+        }
 
-        if (p2 instanceof Object) System.out.println("****Oject*****");
+        if (p2 instanceof Object) {
+            System.out.println("****Oject*****");
+        }
 
 
     }

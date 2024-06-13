@@ -163,7 +163,7 @@ public class StreamOther {
         IntSummaryStatistics statistics = numbers.stream().collect(Collectors.summarizingInt(x -> x));
         System.out.println("列表中最大的数 : " + statistics.getMax());
         System.out.println("列表中最小的数 : " + statistics.getMin());
-        System.out.println("所有数之和 :+ " + statistics.getSum());
+        System.out.println("所有数之和 : " + statistics.getSum());
         System.out.println("平均数 : " + statistics.getAverage());
 
         //anyMatch()，只要有一个元素匹配传入的条件，就返回 true。

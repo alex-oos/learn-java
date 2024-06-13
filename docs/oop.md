@@ -895,6 +895,47 @@ public class PersonTest {
 - 无继承关系的引用类型间的转换是非法的
 - 在造型前可以使用instanceof 操作符测试一个对象的类型
 
+代码demo：
+
+```java
+      	public static void main(String[] args) {
+                   Person p2 = new Man();
+			Man man1 = (Man) p2;
+        	Man.earnMoney();
+        	man1.isSmoking = true;
+              // 使用强转时，可能出现ClassCastException的异常。
+       		Woman woman1 = (Woman) p2;
+        	woman1.goShopping();
+         /*
+         * instanceof关键字的使用
+         *
+         * a instanceof A:判断对象a是否是类A的实例。如果是，返回true；如果不是，返回false。
+         *
+         *
+         *  使用情境：为了避免在向下转型时出现ClassCastException的异常，我们在向下转型之前，先
+         *  进行instanceof的判断，一旦返回true，就进行向下转型。如果返回false，不进行向下转型。
+         *
+         *  如果 a instanceof A返回true,则 a instanceof B也返回true.
+         *  其中，类B是类A的父类。
+         */
+        if (p2 instanceof Woman) {
+            Woman w1 = (Woman) p2;
+            w1.goShopping();
+            System.out.println("*****Woman********");
+        }
+        if (p2 instanceof Man) {
+            Man m2 = (Man) p2;
+            Man.earnMoney();
+            System.out.println("*******Man******");
+        }
+        if (p2 instanceof Person) System.out.println("*****Person****");
+
+        if (p2 instanceof Object) System.out.println("****Oject*****");
+        }
+```
+
+
+
 #### 3.4  父类Object
 
 Object 类位于 java.lang 包中，编译时会自动导入，我们创建一个类时，如果没有明确继承一个父类，那么它就会自动继承 Object，成为 Object 的子类。所以默认Object 类中的方法，在具体的类中均可以使用
