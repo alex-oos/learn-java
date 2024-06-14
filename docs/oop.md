@@ -516,7 +516,9 @@ public static String name ="demo"；
 
 代码demo:
 
-# TODO（目前笔记到了这里，这里还没做完）
+
+
+TODO（目前笔记到了这里，这里还没做完）
 
 ```
 ```
@@ -899,7 +901,7 @@ public class PersonTest {
 
 ```java
       	public static void main(String[] args) {
-                   Person p2 = new Man();
+            Person p2 = new Man();
 			Man man1 = (Man) p2;
         	Man.earnMoney();
         	man1.isSmoking = true;

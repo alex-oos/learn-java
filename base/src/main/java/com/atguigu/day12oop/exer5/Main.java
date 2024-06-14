@@ -17,7 +17,7 @@ public class Main {
         System.out.println(circle.toString());
         System.out.println(circle.findArea());
 
-        GemetricObject rectangle = new Rectangle("red", 5.5, 5.5);
+        GemetricObject rectangle = new Rectangle("red", 5.5, 1.6, 5.5);
         System.out.println(rectangle.toString());
         System.out.println(rectangle.findArea());
     }
