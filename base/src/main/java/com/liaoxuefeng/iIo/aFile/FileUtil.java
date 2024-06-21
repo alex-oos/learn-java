@@ -34,7 +34,9 @@ public class FileUtil {
                 for (File file : files) {
                     if (file.isDirectory()) {
                         List<String> subFolderFiles = listFiles(file.getAbsolutePath());
-                        filePaths.addAll(subFolderFiles);
+                        if (subFolderFiles != null) {
+                            filePaths.addAll(subFolderFiles);
+                        }
                     } else {
                         filePaths.add(file.getAbsolutePath());
                     }
@@ -57,10 +59,8 @@ public class FileUtil {
     public static List<String> listFiles2(String folderPath) {
 
         List<String> filePaths = null;
-        Path path = Paths.get(folderPath);
 
-        try {
-            Stream<Path> walk = Files.walk(path);
+        try (Stream<Path> walk = Files.walk(Paths.get(folderPath))){
             filePaths = walk.filter(Files::isRegularFile).map(a -> a.toAbsolutePath().toString()).collect(Collectors.toList());
         } catch (IOException e) {
             throw new RuntimeException(e);

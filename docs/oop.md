@@ -938,25 +938,32 @@ public class PersonTest {
 
 
 
-#### 3.4  父类Object
+#### 3.4  父类Object(java.lang.Object)
 
-Object 类位于 java.lang 包中，编译时会自动导入，我们创建一个类时，如果没有明确继承一个父类，那么它就会自动继承 Object，成为 Object 的子类。所以默认Object 类中的方法，在具体的类中均可以使用
+##### 1、概念
 
-常用的方法：
+1. Object 类是所有Java类的根父类
+2. 如果在类的声明中未使用extends关键字指明其父类，则默认父类为java.lang,object类
+3. Object类中的功能（属性、方法）就具有通用性
+   - 属性无：
+   - 常用的方法：
 
-```java
-equals() / toString() / getClass() /hashCode() / clone() / finalize()/wait()/notify()/notifyAll()
-```
+		```java
+		equals() / toString() / getClass() /hashCode() / clone() / finalize()/wait()/notify()/notifyAll()
+		```
 
+4. Object类中只声明了一个空参的构造器
 
+##### 2、代码demo: 
 
-代码demo: getClass() 方法
+###### 2.1 getClass() 方法
 
 ```java
 public class ObjectTest {
 
     public static void main(String[] args) {
         Order order = new Order();
+        // 获取当前的属于类，然后再获取所属父类
         System.out.println(order.getClass().getSuperclass());
     }
 }
@@ -966,7 +973,7 @@ class Order {
 }
 ```
 
-代码demo: clone 方法
+###### 2.2 clone 方法
 
 ```java
 public class CloneTest {
@@ -986,7 +993,7 @@ public class CloneTest {
     }
 
 }
-
+// 克隆需要继承该接口，并且重写clone方法
 class Animal implements Cloneable {
 
     private String name;
@@ -1021,7 +1028,7 @@ class Animal implements Cloneable {
 
 ```
 
-代码demo: equals 方法
+###### 2.3 equals 方法
 
 ```java
 public class EqualsTest {
@@ -1068,11 +1075,12 @@ public class EqualsTest {
 
 == 和equals 的区别：
 
-- == 既可以比较基本类型也可以比较引用类型，对于基本类型就是比较值，对于引用类型就是比较内存地址
-- equals 的话，它是属于java.lang.Object 类里面的方法，如果该方法没有重写默认也是==；我们可以看到String 等类的equals 的方法是被重写的，而且String 类在日常开发中用的比较多，
-- 通常情况下，重写equals 方法，会比较类中的响应属性是否相等。
+1. == 既可以比较基本类型也可以比较引用类型，对于基本类型就是比较值，对于引用类型就是比较内存地址
+2. equals 的话，它是属于java.lang.Object 类里面的方法，如果该方法没有重写默认也是==；我们可以看到String 等类的equals 的方法是被重写的，而且String 类在日常开发中用的比较多，久而久之，形成了equals是比较值的错误观点
+3. 具体要看自定义类型里有没有重写Object的equals来判断
+4. 通常情况下，重写equals 方法，会比较类中的响应属性是否相等。
 
-toString 方法：
+###### 2.4 toString 方法：
 
 
 Object类中toString()的使用：

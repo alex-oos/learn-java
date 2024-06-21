@@ -11,11 +11,7 @@ package com.atguigu.day13.object;
  * 属性：无
  * 方法：equals() / toString() / getClass() /hashCode() / clone() / finalize()
  * wait() 、 notify()、notifyAll()
- * <p>
  * 4. Object类只声明了一个空参的构造器
- * <p>
- * <p>
- * <p>
  * 面试题：
  * final、finally、finalize的区别？
  */
@@ -24,7 +20,7 @@ public class ObjectTest {
     public static void main(String[] args) {
 
         Order order = new Order();
-        //调用 object 类中的getClass方法
+        //调用 object 类中的getClass方法的父类
         System.out.println(order.getClass().getSuperclass());
         //调用object 类中的toString方法
         System.out.println(order.toString());

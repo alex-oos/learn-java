@@ -3,6 +3,8 @@ package com.atguigu.day13.object;
 
 import com.atguigu.day13.entity.Customer;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -36,27 +38,29 @@ import java.util.Date;
 public class EqualsTest {
 
     public static void main(String[] args) {
+
         //基本数据类型
-        final int i = 10;
-        final int j = 10;
-        final double d = 10.0;
+        int i = 10;
+        int j = 10;
+        double d = 10.0;
         System.out.println(i == j);
         System.out.println(i == d);
 
-        final boolean b = true;
-        // System.out.println(i == b);
+        boolean b = true;
+        //System.out.println(i == b);
 
-        final char c = 10;
+        char c = 10;
         System.out.println(i == c);
 
-        final char c1 = 'A';
-        final char c2 = 65;
+        char c1 = 'A';
+        char c2 = 65;
         System.out.println(c1 == c2);
 
-        //    引用类型
+
+        //引用类型
         Customer cust1 = new Customer("Tom", 21);
         Customer cust2 = new Customer("Tom", 21);
-        System.out.println("cust1==cust2 = " + (cust1 == cust2));
+        System.out.println("cust1==cust2 = " + (cust1 == cust2)); // 默认对比的tostring 方法
         String str1 = "atguigu";
         String str2 = "atguigu";
         System.out.println(str1 == str2);//false
@@ -64,8 +68,10 @@ public class EqualsTest {
         System.out.println(cust1.equals(cust2));//false--->true
         System.out.println(str1.equals(str2));//true
 
-        Date date1 = new Date(32432525324L);
-        Date date2 = new Date(32432525324L);
+        //开发工程中，包装类，LocalDate，LocalDateTime，String，File，都是重写了Object类中的equals()方法。
+        //比较的不是两个引用的地址值是否相同，而是比较两个对象的"实体内容"是否相同。
+        LocalDate date1 = LocalDate.of(2021, 12, 17);
+        LocalDate date2 = LocalDate.of(2021, 12, 17);
         System.out.println(date1.equals(date2));//true
 
     }
