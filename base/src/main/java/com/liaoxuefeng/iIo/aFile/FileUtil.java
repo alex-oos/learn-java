@@ -1,5 +1,7 @@
 package com.liaoxuefeng.iIo.aFile;
 
+import org.apache.commons.io.FileUtils;
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -7,6 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -54,7 +57,7 @@ public class FileUtil {
     }
 
     /**
-     * 方法二：
+     * 方法二：获取某个目录下的所有文件的绝对路径
      */
     public static List<String> listFiles2(String folderPath) {
 
@@ -70,13 +73,19 @@ public class FileUtil {
 
     }
 
+    //方式三：commons-io 中的 FileUtils 类
+    public static List<String> listFiles3(String folderPath) {
+
+        List<String> filePaths = FileUtils.listFiles(new File(folderPath), null, true).stream().map(File::getAbsolutePath).collect(Collectors.toList());
+        return filePaths;
+
+    }
+
     public static void main(String[] args) {
         // 获取当前目录下所有的文件夹
-        List<String> listFiles = listFiles(".");
-        // function.forEach(System.out::println);
-
-        List<String> listFiles2 = listFiles2(".");
-        listFiles2.forEach(System.out::println);
+        Objects.requireNonNull(listFiles(".")).forEach(System.out::println);
+        listFiles2(".").forEach(System.out::println);
+        listFiles3(".").forEach(System.out::println);
 
 
     }
